@@ -115,8 +115,32 @@
         .header {
             background: var(--primary);
             color: white;
-            padding: 40px 20px 20px;
+            padding: 36px 20px 16px;
             position: relative;
+        }
+
+        .header-top-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            min-height: 28px;
+        }
+
+        .header-top-left {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .header-top-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .header-title-row {
+            margin-bottom: 4px;
         }
 
         .header h1 {
@@ -131,15 +155,13 @@
         }
 
         .role-switcher {
-            position: absolute;
-            top: 45px;
-            right: 20px;
             background: rgba(255, 255, 255, 0.2);
             border-radius: 20px;
             padding: 6px 12px;
             font-size: 12px;
             cursor: pointer;
             transition: all 0.3s;
+            white-space: nowrap;
         }
 
         .role-switcher:hover {
@@ -147,9 +169,6 @@
         }
 
         .back-btn {
-            position: absolute;
-            top: 45px;
-            left: 20px;
             color: white;
             font-size: 20px;
             cursor: pointer;
@@ -638,9 +657,6 @@
         }
 
         .scope-tag {
-            position: absolute;
-            top: 50px;
-            right: 80px;
             font-size: 10px;
             padding: 4px 8px;
             border-radius: 8px;
@@ -908,18 +924,13 @@
         }
 
         .bell-icon {
-            position: absolute;
-            top: 45px;
-            right: 60px;
             color: white;
             font-size: 20px;
             cursor: pointer;
+            position: relative;
         }
 
         .gear-icon {
-            position: absolute;
-            top: 45px;
-            right: 100px;
             color: white;
             font-size: 20px;
             cursor: pointer;
@@ -2410,9 +2421,6 @@
         }
 
         .approve-all-btn {
-            position: absolute;
-            top: 45px;
-            right: 20px;
             background: rgba(40, 167, 69, 0.2);
             color: #28a745;
             padding: 8px 16px;
@@ -2457,15 +2465,13 @@
         }
 
         .points-header-badge {
-            position: absolute;
-            top: 48px;
-            right: 140px;
             background: rgba(255, 255, 255, 0.2);
             color: white;
             padding: 6px 12px;
             border-radius: 16px;
             font-size: 12px;
             font-weight: 600;
+            white-space: nowrap;
         }
 
         .empty-state-chal {
@@ -2721,6 +2727,683 @@
             font-weight: 600;
             margin-left: auto;
         }
+
+        /* ===== V3.0: New Screen Styles ===== */
+        .welcome-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 20px;
+        }
+        .welcome-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 32px 24px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid var(--border);
+        }
+        .welcome-card:hover {
+            border-color: var(--secondary);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+        .welcome-card-icon {
+            font-size: 56px;
+            margin-bottom: 16px;
+        }
+        .welcome-card-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+        .welcome-card-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* PIN Pad */
+        .pin-display {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin: 32px 0;
+        }
+        .pin-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid var(--secondary);
+            transition: all 0.2s;
+        }
+        .pin-dot.filled {
+            background: var(--secondary);
+            transform: scale(1.1);
+        }
+        .pin-pad {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            max-width: 280px;
+            margin: 0 auto;
+        }
+        .pin-key {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            border: 2px solid var(--border);
+            background: var(--bg-card);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--text);
+            cursor: pointer;
+            transition: all 0.15s;
+            margin: 0 auto;
+        }
+        .pin-key:hover {
+            background: var(--bg-light);
+            border-color: var(--secondary);
+        }
+        .pin-key:active {
+            transform: scale(0.92);
+            background: var(--secondary);
+            color: white;
+        }
+        .pin-key.empty {
+            border: none;
+            background: transparent;
+            cursor: default;
+        }
+        .pin-key.backspace {
+            font-size: 22px;
+            border: none;
+            background: transparent;
+        }
+
+        /* Social Auth Buttons */
+        .social-btn {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        .social-btn i {
+            font-size: 20px;
+        }
+        .social-btn-apple {
+            background: #000;
+            color: white;
+        }
+        .social-btn-google {
+            background: white;
+            color: #333;
+            border: 2px solid #ddd;
+        }
+        .social-btn-facebook {
+            background: #1877F2;
+            color: white;
+        }
+        .social-btn:hover {
+            transform: scale(1.02);
+            filter: brightness(0.95);
+        }
+        .auth-divider {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin: 20px 0;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        .auth-divider::before, .auth-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        /* Family Code Preview */
+        .code-preview {
+            background: var(--bg-light);
+            border: 2px dashed var(--secondary);
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+            margin-top: 12px;
+        }
+        .code-preview-label {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+        .code-preview-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--secondary);
+            letter-spacing: 3px;
+        }
+
+        /* Pet Picker */
+        .pet-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .pet-card {
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            padding: 16px 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .pet-card:hover {
+            border-color: var(--secondary);
+        }
+        .pet-card.selected {
+            border-color: var(--accent);
+            background: rgba(241, 143, 1, 0.05);
+            transform: scale(1.05);
+        }
+        .pet-card-emoji {
+            font-size: 36px;
+            margin-bottom: 6px;
+        }
+        .pet-card-name {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        /* Welcome Family celebration */
+        .celebrate-pet {
+            font-size: 80px;
+            animation: pet-bounce 1s ease-in-out infinite;
+            margin-bottom: 20px;
+        }
+        @keyframes pet-bounce {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-15px) rotate(-5deg); }
+            75% { transform: translateY(-5px) rotate(5deg); }
+        }
+        .family-code-card {
+            background: var(--bg-card);
+            border: 2px solid var(--secondary);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .family-code-card .code-label {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        .family-code-card .code-value {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--secondary);
+            letter-spacing: 2px;
+        }
+        .copy-icon {
+            color: var(--secondary);
+            font-size: 18px;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+        .copy-icon:hover {
+            background: rgba(46, 134, 171, 0.1);
+        }
+
+        /* Empty Dashboard */
+        .empty-dashboard-cta {
+            background: var(--bg-card);
+            border: 2px dashed var(--secondary);
+            border-radius: 20px;
+            padding: 32px 24px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .empty-dashboard-cta .pet-icon {
+            font-size: 56px;
+            margin-bottom: 16px;
+        }
+
+        /* Chore Setup */
+        .chore-category {
+            margin-bottom: 16px;
+        }
+        .chore-category-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 16px;
+            background: var(--bg-card);
+            border-radius: 12px 12px 0 0;
+            border: 1px solid var(--border);
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--text);
+        }
+        .chore-category-header i.chevron {
+            margin-left: auto;
+            transition: transform 0.3s;
+        }
+        .chore-category-header.expanded i.chevron {
+            transform: rotate(180deg);
+        }
+        .chore-category-items {
+            display: none;
+            border: 1px solid var(--border);
+            border-top: none;
+            border-radius: 0 0 12px 12px;
+            overflow: hidden;
+        }
+        .chore-category-items.expanded {
+            display: block;
+        }
+        .preset-chore-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .preset-chore-item:last-child {
+            border-bottom: none;
+        }
+        .preset-chore-item:hover {
+            background: var(--bg-light);
+        }
+        .preset-chore-item.selected {
+            background: rgba(46, 134, 171, 0.08);
+        }
+        .preset-check {
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+            border: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: white;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+        .preset-chore-item.selected .preset-check {
+            background: var(--secondary);
+            border-color: var(--secondary);
+        }
+        .preset-chore-info {
+            flex: 1;
+        }
+        .preset-chore-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text);
+        }
+        .preset-chore-meta {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-top: 2px;
+        }
+
+        /* Pet speech bubble */
+        .pet-speech {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 20px;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .pet-speech::after {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: 24px;
+            width: 16px;
+            height: 16px;
+            background: var(--bg-card);
+            transform: rotate(45deg);
+        }
+        .pet-speech-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+        .pet-speech-text {
+            font-size: 14px;
+            color: var(--text);
+            line-height: 1.5;
+        }
+
+        /* Kid Added List */
+        .kid-added-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            background: var(--bg-card);
+            border-radius: 12px;
+            margin-bottom: 8px;
+        }
+        .kid-added-check {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #28a745;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        /* Post Composer */
+        .post-composer {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+        .post-composer textarea {
+            width: 100%;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 14px;
+            font-size: 15px;
+            font-family: 'Inter', sans-serif;
+            resize: none;
+            background: var(--bg-light);
+            color: var(--text);
+            margin-bottom: 12px;
+        }
+        .post-composer textarea:focus {
+            outline: none;
+            border-color: var(--secondary);
+        }
+        .suggested-posts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+        .suggested-post {
+            padding: 8px 14px;
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--text);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .suggested-post:hover {
+            border-color: var(--secondary);
+            background: rgba(46, 134, 171, 0.08);
+        }
+
+        /* Chore status badges */
+        .chore-status-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .chore-status-pending { background: #FFF3CD; color: #856404; }
+        .chore-status-approved { background: #D4EDDA; color: #155724; }
+        .chore-status-redo { background: #F8D7DA; color: #721C24; }
+
+        /* Chore action buttons */
+        .chore-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .chore-action-btn {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .chore-action-btn:active {
+            transform: scale(0.95);
+        }
+        .chore-action-start {
+            background: var(--secondary);
+            color: white;
+        }
+        .chore-action-done {
+            background: #28a745;
+            color: white;
+        }
+        .chore-action-working {
+            background: var(--bg-light);
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+
+        /* Sibling profile */
+        .sibling-profile-header {
+            text-align: center;
+            padding: 20px;
+        }
+        .sibling-profile-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+            font-weight: 700;
+            margin: 0 auto 12px;
+        }
+
+        /* Spotlight card */
+        .spotlight-card {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            border-radius: 16px;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        /* Cashout flow */
+        .cashout-status-step {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+        }
+        .cashout-status-dot {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+        .cashout-status-dot.active {
+            background: var(--secondary);
+            border-color: var(--secondary);
+            color: white;
+        }
+        .cashout-status-dot.done {
+            background: #28a745;
+            border-color: #28a745;
+            color: white;
+        }
+        .cashout-status-line {
+            width: 2px;
+            height: 20px;
+            background: var(--border);
+            margin-left: 11px;
+        }
+
+        /* Waiting dots animation */
+        .waiting-dots::after {
+            content: '';
+            animation: dots 1.5s steps(4, end) infinite;
+        }
+        @keyframes dots {
+            0% { content: ''; }
+            25% { content: '.'; }
+            50% { content: '..'; }
+            75% { content: '...'; }
+        }
+
+        /* Notification cards for parent dashboard */
+        .notification-action-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 12px;
+            border: 2px solid var(--border);
+        }
+        .notification-action-card .card-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+        }
+        .notification-action-card .card-actions .btn {
+            flex: 1;
+            padding: 10px;
+            font-size: 13px;
+        }
+
+        /* Swag section */
+        .swag-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+        .swag-profile {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 26px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .swag-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            flex: 1;
+        }
+        .swag-badge {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+        }
+
+        /* Settings sections v3 */
+        .settings-section {
+            margin-bottom: 16px;
+        }
+        .settings-section-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            padding-left: 4px;
+        }
+        .settings-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 14px 16px;
+            transition: all 0.2s;
+        }
+        .settings-item:hover {
+            background: var(--bg-light);
+        }
+        .settings-item-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: white;
+        }
+        .settings-item-info {
+            flex: 1;
+        }
+        .settings-item-title {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text);
+        }
+        .settings-item-desc {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-top: 2px;
+        }
+
+        /* Tab content sections for chores */
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -2853,43 +3536,698 @@
             <button class="btn btn-primary" onclick="navigateTo('join-family')">Get Started</button>
         </div>
 
-        <!-- SCREEN 2: JOIN FAMILY -->
+        <!-- SCREEN 2: JOIN/CREATE FAMILY -->
         <div id="join-family" class="screen">
             <div class="header">
-                <i class="fas fa-arrow-left back-btn" onclick="navigateTo('splash')"></i>
-                <h1>Join Your Family</h1>
-                <p>Enter your family code</p>
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <i class="fas fa-arrow-left back-btn" onclick="navigateTo('splash')"></i>
+                    </div>
+                    <div class="header-top-right"></div>
+                </div>
+                <div class="header-title-row">
+                    <h1>Welcome to Challey</h1>
+                    <p>How would you like to get started?</p>
+                </div>
+            </div>
+            <div class="content">
+                <div class="welcome-cards">
+                    <div class="welcome-card" onclick="navigateTo('join-family-code')">
+                        <div class="welcome-card-icon">👨‍👩‍👧‍👦</div>
+                        <div class="welcome-card-title">Join a Family</div>
+                        <div class="welcome-card-desc">I have a family code and member code from my parent</div>
+                    </div>
+                    <div class="welcome-card" onclick="navigateTo('create-family-auth')">
+                        <div class="welcome-card-icon">🏠</div>
+                        <div class="welcome-card-title">Create a Family</div>
+                        <div class="welcome-card-desc">I'm a parent setting up Challey for the first time</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCREEN 2A: JOIN FAMILY CODE ENTRY -->
+        <div id="join-family-code" class="screen">
+            <div class="header">
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <i class="fas fa-arrow-left back-btn" onclick="navigateTo('join-family')"></i>
+                    </div>
+                    <div class="header-top-right"></div>
+                </div>
+                <div class="header-title-row">
+                    <h1>Join Your Family</h1>
+                    <p>Enter the codes your parent gave you</p>
+                </div>
             </div>
             <div class="content">
                 <div class="input-group">
                     <label>Family Code</label>
-                    <input type="text" placeholder="Enter 6-digit code" value="JOHN13">
+                    <input type="text" placeholder="e.g., JOHN13" value="JOHN13">
                 </div>
                 <div class="input-group">
-                    <label>Your Name</label>
-                    <input type="text" placeholder="Enter your name" value="Maggie">
+                    <label>Your Member Code</label>
+                    <input type="text" placeholder="e.g., MAG01" value="MAG01">
                 </div>
-                <button class="btn btn-primary" onclick="switchRole('kid'); navigateTo('kid-chores')">Join Family</button>
+                <button class="btn btn-primary" onclick="navigateTo('kid-set-pin')">Continue</button>
+            </div>
+        </div>
+
+        <!-- SCREEN 2B: KID SET PIN -->
+        <div id="kid-set-pin" class="screen">
+            <div class="header">
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <i class="fas fa-arrow-left back-btn" onclick="navigateTo('join-family-code')"></i>
+                    </div>
+                    <div class="header-top-right"></div>
+                </div>
+                <div class="header-title-row">
+                    <h1>Set Your PIN</h1>
+                    <p>Create a 4-digit PIN to keep your account safe</p>
+                </div>
+            </div>
+            <div class="content" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <div class="pin-display" id="pin-set-dots">
+                    <div class="pin-dot"></div>
+                    <div class="pin-dot"></div>
+                    <div class="pin-dot"></div>
+                    <div class="pin-dot"></div>
+                </div>
+                <div class="pin-pad">
+                    <div class="pin-key" onclick="pinPadPress(1, 'kid-set-pin')">1</div>
+                    <div class="pin-key" onclick="pinPadPress(2, 'kid-set-pin')">2</div>
+                    <div class="pin-key" onclick="pinPadPress(3, 'kid-set-pin')">3</div>
+                    <div class="pin-key" onclick="pinPadPress(4, 'kid-set-pin')">4</div>
+                    <div class="pin-key" onclick="pinPadPress(5, 'kid-set-pin')">5</div>
+                    <div class="pin-key" onclick="pinPadPress(6, 'kid-set-pin')">6</div>
+                    <div class="pin-key" onclick="pinPadPress(7, 'kid-set-pin')">7</div>
+                    <div class="pin-key" onclick="pinPadPress(8, 'kid-set-pin')">8</div>
+                    <div class="pin-key" onclick="pinPadPress(9, 'kid-set-pin')">9</div>
+                    <div class="pin-key empty"></div>
+                    <div class="pin-key" onclick="pinPadPress(0, 'kid-set-pin')">0</div>
+                    <div class="pin-key backspace" onclick="pinPadDelete('kid-set-pin')"><i class="fas fa-delete-left"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCREEN 2C: KID CONFIRM PIN -->
+        <div id="kid-confirm-pin" class="screen">
+            <div class="header">
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <i class="fas fa-arrow-left back-btn" onclick="navigateTo('kid-set-pin')"></i>
+                    </div>
+                    <div class="header-top-right"></div>
+                </div>
+                <div class="header-title-row">
+                    <h1>Confirm Your PIN</h1>
+                    <p>Enter the same PIN again</p>
+                </div>
+            </div>
+            <div class="content" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <div class="pin-display" id="pin-confirm-dots">
+                    <div class="pin-dot"></div>
+                    <div class="pin-dot"></div>
+                    <div class="pin-dot"></div>
+                    <div class="pin-dot"></div>
+                </div>
+                <div class="pin-pad">
+                    <div class="pin-key" onclick="pinPadPress(1, 'kid-confirm-pin')">1</div>
+                    <div class="pin-key" onclick="pinPadPress(2, 'kid-confirm-pin')">2</div>
+                    <div class="pin-key" onclick="pinPadPress(3, 'kid-confirm-pin')">3</div>
+                    <div class="pin-key" onclick="pinPadPress(4, 'kid-confirm-pin')">4</div>
+                    <div class="pin-key" onclick="pinPadPress(5, 'kid-confirm-pin')">5</div>
+                    <div class="pin-key" onclick="pinPadPress(6, 'kid-confirm-pin')">6</div>
+                    <div class="pin-key" onclick="pinPadPress(7, 'kid-confirm-pin')">7</div>
+                    <div class="pin-key" onclick="pinPadPress(8, 'kid-confirm-pin')">8</div>
+                    <div class="pin-key" onclick="pinPadPress(9, 'kid-confirm-pin')">9</div>
+                    <div class="pin-key empty"></div>
+                    <div class="pin-key" onclick="pinPadPress(0, 'kid-confirm-pin')">0</div>
+                    <div class="pin-key backspace" onclick="pinPadDelete('kid-confirm-pin')"><i class="fas fa-delete-left"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCREEN 2D: KID ENTER PIN (returning) -->
+        <div id="kid-enter-pin" class="screen">
+            <div class="header">
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <i class="fas fa-arrow-left back-btn" onclick="navigateTo('join-family')"></i>
+                    </div>
+                    <div class="header-top-right"></div>
+                </div>
+                <div class="header-title-row">
+                    <h1>Welcome Back!</h1>
+                    <p>Enter your PIN</p>
+                </div>
+            </div>
+            <div class="content" style="display: flex; flex-direction: column; align-items: center;">
+                <div style="background: var(--bg-card); border-radius: 12px; padding: 12px 16px; margin-bottom: 24px; width: 100%;">
+                    <div style="font-size: 13px; color: var(--text-secondary);">Family: <strong style="color: var(--text);">JOHN13</strong></div>
+                    <div style="font-size: 13px; color: var(--text-secondary);">Member: <strong style="color: var(--text);">MAG01</strong></div>
+                </div>
+                <div class="pin-display" id="pin-enter-dots">
+                    <div class="pin-dot"></div>
+                    <div class="pin-dot"></div>
+                    <div class="pin-dot"></div>
+                    <div class="pin-dot"></div>
+                </div>
+                <div class="pin-pad">
+                    <div class="pin-key" onclick="pinPadPress(1, 'kid-enter-pin')">1</div>
+                    <div class="pin-key" onclick="pinPadPress(2, 'kid-enter-pin')">2</div>
+                    <div class="pin-key" onclick="pinPadPress(3, 'kid-enter-pin')">3</div>
+                    <div class="pin-key" onclick="pinPadPress(4, 'kid-enter-pin')">4</div>
+                    <div class="pin-key" onclick="pinPadPress(5, 'kid-enter-pin')">5</div>
+                    <div class="pin-key" onclick="pinPadPress(6, 'kid-enter-pin')">6</div>
+                    <div class="pin-key" onclick="pinPadPress(7, 'kid-enter-pin')">7</div>
+                    <div class="pin-key" onclick="pinPadPress(8, 'kid-enter-pin')">8</div>
+                    <div class="pin-key" onclick="pinPadPress(9, 'kid-enter-pin')">9</div>
+                    <div class="pin-key empty"></div>
+                    <div class="pin-key" onclick="pinPadPress(0, 'kid-enter-pin')">0</div>
+                    <div class="pin-key backspace" onclick="pinPadDelete('kid-enter-pin')"><i class="fas fa-delete-left"></i></div>
+                </div>
+                <div style="margin-top: 20px;">
+                    <a style="color: var(--secondary); font-size: 14px; cursor: pointer;" onclick="navigateTo('kid-forgot-pin')">Forgot PIN?</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCREEN 2E: KID FORGOT PIN -->
+        <div id="kid-forgot-pin" class="screen">
+            <div class="content" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 100%; padding: 40px;">
+                <div style="font-size: 64px; margin-bottom: 24px;"><i class="fas fa-lock" style="color: var(--secondary);"></i></div>
+                <h2 style="font-size: 22px; color: var(--text); margin-bottom: 12px;">PIN Reset Requested</h2>
+                <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px;">
+                    We just asked Dad to reset your PIN. Hang tight<span class="waiting-dots"></span>
+                </p>
+                <div style="font-size: 40px; margin-bottom: 32px; animation: companion-bob 2s ease-in-out infinite;">
+                    <span id="forgot-pin-pet">🐙</span>
+                </div>
+                <button class="btn btn-secondary" onclick="navigateTo('kid-enter-pin')">
+                    <i class="fas fa-arrow-left"></i> Try Again
+                </button>
+            </div>
+        </div>
+
+        <!-- SCREEN 2F: CREATE FAMILY AUTH -->
+        <div id="create-family-auth" class="screen">
+            <div class="header">
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <i class="fas fa-arrow-left back-btn" onclick="navigateTo('join-family')"></i>
+                    </div>
+                    <div class="header-top-right"></div>
+                </div>
+                <div class="header-title-row">
+                    <h1>Create Your Account</h1>
+                    <p>Choose how to sign up</p>
+                </div>
+            </div>
+            <div class="content">
+                <button class="social-btn social-btn-apple" onclick="navigateTo('create-family-name')">
+                    <i class="fab fa-apple"></i> Sign in with Apple
+                </button>
+                <button class="social-btn social-btn-google" onclick="navigateTo('create-family-name')">
+                    <i class="fab fa-google"></i> Sign in with Google
+                </button>
+                <button class="social-btn social-btn-facebook" onclick="navigateTo('create-family-name')">
+                    <i class="fab fa-facebook-f"></i> Continue with Facebook
+                </button>
+                <div class="auth-divider">or</div>
+                <button class="btn btn-outline" onclick="navigateTo('create-family-manual')" style="border: 2px solid var(--secondary); color: var(--secondary);">
+                    <i class="fas fa-envelope"></i> Sign up with email
+                </button>
+                <div style="text-align: center; margin-top: 24px;">
+                    <span style="font-size: 14px; color: var(--text-secondary);">Already have an account? </span>
+                    <a style="font-size: 14px; color: var(--secondary); cursor: pointer; font-weight: 600;" onclick="navigateTo('kid-enter-pin')">Log in</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCREEN 2G: MANUAL SIGNUP -->
+        <div id="create-family-manual" class="screen">
+            <div class="header">
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <i class="fas fa-arrow-left back-btn" onclick="navigateTo('create-family-auth')"></i>
+                    </div>
+                    <div class="header-top-right"></div>
+                </div>
+                <div class="header-title-row">
+                    <h1>Create Account</h1>
+                    <p>Sign up with your email</p>
+                </div>
+            </div>
+            <div class="content">
+                <div class="input-group">
+                    <label>First Name</label>
+                    <input type="text" placeholder="Mike" value="Mike">
+                </div>
+                <div class="input-group">
+                    <label>Last Name</label>
+                    <input type="text" placeholder="Johnson" value="Johnson">
+                </div>
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="mike@example.com" value="mike@example.com">
+                </div>
+                <div class="input-group">
+                    <label>Create Password</label>
+                    <input type="password" placeholder="Min. 8 characters">
+                </div>
+                <button class="btn btn-primary" onclick="navigateTo('create-family-name')">Continue</button>
+            </div>
+        </div>
+
+        <!-- SCREEN 2H: CREATE FAMILY NAME -->
+        <div id="create-family-name" class="screen">
+            <div class="header">
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <i class="fas fa-arrow-left back-btn" onclick="navigateTo('create-family-auth')"></i>
+                    </div>
+                    <div class="header-top-right"></div>
+                </div>
+                <div class="header-title-row">
+                    <h1>Name Your Family</h1>
+                    <p>This is how your family will appear</p>
+                </div>
+            </div>
+            <div class="content">
+                <div class="input-group">
+                    <label>Family Name</label>
+                    <input type="text" placeholder="e.g., The Johnson Family" value="The Johnson Family" id="family-name-input" oninput="updateFamilyCodePreview()">
+                </div>
+                <div class="code-preview">
+                    <div class="code-preview-label">Your family code will be:</div>
+                    <div class="code-preview-value" id="family-code-preview">JOHN13</div>
+                </div>
+                <button class="btn btn-primary" onclick="navigateTo('pick-family-pet')" style="margin-top: 24px;">Create Family</button>
+            </div>
+        </div>
+
+        <!-- SCREEN 2I: PICK FAMILY PET -->
+        <div id="pick-family-pet" class="screen">
+            <div class="header">
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <i class="fas fa-arrow-left back-btn" onclick="navigateTo('create-family-name')"></i>
+                    </div>
+                    <div class="header-top-right"></div>
+                </div>
+                <div class="header-title-row">
+                    <h1>Choose Your Family Pet!</h1>
+                    <p>Every family needs a pet! Pick one and name them.</p>
+                </div>
+            </div>
+            <div class="content">
+                <div class="pet-grid">
+                    <div class="pet-card" onclick="selectPet(this, '🐕', 'Dog')"><div class="pet-card-emoji">🐕</div><div class="pet-card-name">Dog</div></div>
+                    <div class="pet-card" onclick="selectPet(this, '🐈', 'Cat')"><div class="pet-card-emoji">🐈</div><div class="pet-card-name">Cat</div></div>
+                    <div class="pet-card selected" onclick="selectPet(this, '🐙', 'Octopus')"><div class="pet-card-emoji">🐙</div><div class="pet-card-name">Octopus</div></div>
+                    <div class="pet-card" onclick="selectPet(this, '🐰', 'Bunny')"><div class="pet-card-emoji">🐰</div><div class="pet-card-name">Bunny</div></div>
+                    <div class="pet-card" onclick="selectPet(this, '🐹', 'Hamster')"><div class="pet-card-emoji">🐹</div><div class="pet-card-name">Hamster</div></div>
+                    <div class="pet-card" onclick="selectPet(this, '🦜', 'Parrot')"><div class="pet-card-emoji">🦜</div><div class="pet-card-name">Parrot</div></div>
+                    <div class="pet-card" onclick="selectPet(this, '🐢', 'Turtle')"><div class="pet-card-emoji">🐢</div><div class="pet-card-name">Turtle</div></div>
+                    <div class="pet-card" onclick="selectPet(this, '🦊', 'Fox')"><div class="pet-card-emoji">🦊</div><div class="pet-card-name">Fox</div></div>
+                    <div class="pet-card" onclick="selectPet(this, '🐼', 'Panda')"><div class="pet-card-emoji">🐼</div><div class="pet-card-name">Panda</div></div>
+                    <div class="pet-card" onclick="selectPet(this, '🐧', 'Penguin')"><div class="pet-card-emoji">🐧</div><div class="pet-card-name">Penguin</div></div>
+                    <div class="pet-card" onclick="selectPet(this, '🦁', 'Lion')"><div class="pet-card-emoji">🦁</div><div class="pet-card-name">Lion</div></div>
+                    <div class="pet-card" onclick="selectPet(this, '🐸', 'Frog')"><div class="pet-card-emoji">🐸</div><div class="pet-card-name">Frog</div></div>
+                </div>
+                <div class="input-group">
+                    <label>Name your pet</label>
+                    <input type="text" placeholder="e.g., Biscuit, Chal, Buddy" value="Chal" id="pet-name-input">
+                </div>
+                <button class="btn btn-primary" onclick="finishPetPick()">
+                    Meet <span id="pet-meet-name">Chal</span>!
+                </button>
+            </div>
+        </div>
+
+        <!-- SCREEN 2J: WELCOME FAMILY -->
+        <div id="welcome-family" class="screen">
+            <div class="content" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 100%; padding: 32px 20px;">
+                <div class="celebrate-pet" id="welcome-pet-emoji">🐙</div>
+                <h2 style="font-size: 24px; color: var(--text); margin-bottom: 16px;">Welcome to Challey,<br><span id="welcome-family-name">The Johnson Family</span>!</h2>
+                <div class="family-code-card">
+                    <div>
+                        <div class="code-label">Family Code</div>
+                        <div class="code-value">JOHN13</div>
+                    </div>
+                    <i class="fas fa-copy copy-icon" onclick="showToast('Copied!')"></i>
+                </div>
+                <div class="family-code-card">
+                    <div>
+                        <div class="code-label">Your Member Code</div>
+                        <div class="code-value">MIKE01</div>
+                    </div>
+                    <i class="fas fa-copy copy-icon" onclick="showToast('Copied!')"></i>
+                </div>
+                <p style="font-size: 14px; color: var(--text-secondary); margin: 16px 0; line-height: 1.5;">
+                    Share these codes with your family to join!
+                </p>
+                <button class="btn btn-primary" onclick="navigateTo('parent-dashboard-empty')">Go to Dashboard</button>
+            </div>
+        </div>
+
+        <!-- SCREEN 2K: PARENT DASHBOARD EMPTY STATE -->
+        <div id="parent-dashboard-empty" class="screen">
+            <div class="dashboard-header">
+                <div class="header-top-row">
+                    <div class="header-top-left"></div>
+                    <div class="header-top-right">
+                        <div class="bell-icon" onclick="toggleNotifications()">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                    </div>
+                </div>
+                <h1>The Johnson Family</h1>
+                <p>Welcome, Mike!</p>
+                <div class="quick-stats">
+                    <div class="quick-stat">
+                        <div class="quick-stat-value">0</div>
+                        <div class="quick-stat-label">Active Chores</div>
+                    </div>
+                    <div class="quick-stat">
+                        <div class="quick-stat-value">0</div>
+                        <div class="quick-stat-label">Pending</div>
+                    </div>
+                    <div class="quick-stat">
+                        <div class="quick-stat-value">0</div>
+                        <div class="quick-stat-label">This Week</div>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="empty-dashboard-cta">
+                    <div class="pet-icon" id="dashboard-pet-emoji">🐙</div>
+                    <h3 style="font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 8px;">Let's add your kids!</h3>
+                    <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 20px;">
+                        Your family is set up. Now add your kids so they can start earning rewards!
+                    </p>
+                    <button class="btn btn-primary" onclick="navigateTo('add-kids')">
+                        <i class="fas fa-user-plus"></i> Add Kids
+                    </button>
+                </div>
+            </div>
+            <div class="bottom-nav parent-nav">
+                <div class="nav-item active" onclick="navigateTo('parent-dashboard-empty')">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="nav-item" onclick="navigateTo('parent-verify')">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Verify</span>
+                </div>
+                <div class="nav-item" onclick="navigateTo('parent-rewards')">
+                    <i class="fas fa-gift"></i>
+                    <span>Rewards</span>
+                </div>
+                <div class="nav-item" onclick="navigateTo('parent-living-room')">
+                    <i class="fas fa-couch"></i>
+                    <span>Living Room</span>
+                </div>
+                <div class="nav-item" onclick="navigateTo('parent-family')">
+                    <i class="fas fa-users"></i>
+                    <span>Family</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCREEN 2L: ADD KIDS -->
+        <div id="add-kids" class="screen">
+            <div class="header">
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <i class="fas fa-arrow-left back-btn" onclick="navigateTo('parent-dashboard-empty')"></i>
+                    </div>
+                    <div class="header-top-right"></div>
+                </div>
+                <div class="header-title-row">
+                    <h1>Add Your Kids</h1>
+                    <p>Each kid gets a unique code</p>
+                </div>
+            </div>
+            <div class="content">
+                <div id="added-kids-list"></div>
+                <div class="input-group">
+                    <label>Name or Nickname</label>
+                    <input type="text" placeholder="e.g., Maggie" id="add-kid-name">
+                </div>
+                <div class="input-group">
+                    <label>Birthday</label>
+                    <input type="date" id="add-kid-birthday">
+                </div>
+                <div class="input-group">
+                    <label>Age</label>
+                    <input type="number" placeholder="e.g., 13" id="add-kid-age">
+                </div>
+                <button class="btn btn-secondary" onclick="addKid()" style="margin-bottom: 12px;">
+                    <i class="fas fa-plus"></i> Add Another Kid
+                </button>
+                <button class="btn btn-primary" onclick="navigateTo('add-kids-success')">
+                    Done
+                </button>
+            </div>
+        </div>
+
+        <!-- SCREEN 2M: ADD KIDS SUCCESS -->
+        <div id="add-kids-success" class="screen">
+            <div class="content" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 100%; padding: 32px 20px;">
+                <div class="success-checkmark">
+                    <i class="fas fa-check"></i>
+                </div>
+                <h2 style="font-size: 24px; color: var(--text); margin-bottom: 20px;">Kids Added!</h2>
+                <div style="width: 100%; margin-bottom: 20px;">
+                    <div class="kid-added-item">
+                        <div class="kid-added-check"><i class="fas fa-check"></i></div>
+                        <div style="flex: 1; text-align: left;">
+                            <div style="font-weight: 600; color: var(--text);">Maggie</div>
+                            <div style="font-size: 13px; color: var(--text-secondary);">Age 13</div>
+                        </div>
+                        <div style="font-weight: 700; color: var(--secondary); letter-spacing: 1px;">MAG01</div>
+                    </div>
+                    <div class="kid-added-item">
+                        <div class="kid-added-check"><i class="fas fa-check"></i></div>
+                        <div style="flex: 1; text-align: left;">
+                            <div style="font-weight: 600; color: var(--text);">Jake</div>
+                            <div style="font-size: 13px; color: var(--text-secondary);">Age 10</div>
+                        </div>
+                        <div style="font-weight: 700; color: var(--secondary); letter-spacing: 1px;">JAK01</div>
+                    </div>
+                    <div class="kid-added-item">
+                        <div class="kid-added-check"><i class="fas fa-check"></i></div>
+                        <div style="flex: 1; text-align: left;">
+                            <div style="font-weight: 600; color: var(--text);">Lily</div>
+                            <div style="font-size: 13px; color: var(--text-secondary);">Age 8</div>
+                        </div>
+                        <div style="font-weight: 700; color: var(--secondary); letter-spacing: 1px;">LIL01</div>
+                    </div>
+                </div>
+                <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 24px;">Share these codes with your kids!</p>
+                <button class="btn btn-primary" onclick="navigateTo('setup-chores')">Continue to Setup</button>
+            </div>
+        </div>
+
+        <!-- SCREEN 2N: CHORE SETUP -->
+        <div id="setup-chores" class="screen">
+            <div class="header">
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <i class="fas fa-arrow-left back-btn" onclick="navigateTo('add-kids-success')"></i>
+                    </div>
+                    <div class="header-top-right"></div>
+                </div>
+                <div class="header-title-row">
+                    <h1>Set Up Chores</h1>
+                    <p>Pick some to get started</p>
+                </div>
+            </div>
+            <div class="content">
+                <div class="pet-speech">
+                    <div class="pet-speech-header">
+                        <span style="font-size: 28px;" id="setup-chores-pet">🐙</span>
+                        <span style="font-weight: 600; color: var(--text);" id="setup-chores-pet-name">Chal</span>
+                    </div>
+                    <div class="pet-speech-text">Great! Now let's give your kids something to do. Here are some popular chores!</div>
+                </div>
+
+                <div class="chore-category">
+                    <div class="chore-category-header expanded" onclick="toggleChoreCategory(this)">
+                        <span>🍽</span> Kitchen <i class="fas fa-chevron-down chevron"></i>
+                    </div>
+                    <div class="chore-category-items expanded">
+                        <div class="preset-chore-item selected" onclick="togglePresetChore(this)"><div class="preset-check"><i class="fas fa-check"></i></div><div class="preset-chore-info"><div class="preset-chore-name">Wash dishes</div><div class="preset-chore-meta">15 pts - 15 min</div></div></div>
+                        <div class="preset-chore-item" onclick="togglePresetChore(this)"><div class="preset-check"><i class="fas fa-check"></i></div><div class="preset-chore-info"><div class="preset-chore-name">Empty dishwasher</div><div class="preset-chore-meta">10 pts - 10 min</div></div></div>
+                        <div class="preset-chore-item" onclick="togglePresetChore(this)"><div class="preset-check"><i class="fas fa-check"></i></div><div class="preset-chore-info"><div class="preset-chore-name">Wipe counters</div><div class="preset-chore-meta">10 pts - 10 min</div></div></div>
+                        <div class="preset-chore-item" onclick="togglePresetChore(this)"><div class="preset-check"><i class="fas fa-check"></i></div><div class="preset-chore-info"><div class="preset-chore-name">Set the table</div><div class="preset-chore-meta">5 pts - 5 min</div></div></div>
+                    </div>
+                </div>
+                <div class="chore-category">
+                    <div class="chore-category-header" onclick="toggleChoreCategory(this)">
+                        <span>🛏</span> Bedroom <i class="fas fa-chevron-down chevron"></i>
+                    </div>
+                    <div class="chore-category-items">
+                        <div class="preset-chore-item selected" onclick="togglePresetChore(this)"><div class="preset-check"><i class="fas fa-check"></i></div><div class="preset-chore-info"><div class="preset-chore-name">Make bed</div><div class="preset-chore-meta">5 pts - 5 min</div></div></div>
+                        <div class="preset-chore-item" onclick="togglePresetChore(this)"><div class="preset-check"><i class="fas fa-check"></i></div><div class="preset-chore-info"><div class="preset-chore-name">Clean room</div><div class="preset-chore-meta">20 pts - 30 min</div></div></div>
+                        <div class="preset-chore-item" onclick="togglePresetChore(this)"><div class="preset-check"><i class="fas fa-check"></i></div><div class="preset-chore-info"><div class="preset-chore-name">Put away laundry</div><div class="preset-chore-meta">15 pts - 15 min</div></div></div>
+                    </div>
+                </div>
+                <div class="chore-category">
+                    <div class="chore-category-header" onclick="toggleChoreCategory(this)">
+                        <span>🌿</span> Outdoor <i class="fas fa-chevron-down chevron"></i>
+                    </div>
+                    <div class="chore-category-items">
+                        <div class="preset-chore-item" onclick="togglePresetChore(this)"><div class="preset-check"><i class="fas fa-check"></i></div><div class="preset-chore-info"><div class="preset-chore-name">Mow lawn</div><div class="preset-chore-meta">30 pts - 45 min</div></div></div>
+                        <div class="preset-chore-item selected" onclick="togglePresetChore(this)"><div class="preset-check"><i class="fas fa-check"></i></div><div class="preset-chore-info"><div class="preset-chore-name">Take out trash</div><div class="preset-chore-meta">10 pts - 10 min</div></div></div>
+                        <div class="preset-chore-item" onclick="togglePresetChore(this)"><div class="preset-check"><i class="fas fa-check"></i></div><div class="preset-chore-info"><div class="preset-chore-name">Walk the dog</div><div class="preset-chore-meta">15 pts - 20 min</div></div></div>
+                        <div class="preset-chore-item" onclick="togglePresetChore(this)"><div class="preset-check"><i class="fas fa-check"></i></div><div class="preset-chore-info"><div class="preset-chore-name">Water plants</div><div class="preset-chore-meta">10 pts - 10 min</div></div></div>
+                    </div>
+                </div>
+                <div class="chore-category">
+                    <div class="chore-category-header" onclick="toggleChoreCategory(this)">
+                        <span>🧹</span> Living Areas <i class="fas fa-chevron-down chevron"></i>
+                    </div>
+                    <div class="chore-category-items">
+                        <div class="preset-chore-item" onclick="togglePresetChore(this)"><div class="preset-check"><i class="fas fa-check"></i></div><div class="preset-chore-info"><div class="preset-chore-name">Vacuum</div><div class="preset-chore-meta">20 pts - 20 min</div></div></div>
+                        <div class="preset-chore-item" onclick="togglePresetChore(this)"><div class="preset-check"><i class="fas fa-check"></i></div><div class="preset-chore-info"><div class="preset-chore-name">Sweep/mop</div><div class="preset-chore-meta">20 pts - 25 min</div></div></div>
+                        <div class="preset-chore-item" onclick="togglePresetChore(this)"><div class="preset-check"><i class="fas fa-check"></i></div><div class="preset-chore-info"><div class="preset-chore-name">Dust furniture</div><div class="preset-chore-meta">15 pts - 15 min</div></div></div>
+                    </div>
+                </div>
+
+                <button class="btn btn-secondary" style="margin: 16px 0 12px;"><i class="fas fa-plus"></i> Add Custom Chore</button>
+                <button class="btn btn-primary" onclick="navigateTo('setup-rewards')">Continue</button>
+            </div>
+        </div>
+
+        <!-- SCREEN 2O: REWARD SETUP -->
+        <div id="setup-rewards" class="screen">
+            <div class="header">
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <i class="fas fa-arrow-left back-btn" onclick="navigateTo('setup-chores')"></i>
+                    </div>
+                    <div class="header-top-right"></div>
+                </div>
+                <div class="header-title-row">
+                    <h1>Set Up Rewards</h1>
+                    <p>What can kids earn?</p>
+                </div>
+            </div>
+            <div class="content">
+                <div class="pet-speech">
+                    <div class="pet-speech-header">
+                        <span style="font-size: 28px;" id="setup-rewards-pet">🐙</span>
+                        <span style="font-weight: 600; color: var(--text);">Chal</span>
+                    </div>
+                    <div class="pet-speech-text">Now let's add some rewards! Your kids can also suggest rewards and add to their wishlist later.</div>
+                </div>
+
+                <div class="chore-category">
+                    <div class="chore-category-header expanded" onclick="toggleChoreCategory(this)">
+                        <span>🎮</span> Screen Time <i class="fas fa-chevron-down chevron"></i>
+                    </div>
+                    <div class="chore-category-items expanded">
+                        <div class="preset-chore-item selected" onclick="togglePresetChore(this)"><div class="preset-check"><i class="fas fa-check"></i></div><div class="preset-chore-info"><div class="preset-chore-name">30min gaming</div><div class="preset-chore-meta">30 pts</div></div></div>
+                        <div class="preset-chore-item" onclick="togglePresetChore(this)"><div class="preset-check"><i class="fas fa-check"></i></div><div class="preset-chore-info"><div class="preset-chore-name">1hr TV</div><div class="preset-chore-meta">50 pts</div></div></div>
+                        <div class="preset-chore-item selected" onclick="togglePresetChore(this)"><div class="preset-check"><i class="fas fa-check"></i></div><div class="preset-chore-info"><div class="preset-chore-name">Movie night</div><div class="preset-chore-meta">80 pts</div></div></div>
+                    </div>
+                </div>
+                <div class="chore-category">
+                    <div class="chore-category-header" onclick="toggleChoreCategory(this)">
+                        <span>🍕</span> Food & Treats <i class="fas fa-chevron-down chevron"></i>
+                    </div>
+                    <div class="chore-category-items">
+                        <div class="preset-chore-item" onclick="togglePresetChore(this)"><div class="preset-check"><i class="fas fa-check"></i></div><div class="preset-chore-info"><div class="preset-chore-name">Pick dinner</div><div class="preset-chore-meta">60 pts</div></div></div>
+                        <div class="preset-chore-item" onclick="togglePresetChore(this)"><div class="preset-check"><i class="fas fa-check"></i></div><div class="preset-chore-info"><div class="preset-chore-name">Ice cream outing</div><div class="preset-chore-meta">40 pts</div></div></div>
+                    </div>
+                </div>
+                <div class="chore-category">
+                    <div class="chore-category-header" onclick="toggleChoreCategory(this)">
+                        <span>💰</span> Cash <i class="fas fa-chevron-down chevron"></i>
+                    </div>
+                    <div class="chore-category-items">
+                        <div class="preset-chore-item selected" onclick="togglePresetChore(this)"><div class="preset-check"><i class="fas fa-check"></i></div><div class="preset-chore-info"><div class="preset-chore-name">$1</div><div class="preset-chore-meta">20 pts</div></div></div>
+                        <div class="preset-chore-item selected" onclick="togglePresetChore(this)"><div class="preset-check"><i class="fas fa-check"></i></div><div class="preset-chore-info"><div class="preset-chore-name">$5</div><div class="preset-chore-meta">100 pts</div></div></div>
+                        <div class="preset-chore-item" onclick="togglePresetChore(this)"><div class="preset-check"><i class="fas fa-check"></i></div><div class="preset-chore-info"><div class="preset-chore-name">$10</div><div class="preset-chore-meta">200 pts</div></div></div>
+                    </div>
+                </div>
+
+                <button class="btn btn-secondary" style="margin: 16px 0 12px;"><i class="fas fa-plus"></i> Add Custom Reward</button>
+                <button class="btn btn-primary" onclick="navigateTo('setup-first-post')">Continue</button>
+            </div>
+        </div>
+
+        <!-- SCREEN 2P: FIRST LIVING ROOM POST -->
+        <div id="setup-first-post" class="screen">
+            <div class="header">
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <i class="fas fa-arrow-left back-btn" onclick="navigateTo('setup-rewards')"></i>
+                    </div>
+                    <div class="header-top-right"></div>
+                </div>
+                <div class="header-title-row">
+                    <h1>First Post!</h1>
+                    <p>Welcome your family</p>
+                </div>
+            </div>
+            <div class="content">
+                <div class="pet-speech">
+                    <div class="pet-speech-header">
+                        <span style="font-size: 28px;">🐙</span>
+                        <span style="font-weight: 600; color: var(--text);">Chal</span>
+                    </div>
+                    <div class="pet-speech-text">One last thing! Post something in The Living Room -- this will be the first thing your kids see when they join!</div>
+                </div>
+
+                <div class="post-composer">
+                    <textarea rows="4" placeholder="Welcome to our family app!"></textarea>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <i class="fas fa-camera" style="font-size: 22px; color: var(--secondary); cursor: pointer;"></i>
+                        <span style="font-size: 13px; color: var(--text-secondary);">Add a photo</span>
+                    </div>
+                    <div class="suggested-posts">
+                        <div class="suggested-post" onclick="this.closest('.post-composer').querySelector('textarea').value = this.textContent">Welcome to Challey, family!</div>
+                        <div class="suggested-post" onclick="this.closest('.post-composer').querySelector('textarea').value = this.textContent">Let's earn some rewards!</div>
+                        <div class="suggested-post" onclick="this.closest('.post-composer').querySelector('textarea').value = this.textContent">Who's ready to level up?</div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" onclick="switchRole('parent'); navigateTo('parent-dashboard')">
+                    <i class="fas fa-paper-plane"></i> Post & Finish Setup
+                </button>
             </div>
         </div>
 
         <!-- SCREEN 3: KID CHORES -->
         <div id="kid-chores" class="screen">
             <div class="header">
-                <h1>My Chores</h1>
-                <p>Let's get it done!</p>
-                <div class="role-switcher" onclick="toggleRole()">
-                    <i class="fas fa-repeat"></i> <span class="role-text">Switch to Parent</span>
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <div class="role-switcher" onclick="toggleRole()">
+                            <i class="fas fa-repeat"></i> <span class="role-text">Switch to Parent</span>
+                        </div>
+                        <div class="points-header-badge">
+                            <i class="fas fa-coins" style="margin-right: 4px;"></i> 135 pts
+                        </div>
+                    </div>
+                    <div class="header-top-right">
+                        <div class="gear-icon" onclick="navigateTo('kid-settings')">
+                            <i class="fas fa-gear"></i>
+                        </div>
+                        <div class="bell-icon" onclick="toggleNotifications()">
+                            <i class="fas fa-bell"></i>
+                            <div class="notification-badge">3</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="points-header-badge">
-                    <i class="fas fa-coins" style="margin-right: 4px;"></i> 135 pts
-                </div>
-                <div class="gear-icon" onclick="navigateTo('kid-settings')">
-                    <i class="fas fa-gear"></i>
-                </div>
-                <div class="bell-icon" onclick="toggleNotifications()">
-                    <i class="fas fa-bell"></i>
-                    <div class="notification-badge">3</div>
+                <div class="header-title-row">
+                    <h1>My Chores</h1>
+                    <p>Let's get it done!</p>
                 </div>
             </div>
             <div class="content">
@@ -2901,58 +4239,133 @@
                     </div>
                 </div>
 
-                <div class="streak-card" onclick="navigateTo('kid-points')" style="cursor: pointer;">
+                <div class="streak-card" onclick="navigateTo('kid-board')" style="cursor: pointer;">
                     <h3>7 Day Streak! 🔥</h3>
                     <p>You're on fire! Keep it up to unlock special rewards</p>
                 </div>
 
                 <div class="tabs">
-                    <div class="tab active">To Do</div>
-                    <div class="tab">In Progress</div>
-                    <div class="tab">Done</div>
+                    <div class="tab active" onclick="switchChoreTab('todo', this)">To Do</div>
+                    <div class="tab" onclick="switchChoreTab('inprogress', this)">In Progress</div>
+                    <div class="tab" onclick="switchChoreTab('done', this)">Done</div>
                 </div>
 
-                <div class="card" onclick="navigateTo('kid-chore-detail')">
-                    <div class="card-header">
-                        <div class="card-title">Clean the garage</div>
-                        <div class="points-badge">50 pts</div>
+                <!-- To Do Tab -->
+                <div class="tab-content active" id="chore-tab-todo" data-tab="todo">
+                    <div class="card" onclick="navigateTo('kid-chore-detail')">
+                        <div class="card-header">
+                            <div class="card-title">Clean the garage</div>
+                            <div class="points-badge">50 pts</div>
+                        </div>
+                        <div class="card-meta">
+                            <span><i class="far fa-calendar"></i> Due Saturday</span>
+                            <span style="color: var(--accent); font-weight: 600;">Due today!</span>
+                        </div>
+                        <div class="chore-actions" onclick="event.stopPropagation();">
+                            <button class="chore-action-btn chore-action-start" onclick="startChore(this.closest('.card'))"><i class="fas fa-play"></i> Started it</button>
+                            <button class="chore-action-btn chore-action-done" onclick="completeChore(this.closest('.card'))"><i class="fas fa-check"></i> Done!</button>
+                            <i class="fas fa-repeat" style="color: var(--text-secondary); cursor: pointer; padding: 10px;" onclick="navigateTo('kid-swap-request')"></i>
+                        </div>
                     </div>
-                    <div class="card-meta">
-                        <span><i class="far fa-calendar"></i> Due Saturday</span>
-                        <span><i class="far fa-clock"></i> 2 days left</span>
+
+                    <div class="card" onclick="navigateTo('kid-chore-detail')">
+                        <div class="card-header">
+                            <div class="card-title">Walk the dog</div>
+                            <div class="points-badge">20 pts</div>
+                        </div>
+                        <div class="card-meta">
+                            <span><i class="far fa-calendar"></i> Daily</span>
+                            <span style="color: var(--accent); font-weight: 600;">Due today!</span>
+                        </div>
+                        <div class="chore-actions" onclick="event.stopPropagation();">
+                            <button class="chore-action-btn chore-action-start" onclick="startChore(this.closest('.card'))"><i class="fas fa-play"></i> Started it</button>
+                            <button class="chore-action-btn chore-action-done" onclick="completeChore(this.closest('.card'))"><i class="fas fa-check"></i> Done!</button>
+                            <i class="fas fa-repeat" style="color: var(--text-secondary); cursor: pointer; padding: 10px;" onclick="navigateTo('kid-swap-request')"></i>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="navigateTo('kid-chore-detail')">
+                        <div class="card-header">
+                            <div class="card-title">Do laundry (wash + fold)</div>
+                            <div class="points-badge">40 pts</div>
+                        </div>
+                        <div class="card-meta">
+                            <span><i class="far fa-calendar"></i> Due Sunday</span>
+                            <span><i class="far fa-clock"></i> 4 days left</span>
+                        </div>
+                        <div class="chore-actions" onclick="event.stopPropagation();">
+                            <button class="chore-action-btn chore-action-start" onclick="startChore(this.closest('.card'))"><i class="fas fa-play"></i> Started it</button>
+                            <button class="chore-action-btn chore-action-done" onclick="completeChore(this.closest('.card'))"><i class="fas fa-check"></i> Done!</button>
+                            <i class="fas fa-repeat" style="color: var(--text-secondary); cursor: pointer; padding: 10px;" onclick="navigateTo('kid-swap-request')"></i>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="navigateTo('kid-chore-detail')">
+                        <div class="card-header">
+                            <div class="card-title">Clean your room</div>
+                            <div class="points-badge">25 pts</div>
+                        </div>
+                        <div class="card-meta">
+                            <span><i class="far fa-calendar"></i> Weekly</span>
+                            <span><i class="far fa-clock"></i> Due Friday</span>
+                        </div>
+                        <div class="chore-actions" onclick="event.stopPropagation();">
+                            <button class="chore-action-btn chore-action-start" onclick="startChore(this.closest('.card'))"><i class="fas fa-play"></i> Started it</button>
+                            <button class="chore-action-btn chore-action-done" onclick="completeChore(this.closest('.card'))"><i class="fas fa-check"></i> Done!</button>
+                            <i class="fas fa-repeat" style="color: var(--text-secondary); cursor: pointer; padding: 10px;" onclick="navigateTo('kid-swap-request')"></i>
+                        </div>
                     </div>
                 </div>
 
-                <div class="card" onclick="navigateTo('kid-chore-detail')">
-                    <div class="card-header">
-                        <div class="card-title">Walk the dog</div>
-                        <div class="points-badge">20 pts</div>
-                    </div>
-                    <div class="card-meta">
-                        <span><i class="far fa-calendar"></i> Daily</span>
-                        <span><i class="far fa-clock"></i> Due today</span>
-                    </div>
-                </div>
-
-                <div class="card" onclick="navigateTo('kid-chore-detail')">
-                    <div class="card-header">
-                        <div class="card-title">Do laundry (wash + fold)</div>
-                        <div class="points-badge">40 pts</div>
-                    </div>
-                    <div class="card-meta">
-                        <span><i class="far fa-calendar"></i> Due Sunday</span>
-                        <span><i class="far fa-clock"></i> 4 days left</span>
+                <!-- In Progress Tab -->
+                <div class="tab-content" id="chore-tab-inprogress" data-tab="inprogress">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Vacuum living room</div>
+                            <div class="points-badge">30 pts</div>
+                        </div>
+                        <div class="card-meta">
+                            <span style="color: var(--secondary); font-weight: 500;">Still working on this?</span>
+                        </div>
+                        <div class="chore-actions">
+                            <button class="chore-action-btn chore-action-done" onclick="completeChore(this.closest('.card'))"><i class="fas fa-check"></i> Done!</button>
+                            <button class="chore-action-btn chore-action-working"><i class="fas fa-clock"></i> Still on it</button>
+                            <i class="fas fa-repeat" style="color: var(--text-secondary); cursor: pointer; padding: 10px;" onclick="navigateTo('kid-swap-request')"></i>
+                        </div>
                     </div>
                 </div>
 
-                <div class="card" onclick="navigateTo('kid-chore-detail')">
-                    <div class="card-header">
-                        <div class="card-title">Clean your room</div>
-                        <div class="points-badge">25 pts</div>
+                <!-- Done Tab -->
+                <div class="tab-content" id="chore-tab-done" data-tab="done">
+                    <div class="card" style="cursor: default;">
+                        <div class="card-header">
+                            <div class="card-title">Wash dishes</div>
+                            <div class="points-badge" style="background: #28a745;">15 pts</div>
+                        </div>
+                        <div class="card-meta">
+                            <span class="chore-status-badge chore-status-approved"><i class="fas fa-check"></i> Approved</span>
+                            <span><i class="far fa-clock"></i> Yesterday</span>
+                        </div>
                     </div>
-                    <div class="card-meta">
-                        <span><i class="far fa-calendar"></i> Weekly</span>
-                        <span><i class="far fa-clock"></i> Due Friday</span>
+                    <div class="card" style="cursor: default;">
+                        <div class="card-header">
+                            <div class="card-title">Make bed</div>
+                            <div class="points-badge">5 pts</div>
+                        </div>
+                        <div class="card-meta">
+                            <span class="chore-status-badge chore-status-pending">Pending approval</span>
+                            <span><i class="far fa-clock"></i> Today</span>
+                        </div>
+                    </div>
+                    <div class="card" style="cursor: default;">
+                        <div class="card-header">
+                            <div class="card-title">Take out trash</div>
+                            <div class="points-badge">10 pts</div>
+                        </div>
+                        <div class="card-meta">
+                            <span class="chore-status-badge chore-status-redo">Redo requested</span>
+                            <span><i class="far fa-clock"></i> 2 days ago</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2969,7 +4382,7 @@
                     <i class="fas fa-coins"></i>
                     <span>Points</span>
                 </div>
-                <div class="nav-item" onclick="navigateTo('kid-leaderboard')">
+                <div class="nav-item" onclick="navigateTo('kid-board')">
                     <i class="fas fa-trophy"></i>
                     <span>Board</span>
                 </div>
@@ -3504,28 +4917,42 @@
         <!-- SCREEN 6: KID REWARDS SHOP -->
         <div id="kid-rewards" class="screen">
             <div class="header">
-                <h1>Rewards Shop</h1>
-                <p>Spend your points!</p>
-                <div class="role-switcher" onclick="toggleRole()">
-                    <i class="fas fa-repeat"></i> <span class="role-text">Switch to Parent</span>
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <div class="role-switcher" onclick="toggleRole()">
+                            <i class="fas fa-repeat"></i> <span class="role-text">Switch to Parent</span>
+                        </div>
+                    </div>
+                    <div class="header-top-right">
+                        <div class="gear-icon" onclick="navigateTo('kid-settings')"><i class="fas fa-gear"></i></div>
+                        <div class="bell-icon" onclick="toggleNotifications()"><i class="fas fa-bell"></i><div class="notification-badge">3</div></div>
+                    </div>
+                </div>
+                <div class="header-title-row">
+                    <h1>Rewards Shop</h1>
+                    <p style="opacity: 1;"><i class="fas fa-coins" style="color: var(--accent);"></i> 135 pts available</p>
                 </div>
             </div>
             <div class="content">
+                <!-- Wishlist Section -->
+                <div class="section-header">
+                    <div class="section-title">My Wishlist</div>
+                    <div class="section-action" onclick="navigateTo('kid-add-wish')">+ Add to Wishlist</div>
+                </div>
                 <div class="wishlist-link-banner" onclick="navigateTo('kid-wishlist')">
                     <i class="fas fa-wand-magic-sparkles" style="font-size: 24px;"></i>
                     <div>
-                        <div style="font-weight: 700; font-size: 15px;">My Wishlist</div>
+                        <div style="font-weight: 700; font-size: 15px;">View My Wishlist</div>
                         <div style="font-size: 12px; opacity: 0.9;">3 wishes — tap to manage</div>
                     </div>
                     <i class="fas fa-chevron-right" style="margin-left: auto; opacity: 0.7;"></i>
                 </div>
 
-                <div class="stat-card">
-                    <div class="stat-value">135</div>
-                    <div class="stat-label">Points Available</div>
+                <div class="section-header" style="margin-top: 16px;">
+                    <div class="section-title">Available Rewards</div>
                 </div>
 
-                <div class="reward-card cashout-card" onclick="navigateTo('kid-cashout')">
+                <div class="reward-card" onclick="navigateTo('kid-redeem-confirm')" style="display: none;">
                     <div class="reward-icon">💵</div>
                     <div class="reward-title">Cash Out</div>
                     <p style="font-size: 13px; opacity: 0.9; margin-bottom: 8px;">Turn your points into real money!</p>
@@ -3609,7 +5036,7 @@
                     <i class="fas fa-coins"></i>
                     <span>Points</span>
                 </div>
-                <div class="nav-item" onclick="navigateTo('kid-leaderboard')">
+                <div class="nav-item" onclick="navigateTo('kid-board')">
                     <i class="fas fa-trophy"></i>
                     <span>Board</span>
                 </div>
@@ -3804,10 +5231,20 @@
         <!-- SCREEN 8: KID POINTS -->
         <div id="kid-points" class="screen">
             <div class="header">
-                <h1>My Points</h1>
-                <p>Track your earnings</p>
-                <div class="role-switcher" onclick="toggleRole()">
-                    <i class="fas fa-repeat"></i> <span class="role-text">Switch to Parent</span>
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <div class="role-switcher" onclick="toggleRole()">
+                            <i class="fas fa-repeat"></i> <span class="role-text">Switch to Parent</span>
+                        </div>
+                    </div>
+                    <div class="header-top-right">
+                        <div class="gear-icon" onclick="navigateTo('kid-settings')"><i class="fas fa-gear"></i></div>
+                        <div class="bell-icon" onclick="toggleNotifications()"><i class="fas fa-bell"></i><div class="notification-badge">3</div></div>
+                    </div>
+                </div>
+                <div class="header-title-row">
+                    <h1>My Points</h1>
+                    <p>Track your earnings</p>
                 </div>
             </div>
             <div class="content">
@@ -3816,51 +5253,35 @@
                     <div class="stat-label">Current Balance</div>
                 </div>
 
+                <!-- Cash-out section -->
+                <div class="card" style="background: linear-gradient(135deg, #d4edda, #c3e6cb); cursor: pointer;" onclick="navigateTo('kid-cashout-confirm')">
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <div>
+                            <div style="font-size: 15px; font-weight: 600; color: #155724;">Your points are worth $6.75</div>
+                            <div style="font-size: 13px; color: #28a745;">100 pts = $5.00</div>
+                        </div>
+                        <button class="btn btn-success" style="width: auto; padding: 10px 20px; font-size: 14px;" onclick="event.stopPropagation(); navigateTo('kid-cashout-confirm')">
+                            <i class="fas fa-dollar-sign"></i> Cash Out
+                        </button>
+                    </div>
+                </div>
+
                 <div class="stat-grid">
                     <div class="mini-stat">
+                        <div class="mini-stat-value">85</div>
+                        <div class="mini-stat-label">Earned This Week</div>
+                    </div>
+                    <div class="mini-stat">
                         <div class="mini-stat-value">235</div>
-                        <div class="mini-stat-label">Total Earned</div>
+                        <div class="mini-stat-label">Earned This Month</div>
                     </div>
                     <div class="mini-stat">
                         <div class="mini-stat-value">100</div>
-                        <div class="mini-stat-label">Total Spent</div>
+                        <div class="mini-stat-label">Spent This Month</div>
                     </div>
-                </div>
-
-                <div class="closest-reward">
-                    <h3>Closest Reward</h3>
-                    <p>Sleepover with Friend — 15 points away!</p>
-                </div>
-
-                <div class="section-header">
-                    <div class="section-title">My Badges</div>
-                </div>
-
-                <div class="card" style="cursor: default;">
-                    <div class="badges-grid">
-                        <div class="badge-display">
-                            <div class="badge-icon" style="background: linear-gradient(135deg, #FFD700, #FFA500);">⭐</div>
-                            <div class="badge-label">Super Star</div>
-                        </div>
-                        <div class="badge-display">
-                            <div class="badge-icon" style="background: linear-gradient(135deg, #FF69B4, #D63384);">💪</div>
-                            <div class="badge-label">Hard Worker</div>
-                        </div>
-                        <div class="badge-display">
-                            <div class="badge-icon" style="background: linear-gradient(135deg, #39D353, #28a745);">🌟</div>
-                            <div class="badge-label">Above & Beyond</div>
-                        </div>
-                        <div class="badge-display">
-                            <div class="badge-icon" style="background: linear-gradient(135deg, #58A6FF, #2E86AB);">🔥</div>
-                            <div class="badge-label">7-Day Streak</div>
-                        </div>
-                        <div class="badge-display">
-                            <div class="badge-icon" style="background: linear-gradient(135deg, #FF6B9D, #FEC163);">🎂</div>
-                            <div class="badge-label">Birthday Star</div>
-                        </div>
-                    </div>
-                    <div style="text-align: center; font-size: 12px; color: var(--text-secondary); margin-top: 8px;">
-                        5 badges earned — keep it up!
+                    <div class="mini-stat">
+                        <div class="mini-stat-value">7</div>
+                        <div class="mini-stat-label">Day Streak</div>
                     </div>
                 </div>
 
@@ -3948,7 +5369,7 @@
                     <i class="fas fa-coins"></i>
                     <span>Points</span>
                 </div>
-                <div class="nav-item" onclick="navigateTo('kid-leaderboard')">
+                <div class="nav-item" onclick="navigateTo('kid-board')">
                     <i class="fas fa-trophy"></i>
                     <span>Board</span>
                 </div>
@@ -3959,21 +5380,56 @@
             </div>
         </div>
 
-        <!-- NEW SCREEN: KID LEADERBOARD -->
-        <div id="kid-leaderboard" class="screen">
+        <!-- SCREEN: KID BOARD (restructured from Leaderboard) -->
+        <div id="kid-board" class="screen">
             <div class="header">
-                <h1>Leaderboard</h1>
-                <p>This week's ranking</p>
-                <div class="role-switcher" onclick="toggleRole()">
-                    <i class="fas fa-repeat"></i> <span class="role-text">Switch to Parent</span>
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <div class="role-switcher" onclick="toggleRole()">
+                            <i class="fas fa-repeat"></i> <span class="role-text">Switch to Parent</span>
+                        </div>
+                    </div>
+                    <div class="header-top-right">
+                        <div class="gear-icon" onclick="navigateTo('kid-settings')"><i class="fas fa-gear"></i></div>
+                        <div class="bell-icon" onclick="toggleNotifications()"><i class="fas fa-bell"></i><div class="notification-badge">3</div></div>
+                    </div>
+                </div>
+                <div class="header-title-row">
+                    <h1>My Board</h1>
+                    <p>Your badges, rankings & more</p>
                 </div>
             </div>
             <div class="content">
+                <!-- My Swag Section -->
                 <div class="section-header">
-                    <div class="section-title">Top Performers</div>
+                    <div class="section-title">My Swag</div>
+                </div>
+                <div class="swag-section">
+                    <div class="swag-profile">M</div>
+                    <div class="swag-badges">
+                        <div class="swag-badge" style="background: linear-gradient(135deg, #FFD700, #FFA500);">⭐</div>
+                        <div class="swag-badge" style="background: linear-gradient(135deg, #FF69B4, #D63384);">💪</div>
+                        <div class="swag-badge" style="background: linear-gradient(135deg, #39D353, #28a745);">🌟</div>
+                        <div class="swag-badge" style="background: linear-gradient(135deg, #58A6FF, #2E86AB);">🔥</div>
+                        <div class="swag-badge" style="background: linear-gradient(135deg, #FF6B9D, #FEC163);">🎂</div>
+                    </div>
                 </div>
 
-                <div class="leaderboard-item">
+                <!-- Spotlight -->
+                <div class="section-header">
+                    <div class="section-title">Spotlight</div>
+                </div>
+                <div class="spotlight-card">
+                    <div style="font-size: 36px; margin-bottom: 8px;">👑</div>
+                    <div style="font-size: 18px; font-weight: 700;">This Week's MVP: Maggie</div>
+                    <div style="font-size: 14px; opacity: 0.9; margin-top: 4px;">85 pts earned!</div>
+                </div>
+
+                <!-- Family Rankings -->
+                <div class="section-header">
+                    <div class="section-title">Family Rankings</div>
+                </div>
+                <div class="leaderboard-item" onclick="navigateTo('kid-board')" style="border: 2px solid var(--accent);">
                     <div class="leaderboard-rank">🥇</div>
                     <div class="leaderboard-avatar">M</div>
                     <div class="leaderboard-info">
@@ -3982,8 +5438,7 @@
                     </div>
                     <div class="leaderboard-points">85 pts</div>
                 </div>
-
-                <div class="leaderboard-item">
+                <div class="leaderboard-item" onclick="navigateTo('sibling-profile')" style="cursor: pointer;">
                     <div class="leaderboard-rank">🥈</div>
                     <div class="leaderboard-avatar">L</div>
                     <div class="leaderboard-info">
@@ -3992,8 +5447,7 @@
                     </div>
                     <div class="leaderboard-points">65 pts</div>
                 </div>
-
-                <div class="leaderboard-item">
+                <div class="leaderboard-item" onclick="navigateTo('sibling-profile')" style="cursor: pointer;">
                     <div class="leaderboard-rank">🥉</div>
                     <div class="leaderboard-avatar">J</div>
                     <div class="leaderboard-info">
@@ -4003,12 +5457,7 @@
                     <div class="leaderboard-points">50 pts</div>
                 </div>
 
-                <div class="card" style="text-align: center; margin-top: 30px;">
-                    <div style="font-size: 48px; margin-bottom: 12px;">👑</div>
-                    <div style="font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 8px;">You're #1 this week!</div>
-                    <p style="font-size: 14px; color: var(--text-secondary);">Keep up the great work to stay on top!</p>
-                </div>
-
+                <!-- Send Shout-Out -->
                 <div class="shoutout-banner" onclick="navigateTo('kid-shoutout-select')">
                     <div style="font-size: 32px;">💝</div>
                     <div style="flex: 1;">
@@ -4019,33 +5468,51 @@
                 </div>
             </div>
             <div class="bottom-nav kid-nav">
-                <div class="nav-item" onclick="navigateTo('kid-chores')">
-                    <i class="fas fa-list-check"></i>
-                    <span>Chores</span>
+                <div class="nav-item" onclick="navigateTo('kid-chores')"><i class="fas fa-list-check"></i><span>Chores</span></div>
+                <div class="nav-item" onclick="navigateTo('kid-rewards')"><i class="fas fa-gift"></i><span>Rewards</span></div>
+                <div class="nav-item" onclick="navigateTo('kid-points')"><i class="fas fa-coins"></i><span>Points</span></div>
+                <div class="nav-item active" onclick="navigateTo('kid-board')"><i class="fas fa-trophy"></i><span>Board</span></div>
+                <div class="nav-item" onclick="navigateTo('kid-living-room')"><i class="fas fa-couch"></i><span>Living Room</span></div>
+            </div>
+        </div>
+
+        <!-- SCREEN: SIBLING PROFILE -->
+        <div id="sibling-profile" class="screen">
+            <div class="header">
+                <i class="fas fa-arrow-left back-btn" onclick="navigateTo('kid-board')"></i>
+                <h1>Jake's Profile</h1>
+                <p>Your brother</p>
+            </div>
+            <div class="content">
+                <div class="sibling-profile-header">
+                    <div class="sibling-profile-avatar">J</div>
+                    <h2 style="font-size: 22px; color: var(--text);">Jake</h2>
+                    <p style="font-size: 14px; color: var(--text-secondary);">Age 10</p>
                 </div>
-                <div class="nav-item" onclick="navigateTo('kid-rewards')">
-                    <i class="fas fa-gift"></i>
-                    <span>Rewards</span>
+                <div class="section-header"><div class="section-title">Badges</div></div>
+                <div class="swag-section" style="justify-content: center;">
+                    <div class="swag-badges">
+                        <div class="swag-badge" style="background: linear-gradient(135deg, #FFD700, #FFA500);">⭐</div>
+                        <div class="swag-badge" style="background: linear-gradient(135deg, #39D353, #28a745);">🌟</div>
+                        <div class="swag-badge" style="background: linear-gradient(135deg, #58A6FF, #2E86AB);">🔥</div>
+                    </div>
                 </div>
-                <div class="nav-item" onclick="navigateTo('kid-points')">
-                    <i class="fas fa-coins"></i>
-                    <span>Points</span>
+                <div class="stat-grid">
+                    <div class="mini-stat"><div class="mini-stat-value">3</div><div class="mini-stat-label">Day Streak</div></div>
+                    <div class="mini-stat"><div class="mini-stat-value">70</div><div class="mini-stat-label">Points This Month</div></div>
+                    <div class="mini-stat"><div class="mini-stat-value">24</div><div class="mini-stat-label">Chores Completed</div></div>
+                    <div class="mini-stat"><div class="mini-stat-value">5</div><div class="mini-stat-label">Shout-Outs</div></div>
                 </div>
-                <div class="nav-item active" onclick="navigateTo('kid-leaderboard')">
-                    <i class="fas fa-trophy"></i>
-                    <span>Board</span>
-                </div>
-                <div class="nav-item" onclick="navigateTo('kid-living-room')">
-                    <i class="fas fa-couch"></i>
-                    <span>Living Room</span>
-                </div>
+                <button class="btn" onclick="navigateTo('kid-shoutout-select')" style="background: linear-gradient(135deg, #FF69B4, #E74C3C); color: white; margin-top: 16px;">
+                    <i class="fas fa-heart"></i> Give a Shout-Out
+                </button>
             </div>
         </div>
 
         <!-- SCREEN: KID SHOUT-OUT - SELECT SIBLING -->
         <div id="kid-shoutout-select" class="screen">
             <div class="header" style="background: linear-gradient(135deg, #FF69B4, #E74C3C);">
-                <i class="fas fa-arrow-left back-btn" onclick="navigateTo('kid-leaderboard')"></i>
+                <i class="fas fa-arrow-left back-btn" onclick="navigateTo('kid-board')"></i>
                 <h1>Give a Shout-Out</h1>
                 <p>Who do you want to celebrate?</p>
             </div>
@@ -4347,17 +5814,25 @@
         <!-- THE LIVING ROOM -->
         <div id="kid-living-room" class="screen">
             <div class="header">
-                <h1>The Living Room</h1>
-                <p>Your family's space</p>
-                <div class="role-switcher" onclick="toggleRole()">
-                    <i class="fas fa-repeat"></i> <span class="role-text">Switch to Parent</span>
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <div class="role-switcher" onclick="toggleRole()">
+                            <i class="fas fa-repeat"></i> <span class="role-text">Switch to Parent</span>
+                        </div>
+                    </div>
+                    <div class="header-top-right">
+                        <div class="gear-icon" onclick="navigateTo('kid-settings')">
+                            <i class="fas fa-gear"></i>
+                        </div>
+                        <div class="bell-icon" onclick="toggleNotifications()">
+                            <i class="fas fa-bell"></i>
+                            <div class="notification-badge">3</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="gear-icon" onclick="navigateTo('kid-settings')">
-                    <i class="fas fa-gear"></i>
-                </div>
-                <div class="bell-icon" onclick="toggleNotifications()">
-                    <i class="fas fa-bell"></i>
-                    <div class="notification-badge">3</div>
+                <div class="header-title-row">
+                    <h1>The Living Room</h1>
+                    <p>Your family's space</p>
                 </div>
             </div>
             <div class="content" style="padding: 16px;">
@@ -4640,7 +6115,7 @@
                     <i class="fas fa-coins"></i>
                     <span>Points</span>
                 </div>
-                <div class="nav-item" onclick="navigateTo('kid-leaderboard')">
+                <div class="nav-item" onclick="navigateTo('kid-board')">
                     <i class="fas fa-trophy"></i>
                     <span>Board</span>
                 </div>
@@ -4654,14 +6129,22 @@
         <!-- PARENT LIVING ROOM -->
         <div id="parent-living-room" class="screen">
             <div class="header">
-                <h1>The Living Room</h1>
-                <p>Your family's space</p>
-                <div class="role-switcher" onclick="toggleRole()">
-                    <i class="fas fa-repeat"></i> <span class="role-text">Switch to Kid</span>
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <div class="role-switcher" onclick="toggleRole()">
+                            <i class="fas fa-repeat"></i> <span class="role-text">Switch to Kid</span>
+                        </div>
+                    </div>
+                    <div class="header-top-right">
+                        <div class="bell-icon" onclick="toggleNotifications()">
+                            <i class="fas fa-bell"></i>
+                            <div class="notification-badge">5</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="bell-icon" onclick="toggleNotifications()">
-                    <i class="fas fa-bell"></i>
-                    <div class="notification-badge">5</div>
+                <div class="header-title-row">
+                    <h1>The Living Room</h1>
+                    <p>Your family's space</p>
                 </div>
             </div>
             <div class="content" style="padding: 16px;">
@@ -4949,9 +6432,16 @@
         <!-- SCREEN 9B: KID SETTINGS -->
         <div id="kid-settings" class="screen">
             <div class="header">
-                <i class="fas fa-arrow-left back-btn" onclick="navigateTo('kid-chores')"></i>
-                <h1>My Settings</h1>
-                <p>Make Challey yours!</p>
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <i class="fas fa-arrow-left back-btn" onclick="navigateTo('kid-chores')"></i>
+                    </div>
+                    <div class="header-top-right"></div>
+                </div>
+                <div class="header-title-row">
+                    <h1>My Settings</h1>
+                    <p>Make Challey yours!</p>
+                </div>
             </div>
             <div class="content">
                 <div class="card">
@@ -5035,7 +6525,7 @@
                     <div class="card-title" style="margin-bottom: 12px;">Companion</div>
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
                         <div style="display: flex; align-items: center; gap: 8px;">
-                            <span style="font-size: 24px;">🐙</span>
+                            <span style="font-size: 24px;" data-companion-emoji>🐙</span>
                             <span style="font-size: 14px; color: var(--text);">Show Chal</span>
                         </div>
                         <div class="toggle-switch active" id="companion-toggle" onclick="toggleCompanionSetting()">
@@ -5056,7 +6546,7 @@
                 <div class="card">
                     <div class="card-title" style="margin-bottom: 8px;">About</div>
                     <div style="font-size: 13px; color: #999;">
-                        Challey v2.3.0<br>
+                        Challey v3.0.0<br>
                         Made with care for families
                     </div>
                 </div>
@@ -5066,6 +6556,20 @@
         <!-- SCREEN 10: PARENT DASHBOARD -->
         <div id="parent-dashboard" class="screen">
             <div class="dashboard-header">
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <div class="role-switcher" onclick="toggleRole()">
+                            <i class="fas fa-repeat"></i> <span class="role-text">Switch to Kid</span>
+                        </div>
+                    </div>
+                    <div class="header-top-right">
+                        <div class="gear-icon" onclick="navigateTo('parent-settings')"><i class="fas fa-gear"></i></div>
+                        <div class="bell-icon" onclick="toggleNotifications()">
+                            <i class="fas fa-bell"></i>
+                            <div class="notification-badge">5</div>
+                        </div>
+                    </div>
+                </div>
                 <h1>Family Dashboard</h1>
                 <p>The Johnson Family</p>
                 <div class="quick-stats">
@@ -5081,13 +6585,6 @@
                         <div class="quick-stat-value">12</div>
                         <div class="quick-stat-label">This Week</div>
                     </div>
-                </div>
-                <div class="role-switcher" onclick="toggleRole()">
-                    <i class="fas fa-repeat"></i> <span class="role-text">Switch to Kid</span>
-                </div>
-                <div class="bell-icon" onclick="toggleNotifications()">
-                    <i class="fas fa-bell"></i>
-                    <div class="notification-badge">5</div>
                 </div>
             </div>
             <div class="content">
@@ -5155,6 +6652,36 @@
                     </div>
                     <div style="font-size: 13px; color: #6f42c1; margin-top: 4px; font-weight: 600;">
                         <i class="fas fa-hand-pointer"></i> Tap to review
+                    </div>
+                </div>
+
+                <!-- Suggestion Cards -->
+                <div class="notification-action-card" style="border-left: 4px solid var(--secondary);">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
+                        <div style="font-size: 28px;">💡</div>
+                        <div style="flex: 1;">
+                            <div style="font-size: 14px; font-weight: 600; color: var(--text);">Chore Suggestion from Maggie</div>
+                            <div style="font-size: 13px; color: var(--text-secondary);">"Can I do Help with Groceries for 30 pts?"</div>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 8px;">
+                        <button class="btn btn-success" style="flex: 1; font-size: 13px; padding: 8px;" onclick="showToast('Chore accepted!'); this.closest('.notification-action-card').style.display='none';">Accept</button>
+                        <button class="btn btn-outline" style="flex: 1; font-size: 13px; padding: 8px;" onclick="showToast('Dismissed'); this.closest('.notification-action-card').style.display='none';">Not Now</button>
+                        <button class="btn" style="flex: 0; font-size: 13px; padding: 8px 12px; background: #dc3545; color: white;" onclick="showToast('Rejected'); this.closest('.notification-action-card').style.display='none';"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+
+                <div class="notification-action-card" style="border-left: 4px solid #FF69B4;">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
+                        <div style="font-size: 28px;">🎁</div>
+                        <div style="flex: 1;">
+                            <div style="font-size: 14px; font-weight: 600; color: var(--text);">Reward Suggestion from Jake</div>
+                            <div style="font-size: 13px; color: var(--text-secondary);">"Can we add Pizza Night for 80 pts?"</div>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 8px;">
+                        <button class="btn btn-success" style="flex: 1; font-size: 13px; padding: 8px;" onclick="showToast('Reward added!'); this.closest('.notification-action-card').style.display='none';">Add Reward</button>
+                        <button class="btn btn-outline" style="flex: 1; font-size: 13px; padding: 8px;" onclick="showToast('Dismissed'); this.closest('.notification-action-card').style.display='none';">Not Now</button>
                     </div>
                 </div>
 
@@ -5379,11 +6906,17 @@
         <!-- SCREEN 12: PARENT VERIFY CHORE -->
         <div id="parent-verify" class="screen">
             <div class="header">
-                <i class="fas fa-arrow-left back-btn" onclick="navigateTo('parent-dashboard')"></i>
-                <h1>Verify Chores</h1>
-                <p><span id="chores-count">3</span> waiting for review</p>
-                <div class="approve-all-btn" onclick="approveAllChores()">
-                    Approve All
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <i class="fas fa-arrow-left back-btn" onclick="navigateTo('parent-dashboard')"></i>
+                    </div>
+                    <div class="header-top-right">
+                        <div class="approve-all-btn" onclick="approveAllChores()">Approve All</div>
+                    </div>
+                </div>
+                <div class="header-title-row">
+                    <h1>Verify Chores</h1>
+                    <p><span id="chores-count">3</span> waiting for review</p>
                 </div>
             </div>
             <div class="content" id="verify-content">
@@ -5504,10 +7037,19 @@
         <!-- SCREEN 13: PARENT REWARDS CATALOG -->
         <div id="parent-rewards" class="screen">
             <div class="header">
-                <h1>Reward Catalog</h1>
-                <p>Manage rewards</p>
-                <div class="role-switcher" onclick="toggleRole()">
-                    <i class="fas fa-repeat"></i> <span class="role-text">Switch to Kid</span>
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <i class="fas fa-arrow-left back-btn" onclick="navigateTo('parent-dashboard')"></i>
+                    </div>
+                    <div class="header-top-right">
+                        <div class="role-switcher" onclick="toggleRole()">
+                            <i class="fas fa-repeat"></i> <span class="role-text">Switch to Kid</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-title-row">
+                    <h1>Reward Catalog</h1>
+                    <p>Manage rewards</p>
                 </div>
             </div>
             <div class="content">
@@ -5800,10 +7342,19 @@
         <!-- SCREEN 15: PARENT FAMILY MANAGEMENT -->
         <div id="parent-family" class="screen">
             <div class="header">
-                <h1>Family Management</h1>
-                <p>The Johnson Family</p>
-                <div class="role-switcher" onclick="toggleRole()">
-                    <i class="fas fa-repeat"></i> <span class="role-text">Switch to Kid</span>
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <i class="fas fa-arrow-left back-btn" onclick="navigateTo('parent-dashboard')"></i>
+                    </div>
+                    <div class="header-top-right">
+                        <div class="role-switcher" onclick="toggleRole()">
+                            <i class="fas fa-repeat"></i> <span class="role-text">Switch to Kid</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-title-row">
+                    <h1>Family Management</h1>
+                    <p>The Johnson Family</p>
                 </div>
             </div>
             <div class="content">
@@ -6017,131 +7568,258 @@
         <!-- SCREEN 16: PARENT SETTINGS -->
         <div id="parent-settings" class="screen">
             <div class="header">
-                <i class="fas fa-arrow-left back-btn" onclick="navigateTo('parent-family')"></i>
-                <h1>Settings</h1>
-                <p>Customize your experience</p>
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <i class="fas fa-arrow-left back-btn" onclick="navigateTo('parent-dashboard')"></i>
+                    </div>
+                    <div class="header-top-right"></div>
+                </div>
+                <div class="header-title-row">
+                    <h1>Settings</h1>
+                    <p>Customize your experience</p>
+                </div>
             </div>
             <div class="content">
-                <div class="card">
-                    <div class="card-title" style="margin-bottom: 16px;">Profile</div>
-                    <div class="profile-pic-large">
-                        M
-                        <div class="avatar-camera"><i class="fas fa-camera"></i></div>
+
+                <!-- Family Code at top -->
+                <div class="card" style="text-align: center; background: linear-gradient(135deg, var(--primary), var(--secondary));">
+                    <div style="font-size: 13px; color: rgba(255,255,255,0.8); margin-bottom: 4px;">Family Code</div>
+                    <div style="font-size: 28px; font-weight: 700; color: white; letter-spacing: 4px;">JOHN13</div>
+                    <div style="font-size: 12px; color: rgba(255,255,255,0.7); margin-top: 4px;">Share with family members to join</div>
+                </div>
+
+                <!-- My Profile -->
+                <div class="settings-section">
+                    <div class="settings-section-title">My Profile</div>
+                    <div class="card">
+                        <div style="display: flex; align-items: center; gap: 16px;">
+                            <div class="profile-pic-large" style="width: 60px; height: 60px; font-size: 24px; margin: 0;">
+                                M
+                                <div class="avatar-camera" style="width: 22px; height: 22px; font-size: 10px;"><i class="fas fa-camera"></i></div>
+                            </div>
+                            <div style="flex: 1;">
+                                <div style="font-size: 18px; font-weight: 700; color: var(--text);">Mike Johnson</div>
+                                <div style="font-size: 13px; color: var(--text-secondary);">Admin • mike@email.com</div>
+                            </div>
+                            <i class="fas fa-chevron-right" style="color: var(--text-secondary);"></i>
+                        </div>
                     </div>
-                    <div style="text-align: center; font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 8px;">Mike Johnson</div>
-                    <div style="text-align: center; font-size: 14px; color: var(--text-secondary); margin-bottom: 16px;">Admin • The Johnson Family</div>
-                    <button class="btn btn-secondary" style="font-size: 14px; padding: 12px;">
-                        <i class="fas fa-camera"></i> Change Photo
+                </div>
+
+                <!-- My Kids -->
+                <div class="settings-section">
+                    <div class="settings-section-title">My Kids</div>
+                    <div class="card" style="padding: 0;">
+                        <div class="settings-item" style="border-bottom: 1px solid var(--border);">
+                            <div style="display: flex; align-items: center; gap: 12px; flex: 1;">
+                                <div style="width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, var(--secondary), var(--primary)); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 14px;">M</div>
+                                <div>
+                                    <div style="font-weight: 600; color: var(--text);">Maggie</div>
+                                    <div style="font-size: 12px; color: var(--text-secondary);">Code: MAG01</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <div style="font-size: 12px; color: var(--text-secondary); display: flex; align-items: center; gap: 4px;">
+                                    <i class="fas fa-lock" style="font-size: 10px;"></i> PIN
+                                    <div class="toggle-switch active" style="transform: scale(0.7);">
+                                        <div class="toggle-thumb"></div>
+                                    </div>
+                                </div>
+                                <span style="font-size: 12px; color: var(--secondary); cursor: pointer;" onclick="showToast('PIN reset — Maggie will set a new one')">Reset PIN</span>
+                            </div>
+                        </div>
+                        <div class="settings-item" style="border-bottom: 1px solid var(--border);">
+                            <div style="display: flex; align-items: center; gap: 12px; flex: 1;">
+                                <div style="width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, #39D353, #2196F3); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 14px;">J</div>
+                                <div>
+                                    <div style="font-weight: 600; color: var(--text);">Jake</div>
+                                    <div style="font-size: 12px; color: var(--text-secondary);">Code: JAK01</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <div style="font-size: 12px; color: var(--text-secondary); display: flex; align-items: center; gap: 4px;">
+                                    <i class="fas fa-lock" style="font-size: 10px;"></i> PIN
+                                    <div class="toggle-switch active" style="transform: scale(0.7);">
+                                        <div class="toggle-thumb"></div>
+                                    </div>
+                                </div>
+                                <span style="font-size: 12px; color: var(--secondary); cursor: pointer;" onclick="showToast('PIN reset — Jake will set a new one')">Reset PIN</span>
+                            </div>
+                        </div>
+                        <div class="settings-item">
+                            <div style="display: flex; align-items: center; gap: 12px; flex: 1;">
+                                <div style="width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, #FF69B4, #FF6B35); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 14px;">L</div>
+                                <div>
+                                    <div style="font-weight: 600; color: var(--text);">Lily</div>
+                                    <div style="font-size: 12px; color: var(--text-secondary);">Code: LIL01</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <div style="font-size: 12px; color: var(--text-secondary); display: flex; align-items: center; gap: 4px;">
+                                    <i class="fas fa-lock" style="font-size: 10px;"></i> PIN
+                                    <div class="toggle-switch" style="transform: scale(0.7);">
+                                        <div class="toggle-thumb"></div>
+                                    </div>
+                                </div>
+                                <span style="font-size: 12px; color: #999;">No PIN</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline" style="font-size: 14px; margin-top: 8px;" onclick="navigateTo('add-kids')">
+                        <i class="fas fa-plus"></i> Add Kid
                     </button>
                 </div>
 
-                <div class="card" onclick="navigateTo('parent-companion-config')" style="cursor: pointer;">
-                    <div style="display: flex; align-items: center; gap: 16px;">
-                        <div style="font-size: 40px;">🐙</div>
-                        <div style="flex: 1;">
-                            <div class="card-title">Chal Settings</div>
-                            <p style="font-size: 13px; color: var(--text-secondary); margin-top: 4px;">
-                                Configure your kids' companion
-                            </p>
-                        </div>
-                        <i class="fas fa-chevron-right" style="color: var(--text-secondary);"></i>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-title" style="margin-bottom: 16px;">Appearance</div>
-
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                        <div>
-                            <div style="font-size: 14px; font-weight: 600; color: var(--text);">Dark Mode</div>
-                            <div style="font-size: 12px; color: var(--text-secondary);">Switch to dark theme</div>
-                        </div>
-                        <div class="toggle-switch" id="dark-mode-toggle" onclick="toggleDarkMode()">
-                            <div class="toggle-thumb"></div>
-                        </div>
-                    </div>
-
-                    <div style="font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 12px;">Color Theme</div>
-                    <div class="theme-grid">
-                        <div class="theme-item theme-ocean active" onclick="setTheme('ocean')">
-                            <div class="theme-preview"></div>
-                            <div class="theme-name">Ocean</div>
-                        </div>
-                        <div class="theme-item theme-sunset" onclick="setTheme('sunset')">
-                            <div class="theme-preview"></div>
-                            <div class="theme-name">Sunset</div>
-                        </div>
-                        <div class="theme-item theme-forest" onclick="setTheme('forest')">
-                            <div class="theme-preview"></div>
-                            <div class="theme-name">Forest</div>
-                        </div>
-                        <div class="theme-item theme-midnight" onclick="setTheme('midnight')">
-                            <div class="theme-preview"></div>
-                            <div class="theme-name">Midnight</div>
-                        </div>
-                        <div class="theme-item theme-bubblegum" onclick="setTheme('bubblegum')">
-                            <div class="theme-preview"></div>
-                            <div class="theme-name">Bubblegum</div>
-                        </div>
-                        <div class="theme-item theme-arctic" onclick="setTheme('arctic')">
-                            <div class="theme-preview"></div>
-                            <div class="theme-name">Arctic</div>
+                <!-- Family Pet -->
+                <div class="settings-section">
+                    <div class="settings-section-title">Family Pet</div>
+                    <div class="card" onclick="navigateTo('parent-companion-config')" style="cursor: pointer;">
+                        <div style="display: flex; align-items: center; gap: 16px;">
+                            <div style="font-size: 40px;" data-companion-emoji>🐙</div>
+                            <div style="flex: 1;">
+                                <div class="card-title">Chal Settings</div>
+                                <p style="font-size: 13px; color: var(--text-secondary); margin-top: 4px;">
+                                    Configure your kids' companion
+                                </p>
+                            </div>
+                            <i class="fas fa-chevron-right" style="color: var(--text-secondary);"></i>
                         </div>
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="card-title" style="margin-bottom: 12px;">Notifications</div>
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-                        <span style="font-size: 14px;">Chore completions</span>
-                        <div class="toggle-switch active">
-                            <div class="toggle-thumb"></div>
+                <!-- Appearance -->
+                <div class="settings-section">
+                    <div class="settings-section-title">Appearance</div>
+                    <div class="card">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                            <div>
+                                <div style="font-size: 14px; font-weight: 600; color: var(--text);">Dark Mode</div>
+                                <div style="font-size: 12px; color: var(--text-secondary);">Switch to dark theme</div>
+                            </div>
+                            <div class="toggle-switch" id="dark-mode-toggle" onclick="toggleDarkMode()">
+                                <div class="toggle-thumb"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-                        <span style="font-size: 14px;">Reward redemptions</span>
-                        <div class="toggle-switch active">
-                            <div class="toggle-thumb"></div>
-                        </div>
-                    </div>
-                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <span style="font-size: 14px;">Weekly summaries</span>
-                        <div class="toggle-switch">
-                            <div class="toggle-thumb"></div>
+
+                        <div style="font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 12px;">Color Theme</div>
+                        <div class="theme-grid">
+                            <div class="theme-item theme-ocean active" onclick="setTheme('ocean')">
+                                <div class="theme-preview"></div>
+                                <div class="theme-name">Ocean</div>
+                            </div>
+                            <div class="theme-item theme-sunset" onclick="setTheme('sunset')">
+                                <div class="theme-preview"></div>
+                                <div class="theme-name">Sunset</div>
+                            </div>
+                            <div class="theme-item theme-forest" onclick="setTheme('forest')">
+                                <div class="theme-preview"></div>
+                                <div class="theme-name">Forest</div>
+                            </div>
+                            <div class="theme-item theme-midnight" onclick="setTheme('midnight')">
+                                <div class="theme-preview"></div>
+                                <div class="theme-name">Midnight</div>
+                            </div>
+                            <div class="theme-item theme-bubblegum" onclick="setTheme('bubblegum')">
+                                <div class="theme-preview"></div>
+                                <div class="theme-name">Bubblegum</div>
+                            </div>
+                            <div class="theme-item theme-arctic" onclick="setTheme('arctic')">
+                                <div class="theme-preview"></div>
+                                <div class="theme-name">Arctic</div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="card-title" style="margin-bottom: 12px;">Family Info</div>
-                    <div style="font-size: 14px; color: var(--text-secondary); margin-bottom: 8px;">
-                        <strong>Family Name:</strong> The Johnson Family
-                    </div>
-                    <div style="font-size: 14px; color: var(--text-secondary); margin-bottom: 8px;">
-                        <strong>Family Code:</strong> JOHN13
-                    </div>
-                    <div style="font-size: 14px; color: var(--text-secondary);">
-                        <strong>Members:</strong> 5 (2 adults, 3 kids)
+                <!-- Notifications -->
+                <div class="settings-section">
+                    <div class="settings-section-title">Notifications</div>
+                    <div class="card" style="padding: 0;">
+                        <div class="settings-item" style="border-bottom: 1px solid var(--border);">
+                            <span style="font-size: 14px; color: var(--text);">Chore completions</span>
+                            <div class="toggle-switch active">
+                                <div class="toggle-thumb"></div>
+                            </div>
+                        </div>
+                        <div class="settings-item" style="border-bottom: 1px solid var(--border);">
+                            <span style="font-size: 14px; color: var(--text);">Reward redemptions</span>
+                            <div class="toggle-switch active">
+                                <div class="toggle-thumb"></div>
+                            </div>
+                        </div>
+                        <div class="settings-item" style="border-bottom: 1px solid var(--border);">
+                            <span style="font-size: 14px; color: var(--text);">Cash-out requests</span>
+                            <div class="toggle-switch active">
+                                <div class="toggle-thumb"></div>
+                            </div>
+                        </div>
+                        <div class="settings-item">
+                            <span style="font-size: 14px; color: var(--text);">Weekly summaries</span>
+                            <div class="toggle-switch">
+                                <div class="toggle-thumb"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="card-title" style="margin-bottom: 12px;">Account</div>
-                    <div style="font-size: 14px; color: var(--secondary); margin-bottom: 8px; cursor: pointer;">
-                        <i class="fas fa-lock"></i> Change Password
-                    </div>
-                    <div style="font-size: 14px; color: var(--secondary); margin-bottom: 8px; cursor: pointer;">
-                        <i class="fas fa-envelope"></i> Update Email
-                    </div>
-                    <div style="font-size: 14px; color: #dc3545; cursor: pointer;">
-                        <i class="fas fa-sign-out-alt"></i> Log Out
+                <!-- Management -->
+                <div class="settings-section">
+                    <div class="settings-section-title">Management</div>
+                    <div class="card" style="padding: 0;">
+                        <div class="settings-item" style="border-bottom: 1px solid var(--border); cursor: pointer;" onclick="navigateTo('parent-rewards')">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <i class="fas fa-gift" style="color: var(--secondary); width: 20px; text-align: center;"></i>
+                                <span style="font-size: 14px; color: var(--text);">Manage Rewards</span>
+                            </div>
+                            <i class="fas fa-chevron-right" style="color: var(--text-secondary); font-size: 12px;"></i>
+                        </div>
+                        <div class="settings-item" style="border-bottom: 1px solid var(--border); cursor: pointer;" onclick="navigateTo('parent-family')">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <i class="fas fa-users" style="color: var(--secondary); width: 20px; text-align: center;"></i>
+                                <span style="font-size: 14px; color: var(--text);">Family Members</span>
+                            </div>
+                            <i class="fas fa-chevron-right" style="color: var(--text-secondary); font-size: 12px;"></i>
+                        </div>
+                        <div class="settings-item" style="cursor: pointer;" onclick="showToast('Invite link copied!')">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <i class="fas fa-user-plus" style="color: var(--secondary); width: 20px; text-align: center;"></i>
+                                <span style="font-size: 14px; color: var(--text);">Invite Parent / Guardian</span>
+                            </div>
+                            <i class="fas fa-chevron-right" style="color: var(--text-secondary); font-size: 12px;"></i>
+                        </div>
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="card-title" style="margin-bottom: 8px;">About</div>
+                <!-- Account -->
+                <div class="settings-section">
+                    <div class="settings-section-title">Account</div>
+                    <div class="card" style="padding: 0;">
+                        <div class="settings-item" style="border-bottom: 1px solid var(--border); cursor: pointer;">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <i class="fas fa-lock" style="color: var(--secondary); width: 20px; text-align: center;"></i>
+                                <span style="font-size: 14px; color: var(--text);">Change Password</span>
+                            </div>
+                            <i class="fas fa-chevron-right" style="color: var(--text-secondary); font-size: 12px;"></i>
+                        </div>
+                        <div class="settings-item" style="border-bottom: 1px solid var(--border); cursor: pointer;">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <i class="fas fa-envelope" style="color: var(--secondary); width: 20px; text-align: center;"></i>
+                                <span style="font-size: 14px; color: var(--text);">Update Email</span>
+                            </div>
+                            <i class="fas fa-chevron-right" style="color: var(--text-secondary); font-size: 12px;"></i>
+                        </div>
+                        <div class="settings-item" style="cursor: pointer;" onclick="navigateTo('splash')">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <i class="fas fa-sign-out-alt" style="color: #dc3545; width: 20px; text-align: center;"></i>
+                                <span style="font-size: 14px; color: #dc3545;">Log Out</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; padding: 16px 0 32px;">
                     <div style="font-size: 13px; color: #999;">
-                        Challey v2.1.0<br>
+                        Challey v3.0.0<br>
                         Made with care for families
                     </div>
                 </div>
@@ -6228,6 +7906,76 @@
                         <div class="activity-time">5 hours ago</div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <!-- SCREEN: KID CASHOUT CONFIRM -->
+        <div id="kid-cashout-confirm" class="screen">
+            <div class="header">
+                <i class="fas fa-arrow-left back-btn" onclick="navigateTo('kid-points')"></i>
+                <h1>Cash Out</h1>
+                <p>Confirm your request</p>
+            </div>
+            <div class="content" style="text-align: center; padding-top: 40px;">
+                <div style="font-size: 56px; margin-bottom: 16px;">💰</div>
+                <h2 style="font-size: 22px; color: var(--text); margin-bottom: 8px;">You're cashing out</h2>
+                <div style="font-size: 36px; font-weight: 700; color: #28a745; margin-bottom: 4px;">100 pts ($5.00)</div>
+                <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 32px;">Dad will be notified to confirm</p>
+                <button class="btn btn-success" onclick="createConfetti(); setTimeout(function(){ navigateTo('kid-cashout-pending'); }, 800);">
+                    <i class="fas fa-dollar-sign"></i> Request Cash Out
+                </button>
+                <button class="btn btn-outline" onclick="navigateTo('kid-points')" style="margin-top: 12px;">Cancel</button>
+            </div>
+        </div>
+
+        <!-- SCREEN: KID CASHOUT PENDING -->
+        <div id="kid-cashout-pending" class="screen">
+            <div class="content" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 100%; padding: 40px 20px;">
+                <div style="font-size: 64px; margin-bottom: 20px;">💰</div>
+                <h2 style="font-size: 22px; color: var(--text); margin-bottom: 16px;">Pending Cash!</h2>
+                <p style="font-size: 15px; color: var(--text-secondary); margin-bottom: 24px;">Waiting for Dad to confirm payment</p>
+                <div style="width: 100%; max-width: 260px; text-align: left;">
+                    <div class="cashout-status-step">
+                        <div class="cashout-status-dot done"><i class="fas fa-check"></i></div>
+                        <span style="font-size: 14px; color: var(--text);">Requested</span>
+                    </div>
+                    <div class="cashout-status-line"></div>
+                    <div class="cashout-status-step">
+                        <div class="cashout-status-dot active"><i class="fas fa-spinner fa-spin" style="font-size: 10px;"></i></div>
+                        <span style="font-size: 14px; color: var(--text);">Waiting for Dad</span>
+                    </div>
+                    <div class="cashout-status-line"></div>
+                    <div class="cashout-status-step">
+                        <div class="cashout-status-dot"></div>
+                        <span style="font-size: 14px; color: var(--text-secondary);">Paid</span>
+                    </div>
+                    <div class="cashout-status-line"></div>
+                    <div class="cashout-status-step">
+                        <div class="cashout-status-dot"></div>
+                        <span style="font-size: 14px; color: var(--text-secondary);">You confirm received</span>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="navigateTo('kid-chores')" style="margin-top: 32px;">Back to Chores</button>
+            </div>
+        </div>
+
+        <!-- SCREEN: KID REDEEM CONFIRM -->
+        <div id="kid-redeem-confirm" class="screen">
+            <div class="header">
+                <i class="fas fa-arrow-left back-btn" onclick="navigateTo('kid-rewards')"></i>
+                <h1>Confirm Redemption</h1>
+                <p>Almost there!</p>
+            </div>
+            <div class="content" style="text-align: center; padding-top: 40px;">
+                <div style="font-size: 64px; margin-bottom: 16px;">🎬</div>
+                <h2 style="font-size: 22px; color: var(--text); margin-bottom: 8px;">Redeem Movie Night?</h2>
+                <div style="font-size: 28px; font-weight: 700; color: var(--accent); margin-bottom: 8px;">50 points</div>
+                <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 8px;">You'll have 85 points remaining</p>
+                <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 32px;">Dad will be notified to fulfill this reward</p>
+                <button class="btn btn-primary" onclick="createConfetti(); showToast('Reward redeemed!'); setTimeout(function(){ navigateTo('kid-rewards'); }, 1200);">
+                    <i class="fas fa-star"></i> Redeem
+                </button>
+                <button class="btn btn-outline" onclick="navigateTo('kid-rewards')" style="margin-top: 12px;">Cancel</button>
             </div>
         </div>
 
@@ -6756,10 +8504,11 @@
                 "Look at all those badges! You're a champ!",
                 "Your points history is so impressive!",
             ],
-            'kid-leaderboard': [
+            'kid-board': [
                 "You're #1 this week! Crown secured!",
                 "Friendly competition makes everyone better!",
                 "Maybe give a shout-out to Jake or Lily!",
+                "Check out your swag collection!",
             ],
             'kid-living-room': [
                 "Welcome to The Living Room! See what the fam is up to.",
@@ -6820,6 +8569,72 @@
             ],
             'parent-family': [
                 "What a great family you've got!",
+            ],
+            'join-family-code': [
+                "Got your codes ready? Type them in!",
+                "Your parent should have your member code!",
+            ],
+            'kid-set-pin': [
+                "Pick 4 numbers you'll remember!",
+                "This keeps your account safe!",
+            ],
+            'kid-confirm-pin': [
+                "Type it one more time to be sure!",
+            ],
+            'kid-enter-pin': [
+                "Welcome back! Enter your PIN to get in!",
+            ],
+            'kid-forgot-pin': [
+                "No worries! Your parent can reset it for you.",
+            ],
+            'create-family-auth': [
+                "Let's get your family set up!",
+                "Pick the easiest way to sign in!",
+            ],
+            'create-family-manual': [
+                "Just a few details and you're in!",
+            ],
+            'create-family-name': [
+                "What should we call your family?",
+            ],
+            'pick-family-pet': [
+                "Choose a pet to be your family's helper!",
+                "Every family needs a mascot!",
+            ],
+            'welcome-family': [
+                "Your family is all set! Let's go!",
+                "This is going to be awesome!",
+            ],
+            'parent-dashboard-empty': [
+                "Let's add some kids to get started!",
+                "Your family adventure starts here!",
+            ],
+            'add-kids': [
+                "Who's joining the family?",
+            ],
+            'add-kids-success': [
+                "Great team! Share those codes with the kids!",
+            ],
+            'setup-chores': [
+                "Pick some chores to get started — you can always add more later!",
+            ],
+            'setup-rewards': [
+                "Rewards keep everyone motivated!",
+            ],
+            'setup-first-post': [
+                "A first post brings the family together!",
+            ],
+            'sibling-profile': [
+                "Check out what they've been up to!",
+            ],
+            'kid-cashout-confirm': [
+                "Almost there! Confirm your cash out!",
+            ],
+            'kid-cashout-pending': [
+                "Your request is in! Hang tight!",
+            ],
+            'kid-redeem-confirm': [
+                "Great choice! Confirm to claim it!",
             ],
         };
 
@@ -7283,6 +9098,218 @@
                 setTimeout(() => initSwipeCards(), 100);
             }
         };
+
+        // ===== V3 NEW FUNCTIONS =====
+
+        // Pet state (configurable companion)
+        let familyPetEmoji = '🐙';
+        let familyPetName = 'Chal';
+
+        function updateCompanionEmoji() {
+            // Update companion body emoji (preserve pulse child)
+            document.querySelectorAll('.companion-body').forEach(el => {
+                var pulse = el.querySelector('.companion-pulse');
+                el.textContent = familyPetEmoji;
+                if (pulse) el.appendChild(pulse);
+            });
+            // Update intro character
+            document.querySelectorAll('.intro-character').forEach(el => {
+                el.textContent = familyPetEmoji;
+            });
+            // Update all data-companion-emoji elements (settings, etc.)
+            document.querySelectorAll('[data-companion-emoji]').forEach(el => {
+                el.textContent = familyPetEmoji;
+            });
+            // Update named IDs in setup/welcome screens
+            var petIds = ['forgot-pin-pet', 'welcome-pet-emoji', 'dashboard-pet-emoji', 'setup-chores-pet', 'setup-rewards-pet'];
+            petIds.forEach(function(id) {
+                var el = document.getElementById(id);
+                if (el) el.textContent = familyPetEmoji;
+            });
+        }
+
+        // PIN Pad
+        let pinBuffer = {};
+
+        function pinPadPress(digit, screenId) {
+            if (!pinBuffer[screenId]) pinBuffer[screenId] = '';
+            if (pinBuffer[screenId].length >= 4) return;
+            pinBuffer[screenId] += digit;
+            updatePinDots(screenId);
+
+            if (pinBuffer[screenId].length === 4) {
+                setTimeout(function() {
+                    if (screenId === 'kid-set-pin') {
+                        navigateTo('kid-confirm-pin');
+                    } else if (screenId === 'kid-confirm-pin') {
+                        if (pinBuffer['kid-set-pin'] === pinBuffer['kid-confirm-pin']) {
+                            createConfetti();
+                            showToast('PIN set!');
+                            setTimeout(function() { navigateTo('kid-chores'); }, 800);
+                        } else {
+                            showToast('PINs don\'t match — try again');
+                            pinBuffer['kid-confirm-pin'] = '';
+                            updatePinDots('kid-confirm-pin');
+                        }
+                    } else if (screenId === 'kid-enter-pin') {
+                        navigateTo('kid-chores');
+                    }
+                }, 300);
+            }
+        }
+
+        function pinPadDelete(screenId) {
+            if (!pinBuffer[screenId]) return;
+            pinBuffer[screenId] = pinBuffer[screenId].slice(0, -1);
+            updatePinDots(screenId);
+        }
+
+        function updatePinDots(screenId) {
+            const screen = document.getElementById(screenId);
+            if (!screen) return;
+            const dots = screen.querySelectorAll('.pin-dot');
+            const len = (pinBuffer[screenId] || '').length;
+            dots.forEach(function(dot, i) {
+                dot.classList.toggle('filled', i < len);
+            });
+        }
+
+        // Chore Tab Switching
+        function switchChoreTab(tabName, tabElement) {
+            // Update tab buttons
+            const tabBar = tabElement.parentElement;
+            tabBar.querySelectorAll('.tab').forEach(function(t) {
+                t.classList.remove('active');
+            });
+            tabElement.classList.add('active');
+
+            // Show/hide tab content
+            const choreScreen = document.getElementById('kid-chores');
+            choreScreen.querySelectorAll('.tab-content').forEach(function(tc) {
+                tc.classList.remove('active');
+            });
+            const target = choreScreen.querySelector('.tab-content[data-tab="' + tabName + '"]');
+            if (target) target.classList.add('active');
+        }
+
+        // Chore Actions
+        function startChore(btn) {
+            var card = btn.closest('.chore-card') || btn.closest('.card');
+            if (card) {
+                card.style.opacity = '0.5';
+                card.style.transform = 'translateX(100px)';
+                card.style.transition = 'all 0.3s ease';
+                showToast('Started! Moved to In Progress');
+                setTimeout(function() {
+                    card.style.display = 'none';
+                }, 300);
+            }
+        }
+
+        function completeChore(btn) {
+            var card = btn.closest('.chore-card') || btn.closest('.card');
+            if (card) {
+                createConfetti();
+                card.style.opacity = '0.5';
+                card.style.transform = 'scale(0.8)';
+                card.style.transition = 'all 0.3s ease';
+                showToast('Submitted for review!');
+                setTimeout(function() {
+                    card.style.display = 'none';
+                }, 400);
+            }
+        }
+
+        // Pet Picker
+        let selectedPetEl = null;
+
+        function selectPet(element, emoji, name) {
+            document.querySelectorAll('.pet-card').forEach(function(c) {
+                c.classList.remove('selected');
+            });
+            element.classList.add('selected');
+            selectedPetEl = element;
+            familyPetEmoji = emoji;
+            familyPetName = name;
+
+            // Update pet name input
+            var nameInput = document.getElementById('pet-name-input');
+            if (nameInput) nameInput.value = name;
+
+            // Update celebration screen preview
+            var celebratePet = document.querySelector('.celebrate-pet');
+            if (celebratePet) celebratePet.textContent = emoji;
+        }
+
+        function finishPetPick() {
+            var nameInput = document.getElementById('pet-name-input');
+            if (nameInput && nameInput.value) {
+                familyPetName = nameInput.value;
+            }
+            updateCompanionEmoji();
+            createConfetti();
+            setTimeout(function() { navigateTo('welcome-family'); }, 800);
+        }
+
+        // Family Code Preview
+        function updateFamilyCodePreview() {
+            var input = document.getElementById('family-name-input');
+            var preview = document.getElementById('family-code-preview');
+            if (input && preview) {
+                var val = input.value.toUpperCase().replace(/[^A-Z]/g, '').substring(0, 4);
+                if (val.length >= 2) {
+                    var code = val + Math.floor(Math.random() * 90 + 10);
+                    preview.textContent = code;
+                } else {
+                    preview.textContent = '----';
+                }
+            }
+        }
+
+        // Add Kids
+        let addedKids = [];
+
+        function addKid() {
+            var nameInput = document.getElementById('add-kid-name');
+            if (!nameInput || !nameInput.value.trim()) {
+                showToast('Enter a name first');
+                return;
+            }
+            var name = nameInput.value.trim();
+            var code = name.substring(0, 3).toUpperCase() + '0' + (addedKids.length + 1);
+            addedKids.push({ name: name, code: code });
+            nameInput.value = '';
+
+            // Update the kids list
+            var list = document.getElementById('added-kids-list');
+            if (list) {
+                var item = document.createElement('div');
+                item.className = 'kid-added-item';
+                item.innerHTML = '<div class="kid-added-avatar">' + name.charAt(0) + '</div>' +
+                    '<div style="flex:1;"><div style="font-weight:600;color:var(--text);">' + name + '</div>' +
+                    '<div style="font-size:12px;color:var(--text-secondary);">Code: ' + code + '</div></div>' +
+                    '<i class="fas fa-check-circle" style="color:#28a745;font-size:20px;"></i>';
+                list.appendChild(item);
+            }
+            showToast(name + ' added!');
+        }
+
+        // Chore/Reward Setup Categories
+        function toggleChoreCategory(headerEl) {
+            var category = headerEl.closest('.chore-category');
+            if (category) {
+                var items = category.querySelector('.chore-category-items');
+                if (items) {
+                    items.classList.toggle('expanded');
+                }
+                // Toggle expanded on header for chevron rotation
+                headerEl.classList.toggle('expanded');
+            }
+        }
+
+        function togglePresetChore(item) {
+            item.classList.toggle('selected');
+        }
 
         // Add button press animation
         document.addEventListener('click', function(e) {
