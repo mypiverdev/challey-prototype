@@ -575,6 +575,129 @@
             animation: glow 2s ease-in-out infinite;
         }
 
+        /* Reward Cart System */
+        .reward-card-actions {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+        }
+
+        .reward-add-btn {
+            padding: 8px 20px;
+            border: none;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .reward-add-btn.can-add {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .reward-add-btn.can-add:hover {
+            filter: brightness(1.1);
+            transform: scale(1.05);
+        }
+
+        .reward-add-btn.in-cart {
+            background: #28a745;
+            color: white;
+        }
+
+        .reward-add-btn.in-cart:hover {
+            background: #dc3545;
+        }
+
+        .reward-add-btn.in-cart:hover .btn-label-add {
+            display: none;
+        }
+
+        .reward-add-btn.in-cart:hover .btn-label-remove {
+            display: inline;
+        }
+
+        .reward-add-btn .btn-label-remove {
+            display: none;
+        }
+
+        .reward-add-btn.disabled {
+            background: var(--border);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        .reward-cart-bar {
+            position: sticky;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 14px 20px;
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 16px 16px 0 0;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            animation: slideUp 0.3s ease-out;
+        }
+
+        .reward-cart-bar.visible {
+            display: flex;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .cart-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .cart-count {
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .cart-total {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        .cart-remaining {
+            font-size: 11px;
+            opacity: 0.7;
+        }
+
+        .cart-checkout-btn {
+            padding: 10px 24px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .cart-checkout-btn:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
         @keyframes glow {
             0%, 100% { box-shadow: 0 0 10px rgba(241, 143, 1, 0.5); }
             50% { box-shadow: 0 0 20px rgba(241, 143, 1, 0.8); }
@@ -4952,76 +5075,114 @@
                     <div class="section-title">Available Rewards</div>
                 </div>
 
-                <div class="reward-card" onclick="navigateTo('kid-redeem-confirm')" style="display: none;">
-                    <div class="reward-icon">💵</div>
-                    <div class="reward-title">Cash Out</div>
-                    <p style="font-size: 13px; opacity: 0.9; margin-bottom: 8px;">Turn your points into real money!</p>
-                    <div style="font-size: 16px; font-weight: 600;">100 pts = $5.00</div>
-                </div>
-
-                <div class="reward-card" onclick="navigateTo('kid-reward-detail')">
+                <div class="reward-card" data-reward="movie-night" data-cost="50">
                     <div class="reward-icon">🎬</div>
                     <div class="reward-title">Movie Night</div>
                     <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 8px;">Family picks movie together</p>
                     <div class="reward-cost">50 points</div>
                     <div class="reward-affordable">You can get this! ✨</div>
+                    <div class="reward-card-actions" onclick="event.stopPropagation();">
+                        <div style="font-size: 13px; color: var(--text-secondary);"><i class="fas fa-coins" style="color: var(--accent);"></i> 50 pts</div>
+                        <button class="reward-add-btn can-add" onclick="toggleCartItem(this, 'Movie Night', 50)"><i class="fas fa-plus"></i> <span class="btn-label-add">Add</span><span class="btn-label-remove">Remove</span></button>
+                    </div>
                 </div>
 
-                <div class="reward-card" onclick="navigateTo('kid-reward-detail')">
+                <div class="reward-card" data-reward="gift-card" data-cost="100">
                     <div class="reward-icon">🎁</div>
                     <div class="reward-title">$10 Amazon Gift Card</div>
                     <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 8px;">Shop for what you want</p>
                     <div class="reward-cost">100 points</div>
                     <div class="reward-affordable">You can get this! ✨</div>
+                    <div class="reward-card-actions" onclick="event.stopPropagation();">
+                        <div style="font-size: 13px; color: var(--text-secondary);"><i class="fas fa-coins" style="color: var(--accent);"></i> 100 pts</div>
+                        <button class="reward-add-btn can-add" onclick="toggleCartItem(this, '$10 Gift Card', 100)"><i class="fas fa-plus"></i> <span class="btn-label-add">Add</span><span class="btn-label-remove">Remove</span></button>
+                    </div>
                 </div>
 
-                <div class="reward-card" onclick="navigateTo('kid-reward-detail')">
+                <div class="reward-card" data-reward="screen-time" data-cost="30">
                     <div class="reward-icon">📱</div>
                     <div class="reward-title">Extra 30 min Screen Time</div>
                     <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 8px;">One night bonus time</p>
                     <div class="reward-cost">30 points</div>
                     <div class="reward-affordable">You can get this! ✨</div>
+                    <div class="reward-card-actions" onclick="event.stopPropagation();">
+                        <div style="font-size: 13px; color: var(--text-secondary);"><i class="fas fa-coins" style="color: var(--accent);"></i> 30 pts</div>
+                        <button class="reward-add-btn can-add" onclick="toggleCartItem(this, 'Screen Time', 30)"><i class="fas fa-plus"></i> <span class="btn-label-add">Add</span><span class="btn-label-remove">Remove</span></button>
+                    </div>
                 </div>
 
-                <div class="reward-card" onclick="navigateTo('kid-reward-detail')">
+                <div class="reward-card" data-reward="dinner" data-cost="40">
                     <div class="reward-icon">🍕</div>
                     <div class="reward-title">Choose Dinner Menu</div>
                     <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 8px;">Pick what we eat tonight</p>
                     <div class="reward-cost">40 points</div>
                     <div class="reward-affordable">You can get this! ✨</div>
+                    <div class="reward-card-actions" onclick="event.stopPropagation();">
+                        <div style="font-size: 13px; color: var(--text-secondary);"><i class="fas fa-coins" style="color: var(--accent);"></i> 40 pts</div>
+                        <button class="reward-add-btn can-add" onclick="toggleCartItem(this, 'Choose Dinner', 40)"><i class="fas fa-plus"></i> <span class="btn-label-add">Add</span><span class="btn-label-remove">Remove</span></button>
+                    </div>
                 </div>
 
-                <div class="reward-card" onclick="navigateTo('kid-reward-detail')">
+                <div class="reward-card" data-reward="sleepover" data-cost="150">
                     <div class="reward-icon">🏠</div>
                     <div class="reward-title">Sleepover with Friend</div>
                     <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 8px;">Invite a friend over</p>
                     <div class="reward-cost">150 points</div>
                     <div class="reward-nudge">15 points away!</div>
+                    <div class="reward-card-actions" onclick="event.stopPropagation();">
+                        <div style="font-size: 13px; color: var(--text-secondary);"><i class="fas fa-coins" style="color: var(--accent);"></i> 150 pts</div>
+                        <button class="reward-add-btn disabled" disabled><i class="fas fa-lock"></i> <span>Not enough pts</span></button>
+                    </div>
                 </div>
 
-                <div class="reward-card" onclick="navigateTo('kid-reward-detail')">
+                <div class="reward-card" data-reward="book" data-cost="80">
                     <div class="reward-icon">📚</div>
                     <div class="reward-title">New Book</div>
                     <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 8px;">Pick any book you want</p>
                     <div class="reward-cost">80 points</div>
                     <div class="reward-affordable">You can get this! ✨</div>
+                    <div class="reward-card-actions" onclick="event.stopPropagation();">
+                        <div style="font-size: 13px; color: var(--text-secondary);"><i class="fas fa-coins" style="color: var(--accent);"></i> 80 pts</div>
+                        <button class="reward-add-btn can-add" onclick="toggleCartItem(this, 'New Book', 80)"><i class="fas fa-plus"></i> <span class="btn-label-add">Add</span><span class="btn-label-remove">Remove</span></button>
+                    </div>
                 </div>
 
-                <div class="reward-card" onclick="navigateTo('kid-reward-detail')">
+                <div class="reward-card" data-reward="skip-chore" data-cost="75">
                     <div class="reward-icon">🎫</div>
                     <div class="reward-title">Skip One Chore Pass</div>
                     <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 8px;">Use wisely!</p>
                     <div class="reward-cost">75 points</div>
                     <div class="reward-affordable">You can get this! ✨</div>
+                    <div class="reward-card-actions" onclick="event.stopPropagation();">
+                        <div style="font-size: 13px; color: var(--text-secondary);"><i class="fas fa-coins" style="color: var(--accent);"></i> 75 pts</div>
+                        <button class="reward-add-btn can-add" onclick="toggleCartItem(this, 'Skip Chore Pass', 75)"><i class="fas fa-plus"></i> <span class="btn-label-add">Add</span><span class="btn-label-remove">Remove</span></button>
+                    </div>
                 </div>
 
-                <div class="reward-card" onclick="navigateTo('kid-reward-detail')">
+                <div class="reward-card" data-reward="ice-cream" data-cost="60">
                     <div class="reward-icon">🍦</div>
                     <div class="reward-title">Ice Cream Trip</div>
                     <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 8px;">Visit your favorite spot</p>
                     <div class="reward-cost">60 points</div>
                     <div class="reward-affordable">You can get this! ✨</div>
+                    <div class="reward-card-actions" onclick="event.stopPropagation();">
+                        <div style="font-size: 13px; color: var(--text-secondary);"><i class="fas fa-coins" style="color: var(--accent);"></i> 60 pts</div>
+                        <button class="reward-add-btn can-add" onclick="toggleCartItem(this, 'Ice Cream Trip', 60)"><i class="fas fa-plus"></i> <span class="btn-label-add">Add</span><span class="btn-label-remove">Remove</span></button>
+                    </div>
                 </div>
+
+                <!-- Spacer for cart bar -->
+                <div style="height: 80px;"></div>
+            </div>
+
+            <!-- Floating Cart Bar -->
+            <div class="reward-cart-bar" id="reward-cart-bar">
+                <div class="cart-info">
+                    <div class="cart-count" id="cart-count">0 items</div>
+                    <div class="cart-total" id="cart-total">0 pts total</div>
+                    <div class="cart-remaining" id="cart-remaining">135 pts left</div>
+                </div>
+                <button class="cart-checkout-btn" onclick="checkoutCart()">Redeem All</button>
             </div>
             <div class="bottom-nav kid-nav">
                 <div class="nav-item" onclick="navigateTo('kid-chores')">
@@ -9100,6 +9261,99 @@
         };
 
         // ===== V3 NEW FUNCTIONS =====
+
+        // Reward Cart state
+        let rewardCart = [];
+        let availablePoints = 135;
+
+        function toggleCartItem(btn, name, cost) {
+            var idx = rewardCart.findIndex(function(item) { return item.name === name; });
+            if (idx > -1) {
+                // Remove from cart
+                rewardCart.splice(idx, 1);
+                btn.className = 'reward-add-btn can-add';
+                btn.innerHTML = '<i class="fas fa-plus"></i> <span class="btn-label-add">Add</span><span class="btn-label-remove">Remove</span>';
+            } else {
+                // Check if can afford
+                var cartTotal = rewardCart.reduce(function(sum, item) { return sum + item.cost; }, 0);
+                if (cartTotal + cost > availablePoints) {
+                    showToast('Not enough points! Remove something first.');
+                    return;
+                }
+                // Add to cart
+                rewardCart.push({ name: name, cost: cost });
+                btn.className = 'reward-add-btn in-cart';
+                btn.innerHTML = '<i class="fas fa-check"></i> <span class="btn-label-add">In Cart</span><span class="btn-label-remove">Remove</span>';
+            }
+            updateCartBar();
+            updateAddButtons();
+        }
+
+        function updateCartBar() {
+            var bar = document.getElementById('reward-cart-bar');
+            var countEl = document.getElementById('cart-count');
+            var totalEl = document.getElementById('cart-total');
+            var remainEl = document.getElementById('cart-remaining');
+            var cartTotal = rewardCart.reduce(function(sum, item) { return sum + item.cost; }, 0);
+
+            if (rewardCart.length > 0) {
+                bar.classList.add('visible');
+                countEl.textContent = rewardCart.length + (rewardCart.length === 1 ? ' item' : ' items');
+                totalEl.textContent = cartTotal + ' pts total';
+                remainEl.textContent = (availablePoints - cartTotal) + ' pts remaining';
+            } else {
+                bar.classList.remove('visible');
+            }
+        }
+
+        function updateAddButtons() {
+            var cartTotal = rewardCart.reduce(function(sum, item) { return sum + item.cost; }, 0);
+            var remaining = availablePoints - cartTotal;
+
+            document.querySelectorAll('#kid-rewards .reward-add-btn.can-add').forEach(function(btn) {
+                var card = btn.closest('.reward-card');
+                var cost = parseInt(card.getAttribute('data-cost'));
+                if (cost > remaining) {
+                    btn.classList.add('disabled');
+                    btn.setAttribute('disabled', 'true');
+                    btn.innerHTML = '<i class="fas fa-lock"></i> <span>Not enough pts</span>';
+                }
+            });
+
+            // Re-enable buttons that became affordable after removal
+            document.querySelectorAll('#kid-rewards .reward-add-btn.disabled').forEach(function(btn) {
+                var card = btn.closest('.reward-card');
+                var cost = parseInt(card.getAttribute('data-cost'));
+                var inCart = rewardCart.some(function(item) { return item.name === card.querySelector('.reward-title').textContent.trim(); });
+                if (!inCart && cost <= remaining && cost <= availablePoints) {
+                    btn.classList.remove('disabled');
+                    btn.removeAttribute('disabled');
+                    btn.className = 'reward-add-btn can-add';
+                    btn.innerHTML = '<i class="fas fa-plus"></i> <span class="btn-label-add">Add</span><span class="btn-label-remove">Remove</span>';
+                    btn.setAttribute('onclick', "toggleCartItem(this, '" + card.querySelector('.reward-title').textContent.trim() + "', " + cost + ")");
+                }
+            });
+        }
+
+        function checkoutCart() {
+            if (rewardCart.length === 0) return;
+            var names = rewardCart.map(function(item) { return item.name; }).join(', ');
+            var total = rewardCart.reduce(function(sum, item) { return sum + item.cost; }, 0);
+            createConfetti();
+            showToast('Redeeming ' + rewardCart.length + ' rewards for ' + total + ' pts! Dad will be notified.');
+            // Reset cart
+            rewardCart = [];
+            updateCartBar();
+            // Reset all buttons
+            document.querySelectorAll('#kid-rewards .reward-add-btn').forEach(function(btn) {
+                var card = btn.closest('.reward-card');
+                var cost = parseInt(card.getAttribute('data-cost'));
+                if (cost <= availablePoints) {
+                    btn.className = 'reward-add-btn can-add';
+                    btn.innerHTML = '<i class="fas fa-plus"></i> <span class="btn-label-add">Add</span><span class="btn-label-remove">Remove</span>';
+                }
+            });
+        }
 
         // Pet state (configurable companion)
         let familyPetEmoji = '🐙';
