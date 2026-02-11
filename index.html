@@ -3535,6 +3535,34 @@
         .tab-content.active {
             display: block;
         }
+
+        .role-select-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .role-option {
+            background: var(--bg-card);
+            border: 3px solid var(--border);
+            border-radius: 16px;
+            padding: 24px 16px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .role-option:hover {
+            border-color: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        .role-option.selected {
+            border-color: var(--secondary);
+            background: rgba(46, 134, 171, 0.05);
+            box-shadow: 0 4px 12px rgba(46, 134, 171, 0.2);
+        }
     </style>
 </head>
 <body>
@@ -3877,13 +3905,13 @@
                 </div>
             </div>
             <div class="content">
-                <button class="social-btn social-btn-apple" onclick="navigateTo('create-family-name')">
+                <button class="social-btn social-btn-apple" onclick="navigateTo('create-family-role')">
                     <i class="fab fa-apple"></i> Sign in with Apple
                 </button>
-                <button class="social-btn social-btn-google" onclick="navigateTo('create-family-name')">
+                <button class="social-btn social-btn-google" onclick="navigateTo('create-family-role')">
                     <i class="fab fa-google"></i> Sign in with Google
                 </button>
-                <button class="social-btn social-btn-facebook" onclick="navigateTo('create-family-name')">
+                <button class="social-btn social-btn-facebook" onclick="navigateTo('create-family-role')">
                     <i class="fab fa-facebook-f"></i> Continue with Facebook
                 </button>
                 <div class="auth-divider">or</div>
@@ -3928,7 +3956,46 @@
                     <label>Create Password</label>
                     <input type="password" placeholder="Min. 8 characters">
                 </div>
-                <button class="btn btn-primary" onclick="navigateTo('create-family-name')">Continue</button>
+                <button class="btn btn-primary" onclick="navigateTo('create-family-role')">Continue</button>
+            </div>
+        </div>
+
+        <!-- SCREEN: PARENT ROLE SELECTION -->
+        <div id="create-family-role" class="screen">
+            <div class="header">
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <i class="fas fa-arrow-left back-btn" onclick="navigateTo('create-family-auth')"></i>
+                    </div>
+                    <div class="header-top-right"></div>
+                </div>
+                <div class="header-title-row">
+                    <h1>What's Your Role?</h1>
+                    <p>How should we introduce you?</p>
+                </div>
+            </div>
+            <div class="content">
+                <div class="role-select-grid">
+                    <div class="role-option" onclick="selectRole(this, 'Dad')">
+                        <div style="font-size: 48px; margin-bottom: 8px;">&#x1F468;</div>
+                        <div style="font-size: 16px; font-weight: 600;">Dad</div>
+                    </div>
+                    <div class="role-option" onclick="selectRole(this, 'Mom')">
+                        <div style="font-size: 48px; margin-bottom: 8px;">&#x1F469;</div>
+                        <div style="font-size: 16px; font-weight: 600;">Mom</div>
+                    </div>
+                    <div class="role-option" onclick="selectRole(this, 'Guardian')">
+                        <div style="font-size: 48px; margin-bottom: 8px;">&#x1F6E1;&#xFE0F;</div>
+                        <div style="font-size: 16px; font-weight: 600;">Guardian</div>
+                    </div>
+                    <div class="role-option" onclick="selectRole(this, 'Relative')">
+                        <div style="font-size: 48px; margin-bottom: 8px;">&#x1F46A;</div>
+                        <div style="font-size: 16px; font-weight: 600;">Relative</div>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="navigateTo('create-family-name')" style="margin-top: 24px;">
+                    Continue
+                </button>
             </div>
         </div>
 
@@ -4446,6 +4513,27 @@
                             <i class="fas fa-repeat" style="color: var(--text-secondary); cursor: pointer; padding: 10px;" onclick="navigateTo('kid-swap-request')"></i>
                         </div>
                     </div>
+
+                    <!-- Redo requested chore (returned from Done) -->
+                    <div class="card" onclick="navigateTo('kid-chore-detail')" style="border: 2px solid #F18F01; background: rgba(241, 143, 1, 0.06);">
+                        <div class="card-header">
+                            <div class="card-title"><i class="fas fa-redo" style="color: #F18F01; margin-right: 6px;"></i>Take out trash</div>
+                            <div class="points-badge">10 pts</div>
+                        </div>
+                        <div class="card-meta">
+                            <span class="chore-status-badge chore-status-redo" style="background: rgba(241, 143, 1, 0.15); color: #c57700;">Redo requested</span>
+                            <span><i class="far fa-clock"></i> 2 days ago</span>
+                        </div>
+                        <div style="background: #FFF8EE; border-left: 3px solid #F18F01; padding: 8px 12px; border-radius: 6px; margin-top: 8px;">
+                            <div style="font-size: 12px; font-weight: 600; color: #c57700; margin-bottom: 2px;">Redo: Needs another pass</div>
+                            <div style="font-size: 12px; color: var(--text-secondary);">Dad's note: All done! Organized the tools but forgot to sweep the floor. Quick sweep and you're good!</div>
+                        </div>
+                        <div class="chore-actions" onclick="event.stopPropagation();">
+                            <button class="chore-action-btn chore-action-start" onclick="startChore(this.closest('.card'))"><i class="fas fa-play"></i> Started it</button>
+                            <button class="chore-action-btn chore-action-done" onclick="completeChore(this.closest('.card'))"><i class="fas fa-check"></i> Done!</button>
+                            <i class="fas fa-repeat" style="color: var(--text-secondary); cursor: pointer; padding: 10px;" onclick="navigateTo('kid-swap-request')"></i>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- In Progress Tab -->
@@ -4486,16 +4574,6 @@
                         <div class="card-meta">
                             <span class="chore-status-badge chore-status-pending">Pending approval</span>
                             <span><i class="far fa-clock"></i> Today</span>
-                        </div>
-                    </div>
-                    <div class="card" style="cursor: default;">
-                        <div class="card-header">
-                            <div class="card-title">Take out trash</div>
-                            <div class="points-badge">10 pts</div>
-                        </div>
-                        <div class="card-meta">
-                            <span class="chore-status-badge chore-status-redo">Redo requested</span>
-                            <span><i class="far fa-clock"></i> 2 days ago</span>
                         </div>
                     </div>
                 </div>
@@ -4850,8 +4928,175 @@
                     <button class="btn btn-outline" onclick="declineSwap()" style="flex: 1;">
                         Decline
                     </button>
+                    <button class="btn btn-secondary" onclick="navigateTo('kid-swap-counter')" style="flex: 1;">
+                        <i class="fas fa-exchange-alt"></i> Counter
+                    </button>
                     <button class="btn btn-success" onclick="acceptSwap()" style="flex: 1;">
-                        <i class="fas fa-check"></i> Accept Swap
+                        <i class="fas fa-check"></i> Accept
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCREEN: KID SWAP COUNTER OFFER -->
+        <div id="kid-swap-counter" class="screen">
+            <div class="header">
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <i class="fas fa-arrow-left back-btn" onclick="navigateTo('kid-swap-incoming')"></i>
+                    </div>
+                    <div class="header-top-right"></div>
+                </div>
+                <div class="header-title-row">
+                    <h1>Counter Offer</h1>
+                    <p>Propose something different to Maggie</p>
+                </div>
+            </div>
+            <div class="content">
+                <div class="card" style="background: var(--bg-light);">
+                    <div style="font-size: 13px; color: var(--text-secondary); margin-bottom: 4px;">Maggie wants:</div>
+                    <div style="font-size: 16px; font-weight: 600; color: var(--text);">Vacuum living room (30 pts)</div>
+                </div>
+
+                <div class="section-header" style="margin-top: 20px;">
+                    <div class="section-title">Your Counter</div>
+                </div>
+
+                <!-- Option 1: Pick a different chore -->
+                <div class="card" onclick="document.getElementById('counter-chore-list').style.display='block'; document.getElementById('counter-favor-section').style.display='none';" style="cursor: pointer; border: 2px solid var(--border);">
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <div style="font-size: 32px;">&#x1F504;</div>
+                        <div>
+                            <div class="card-title">Offer a Different Chore</div>
+                            <div style="font-size: 13px; color: var(--text-secondary); margin-top: 2px;">Pick from your available chores</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Option 2: Offer a favor -->
+                <div class="card" onclick="document.getElementById('counter-favor-section').style.display='block'; document.getElementById('counter-chore-list').style.display='none';" style="cursor: pointer; border: 2px solid var(--border);">
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <div style="font-size: 32px;">&#x1F91D;</div>
+                        <div>
+                            <div class="card-title">Offer a Favor</div>
+                            <div style="font-size: 13px; color: var(--text-secondary); margin-top: 2px;">No points — just a promise between siblings</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chore selection (hidden by default) -->
+                <div id="counter-chore-list" style="display: none; margin-top: 16px;">
+                    <div class="section-header">
+                        <div class="section-title">Your Available Chores</div>
+                    </div>
+                    <div class="card swap-chore-option" onclick="selectSwapChore(this)" style="border: 2px solid var(--border); cursor: pointer;">
+                        <div class="card-header">
+                            <div class="card-title">Set dinner table</div>
+                            <div class="points-badge">10 pts</div>
+                        </div>
+                    </div>
+                    <div class="card swap-chore-option" onclick="selectSwapChore(this)" style="border: 2px solid var(--border); cursor: pointer;">
+                        <div class="card-header">
+                            <div class="card-title">Take out trash</div>
+                            <div class="points-badge">15 pts</div>
+                        </div>
+                    </div>
+                    <div class="card swap-chore-option" onclick="selectSwapChore(this)" style="border: 2px solid var(--border); cursor: pointer;">
+                        <div class="card-header">
+                            <div class="card-title">Water the plants</div>
+                            <div class="points-badge">10 pts</div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" onclick="navigateTo('kid-swap-counter-sent')">
+                        <i class="fas fa-paper-plane"></i> Send Counter Offer
+                    </button>
+                </div>
+
+                <!-- Favor input (hidden by default) -->
+                <div id="counter-favor-section" style="display: none; margin-top: 16px;">
+                    <div class="section-header">
+                        <div class="section-title">Describe Your Favor</div>
+                    </div>
+                    <div class="input-group">
+                        <textarea placeholder="e.g., I'll let you pick the movie tonight, I'll share my snacks..." style="min-height: 100px;"></textarea>
+                    </div>
+                    <div style="font-size: 13px; color: var(--text-secondary); margin-bottom: 16px; font-style: italic;">
+                        <i class="fas fa-info-circle"></i> Favors are between you and your sibling — not tracked in the app, no points involved.
+                    </div>
+                    <button class="btn btn-primary" onclick="navigateTo('kid-swap-counter-sent')">
+                        <i class="fas fa-paper-plane"></i> Send Favor Offer
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCREEN: KID SWAP COUNTER SENT -->
+        <div id="kid-swap-counter-sent" class="screen">
+            <div class="success-screen">
+                <div class="success-checkmark">&#x2713;</div>
+                <div class="success-title">Counter Offer Sent!</div>
+                <div class="success-subtitle">Maggie will see your counter offer next time she opens Challey.</div>
+                <div class="success-subtitle" style="margin-top: 8px;">If she accepts, the swap happens automatically.</div>
+                <button class="btn btn-primary" onclick="navigateTo('kid-chores')" style="margin-top: 24px;">
+                    <i class="fas fa-arrow-left"></i> Back to My Chores
+                </button>
+                <button class="btn btn-outline" onclick="navigateTo('kid-swap-counter-received')" style="margin-top: 12px; font-size: 13px;">
+                    <i class="fas fa-forward"></i> Demo: Maggie's View
+                </button>
+            </div>
+        </div>
+
+        <!-- SCREEN: KID SWAP COUNTER RECEIVED (Maggie sees Jake's counter) -->
+        <div id="kid-swap-counter-received" class="screen">
+            <div class="header">
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <i class="fas fa-arrow-left back-btn" onclick="navigateTo('kid-chores')"></i>
+                    </div>
+                    <div class="header-top-right"></div>
+                </div>
+                <div class="header-title-row">
+                    <h1>Counter Offer</h1>
+                    <p>Jake has a different idea</p>
+                </div>
+            </div>
+            <div class="content">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <div style="font-size: 48px; margin-bottom: 8px;">&#x1F91D;</div>
+                    <div style="font-size: 16px; font-weight: 600; color: var(--text);">Jake countered your swap!</div>
+                </div>
+
+                <div class="card" style="background: var(--bg-light);">
+                    <div style="font-size: 13px; color: var(--text-secondary); margin-bottom: 4px;">You wanted:</div>
+                    <div style="font-size: 16px; font-weight: 600; color: var(--text);">Vacuum living room (30 pts)</div>
+                </div>
+
+                <div style="text-align: center; font-size: 24px; padding: 8px 0;">&#x2195;&#xFE0F;</div>
+
+                <div class="card" style="background: linear-gradient(135deg, #FFF0F5, #FFE8F0); border: 2px solid var(--secondary);">
+                    <div style="font-size: 13px; color: var(--text-secondary); margin-bottom: 4px;">Jake offers instead:</div>
+                    <div style="display: flex; align-items: center; gap: 12px; margin-top: 8px;">
+                        <div style="font-size: 32px;">&#x1F91D;</div>
+                        <div>
+                            <div style="font-size: 16px; font-weight: 600; color: var(--text);">A Favor</div>
+                            <div style="font-size: 14px; color: var(--text-secondary); font-style: italic; margin-top: 4px;">"I'll let you pick the movie tonight"</div>
+                        </div>
+                    </div>
+                    <div style="font-size: 12px; color: var(--text-secondary); margin-top: 12px;">
+                        <i class="fas fa-info-circle"></i> No points — just a sibling promise
+                    </div>
+                </div>
+
+                <div style="font-size: 14px; color: var(--text-secondary); text-align: center; margin: 16px 0;">
+                    If you accept, <strong>Clean the garage</strong> moves to Jake.
+                </div>
+
+                <div style="display: flex; gap: 12px;">
+                    <button class="btn btn-outline" onclick="showToast('Swap cancelled'); navigateTo('kid-chores');" style="flex: 1;">
+                        Decline
+                    </button>
+                    <button class="btn btn-success" onclick="createConfetti(); showToast('Favor accepted! Chore moved to Jake.'); setTimeout(function(){ navigateTo('kid-chores'); }, 1500);" style="flex: 1;">
+                        <i class="fas fa-check"></i> Accept Favor
                     </button>
                 </div>
             </div>
@@ -8093,15 +8338,38 @@
         <!-- SCREEN: KID CASHOUT CONFIRM -->
         <div id="kid-cashout-confirm" class="screen">
             <div class="header">
-                <i class="fas fa-arrow-left back-btn" onclick="navigateTo('kid-points')"></i>
-                <h1>Cash Out</h1>
-                <p>Confirm your request</p>
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <i class="fas fa-arrow-left back-btn" onclick="navigateTo('kid-points')"></i>
+                    </div>
+                    <div class="header-top-right"></div>
+                </div>
+                <div class="header-title-row">
+                    <h1>Cash Out</h1>
+                    <p>Choose how much to cash out</p>
+                </div>
             </div>
-            <div class="content" style="text-align: center; padding-top: 40px;">
+            <div class="content" style="text-align: center; padding-top: 24px;">
                 <div style="font-size: 56px; margin-bottom: 16px;">💰</div>
-                <h2 style="font-size: 22px; color: var(--text); margin-bottom: 8px;">You're cashing out</h2>
-                <div style="font-size: 36px; font-weight: 700; color: #28a745; margin-bottom: 4px;">100 pts ($5.00)</div>
-                <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 32px;">Dad will be notified to confirm</p>
+                <h2 style="font-size: 22px; color: var(--text); margin-bottom: 16px;">You're cashing out</h2>
+                <div style="font-size: 36px; font-weight: 700; color: #28a745; margin-bottom: 4px;">
+                    <span id="cashout-pts-display">100</span> pts ($<span id="cashout-dollar-display">5.00</span>)
+                </div>
+                <div style="margin: 24px 0;">
+                    <input type="range" min="20" max="200" value="100" step="10"
+                        oninput="updateCashoutAmount(this.value)"
+                        style="width: 100%; accent-color: var(--secondary); height: 8px; cursor: pointer;">
+                    <div style="display: flex; justify-content: space-between; font-size: 12px; color: var(--text-secondary); margin-top: 6px;">
+                        <span>20 pts ($1.00)</span>
+                        <span>200 pts ($10.00)</span>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: center; gap: 8px; margin-bottom: 16px;">
+                    <button class="btn btn-outline" onclick="document.querySelector('#kid-cashout-confirm input[type=range]').value=40; updateCashoutAmount(40);" style="padding: 6px 14px; font-size: 13px;">40 pts</button>
+                    <button class="btn btn-outline" onclick="document.querySelector('#kid-cashout-confirm input[type=range]').value=100; updateCashoutAmount(100);" style="padding: 6px 14px; font-size: 13px;">100 pts</button>
+                    <button class="btn btn-outline" onclick="document.querySelector('#kid-cashout-confirm input[type=range]').value=200; updateCashoutAmount(200);" style="padding: 6px 14px; font-size: 13px;">200 pts</button>
+                </div>
+                <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 24px;">Dad will be notified to confirm</p>
                 <button class="btn btn-success" onclick="createConfetti(); setTimeout(function(){ navigateTo('kid-cashout-pending'); }, 800);">
                     <i class="fas fa-dollar-sign"></i> Request Cash Out
                 </button>
@@ -8564,6 +8832,20 @@
             navigateTo('kid-chores');
         }
 
+        function updateCashoutAmount(value) {
+            var pts = parseInt(value);
+            var dollars = (pts / 20).toFixed(2);
+            document.getElementById('cashout-pts-display').textContent = pts;
+            document.getElementById('cashout-dollar-display').textContent = dollars;
+        }
+
+        function selectRole(el, role) {
+            document.querySelectorAll('.role-option').forEach(function(opt) {
+                opt.classList.remove('selected');
+            });
+            el.classList.add('selected');
+        }
+
         function submitSwapConfirm() {
             createConfetti();
             setTimeout(() => navigateTo('kid-swap-sibling-sent'), 800);
@@ -8787,6 +9069,9 @@
                 "Dad might have something better for you!",
                 "Try suggesting something you're great at!",
             ],
+            'kid-swap-counter': ["Make Jake an offer he can't refuse!", "What can you offer instead?"],
+            'kid-swap-counter-sent': ["Nice counter! Let's see what Maggie thinks."],
+            'kid-swap-counter-received': ["Jake's got a deal for you! What do you think?"],
             'kid-shoutout-select': [
                 "Being kind is the best reward!",
                 "Shout-outs make everyone's day better!",
@@ -8842,6 +9127,7 @@
             'create-family-manual': [
                 "Just a few details and you're in!",
             ],
+            'create-family-role': ["Nice to meet you! What should the kids call you?"],
             'create-family-name': [
                 "What should we call your family?",
             ],
