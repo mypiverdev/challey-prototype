@@ -2437,12 +2437,14 @@
         /* ===== FEATURE 6: Swipe to Approve ===== */
         .swipe-card-stack {
             position: relative;
-            height: 500px;
+            min-height: 420px;
             margin-bottom: 20px;
         }
 
         .swipe-card {
             position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             background: var(--bg-card);
             border-radius: 20px;
@@ -2451,6 +2453,7 @@
             transition: transform 0.3s, opacity 0.3s;
             cursor: grab;
             user-select: none;
+            -webkit-user-select: none;
         }
 
         .swipe-card:active {
@@ -2460,11 +2463,13 @@
         .swipe-card:nth-child(2) {
             transform: scale(0.95) translateY(10px);
             opacity: 0.7;
+            pointer-events: none;
         }
 
         .swipe-card:nth-child(3) {
             transform: scale(0.9) translateY(20px);
             opacity: 0.4;
+            pointer-events: none;
         }
 
         .swipe-overlay {
@@ -3399,6 +3404,9 @@
             height: 20px;
             background: var(--border);
             margin-left: 11px;
+        }
+        .cashout-status-line.done {
+            background: #28a745;
         }
 
         /* Waiting dots animation */
@@ -5424,6 +5432,18 @@
                         <button class="btn btn-success" style="width: auto; padding: 10px 20px; font-size: 14px;" onclick="event.stopPropagation(); navigateTo('kid-cashout-confirm')">
                             <i class="fas fa-dollar-sign"></i> Cash Out
                         </button>
+                    </div>
+                </div>
+
+                <!-- Pending Cash-Out Status Card -->
+                <div class="card" style="background: linear-gradient(135deg, #FFF3CD, #FFE8A1); cursor: pointer; border: 2px solid #FFD700;" onclick="navigateTo('kid-cashout-pending')">
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <div style="font-size: 28px;">⏳</div>
+                        <div style="flex: 1;">
+                            <div style="font-size: 15px; font-weight: 700; color: #856404;">Pending Cash-Out: $5.00</div>
+                            <div style="font-size: 12px; color: #856404;">Waiting for Dad to confirm • Tap to check status</div>
+                        </div>
+                        <i class="fas fa-chevron-right" style="color: #856404;"></i>
                     </div>
                 </div>
 
@@ -8089,16 +8109,29 @@
             </div>
         </div>
 
-        <!-- SCREEN: KID CASHOUT PENDING -->
+        <!-- SCREEN: KID CASHOUT PENDING (Step 2: Waiting for Dad) -->
         <div id="kid-cashout-pending" class="screen">
-            <div class="content" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 100%; padding: 40px 20px;">
-                <div style="font-size: 64px; margin-bottom: 20px;">💰</div>
-                <h2 style="font-size: 22px; color: var(--text); margin-bottom: 16px;">Pending Cash!</h2>
-                <p style="font-size: 15px; color: var(--text-secondary); margin-bottom: 24px;">Waiting for Dad to confirm payment</p>
-                <div style="width: 100%; max-width: 260px; text-align: left;">
+            <div class="header">
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <i class="fas fa-arrow-left back-btn" onclick="navigateTo('kid-points')"></i>
+                    </div>
+                    <div class="header-top-right"></div>
+                </div>
+                <div class="header-title-row">
+                    <h1>Cash-Out Status</h1>
+                    <p>100 pts → $5.00</p>
+                </div>
+            </div>
+            <div class="content" style="display: flex; flex-direction: column; align-items: center; text-align: center; padding-top: 24px;">
+                <div style="font-size: 64px; margin-bottom: 16px;">💰</div>
+                <h2 style="font-size: 22px; color: var(--text); margin-bottom: 8px;">Pending Cash!</h2>
+                <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 24px;">Waiting for Dad to confirm payment</p>
+                <div style="width: 100%; max-width: 280px; text-align: left;">
                     <div class="cashout-status-step">
                         <div class="cashout-status-dot done"><i class="fas fa-check"></i></div>
                         <span style="font-size: 14px; color: var(--text);">Requested</span>
+                        <span style="font-size: 11px; color: var(--text-secondary); margin-left: auto;">Just now</span>
                     </div>
                     <div class="cashout-status-line"></div>
                     <div class="cashout-status-step">
@@ -8108,7 +8141,7 @@
                     <div class="cashout-status-line"></div>
                     <div class="cashout-status-step">
                         <div class="cashout-status-dot"></div>
-                        <span style="font-size: 14px; color: var(--text-secondary);">Paid</span>
+                        <span style="font-size: 14px; color: var(--text-secondary);">Dad confirms paid</span>
                     </div>
                     <div class="cashout-status-line"></div>
                     <div class="cashout-status-step">
@@ -8116,7 +8149,57 @@
                         <span style="font-size: 14px; color: var(--text-secondary);">You confirm received</span>
                     </div>
                 </div>
-                <button class="btn btn-primary" onclick="navigateTo('kid-chores')" style="margin-top: 32px;">Back to Chores</button>
+                <button class="btn btn-primary" onclick="navigateTo('kid-points')" style="margin-top: 32px;">Back to Points</button>
+                <!-- Demo: simulate Dad approved + paid -->
+                <button class="btn btn-outline" onclick="navigateTo('kid-cashout-paid')" style="margin-top: 12px; font-size: 13px;">
+                    <i class="fas fa-forward"></i> Demo: Dad marks paid
+                </button>
+            </div>
+        </div>
+
+        <!-- SCREEN: KID CASHOUT PAID (Step 3: Dad paid, kid confirms) -->
+        <div id="kid-cashout-paid" class="screen">
+            <div class="header">
+                <div class="header-top-row">
+                    <div class="header-top-left">
+                        <i class="fas fa-arrow-left back-btn" onclick="navigateTo('kid-points')"></i>
+                    </div>
+                    <div class="header-top-right"></div>
+                </div>
+                <div class="header-title-row">
+                    <h1>Cash-Out Status</h1>
+                    <p>100 pts → $5.00</p>
+                </div>
+            </div>
+            <div class="content" style="display: flex; flex-direction: column; align-items: center; text-align: center; padding-top: 24px;">
+                <div style="font-size: 64px; margin-bottom: 16px;">🎉</div>
+                <h2 style="font-size: 22px; color: #28a745; margin-bottom: 8px;">Dad sent your cash!</h2>
+                <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 24px;">Confirm once you've received $5.00</p>
+                <div style="width: 100%; max-width: 280px; text-align: left;">
+                    <div class="cashout-status-step">
+                        <div class="cashout-status-dot done"><i class="fas fa-check"></i></div>
+                        <span style="font-size: 14px; color: var(--text);">Requested</span>
+                    </div>
+                    <div class="cashout-status-line done"></div>
+                    <div class="cashout-status-step">
+                        <div class="cashout-status-dot done"><i class="fas fa-check"></i></div>
+                        <span style="font-size: 14px; color: var(--text);">Dad approved</span>
+                    </div>
+                    <div class="cashout-status-line done"></div>
+                    <div class="cashout-status-step">
+                        <div class="cashout-status-dot done"><i class="fas fa-check"></i></div>
+                        <span style="font-size: 14px; color: var(--text);">Dad marked paid</span>
+                    </div>
+                    <div class="cashout-status-line"></div>
+                    <div class="cashout-status-step">
+                        <div class="cashout-status-dot active" style="background: #28a745; border-color: #28a745;"><i class="fas fa-hand-holding-dollar" style="font-size: 10px;"></i></div>
+                        <span style="font-size: 14px; font-weight: 600; color: var(--text);">Confirm you received it</span>
+                    </div>
+                </div>
+                <button class="btn btn-success" onclick="createConfetti(); showToast('Cash received! $5.00 confirmed.'); setTimeout(function(){ navigateTo('kid-points'); }, 1500);" style="margin-top: 24px; font-size: 16px; padding: 16px;">
+                    <i class="fas fa-check-circle"></i> Yes, I received $5.00!
+                </button>
+                <button class="btn btn-outline" onclick="navigateTo('kid-points')" style="margin-top: 12px;">Not yet — check later</button>
             </div>
         </div>
 
@@ -8271,6 +8354,10 @@
             });
             document.getElementById(screenId).classList.add('active');
             companionOnNavigate(screenId);
+            // Initialize swipe cards when entering parent-verify
+            if (screenId === 'parent-verify') {
+                setTimeout(function() { initSwipeCards(); }, 150);
+            }
         }
 
         function toggleRole() {
@@ -8793,6 +8880,11 @@
             ],
             'kid-cashout-pending': [
                 "Your request is in! Hang tight!",
+                "Dad will get to it soon!",
+            ],
+            'kid-cashout-paid': [
+                "Dad sent the cash! Confirm when you have it!",
+                "Cha-ching! Time to collect!",
             ],
             'kid-redeem-confirm': [
                 "Great choice! Confirm to claim it!",
@@ -9098,19 +9190,29 @@
         function initSwipeCards() {
             swipeCards = Array.from(document.querySelectorAll('.swipe-card'));
             currentCardIndex = 0;
+            isDragging = false;
+            dragCard = null;
 
-            swipeCards.forEach((card, index) => {
-                if (index === 0) {
-                    setupCardDrag(card);
-                }
+            // Remove old listeners from all cards, then add to first
+            swipeCards.forEach(function(card) {
+                card.removeEventListener('mousedown', handleDragStart);
+                card.removeEventListener('touchstart', handleDragStart);
+                card.style.transform = '';
+                card.style.transition = '';
             });
+
+            if (swipeCards.length > 0) {
+                setupCardDrag(swipeCards[0]);
+            }
 
             updateChoresCount();
         }
 
         function setupCardDrag(card) {
+            card.removeEventListener('mousedown', handleDragStart);
+            card.removeEventListener('touchstart', handleDragStart);
             card.addEventListener('mousedown', handleDragStart);
-            card.addEventListener('touchstart', handleDragStart);
+            card.addEventListener('touchstart', handleDragStart, { passive: true });
         }
 
         function handleDragStart(e) {
@@ -9124,23 +9226,25 @@
             currentX = startX;
 
             dragCard.style.transition = 'none';
+            dragCard.style.touchAction = 'none';
 
-            document.addEventListener('mousemove', handleDrag);
-            document.addEventListener('touchmove', handleDrag);
+            document.addEventListener('mousemove', handleDrag, { passive: false });
+            document.addEventListener('touchmove', handleDrag, { passive: false });
             document.addEventListener('mouseup', handleDragEnd);
             document.addEventListener('touchend', handleDragEnd);
         }
 
         function handleDrag(e) {
-            if (!isDragging) return;
+            if (!isDragging || !dragCard) return;
+            e.preventDefault();
 
             currentX = e.type === 'touchmove' ? e.touches[0].clientX : e.clientX;
-            const deltaX = currentX - startX;
+            var deltaX = currentX - startX;
 
-            dragCard.style.transform = `translateX(${deltaX}px) rotate(${deltaX * 0.1}deg)`;
+            dragCard.style.transform = 'translateX(' + deltaX + 'px) rotate(' + (deltaX * 0.1) + 'deg)';
 
-            const approveOverlay = dragCard.querySelector('.swipe-overlay.approve');
-            const rejectOverlay = dragCard.querySelector('.swipe-overlay.reject');
+            var approveOverlay = dragCard.querySelector('.swipe-overlay.approve');
+            var rejectOverlay = dragCard.querySelector('.swipe-overlay.reject');
 
             if (deltaX > 0) {
                 approveOverlay.style.opacity = Math.min(Math.abs(deltaX) / 100, 1);
@@ -9155,15 +9259,19 @@
             if (!isDragging) return;
 
             isDragging = false;
-            const deltaX = currentX - startX;
+            var deltaX = currentX - startX;
 
             document.removeEventListener('mousemove', handleDrag);
             document.removeEventListener('touchmove', handleDrag);
             document.removeEventListener('mouseup', handleDragEnd);
             document.removeEventListener('touchend', handleDragEnd);
 
-            if (Math.abs(deltaX) > 100) {
-                // Swipe detected
+            if (dragCard) {
+                dragCard.style.touchAction = '';
+            }
+
+            if (Math.abs(deltaX) > 80) {
+                // Swipe detected (lowered threshold for easier swiping)
                 if (deltaX > 0) {
                     approveCard();
                 } else {
@@ -9171,12 +9279,14 @@
                 }
             } else {
                 // Snap back
-                dragCard.style.transition = 'transform 0.3s';
-                dragCard.style.transform = '';
-                const approveOverlay = dragCard.querySelector('.swipe-overlay.approve');
-                const rejectOverlay = dragCard.querySelector('.swipe-overlay.reject');
-                approveOverlay.style.opacity = 0;
-                rejectOverlay.style.opacity = 0;
+                if (dragCard) {
+                    dragCard.style.transition = 'transform 0.3s';
+                    dragCard.style.transform = '';
+                    var approveOverlay = dragCard.querySelector('.swipe-overlay.approve');
+                    var rejectOverlay = dragCard.querySelector('.swipe-overlay.reject');
+                    if (approveOverlay) approveOverlay.style.opacity = 0;
+                    if (rejectOverlay) rejectOverlay.style.opacity = 0;
+                }
             }
         }
 
@@ -9251,14 +9361,7 @@
             }
         }
 
-        // Initialize swipe cards when navigating to parent-verify
-        const originalNavigateTo = navigateTo;
-        navigateTo = function(screenId) {
-            originalNavigateTo(screenId);
-            if (screenId === 'parent-verify') {
-                setTimeout(() => initSwipeCards(), 100);
-            }
-        };
+        // Swipe init is handled inside navigateTo() directly
 
         // ===== V3 NEW FUNCTIONS =====
 
