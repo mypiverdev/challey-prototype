@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <!-- Celebration: Swap Accepted — Two hands shake/high-five (Animated) -->
+  <defs>
+    <linearGradient id="saBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2E86AB"/>
+      <stop offset="100%" stop-color="#1B5A75"/>
+    </linearGradient>
+    <filter id="saGlow">
+      <feGaussianBlur stdDeviation="3" result="glow"/>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="saShadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#1B2A4A" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <style>
+    /* === CIRCLE POP === */
+    .sa-main-circle {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: sa-circle-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+    @keyframes sa-circle-pop {
+      0%   { transform: scale(0); }
+      70%  { transform: scale(1.05); }
+      85%  { transform: scale(0.98); }
+      100% { transform: scale(1); }
+    }
+
+    /* === RIGHT ARROW (top) - slides from left === */
+    .sa-arrow-right {
+      animation: sa-arrow-slide-in-right 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both,
+                 sa-arrow-pulse-right 2s ease-in-out 1s infinite;
+    }
+    @keyframes sa-arrow-slide-in-right {
+      0%   { transform: translateX(-40px); opacity: 0; }
+      100% { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes sa-arrow-pulse-right {
+      0%, 100% { transform: translateX(0); }
+      50%      { transform: translateX(3px); }
+    }
+
+    /* === LEFT ARROW (bottom) - slides from right === */
+    .sa-arrow-left {
+      animation: sa-arrow-slide-in-left 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both,
+                 sa-arrow-pulse-left 2s ease-in-out 1s infinite;
+    }
+    @keyframes sa-arrow-slide-in-left {
+      0%   { transform: translateX(40px); opacity: 0; }
+      100% { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes sa-arrow-pulse-left {
+      0%, 100% { transform: translateX(0); }
+      50%      { transform: translateX(-3px); }
+    }
+
+    /* === CHECKMARK POP === */
+    .sa-checkmark {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: sa-check-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.6s both;
+    }
+    @keyframes sa-check-pop {
+      0%   { transform: scale(0); }
+      65%  { transform: scale(1.2); }
+      80%  { transform: scale(0.95); }
+      100% { transform: scale(1); }
+    }
+
+    /* === BURST RAYS === */
+    .sa-burst-rays {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: sa-rays-expand 0.5s ease-out 0.15s forwards,
+                 sa-rays-pulse 2.5s ease-in-out 0.8s infinite;
+    }
+    @keyframes sa-rays-expand {
+      0%   { transform: scale(0.5); opacity: 0.02; }
+      70%  { transform: scale(1.15); opacity: 0.12; }
+      100% { transform: scale(1); opacity: 0.08; }
+    }
+    @keyframes sa-rays-pulse {
+      0%, 100% { opacity: 0.05; }
+      50%      { opacity: 0.12; }
+    }
+
+    /* === CONFETTI DRIFT === */
+    .sa-confetti-1 { transform-box: fill-box; transform-origin: center; animation: sa-confetti-1 3s ease-in-out 0.5s infinite; }
+    .sa-confetti-2 { transform-box: fill-box; transform-origin: center; animation: sa-confetti-2 3s ease-in-out 0.8s infinite; }
+    .sa-confetti-3 { transform-box: fill-box; transform-origin: center; animation: sa-confetti-3 3s ease-in-out 1.1s infinite; }
+    .sa-confetti-4 { transform-box: fill-box; transform-origin: center; animation: sa-confetti-4 3s ease-in-out 0.6s infinite; }
+    .sa-confetti-5 { transform-box: fill-box; transform-origin: center; animation: sa-confetti-5 3s ease-in-out 0.9s infinite; }
+    .sa-confetti-6 { transform-box: fill-box; transform-origin: center; animation: sa-confetti-6 3s ease-in-out 1.3s infinite; }
+
+    @keyframes sa-confetti-1 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      50%      { transform: translate(-5px, 38px) rotate(180deg); }
+    }
+    @keyframes sa-confetti-2 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      50%      { transform: translate(8px, 35px) rotate(-175deg); }
+    }
+    @keyframes sa-confetti-3 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      50%      { transform: translate(-10px, 40px) rotate(165deg); }
+    }
+    @keyframes sa-confetti-4 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      50%      { transform: translate(12px, 42px) rotate(-190deg); }
+    }
+    @keyframes sa-confetti-5 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      50%      { transform: translate(-7px, 30px) rotate(195deg); }
+    }
+    @keyframes sa-confetti-6 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      50%      { transform: translate(6px, 36px) rotate(-160deg); }
+    }
+
+    /* === SPARKLE TWINKLE === */
+    .sa-sparkle-1 {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: sa-twinkle 2s ease-in-out 0.4s infinite;
+    }
+    .sa-sparkle-2 {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: sa-twinkle 2s ease-in-out 1.2s infinite;
+    }
+    @keyframes sa-twinkle {
+      0%, 100% { transform: scale(0); opacity: 0; }
+      50%      { transform: scale(1); opacity: 1; }
+    }
+  </style>
+
+  <!-- Burst lines -->
+  <g class="sa-burst-rays" stroke="#2E86AB" stroke-width="2" stroke-linecap="round" opacity="0.08">
+    <line x1="150" y1="30" x2="150" y2="55"/>
+    <line x1="150" y1="245" x2="150" y2="270"/>
+    <line x1="35" y1="150" x2="60" y2="150"/>
+    <line x1="240" y1="150" x2="265" y2="150"/>
+    <line x1="60" y1="60" x2="80" y2="80"/>
+    <line x1="220" y1="80" x2="240" y2="60"/>
+  </g>
+
+  <!-- Swap arrows circle -->
+  <g class="sa-main-circle">
+    <circle cx="150" cy="150" r="72" fill="url(#saBlue)" filter="url(#saShadow)"/>
+    <circle cx="150" cy="150" r="62" fill="none" stroke="white" stroke-width="2" opacity="0.2"/>
+    <ellipse cx="138" cy="125" rx="28" ry="18" fill="white" opacity="0.08"/>
+  </g>
+
+  <!-- Swap arrows icon -->
+  <g filter="url(#saGlow)" stroke="white" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Right arrow (top) -->
+    <g class="sa-arrow-right">
+      <path d="M120 135 L180 135"/>
+      <path d="M168 123 L180 135 L168 147"/>
+    </g>
+    <!-- Left arrow (bottom) -->
+    <g class="sa-arrow-left">
+      <path d="M180 165 L120 165"/>
+      <path d="M132 177 L120 165 L132 153"/>
+    </g>
+  </g>
+
+  <!-- Checkmark overlay -->
+  <g class="sa-checkmark" transform="translate(195, 110)" filter="url(#saGlow)">
+    <circle cx="0" cy="0" r="16" fill="#28a745"/>
+    <path d="M-7 0 L-2 5 L8 -5" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Confetti -->
+  <g>
+    <rect class="sa-confetti-1" x="70" y="50" width="7" height="7" rx="1.5" fill="#FFD700" opacity="0.6" transform="rotate(20, 73, 53)"/>
+    <rect class="sa-confetti-2" x="220" y="55" width="6" height="8" rx="1.5" fill="#FF6B6B" opacity="0.55" transform="rotate(-25, 223, 59)"/>
+    <rect class="sa-confetti-3" x="55" y="200" width="8" height="5" rx="1.5" fill="#A855F7" opacity="0.45" transform="rotate(35, 59, 202)"/>
+    <rect class="sa-confetti-4" x="235" y="210" width="5" height="8" rx="1" fill="#00D2D3" opacity="0.5" transform="rotate(-40, 237, 214)"/>
+    <circle class="sa-confetti-5" cx="95" cy="75" r="3.5" fill="#F18F01" opacity="0.45"/>
+    <circle class="sa-confetti-6" cx="210" cy="240" r="3" fill="#FFD700" opacity="0.4"/>
+  </g>
+
+  <!-- Sparkle stars -->
+  <path class="sa-sparkle-1" d="M85 115 L87 120 L92 122 L87 124 L85 129 L83 124 L78 122 L83 120 Z" fill="#FFD700" opacity="0.45"/>
+  <path class="sa-sparkle-2" d="M225 130 L227 134 L231 135 L227 137 L225 141 L223 137 L219 135 L223 134 Z" fill="white" opacity="0.35"/>
+</svg>

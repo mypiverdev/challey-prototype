@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Badge: So Funny — Orange gradient, laughing face icon -->
+  <defs>
+    <linearGradient id="sfBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFA502"/>
+      <stop offset="100%" stop-color="#E8850A"/>
+    </linearGradient>
+    <filter id="sfShadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#A05A00" flood-opacity="0.3"/>
+    </filter>
+    <filter id="sfGlow">
+      <feGaussianBlur stdDeviation="2" result="glow"/>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <circle cx="100" cy="100" r="96" fill="url(#sfBg)" filter="url(#sfShadow)"/>
+  <circle cx="100" cy="100" r="85" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
+  <circle cx="100" cy="100" r="80" fill="url(#sfBg)"/>
+  <ellipse cx="85" cy="72" rx="40" ry="28" fill="white" opacity="0.1"/>
+
+  <!-- Laughing face icon -->
+  <g filter="url(#sfGlow)" transform="translate(100, 88)">
+    <!-- Face circle -->
+    <circle cx="0" cy="0" r="35" fill="white" opacity="0.95"/>
+    <!-- Squinting happy eyes -->
+    <path d="M-18 -8 Q-12 -16 -6 -8" fill="none" stroke="#E8850A" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M6 -8 Q12 -16 18 -8" fill="none" stroke="#E8850A" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Big open laugh mouth -->
+    <path d="M-18 8 Q0 32 18 8" fill="#E8850A" opacity="0.3"/>
+    <path d="M-18 8 Q0 32 18 8" fill="none" stroke="#E8850A" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Tongue -->
+    <ellipse cx="0" cy="18" rx="8" ry="6" fill="#FF6B6B" opacity="0.5"/>
+    <!-- Tear of laughter -->
+    <path d="M24 -5 Q28 2 24 5" fill="#4FC3F7" opacity="0.5" stroke="#4FC3F7" stroke-width="1"/>
+  </g>
+
+  <!-- Ha ha text accents -->
+  <text x="52" y="58" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="white" opacity="0.35" transform="rotate(-15, 52, 58)">Ha!</text>
+  <text x="138" y="52" font-family="Inter, sans-serif" font-size="8" font-weight="700" fill="white" opacity="0.25" transform="rotate(10, 138, 52)">Ha!</text>
+
+  <text x="100" y="168" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="white" letter-spacing="0.5">SO</text>
+  <text x="100" y="183" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="white" opacity="0.8">FUNNY</text>
+</svg>

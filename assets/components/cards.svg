@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 520" width="700" height="520">
+  <!-- Component: Card System -->
+  <defs>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#1B2A4A" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="700" height="520" fill="#F5F7FA"/>
+
+  <text x="30" y="35" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#1B2A4A">Cards</text>
+  <text x="30" y="55" font-family="Inter, sans-serif" font-size="11" fill="#888">Border-radius: 12-16px | Shadow: 0 2px 8px rgba(27,42,74,0.08)</text>
+
+  <!-- Chore Card -->
+  <text x="30" y="85" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#888" letter-spacing="1">CHORE CARD</text>
+  <g filter="url(#cardShadow)">
+    <rect x="30" y="95" width="300" height="75" rx="14" fill="white"/>
+    <circle cx="68" cy="132" r="18" fill="#E8F4F8"/>
+    <text x="68" y="138" text-anchor="middle" font-family="Inter, sans-serif" font-size="16">🧹</text>
+    <text x="96" y="122" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#1B2A4A">Clean bedroom</text>
+    <text x="96" y="140" font-family="Inter, sans-serif" font-size="11" fill="#888">Due today</text>
+    <rect x="260" y="115" width="55" height="26" rx="13" fill="#E8F4F8"/>
+    <text x="287" y="133" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#2E86AB">20 pts</text>
+  </g>
+
+  <!-- Chore Card (Approved state) -->
+  <g filter="url(#cardShadow)">
+    <rect x="360" y="95" width="300" height="75" rx="14" fill="white"/>
+    <circle cx="398" cy="132" r="18" fill="#E0F8E8"/>
+    <text x="398" y="138" text-anchor="middle" font-family="Inter, sans-serif" font-size="16">🍽️</text>
+    <text x="426" y="122" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#1B2A4A">Set the table</text>
+    <text x="426" y="140" font-family="Inter, sans-serif" font-size="11" fill="#28a745">✓ Approved</text>
+    <rect x="590" y="115" width="55" height="26" rx="13" fill="#E0F8E8"/>
+    <text x="617" y="133" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#28a745">10 pts</text>
+  </g>
+
+  <!-- Streak Card -->
+  <text x="30" y="200" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#888" letter-spacing="1">STREAK CARD</text>
+  <g filter="url(#cardShadow)">
+    <rect x="30" y="210" width="300" height="65" rx="14" fill="#F18F01"/>
+    <text x="50" y="240" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="white">🔥 5 Day Streak!</text>
+    <text x="50" y="258" font-family="Inter, sans-serif" font-size="11" font-weight="400" fill="white" opacity="0.75">Keep it going!</text>
+    <text x="300" y="248" text-anchor="end" font-family="Inter, sans-serif" font-size="30" font-weight="700" fill="white" opacity="0.3">5</text>
+  </g>
+
+  <!-- Reward Card -->
+  <text x="360" y="200" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#888" letter-spacing="1">REWARD CARD</text>
+  <g filter="url(#cardShadow)">
+    <rect x="360" y="210" width="140" height="135" rx="14" fill="white"/>
+    <text x="430" y="272" text-anchor="middle" font-family="Inter, sans-serif" font-size="36">🎬</text>
+    <text x="430" y="300" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#1B2A4A">Movie Night</text>
+    <rect x="390" y="312" width="80" height="24" rx="12" fill="#E8F4F8"/>
+    <text x="430" y="329" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#2E86AB">100 pts</text>
+  </g>
+  <!-- Reward Card (Affordable) -->
+  <g filter="url(#cardShadow)">
+    <rect x="520" y="210" width="140" height="135" rx="14" fill="white" stroke="#28a745" stroke-width="2"/>
+    <text x="590" y="272" text-anchor="middle" font-family="Inter, sans-serif" font-size="36">🎫</text>
+    <text x="590" y="300" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#1B2A4A">Game Pass</text>
+    <rect x="550" y="312" width="80" height="24" rx="12" fill="#E0F8E8"/>
+    <text x="590" y="329" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#28a745">30 pts ✓</text>
+  </g>
+
+  <!-- Member Card -->
+  <text x="30" y="310" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#888" letter-spacing="1">MEMBER CARD</text>
+  <g filter="url(#cardShadow)">
+    <rect x="30" y="320" width="300" height="65" rx="14" fill="white"/>
+    <circle cx="68" cy="352" r="18" fill="#FF6B6B"/>
+    <text x="68" y="358" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="white">J</text>
+    <text x="96" y="343" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#1B2A4A">Johnny</text>
+    <text x="96" y="361" font-family="Inter, sans-serif" font-size="11" fill="#888">3/5 chores done today</text>
+    <!-- Progress bar -->
+    <rect x="96" y="367" width="150" height="5" rx="2.5" fill="#E8ECF0"/>
+    <rect x="96" y="367" width="90" height="5" rx="2.5" fill="#28a745"/>
+    <text x="310" y="358" text-anchor="end" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#F18F01">285 pts</text>
+  </g>
+
+  <!-- Activity Card -->
+  <text x="30" y="415" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#888" letter-spacing="1">ACTIVITY / NOTIFICATION CARD</text>
+  <g filter="url(#cardShadow)">
+    <rect x="30" y="425" width="300" height="65" rx="14" fill="white" stroke="#F18F01" stroke-width="1.5"/>
+    <circle cx="68" cy="457" r="18" fill="#FFF5E0"/>
+    <text x="68" y="463" text-anchor="middle" font-family="Inter, sans-serif" font-size="14">📸</text>
+    <text x="96" y="448" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#1B2A4A">Johnny completed a chore</text>
+    <text x="96" y="466" font-family="Inter, sans-serif" font-size="10" fill="#F18F01">Awaiting approval</text>
+    <text x="310" y="448" text-anchor="end" font-family="Inter, sans-serif" font-size="9" fill="#B0B8C0">2m ago</text>
+  </g>
+
+  <!-- Swap Card -->
+  <g filter="url(#cardShadow)">
+    <rect x="360" y="425" width="300" height="65" rx="14" fill="white" stroke="#2E86AB" stroke-width="1.5"/>
+    <circle cx="398" cy="457" r="18" fill="#E8F4F8"/>
+    <text x="398" y="463" text-anchor="middle" font-family="Inter, sans-serif" font-size="14">🔄</text>
+    <text x="426" y="448" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#1B2A4A">Maggie wants to swap</text>
+    <text x="426" y="466" font-family="Inter, sans-serif" font-size="10" fill="#2E86AB">+5 bonus pts offered</text>
+    <text x="640" y="448" text-anchor="end" font-family="Inter, sans-serif" font-size="9" fill="#B0B8C0">5m ago</text>
+  </g>
+</svg>

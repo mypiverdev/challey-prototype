@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Challey — Complete Asset Library</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #f5f7fa;
+    color: #1B2A4A;
+    line-height: 1.6;
+  }
+
+  .header {
+    background: linear-gradient(135deg, #1B2A4A 0%, #2E86AB 100%);
+    color: white;
+    padding: 60px 40px 50px;
+    text-align: center;
+  }
+  .header h1 { font-size: 48px; font-weight: 700; letter-spacing: -1px; }
+  .header p { font-size: 18px; opacity: 0.7; margin-top: 8px; letter-spacing: 4px; font-weight: 300; }
+  .header .count { font-size: 14px; opacity: 0.4; margin-top: 12px; }
+
+  /* Navigation */
+  .nav {
+    background: white;
+    border-bottom: 1px solid #e8ecf0;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .nav a {
+    display: inline-block;
+    padding: 14px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #888;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+  }
+  .nav a:hover { color: #1B2A4A; border-bottom-color: #2E86AB; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+
+  .section {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 12px rgba(27,42,74,0.06);
+  }
+  .section h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .section .subtitle { font-size: 14px; color: #666; margin-bottom: 24px; }
+  .section .count-badge {
+    display: inline-block;
+    background: #E8F4F8;
+    color: #2E86AB;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  .asset-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+  .asset-grid.wide { grid-template-columns: 1fr; }
+  .asset-grid.two-col { grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); }
+
+  .asset-card {
+    border: 1px solid #e8ecf0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .asset-card:hover { box-shadow: 0 4px 20px rgba(27,42,74,0.1); transform: translateY(-2px); }
+
+  .asset-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 28px;
+    min-height: 180px;
+  }
+  .asset-preview.dark { background: #1B2A4A; }
+  .asset-preview.light { background: #f5f7fa; }
+  .asset-preview.warm { background: #FFF8EE; }
+  .asset-preview.checker {
+    background-image:
+      linear-gradient(45deg, #e8e8e8 25%, transparent 25%),
+      linear-gradient(-45deg, #e8e8e8 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, #e8e8e8 75%),
+      linear-gradient(-45deg, transparent 75%, #e8e8e8 75%);
+    background-size: 16px 16px;
+    background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+  }
+
+  .asset-preview img { max-width: 100%; max-height: 200px; object-fit: contain; }
+
+  .asset-info {
+    padding: 14px 18px;
+    border-top: 1px solid #e8ecf0;
+  }
+  .asset-info h3 { font-size: 14px; font-weight: 600; margin-bottom: 3px; }
+  .asset-info p { font-size: 11px; color: #888; }
+  .asset-info .path { font-family: 'Courier New', monospace; font-size: 10px; color: #2E86AB; margin-top: 4px; }
+
+  /* Badge grid */
+  .badge-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+  }
+  .badge-card { text-align: center; }
+  .badge-card img { width: 120px; height: 120px; transition: transform 0.2s; }
+  .badge-card:hover img { transform: scale(1.1); }
+  .badge-card .name { font-size: 12px; font-weight: 600; margin-top: 8px; }
+
+  /* Mascot mini grid */
+  .mascot-mini-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 16px;
+  }
+  .mascot-mini { text-align: center; cursor: pointer; transition: transform 0.2s; }
+  .mascot-mini:hover { transform: scale(1.08); }
+  .mascot-mini img { width: 90px; height: 90px; }
+  .mascot-mini .name { font-size: 11px; font-weight: 500; margin-top: 4px; color: #666; }
+
+  /* Color palette */
+  .color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 14px;
+  }
+  .color-swatch { border-radius: 10px; overflow: hidden; border: 1px solid #e8ecf0; }
+  .color-swatch .swatch {
+    height: 60px;
+    display: flex;
+    align-items: flex-end;
+    padding: 6px 10px;
+  }
+  .color-swatch .swatch span {
+    font-size: 11px; font-weight: 600; padding: 1px 6px;
+    border-radius: 4px; background: rgba(255,255,255,0.9); color: #1B2A4A;
+  }
+  .color-swatch .meta { padding: 10px; font-size: 12px; }
+  .color-swatch .meta .name { font-weight: 600; }
+  .color-swatch .meta .hex { color: #888; font-family: monospace; font-size: 11px; }
+
+  /* Splash preview */
+  .splash-preview {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .splash-frame {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 6px 30px rgba(27,42,74,0.12);
+    border: 3px solid #1B2A4A;
+  }
+  .splash-frame img { width: 100%; display: block; }
+  .splash-label { text-align: center; margin-top: 10px; font-size: 12px; color: #666; }
+
+  /* File tree */
+  .file-tree {
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    background: #1B2A4A;
+    color: #a0c4d8;
+    padding: 20px;
+    border-radius: 10px;
+    line-height: 1.9;
+    overflow-x: auto;
+  }
+  .file-tree .dir { color: #2E86AB; font-weight: 600; }
+  .file-tree .file { color: #FFB347; }
+  .file-tree .comment { color: #5A7A8A; }
+
+  /* Stats bar */
+  .stats {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+  .stat {
+    background: white;
+    border-radius: 12px;
+    padding: 20px 28px;
+    box-shadow: 0 2px 8px rgba(27,42,74,0.06);
+    text-align: center;
+    flex: 1;
+    min-width: 120px;
+  }
+  .stat .num { font-size: 32px; font-weight: 700; color: #2E86AB; }
+  .stat .label { font-size: 11px; color: #888; margin-top: 2px; text-transform: uppercase; letter-spacing: 1px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Challey Brand Assets</h1>
+  <p>COMPLETE DESIGN SYSTEM</p>
+  <div class="count">57 SVG assets across 9 categories</div>
+</div>
+
+<div class="nav">
+  <a href="#colors">Colors</a>
+  <a href="#logos">Logos</a>
+  <a href="#icons">App Icons</a>
+  <a href="#mascots">Mascots</a>
+  <a href="#badges">Badges</a>
+  <a href="#empty">Empty States</a>
+  <a href="#celebrations">Celebrations</a>
+  <a href="#onboarding">Onboarding</a>
+  <a href="#store">App Store</a>
+  <a href="#components">Components</a>
+  <a href="#splash">Splash</a>
+  <a href="#screens">Screen Flow</a>
+  <a href="#files">All Files</a>
+</div>
+
+<div class="container">
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat"><div class="num">92</div><div class="label">Total Assets</div></div>
+    <div class="stat"><div class="num">35</div><div class="label">Screen Flows</div></div>
+    <div class="stat"><div class="num">12</div><div class="label">Mascots</div></div>
+    <div class="stat"><div class="num">10</div><div class="label">Categories</div></div>
+  </div>
+
+  <!-- COLORS -->
+  <div class="section" id="colors">
+    <h2>Color Palette</h2>
+    <p class="subtitle">Primary brand colors — Ocean theme (default)</p>
+    <div class="color-grid">
+      <div class="color-swatch">
+        <div class="swatch" style="background:#1B2A4A;"><span>#1B2A4A</span></div>
+        <div class="meta"><div class="name">Navy (Primary)</div><div class="hex">RGB 27, 42, 74</div></div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch" style="background:#2E86AB;"><span>#2E86AB</span></div>
+        <div class="meta"><div class="name">Ocean Blue</div><div class="hex">RGB 46, 134, 171</div></div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch" style="background:#F18F01;"><span>#F18F01</span></div>
+        <div class="meta"><div class="name">Orange (Accent)</div><div class="hex">RGB 241, 143, 1</div></div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch" style="background:#FFB347;"><span>#FFB347</span></div>
+        <div class="meta"><div class="name">Light Orange</div><div class="hex">RGB 255, 179, 71</div></div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch" style="background:#E8F4F8;"><span>#E8F4F8</span></div>
+        <div class="meta"><div class="name">Ice Blue (BG)</div><div class="hex">RGB 232, 244, 248</div></div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch" style="background:#28a745;"><span>#28a745</span></div>
+        <div class="meta"><div class="name">Success Green</div><div class="hex">RGB 40, 167, 69</div></div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch" style="background:#FF6B6B;"><span>#FF6B6B</span></div>
+        <div class="meta"><div class="name">Heart Red</div><div class="hex">RGB 255, 107, 107</div></div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch" style="background:#A855F7;"><span>#A855F7</span></div>
+        <div class="meta"><div class="name">Purple</div><div class="hex">RGB 168, 85, 247</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOGOS -->
+  <div class="section" id="logos">
+    <h2>Logo System <span class="count-badge">5 variants</span></h2>
+    <p class="subtitle">The "Challey Coin" — achievement token with checkmark and sparkle accents</p>
+    <div class="asset-grid">
+      <div class="asset-card">
+        <div class="asset-preview dark"><img src="logo/challey-mark.svg" alt="Mark Dark"></div>
+        <div class="asset-info"><h3>Logo Mark (Dark BG)</h3><p>512x512 primary icon</p><div class="path">logo/challey-mark.svg</div></div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-preview light"><img src="logo/challey-mark-light.svg" alt="Mark Light"></div>
+        <div class="asset-info"><h3>Logo Mark (Light BG)</h3><p>512x512 light variant</p><div class="path">logo/challey-mark-light.svg</div></div>
+      </div>
+    </div>
+    <div class="asset-grid wide" style="margin-top:20px;">
+      <div class="asset-card">
+        <div class="asset-preview light" style="padding:36px;"><img src="logo/challey-logo-full.svg" alt="Full" style="max-height:100px;"></div>
+        <div class="asset-info"><h3>Horizontal Wordmark</h3><p>960x240 — headers, marketing</p><div class="path">logo/challey-logo-full.svg</div></div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-preview dark" style="padding:36px;"><img src="logo/challey-logo-white.svg" alt="White" style="max-height:100px;"></div>
+        <div class="asset-info"><h3>White Wordmark (Dark BG)</h3><p>960x240 — dark overlays</p><div class="path">logo/challey-logo-white.svg</div></div>
+      </div>
+    </div>
+    <div class="asset-grid" style="margin-top:20px;">
+      <div class="asset-card">
+        <div class="asset-preview checker" style="padding:30px;"><img src="logo/challey-logo-stacked.svg" alt="Stacked" style="max-height:260px;"></div>
+        <div class="asset-info"><h3>Stacked (Vertical)</h3><p>512x640 — centered layouts</p><div class="path">logo/challey-logo-stacked.svg</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- APP ICONS -->
+  <div class="section" id="icons">
+    <h2>App Icons <span class="count-badge">4 assets</span></h2>
+    <p class="subtitle">Platform-optimized for iOS, Android, and web</p>
+    <div class="asset-grid">
+      <div class="asset-card">
+        <div class="asset-preview checker"><img src="icons/app-icon.svg" alt="iOS" style="max-height:160px;border-radius:36px;"></div>
+        <div class="asset-info"><h3>iOS App Icon</h3><p>1024x1024 base</p><div class="path">icons/app-icon.svg</div></div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-preview checker">
+          <div style="position:relative;width:160px;height:160px;">
+            <img src="icons/app-icon-android-adaptive-bg.svg" style="position:absolute;inset:0;width:100%;height:100%;border-radius:50%;">
+            <img src="icons/app-icon-android-adaptive-fg.svg" style="position:absolute;inset:0;width:100%;height:100%;">
+          </div>
+        </div>
+        <div class="asset-info"><h3>Android Adaptive</h3><p>108dp foreground + background</p><div class="path">icons/app-icon-android-adaptive-*.svg</div></div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-preview dark"><img src="icons/favicon.svg" alt="Favicon" style="max-height:48px;"></div>
+        <div class="asset-info"><h3>Favicon</h3><p>32x32 simplified</p><div class="path">icons/favicon.svg</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MASCOTS -->
+  <div class="section" id="mascots">
+    <h2>Chal Mascots <span class="count-badge">12 characters</span></h2>
+    <p class="subtitle">Family companion characters — each with a unique Challey-branded accessory</p>
+    <div class="mascot-mini-grid">
+      <div class="mascot-mini"><img src="mascots/chal-octopus.svg" alt="Octopus"><div class="name">Octopus *</div></div>
+      <div class="mascot-mini"><img src="mascots/chal-dog.svg" alt="Dog"><div class="name">Dog</div></div>
+      <div class="mascot-mini"><img src="mascots/chal-cat.svg" alt="Cat"><div class="name">Cat</div></div>
+      <div class="mascot-mini"><img src="mascots/chal-bunny.svg" alt="Bunny"><div class="name">Bunny</div></div>
+      <div class="mascot-mini"><img src="mascots/chal-hamster.svg" alt="Hamster"><div class="name">Hamster</div></div>
+      <div class="mascot-mini"><img src="mascots/chal-parrot.svg" alt="Parrot"><div class="name">Parrot</div></div>
+      <div class="mascot-mini"><img src="mascots/chal-turtle.svg" alt="Turtle"><div class="name">Turtle</div></div>
+      <div class="mascot-mini"><img src="mascots/chal-fox.svg" alt="Fox"><div class="name">Fox</div></div>
+      <div class="mascot-mini"><img src="mascots/chal-panda.svg" alt="Panda"><div class="name">Panda</div></div>
+      <div class="mascot-mini"><img src="mascots/chal-penguin.svg" alt="Penguin"><div class="name">Penguin</div></div>
+      <div class="mascot-mini"><img src="mascots/chal-lion.svg" alt="Lion"><div class="name">Lion</div></div>
+      <div class="mascot-mini"><img src="mascots/chal-frog.svg" alt="Frog"><div class="name">Frog</div></div>
+    </div>
+    <p style="font-size:11px;color:#999;margin-top:12px;">* Default mascot. <a href="mascots/preview.html" style="color:#2E86AB;">View full mascot gallery &rarr;</a></p>
+  </div>
+
+  <!-- BADGES -->
+  <div class="section" id="badges">
+    <h2>Achievement Badges <span class="count-badge">6 badges</span></h2>
+    <p class="subtitle">Shoutout/reward badges for sibling recognition</p>
+    <div class="badge-grid">
+      <div class="badge-card"><img src="badges/amazing-sibling.svg" alt="Amazing Sibling"><div class="name">Amazing Sibling</div></div>
+      <div class="badge-card"><img src="badges/kind-heart.svg" alt="Kind Heart"><div class="name">Kind Heart</div></div>
+      <div class="badge-card"><img src="badges/best-helper.svg" alt="Best Helper"><div class="name">Best Helper</div></div>
+      <div class="badge-card"><img src="badges/so-funny.svg" alt="So Funny"><div class="name">So Funny</div></div>
+      <div class="badge-card"><img src="badges/super-brave.svg" alt="Super Brave"><div class="name">Super Brave</div></div>
+      <div class="badge-card"><img src="badges/team-player.svg" alt="Team Player"><div class="name">Team Player</div></div>
+    </div>
+  </div>
+
+  <!-- EMPTY STATES -->
+  <div class="section" id="empty">
+    <h2>Empty State Illustrations <span class="count-badge">6 states</span></h2>
+    <p class="subtitle">Friendly graphics for screens with no content yet</p>
+    <div class="asset-grid">
+      <div class="asset-card">
+        <div class="asset-preview light"><img src="empty-states/no-chores.svg" alt="No Chores"></div>
+        <div class="asset-info"><h3>No Chores</h3><div class="path">empty-states/no-chores.svg</div></div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-preview light"><img src="empty-states/no-rewards.svg" alt="No Rewards"></div>
+        <div class="asset-info"><h3>No Rewards</h3><div class="path">empty-states/no-rewards.svg</div></div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-preview light"><img src="empty-states/empty-wishlist.svg" alt="Empty Wishlist"></div>
+        <div class="asset-info"><h3>Empty Wishlist</h3><div class="path">empty-states/empty-wishlist.svg</div></div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-preview light"><img src="empty-states/no-activity.svg" alt="No Activity"></div>
+        <div class="asset-info"><h3>No Activity</h3><div class="path">empty-states/no-activity.svg</div></div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-preview light"><img src="empty-states/no-pending.svg" alt="No Pending"></div>
+        <div class="asset-info"><h3>All Caught Up</h3><div class="path">empty-states/no-pending.svg</div></div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-preview light"><img src="empty-states/empty-feed.svg" alt="Empty Feed"></div>
+        <div class="asset-info"><h3>Empty Feed</h3><div class="path">empty-states/empty-feed.svg</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CELEBRATIONS -->
+  <div class="section" id="celebrations">
+    <h2>Success & Celebration Graphics <span class="count-badge">5 moments</span></h2>
+    <p class="subtitle">High-energy celebration moments with confetti and sparkles</p>
+    <div class="asset-grid">
+      <div class="asset-card">
+        <div class="asset-preview light"><img src="celebrations/chore-complete.svg" alt="Chore Complete"></div>
+        <div class="asset-info"><h3>Chore Completed</h3><div class="path">celebrations/chore-complete.svg</div></div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-preview warm"><img src="celebrations/reward-redeemed.svg" alt="Reward Redeemed"></div>
+        <div class="asset-info"><h3>Reward Redeemed</h3><div class="path">celebrations/reward-redeemed.svg</div></div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-preview light"><img src="celebrations/swap-accepted.svg" alt="Swap Accepted"></div>
+        <div class="asset-info"><h3>Swap Accepted</h3><div class="path">celebrations/swap-accepted.svg</div></div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-preview light"><img src="celebrations/shoutout-sent.svg" alt="Shoutout Sent"></div>
+        <div class="asset-info"><h3>Shoutout Sent</h3><div class="path">celebrations/shoutout-sent.svg</div></div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-preview light"><img src="celebrations/family-created.svg" alt="Family Created"></div>
+        <div class="asset-info"><h3>Family Created</h3><div class="path">celebrations/family-created.svg</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ONBOARDING -->
+  <div class="section" id="onboarding">
+    <h2>Onboarding Illustrations <span class="count-badge">5 screens</span></h2>
+    <p class="subtitle">First-impression graphics for the welcome and setup flow</p>
+    <div class="asset-grid two-col">
+      <div class="asset-card">
+        <div class="asset-preview light" style="padding:20px;"><img src="onboarding/welcome-hero.svg" alt="Welcome Hero" style="max-height:220px;"></div>
+        <div class="asset-info"><h3>Welcome Hero</h3><p>Main landing illustration</p><div class="path">onboarding/welcome-hero.svg</div></div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-preview light" style="padding:20px;"><img src="onboarding/join-or-create.svg" alt="Join or Create" style="max-height:180px;"></div>
+        <div class="asset-info"><h3>Join or Create Family</h3><p>Two-path choice screen</p><div class="path">onboarding/join-or-create.svg</div></div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-preview light" style="padding:20px;"><img src="onboarding/pin-setup.svg" alt="PIN Setup" style="max-height:180px;"></div>
+        <div class="asset-info"><h3>PIN Setup</h3><p>Security/lock illustration</p><div class="path">onboarding/pin-setup.svg</div></div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-preview warm" style="padding:20px;"><img src="onboarding/pet-selection.svg" alt="Pet Selection" style="max-height:180px;"></div>
+        <div class="asset-info"><h3>Pet Selection</h3><p>Companion choice screen</p><div class="path">onboarding/pet-selection.svg</div></div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-preview light" style="padding:20px;"><img src="onboarding/family-ready.svg" alt="Family Ready" style="max-height:200px;"></div>
+        <div class="asset-info"><h3>Family Ready / Launch</h3><p>Setup complete celebration</p><div class="path">onboarding/family-ready.svg</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- APP STORE ASSETS -->
+  <div class="section" id="store">
+    <h2>App Store Marketing <span class="count-badge">7 assets</span></h2>
+    <p class="subtitle">Feature graphics, screenshot mockups, and promotional banners</p>
+    <div class="asset-grid wide">
+      <div class="asset-card">
+        <div class="asset-preview dark" style="padding:16px;"><img src="store/feature-graphic.svg" alt="Feature Graphic" style="max-height:250px;"></div>
+        <div class="asset-info"><h3>Google Play Feature Graphic</h3><p>1024x500</p><div class="path">store/feature-graphic.svg</div></div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-preview dark" style="padding:16px;"><img src="store/promo-banner.svg" alt="Promo Banner" style="max-height:280px;"></div>
+        <div class="asset-info"><h3>Social/Marketing Banner</h3><p>1200x628 — OG/Meta standard</p><div class="path">store/promo-banner.svg</div></div>
+      </div>
+    </div>
+    <div class="asset-grid" style="margin-top:20px; grid-template-columns: repeat(5, 1fr);">
+      <div class="asset-card">
+        <div class="asset-preview dark" style="padding:8px;"><img src="store/screenshot-1-chores.svg" alt="Screenshot 1" style="max-height:260px;"></div>
+        <div class="asset-info"><h3>Chores</h3><div class="path">screenshot-1</div></div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-preview dark" style="padding:8px;"><img src="store/screenshot-2-rewards.svg" alt="Screenshot 2" style="max-height:260px;"></div>
+        <div class="asset-info"><h3>Rewards</h3><div class="path">screenshot-2</div></div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-preview dark" style="padding:8px;"><img src="store/screenshot-3-swap.svg" alt="Screenshot 3" style="max-height:260px;"></div>
+        <div class="asset-info"><h3>Swap</h3><div class="path">screenshot-3</div></div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-preview dark" style="padding:8px;"><img src="store/screenshot-4-badges.svg" alt="Screenshot 4" style="max-height:260px;"></div>
+        <div class="asset-info"><h3>Shoutouts</h3><div class="path">screenshot-4</div></div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-preview dark" style="padding:8px;"><img src="store/screenshot-5-parent.svg" alt="Screenshot 5" style="max-height:260px;"></div>
+        <div class="asset-info"><h3>Parent</h3><div class="path">screenshot-5</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- UI COMPONENT LIBRARY -->
+  <div class="section" id="components">
+    <h2>UI Component Library <span class="count-badge">3 sheets</span></h2>
+    <p class="subtitle">Production-ready reference for buttons, cards, navigation, inputs, toggles, and badges</p>
+    <div class="asset-grid wide">
+      <div class="asset-card">
+        <div class="asset-preview light" style="padding:12px;"><img src="components/buttons.svg" alt="Buttons" style="max-height:320px;"></div>
+        <div class="asset-info"><h3>Button System</h3><p>Primary, secondary, success, danger, accent, pill, FAB</p><div class="path">components/buttons.svg</div></div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-preview light" style="padding:12px;"><img src="components/cards.svg" alt="Cards" style="max-height:380px;"></div>
+        <div class="asset-info"><h3>Card System</h3><p>Chore, streak, reward, member, activity, swap cards</p><div class="path">components/cards.svg</div></div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-preview light" style="padding:12px;"><img src="components/navigation.svg" alt="Navigation" style="max-height:280px;"></div>
+        <div class="asset-info"><h3>Navigation & Controls</h3><p>Headers, bottom nav, toggles, inputs, badges, themes</p><div class="path">components/navigation.svg</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPLASH SCREENS -->
+  <div class="section" id="splash">
+    <h2>Splash Screens <span class="count-badge">2 platforms</span></h2>
+    <p class="subtitle">Launch/loading screens for iOS and Android</p>
+    <div class="splash-preview">
+      <div>
+        <div class="splash-frame" style="width:200px;height:433px;"><img src="splash/splash-screen.svg" alt="iOS Splash"></div>
+        <div class="splash-label">iOS (1170x2532)</div>
+      </div>
+      <div>
+        <div class="splash-frame" style="width:200px;height:356px;"><img src="splash/splash-screen-android.svg" alt="Android Splash"></div>
+        <div class="splash-label">Android (1080x1920)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN FLOW -->
+  <div class="section" id="screens">
+    <h2>Screen Flows <span class="count-badge">38 screens</span></h2>
+    <p class="subtitle">Complete parent user journey: onboarding → setup → dashboard — <a href="screens/preview.html" style="color:#2E86AB;">View full flow →</a></p>
+    <div class="splash-preview" style="flex-wrap: wrap; gap: 16px;">
+      <div>
+        <div class="splash-frame" style="width:140px;height:303px;"><img src="screens/01-splash.svg" alt="Splash"></div>
+        <div class="splash-label">01 Splash</div>
+      </div>
+      <div>
+        <div class="splash-frame" style="width:140px;height:303px;"><img src="screens/02-join-family.svg" alt="Join or Create"></div>
+        <div class="splash-label">02 Join/Create</div>
+      </div>
+      <div>
+        <div class="splash-frame" style="width:140px;height:303px;"><img src="screens/03a-join-family-code.svg" alt="Enter Codes"></div>
+        <div class="splash-label">03a Enter Codes</div>
+      </div>
+      <div>
+        <div class="splash-frame" style="width:140px;height:303px;"><img src="screens/03b-kid-set-pin.svg" alt="Set PIN"></div>
+        <div class="splash-label">03b Set PIN</div>
+      </div>
+      <div>
+        <div class="splash-frame" style="width:140px;height:303px;"><img src="screens/04a-create-family-auth.svg" alt="Auth"></div>
+        <div class="splash-label">04a Auth Method</div>
+      </div>
+      <div>
+        <div class="splash-frame" style="width:140px;height:303px;"><img src="screens/04c-create-family-role.svg" alt="Role"></div>
+        <div class="splash-label">04c Pick Role</div>
+      </div>
+      <div>
+        <div class="splash-frame" style="width:140px;height:303px;"><img src="screens/04e-pick-family-pet.svg" alt="Pet"></div>
+        <div class="splash-label">04e Choose Pet</div>
+      </div>
+      <div>
+        <div class="splash-frame" style="width:140px;height:303px;"><img src="screens/04f-welcome-family.svg" alt="Welcome"></div>
+        <div class="splash-label">04f Welcome</div>
+      </div>
+      <div>
+        <div class="splash-frame" style="width:140px;height:303px;"><img src="screens/05g-parent-dashboard.svg" alt="Dashboard"></div>
+        <div class="splash-label">05g Dashboard</div>
+      </div>
+      <div>
+        <div class="splash-frame" style="width:140px;height:303px;"><img src="screens/06a-parent-verify.svg" alt="Verify"></div>
+        <div class="splash-label">06a Verify (Photo)</div>
+      </div>
+      <div>
+        <div class="splash-frame" style="width:140px;height:303px;"><img src="screens/06a2-parent-verify-nophoto.svg" alt="Verify No Photo"></div>
+        <div class="splash-label">06a2 Verify (No Photo)</div>
+      </div>
+      <div>
+        <div class="splash-frame" style="width:140px;height:303px;"><img src="screens/06a3-parent-verify-reject.svg" alt="Verify Reject"></div>
+        <div class="splash-label">06a3 Reject State</div>
+      </div>
+      <div>
+        <div class="splash-frame" style="width:140px;height:303px;"><img src="screens/06b-parent-rewards.svg" alt="Rewards"></div>
+        <div class="splash-label">06b Rewards</div>
+      </div>
+      <div>
+        <div class="splash-frame" style="width:140px;height:303px;"><img src="screens/06e-parent-living-room.svg" alt="Living Room"></div>
+        <div class="splash-label">06e Living Room</div>
+      </div>
+      <div>
+        <div class="splash-frame" style="width:140px;height:303px;"><img src="screens/06f-parent-family.svg" alt="Family"></div>
+        <div class="splash-label">06f Family</div>
+      </div>
+      <div>
+        <div class="splash-frame" style="width:140px;height:303px;"><img src="screens/06l-parent-give-badge.svg" alt="Give Badge"></div>
+        <div class="splash-label">06l Give Badge</div>
+      </div>
+      <div>
+        <div class="splash-frame" style="width:140px;height:303px;"><img src="screens/06m-notifications-panel.svg" alt="Notifications"></div>
+        <div class="splash-label">06m Notifications</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPLETE FILE TREE -->
+  <div class="section" id="files">
+    <h2>Complete File Structure</h2>
+    <p class="subtitle">All 92 source SVG files — scalable to any resolution</p>
+    <div class="file-tree">
+<span class="dir">assets/</span>
+├── <span class="dir">logo/</span> <span class="comment">— 5 files</span>
+│   ├── <span class="file">challey-mark.svg</span>              <span class="comment">— Primary icon (dark bg)</span>
+│   ├── <span class="file">challey-mark-light.svg</span>        <span class="comment">— Icon (light bg)</span>
+│   ├── <span class="file">challey-logo-full.svg</span>         <span class="comment">— Horizontal wordmark</span>
+│   ├── <span class="file">challey-logo-stacked.svg</span>      <span class="comment">— Vertical stacked</span>
+│   └── <span class="file">challey-logo-white.svg</span>        <span class="comment">— White variant</span>
+├── <span class="dir">icons/</span> <span class="comment">— 4 files</span>
+│   ├── <span class="file">app-icon.svg</span>                  <span class="comment">— iOS (1024x1024)</span>
+│   ├── <span class="file">app-icon-android-adaptive-fg.svg</span> <span class="comment">— Android foreground</span>
+│   ├── <span class="file">app-icon-android-adaptive-bg.svg</span> <span class="comment">— Android background</span>
+│   └── <span class="file">favicon.svg</span>                   <span class="comment">— Browser (32x32)</span>
+├── <span class="dir">mascots/</span> <span class="comment">— 12 files</span>
+│   ├── <span class="file">chal-octopus.svg</span>              <span class="comment">— Default companion</span>
+│   ├── <span class="file">chal-dog.svg</span>
+│   ├── <span class="file">chal-cat.svg</span>
+│   ├── <span class="file">chal-bunny.svg</span>
+│   ├── <span class="file">chal-hamster.svg</span>
+│   ├── <span class="file">chal-parrot.svg</span>
+│   ├── <span class="file">chal-turtle.svg</span>
+│   ├── <span class="file">chal-fox.svg</span>
+│   ├── <span class="file">chal-panda.svg</span>
+│   ├── <span class="file">chal-penguin.svg</span>
+│   ├── <span class="file">chal-lion.svg</span>
+│   ├── <span class="file">chal-frog.svg</span>
+│   └── <span class="file">preview.html</span>                 <span class="comment">— Full mascot gallery</span>
+├── <span class="dir">badges/</span> <span class="comment">— 6 files</span>
+│   ├── <span class="file">amazing-sibling.svg</span>           <span class="comment">— Gold/orange star</span>
+│   ├── <span class="file">kind-heart.svg</span>                <span class="comment">— Red heart</span>
+│   ├── <span class="file">best-helper.svg</span>               <span class="comment">— Teal handshake</span>
+│   ├── <span class="file">so-funny.svg</span>                  <span class="comment">— Orange laughing</span>
+│   ├── <span class="file">super-brave.svg</span>               <span class="comment">— Brown shield</span>
+│   └── <span class="file">team-player.svg</span>               <span class="comment">— Purple team</span>
+├── <span class="dir">empty-states/</span> <span class="comment">— 6 files</span>
+│   ├── <span class="file">no-chores.svg</span>                 <span class="comment">— Empty clipboard</span>
+│   ├── <span class="file">no-rewards.svg</span>                <span class="comment">— Gift box</span>
+│   ├── <span class="file">empty-wishlist.svg</span>            <span class="comment">— Dream cloud</span>
+│   ├── <span class="file">no-activity.svg</span>               <span class="comment">— Idle clock</span>
+│   ├── <span class="file">no-pending.svg</span>                <span class="comment">— Shield checkmark</span>
+│   └── <span class="file">empty-feed.svg</span>                <span class="comment">— Photo frames</span>
+├── <span class="dir">celebrations/</span> <span class="comment">— 5 files</span>
+│   ├── <span class="file">chore-complete.svg</span>            <span class="comment">— Green check burst</span>
+│   ├── <span class="file">reward-redeemed.svg</span>           <span class="comment">— Gift opening</span>
+│   ├── <span class="file">swap-accepted.svg</span>             <span class="comment">— Swap arrows check</span>
+│   ├── <span class="file">shoutout-sent.svg</span>             <span class="comment">— Heart burst</span>
+│   └── <span class="file">family-created.svg</span>            <span class="comment">— House with heart</span>
+├── <span class="dir">onboarding/</span> <span class="comment">— 5 files</span>
+│   ├── <span class="file">welcome-hero.svg</span>              <span class="comment">— Family + coins</span>
+│   ├── <span class="file">join-or-create.svg</span>            <span class="comment">— Two-path choice</span>
+│   ├── <span class="file">pin-setup.svg</span>                 <span class="comment">— Lock shield</span>
+│   ├── <span class="file">pet-selection.svg</span>             <span class="comment">— Paw + heart</span>
+│   └── <span class="file">family-ready.svg</span>              <span class="comment">— Launch rocket</span>
+├── <span class="dir">store/</span> <span class="comment">— 7 files</span>
+│   ├── <span class="file">feature-graphic.svg</span>           <span class="comment">— Play Store (1024x500)</span>
+│   ├── <span class="file">promo-banner.svg</span>              <span class="comment">— Social/OG (1200x628)</span>
+│   ├── <span class="file">screenshot-1-chores.svg</span>       <span class="comment">— Chores screen</span>
+│   ├── <span class="file">screenshot-2-rewards.svg</span>      <span class="comment">— Rewards shop</span>
+│   ├── <span class="file">screenshot-3-swap.svg</span>         <span class="comment">— Sibling swap</span>
+│   ├── <span class="file">screenshot-4-badges.svg</span>       <span class="comment">— Shoutouts/badges</span>
+│   └── <span class="file">screenshot-5-parent.svg</span>       <span class="comment">— Parent dashboard</span>
+├── <span class="dir">components/</span> <span class="comment">— 3 files</span>
+│   ├── <span class="file">buttons.svg</span>                   <span class="comment">— Button system reference</span>
+│   ├── <span class="file">cards.svg</span>                     <span class="comment">— Card system reference</span>
+│   └── <span class="file">navigation.svg</span>                <span class="comment">— Nav, toggles, inputs</span>
+├── <span class="dir">splash/</span> <span class="comment">— 2 files</span>
+│   ├── <span class="file">splash-screen.svg</span>             <span class="comment">— iOS (1170x2532)</span>
+│   └── <span class="file">splash-screen-android.svg</span>     <span class="comment">— Android (1080x1920)</span>
+├── <span class="dir">screens/</span> <span class="comment">— 35 files</span>
+│   ├── <span class="file">01-splash.svg</span>                 <span class="comment">— App launch/landing</span>
+│   ├── <span class="file">02-join-family.svg</span>            <span class="comment">— Join or Create choice</span>
+│   ├── <span class="file">03a-join-family-code.svg</span>      <span class="comment">— Enter family/member codes</span>
+│   ├── <span class="file">03b-kid-set-pin.svg</span>           <span class="comment">— Create 4-digit PIN</span>
+│   ├── <span class="file">03c-kid-confirm-pin.svg</span>       <span class="comment">— Confirm PIN</span>
+│   ├── <span class="file">03d-kid-enter-pin.svg</span>         <span class="comment">— Returning user login</span>
+│   ├── <span class="file">03e-kid-forgot-pin.svg</span>        <span class="comment">— PIN reset requested</span>
+│   ├── <span class="file">03f-join-family-preview.svg</span>   <span class="comment">— Family preview (invite join)</span>
+│   ├── <span class="file">03g-join-setup-profile.svg</span>    <span class="comment">— Profile setup (invite join)</span>
+│   ├── <span class="file">04a-create-family-auth.svg</span>    <span class="comment">— Sign up method</span>
+│   ├── <span class="file">04b-create-family-manual.svg</span>  <span class="comment">— Email signup form</span>
+│   ├── <span class="file">04c-create-family-role.svg</span>    <span class="comment">— Choose role (neutral icons)</span>
+│   ├── <span class="file">04d-create-family-name.svg</span>    <span class="comment">— Name your family</span>
+│   ├── <span class="file">04e-pick-family-pet.svg</span>       <span class="comment">— Choose family mascot</span>
+│   ├── <span class="file">04f-welcome-family.svg</span>        <span class="comment">— Welcome + share codes</span>
+│   ├── <span class="file">05a-parent-dashboard-empty.svg</span> <span class="comment">— Empty dashboard CTA</span>
+│   ├── <span class="file">05b-add-kids.svg</span>              <span class="comment">— Add kids form</span>
+│   ├── <span class="file">05c-add-kids-success.svg</span>      <span class="comment">— Kids added + codes</span>
+│   ├── <span class="file">05d-setup-chores.svg</span>          <span class="comment">— Pick preset chores</span>
+│   ├── <span class="file">05e-setup-rewards.svg</span>         <span class="comment">— Pick rewards + pricing</span>
+│   ├── <span class="file">05f-setup-first-post.svg</span>      <span class="comment">— Living Room first post</span>
+│   ├── <span class="file">05g-parent-dashboard.svg</span>      <span class="comment">— Dashboard populated</span>
+│   ├── <span class="file">06a-parent-verify.svg</span>         <span class="comment">— Tinder-style verify (photo)</span>
+│   ├── <span class="file">06a2-parent-verify-nophoto.svg</span> <span class="comment">— Verify card (no photo)</span>
+│   ├── <span class="file">06a3-parent-verify-reject.svg</span> <span class="comment">— Swipe-left reject + note</span>
+│   ├── <span class="file">06b-parent-rewards.svg</span>        <span class="comment">— Rewards catalog</span>
+│   ├── <span class="file">06c-parent-create-reward.svg</span>  <span class="comment">— Create/edit reward form</span>
+│   ├── <span class="file">06d-parent-create-chore.svg</span>   <span class="comment">— Create chore form</span>
+│   ├── <span class="file">06e-parent-living-room.svg</span>    <span class="comment">— Social feed</span>
+│   ├── <span class="file">06f-parent-family.svg</span>         <span class="comment">— Family management</span>
+│   ├── <span class="file">06f2-parent-invite-member.svg</span>  <span class="comment">— Invite family member form</span>
+│   ├── <span class="file">06g-parent-settings.svg</span>       <span class="comment">— Settings hub</span>
+│   ├── <span class="file">06h-parent-companion-config.svg</span> <span class="comment">— Chal message config</span>
+│   ├── <span class="file">06i-parent-swap-review.svg</span>    <span class="comment">— Swap request review</span>
+│   ├── <span class="file">06j-parent-shoutout-review.svg</span> <span class="comment">— Shout-out boost</span>
+│   ├── <span class="file">06k-parent-wishlist.svg</span>       <span class="comment">— Kids' wishlists</span>
+│   ├── <span class="file">06l-parent-give-badge.svg</span>     <span class="comment">— Award badge to kid</span>
+│   ├── <span class="file">06m-notifications-panel.svg</span>   <span class="comment">— Notification overlay</span>
+│   └── <span class="file">preview.html</span>                  <span class="comment">— Flow gallery</span>
+└── <span class="file">preview.html</span>                      <span class="comment">— This file</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<svg width="256" height="256" viewBox="0 0 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- Badge 7: Reward Time -->
+<defs>
+    <filter id="shadow-badge7" x="-10%" y="-10%" width="120%" height="120%">
+        <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#003366" flood-opacity="0.2"/>
+    </filter>
+</defs>
+<g filter="url(#shadow-badge7)">
+    <circle cx="128" cy="128" r="110" fill="#F18F01"/>
+    <circle cx="128" cy="128" r="95" stroke="white" stroke-width="8"/>
+    <path d="M128 70 L158 100 L128 130 L98 100 Z" fill="white"/>
+    <path d="M128 130 L98 160 L128 190 L158 160 Z" fill="#FFD700"/>
+</g>
+</svg>

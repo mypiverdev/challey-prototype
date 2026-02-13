@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 932" width="430" height="932">
+  <!-- App Store Screenshot 2: Rewards Shop -->
+  <defs>
+    <linearGradient id="s2Bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B2A4A"/>
+      <stop offset="100%" stop-color="#2E86AB"/>
+    </linearGradient>
+    <filter id="s2Shadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#0D1520" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="430" height="932" fill="url(#s2Bg)"/>
+
+  <text x="215" y="100" text-anchor="middle" font-family="Inter, sans-serif" font-size="32" font-weight="700" fill="white">Redeem rewards</text>
+  <text x="215" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="32" font-weight="700" fill="white">with your points</text>
+  <text x="215" y="175" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="400" fill="white" opacity="0.5">Points-per-dollar reward system</text>
+
+  <g transform="translate(215, 560)" filter="url(#s2Shadow)">
+    <rect x="-155" y="-320" width="310" height="640" rx="40" fill="#111" stroke="#333" stroke-width="2"/>
+    <rect x="-140" y="-300" width="280" height="600" rx="28" fill="#F5F7FA"/>
+    <rect x="-50" y="-310" width="100" height="12" rx="6" fill="#111"/>
+
+    <!-- Header -->
+    <rect x="-140" y="-300" width="280" height="60" rx="28 28 0 0" fill="#1B2A4A"/>
+    <text x="0" y="-262" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="white">Rewards</text>
+
+    <!-- Points balance -->
+    <rect x="-125" y="-225" width="250" height="50" rx="12" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+    <text x="-110" y="-195" font-family="Inter, sans-serif" font-size="11" fill="#888">Your balance</text>
+    <text x="110" y="-195" text-anchor="end" font-family="Inter, sans-serif" font-size="22" font-weight="700" fill="#F18F01">285 pts</text>
+
+    <!-- Reward grid (2x2) -->
+    <!-- Card 1 -->
+    <rect x="-125" y="-165" width="120" height="110" rx="12" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+    <text x="-65" y="-120" text-anchor="middle" font-family="Inter, sans-serif" font-size="28">🎬</text>
+    <text x="-65" y="-98" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#1B2A4A">Movie Night</text>
+    <rect x="-95" y="-82" width="60" height="20" rx="10" fill="#E8F4F8"/>
+    <text x="-65" y="-68" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="600" fill="#2E86AB">100 pts</text>
+
+    <!-- Card 2 -->
+    <rect x="5" y="-165" width="120" height="110" rx="12" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+    <text x="65" y="-120" text-anchor="middle" font-family="Inter, sans-serif" font-size="28">📱</text>
+    <text x="65" y="-98" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#1B2A4A">Screen Time</text>
+    <rect x="35" y="-82" width="60" height="20" rx="10" fill="#E8F4F8"/>
+    <text x="65" y="-68" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="600" fill="#2E86AB">50 pts</text>
+
+    <!-- Card 3 -->
+    <rect x="-125" y="-45" width="120" height="110" rx="12" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+    <text x="-65" y="0" text-anchor="middle" font-family="Inter, sans-serif" font-size="28">🍦</text>
+    <text x="-65" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#1B2A4A">Ice Cream</text>
+    <rect x="-95" y="38" width="60" height="20" rx="10" fill="#FFF5E0"/>
+    <text x="-65" y="52" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="600" fill="#F18F01">80 pts</text>
+
+    <!-- Card 4 (affordable - glow!) -->
+    <rect x="5" y="-45" width="120" height="110" rx="12" fill="white" stroke="#28a745" stroke-width="2"/>
+    <text x="65" y="0" text-anchor="middle" font-family="Inter, sans-serif" font-size="28">🎫</text>
+    <text x="65" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#1B2A4A">Game Pass</text>
+    <rect x="35" y="38" width="60" height="20" rx="10" fill="#E0F8E8"/>
+    <text x="65" y="52" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="600" fill="#28a745">30 pts ✓</text>
+
+    <!-- Reward cart bar -->
+    <rect x="-125" y="140" width="250" height="42" rx="12" fill="#2E86AB"/>
+    <text x="0" y="166" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="white">Redeem Selected (30 pts)</text>
+
+    <!-- Bottom nav -->
+    <rect x="-140" y="230" width="280" height="70" rx="0 0 28 28" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+    <g text-anchor="middle" font-family="Inter, sans-serif" font-size="9">
+      <g fill="#B0B8C0"><circle cx="-80" cy="252" r="3"/><text x="-80" y="270">Chores</text></g>
+      <g fill="#2E86AB"><circle cx="-25" cy="252" r="3"/><text x="-25" y="270" font-weight="600">Rewards</text></g>
+      <g fill="#B0B8C0"><circle cx="30" cy="252" r="3"/><text x="30" y="270">Points</text></g>
+      <g fill="#B0B8C0"><circle cx="85" cy="252" r="3"/><text x="85" y="270">Board</text></g>
+    </g>
+  </g>
+</svg>

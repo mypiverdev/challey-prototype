@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 220" width="350" height="220">
+  <!-- Onboarding: Pet Selection — Paw print with heart, pet parade hint -->
+  <defs>
+    <linearGradient id="peBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5E0"/>
+      <stop offset="100%" stop-color="#FFE8C0"/>
+    </linearGradient>
+    <filter id="peSoft">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#B8760A" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background blob -->
+  <ellipse cx="175" cy="100" rx="150" ry="90" fill="url(#peBg)" opacity="0.4"/>
+
+  <!-- Large paw print (center) -->
+  <g transform="translate(175, 90)" filter="url(#peSoft)" fill="#F18F01" opacity="0.7">
+    <!-- Main pad -->
+    <ellipse cx="0" cy="15" rx="28" ry="22"/>
+    <!-- Toe pads -->
+    <ellipse cx="-22" cy="-12" rx="12" ry="14" transform="rotate(-15, -22, -12)"/>
+    <ellipse cx="-6" cy="-25" rx="11" ry="13" transform="rotate(-5, -6, -25)"/>
+    <ellipse cx="10" cy="-25" rx="11" ry="13" transform="rotate(5, 10, -25)"/>
+    <ellipse cx="24" cy="-12" rx="12" ry="14" transform="rotate(15, 24, -12)"/>
+  </g>
+
+  <!-- Heart in center of paw -->
+  <g transform="translate(177, 92)" fill="#FF6B6B" opacity="0.7">
+    <path d="M0 8 C-1 7 -9 3 -9 -2 C-9 -5 -7 -7 -5 -7 C-2 -7 0 -5 0 -5 C0 -5 2 -7 5 -7 C7 -7 9 -5 9 -2 C9 3 1 7 0 8 Z"/>
+  </g>
+
+  <!-- Small pet silhouettes parading -->
+  <g opacity="0.15" fill="#1B2A4A">
+    <!-- Cat silhouette -->
+    <g transform="translate(55, 145) scale(0.5)">
+      <ellipse cx="0" cy="0" rx="18" ry="14"/>
+      <circle cx="0" cy="-18" r="12"/>
+      <polygon points="-12,-25 -8,-35 -4,-25" />
+      <polygon points="12,-25 8,-35 4,-25" />
+    </g>
+    <!-- Dog silhouette -->
+    <g transform="translate(115, 148) scale(0.5)">
+      <ellipse cx="0" cy="0" rx="20" ry="14"/>
+      <circle cx="0" cy="-18" r="14"/>
+      <ellipse cx="-15" cy="-20" rx="8" ry="14" transform="rotate(-20, -15, -20)"/>
+      <ellipse cx="15" cy="-20" rx="8" ry="14" transform="rotate(20, 15, -20)"/>
+    </g>
+    <!-- Bunny silhouette -->
+    <g transform="translate(240, 145) scale(0.5)">
+      <ellipse cx="0" cy="0" rx="16" ry="13"/>
+      <circle cx="0" cy="-16" r="12"/>
+      <ellipse cx="-6" cy="-40" rx="5" ry="18"/>
+      <ellipse cx="6" cy="-40" rx="5" ry="18"/>
+    </g>
+    <!-- Frog silhouette -->
+    <g transform="translate(300, 148) scale(0.45)">
+      <ellipse cx="0" cy="0" rx="20" ry="12"/>
+      <ellipse cx="0" cy="-14" rx="22" ry="14"/>
+      <circle cx="-12" cy="-24" r="8"/>
+      <circle cx="12" cy="-24" r="8"/>
+    </g>
+  </g>
+
+  <!-- Sparkles -->
+  <path d="M80 55 L82 60 L87 62 L82 64 L80 69 L78 64 L73 62 L78 60 Z" fill="#FFD700" opacity="0.4"/>
+  <path d="M270 50 L272 55 L277 57 L272 59 L270 64 L268 59 L263 57 L268 55 Z" fill="#F18F01" opacity="0.35"/>
+  <circle cx="45" cy="90" r="3" fill="#2E86AB" opacity="0.15"/>
+  <circle cx="310" cy="85" r="2.5" fill="#A855F7" opacity="0.15"/>
+
+  <text x="175" y="192" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#1B2A4A">Pick your family companion</text>
+  <text x="175" y="210" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="400" fill="#888">Your Chal will guide you on your chore journey</text>
+</svg>

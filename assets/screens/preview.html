@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challey Screens — Complete Parent Flow</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0D1520;
+            color: #F5F7FA;
+            min-height: 100vh;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: linear-gradient(135deg, #1B2A4A 0%, #2E86AB 100%);
+        }
+        .hero h1 { font-size: 36px; font-weight: 800; margin-bottom: 8px; }
+        .hero p { font-size: 16px; opacity: 0.6; }
+
+        .stats {
+            display: flex; justify-content: center; gap: 40px;
+            padding: 24px; background: rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .stat { text-align: center; }
+        .stat-num { font-size: 28px; font-weight: 800; color: #F18F01; }
+        .stat-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; opacity: 0.5; }
+
+        nav {
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(13, 21, 32, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding: 12px 20px;
+            display: flex; gap: 8px; overflow-x: auto;
+        }
+        nav a {
+            white-space: nowrap;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px; font-weight: 500;
+            text-decoration: none;
+            color: rgba(255,255,255,0.5);
+            background: rgba(255,255,255,0.05);
+            transition: all 0.2s;
+        }
+        nav a:hover, nav a.active {
+            color: white;
+            background: #2E86AB;
+        }
+
+        .section {
+            padding: 48px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .section-title {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #2E86AB;
+            margin-bottom: 8px;
+        }
+        .section-heading {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .section-desc {
+            font-size: 14px;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 32px;
+        }
+
+        .flow-row {
+            display: flex;
+            gap: 24px;
+            overflow-x: auto;
+            padding-bottom: 16px;
+        }
+
+        .screen-card {
+            flex-shrink: 0;
+            width: 240px;
+        }
+        .screen-card img {
+            width: 240px;
+            height: auto;
+            border-radius: 20px;
+            border: 2px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s, border-color 0.3s;
+            background: #1B2A4A;
+        }
+        .screen-card img:hover {
+            transform: scale(1.02);
+            border-color: #2E86AB;
+        }
+        .screen-label {
+            margin-top: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.7);
+        }
+        .screen-id {
+            font-size: 10px;
+            color: rgba(255,255,255,0.3);
+            font-family: monospace;
+        }
+
+        .flow-arrow {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            color: rgba(255,255,255,0.2);
+            font-size: 24px;
+        }
+
+        .divider {
+            height: 1px;
+            background: rgba(255,255,255,0.06);
+            margin: 0 20px;
+        }
+
+        .flow-diagram {
+            background: rgba(255,255,255,0.03);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 32px;
+            font-size: 13px;
+            line-height: 2;
+            color: rgba(255,255,255,0.5);
+        }
+        .flow-diagram .step { color: #F18F01; font-weight: 600; }
+        .flow-diagram .arrow { color: rgba(255,255,255,0.2); margin: 0 4px; }
+        .flow-diagram .branch { color: #2E86AB; font-weight: 500; }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: rgba(255,255,255,0.2);
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>Challey Screen Flows</h1>
+    <p>Onboarding → Parent Setup → Parent Dashboard</p>
+</div>
+
+<div class="stats">
+    <div class="stat">
+        <div class="stat-num">35</div>
+        <div class="stat-label">Screens</div>
+    </div>
+    <div class="stat">
+        <div class="stat-num">6</div>
+        <div class="stat-label">Sections</div>
+    </div>
+    <div class="stat">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Coverage</div>
+    </div>
+</div>
+
+<nav>
+    <a href="#splash" class="active">Splash</a>
+    <a href="#choice">Join or Create</a>
+    <a href="#join-path">Join Family Path</a>
+    <a href="#create-path">Create Family Path</a>
+    <a href="#parent-setup">Parent Setup</a>
+    <a href="#parent-tabs">Dashboard Tabs</a>
+    <a href="#parent-actions">Parent Actions</a>
+    <a href="#flowmap">Flow Map</a>
+</nav>
+
+<!-- SPLASH -->
+<div class="section" id="splash">
+    <div class="section-title">Step 1</div>
+    <div class="section-heading">App Launch</div>
+    <div class="section-desc">The first thing the user sees after downloading and opening the app.</div>
+    <div class="flow-row">
+        <div class="screen-card">
+            <img src="01-splash.svg" alt="Splash Screen">
+            <div class="screen-label">Splash / Landing</div>
+            <div class="screen-id">01-splash.svg</div>
+        </div>
+    </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- CHOICE -->
+<div class="section" id="choice">
+    <div class="section-title">Step 2</div>
+    <div class="section-heading">Join or Create</div>
+    <div class="section-desc">The user chooses between joining an existing family (kid) or creating a new one (parent).</div>
+    <div class="flow-row">
+        <div class="screen-card">
+            <img src="02-join-family.svg" alt="Join or Create">
+            <div class="screen-label">Welcome / Choose Path</div>
+            <div class="screen-id">02-join-family.svg</div>
+        </div>
+    </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- JOIN PATH -->
+<div class="section" id="join-path">
+    <div class="section-title">Path A — Kid Flow</div>
+    <div class="section-heading">Join a Family</div>
+    <div class="section-desc">A child enters their family code + member code, sets a PIN, and they're in.</div>
+    <div class="flow-row">
+        <div class="screen-card">
+            <img src="03a-join-family-code.svg" alt="Enter Codes">
+            <div class="screen-label">Enter Family & Member Code</div>
+            <div class="screen-id">03a-join-family-code.svg</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="screen-card">
+            <img src="03b-kid-set-pin.svg" alt="Set PIN">
+            <div class="screen-label">Set 4-Digit PIN</div>
+            <div class="screen-id">03b-kid-set-pin.svg</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="screen-card">
+            <img src="03c-kid-confirm-pin.svg" alt="Confirm PIN">
+            <div class="screen-label">Confirm PIN</div>
+            <div class="screen-id">03c-kid-confirm-pin.svg</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="screen-card">
+            <img src="03d-kid-enter-pin.svg" alt="Enter PIN">
+            <div class="screen-label">Returning User Login</div>
+            <div class="screen-id">03d-kid-enter-pin.svg</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="screen-card">
+            <img src="03e-kid-forgot-pin.svg" alt="Forgot PIN">
+            <div class="screen-label">Forgot PIN</div>
+            <div class="screen-id">03e-kid-forgot-pin.svg</div>
+        </div>
+    </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- INVITE JOIN PATH -->
+<div class="section" id="invite-join-path">
+    <div class="section-title">Path A2 — Invited Adult Flow</div>
+    <div class="section-heading">Join via Invite</div>
+    <div class="section-desc">An invited family member downloads the app, enters the family code, sees who's in the family, sets up their profile, and lands on the dashboard.</div>
+    <div class="flow-row">
+        <div class="screen-card">
+            <img src="03a-join-family-code.svg" alt="Enter Code">
+            <div class="screen-label">Enter Family Code</div>
+            <div class="screen-id">03a-join-family-code.svg</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="screen-card">
+            <img src="03f-join-family-preview.svg" alt="Family Preview">
+            <div class="screen-label">Family Preview</div>
+            <div class="screen-id">03f-join-family-preview.svg</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="screen-card">
+            <img src="03g-join-setup-profile.svg" alt="Setup Profile">
+            <div class="screen-label">Set Up Profile</div>
+            <div class="screen-id">03g-join-setup-profile.svg</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="screen-card">
+            <img src="05g-parent-dashboard.svg" alt="Dashboard">
+            <div class="screen-label">Dashboard</div>
+            <div class="screen-id">05g-parent-dashboard.svg</div>
+        </div>
+    </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- CREATE PATH -->
+<div class="section" id="create-path">
+    <div class="section-title">Path B — Parent Flow</div>
+    <div class="section-heading">Create a Family</div>
+    <div class="section-desc">A parent creates an account, picks their role, names the family, chooses a pet mascot, and gets their family code.</div>
+    <div class="flow-row">
+        <div class="screen-card">
+            <img src="04a-create-family-auth.svg" alt="Auth Choice">
+            <div class="screen-label">Sign Up Method</div>
+            <div class="screen-id">04a-create-family-auth.svg</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="screen-card">
+            <img src="04b-create-family-manual.svg" alt="Email Signup">
+            <div class="screen-label">Email Sign Up Form</div>
+            <div class="screen-id">04b-create-family-manual.svg</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="screen-card">
+            <img src="04c-create-family-role.svg" alt="Role Selection">
+            <div class="screen-label">Choose Your Role</div>
+            <div class="screen-id">04c-create-family-role.svg</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="screen-card">
+            <img src="04d-create-family-name.svg" alt="Family Name">
+            <div class="screen-label">Name Your Family</div>
+            <div class="screen-id">04d-create-family-name.svg</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="screen-card">
+            <img src="04e-pick-family-pet.svg" alt="Pet Selection">
+            <div class="screen-label">Choose Family Pet</div>
+            <div class="screen-id">04e-pick-family-pet.svg</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="screen-card">
+            <img src="04f-welcome-family.svg" alt="Welcome">
+            <div class="screen-label">Welcome + Share Codes</div>
+            <div class="screen-id">04f-welcome-family.svg</div>
+        </div>
+    </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- PARENT SETUP -->
+<div class="section" id="parent-setup">
+    <div class="section-title">Chunk 2 — Parent Setup</div>
+    <div class="section-heading">Initial Parent Setup</div>
+    <div class="section-desc">After onboarding, the parent adds kids, picks chores, sets up rewards, and posts a welcome message.</div>
+    <div class="flow-row">
+        <div class="screen-card">
+            <img src="05a-parent-dashboard-empty.svg" alt="Empty Dashboard">
+            <div class="screen-label">Empty Dashboard</div>
+            <div class="screen-id">05a-parent-dashboard-empty.svg</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="screen-card">
+            <img src="05b-add-kids.svg" alt="Add Kids">
+            <div class="screen-label">Add Kids</div>
+            <div class="screen-id">05b-add-kids.svg</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="screen-card">
+            <img src="05c-add-kids-success.svg" alt="Kids Added">
+            <div class="screen-label">Kids Added + Codes</div>
+            <div class="screen-id">05c-add-kids-success.svg</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="screen-card">
+            <img src="05d-setup-chores.svg" alt="Setup Chores">
+            <div class="screen-label">Pick Chores</div>
+            <div class="screen-id">05d-setup-chores.svg</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="screen-card">
+            <img src="05e-setup-rewards.svg" alt="Setup Rewards">
+            <div class="screen-label">Pick Rewards</div>
+            <div class="screen-id">05e-setup-rewards.svg</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="screen-card">
+            <img src="05f-setup-first-post.svg" alt="First Post">
+            <div class="screen-label">First Post</div>
+            <div class="screen-id">05f-setup-first-post.svg</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="screen-card">
+            <img src="05g-parent-dashboard.svg" alt="Dashboard">
+            <div class="screen-label">Dashboard (Live)</div>
+            <div class="screen-id">05g-parent-dashboard.svg</div>
+        </div>
+    </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- PARENT DASHBOARD TABS -->
+<div class="section" id="parent-tabs">
+    <div class="section-title">Chunk 3 — Dashboard Tabs</div>
+    <div class="section-heading">Parent Dashboard Navigation</div>
+    <div class="section-desc">The five main tabs: Verify, Rewards, Living Room, Family, and Settings.</div>
+    <div class="flow-row">
+        <div class="screen-card">
+            <img src="06a-parent-verify.svg" alt="Verify — Photo">
+            <div class="screen-label">Verify (Photo Proof)</div>
+            <div class="screen-id">06a-parent-verify.svg</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="screen-card">
+            <img src="06a2-parent-verify-nophoto.svg" alt="Verify — No Photo">
+            <div class="screen-label">Verify (No Photo)</div>
+            <div class="screen-id">06a2-parent-verify-nophoto.svg</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="screen-card">
+            <img src="06a3-parent-verify-reject.svg" alt="Verify — Reject">
+            <div class="screen-label">Swipe Left → Note</div>
+            <div class="screen-id">06a3-parent-verify-reject.svg</div>
+        </div>
+        <div class="flow-arrow">|</div>
+        <div class="screen-card">
+            <img src="06b-parent-rewards.svg" alt="Rewards Catalog">
+            <div class="screen-label">Rewards Catalog</div>
+            <div class="screen-id">06b-parent-rewards.svg</div>
+        </div>
+        <div class="flow-arrow">|</div>
+        <div class="screen-card">
+            <img src="06e-parent-living-room.svg" alt="Living Room">
+            <div class="screen-label">The Living Room</div>
+            <div class="screen-id">06e-parent-living-room.svg</div>
+        </div>
+        <div class="flow-arrow">|</div>
+        <div class="screen-card">
+            <img src="06f-parent-family.svg" alt="Family">
+            <div class="screen-label">Family Management</div>
+            <div class="screen-id">06f-parent-family.svg</div>
+        </div>
+        <div class="flow-arrow">|</div>
+        <div class="screen-card">
+            <img src="06f2-parent-invite-member.svg" alt="Invite Member">
+            <div class="screen-label">Invite Family Member</div>
+            <div class="screen-id">06f2-parent-invite-member.svg</div>
+        </div>
+        <div class="flow-arrow">|</div>
+        <div class="screen-card">
+            <img src="06g-parent-settings.svg" alt="Settings">
+            <div class="screen-label">Settings</div>
+            <div class="screen-id">06g-parent-settings.svg</div>
+        </div>
+    </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- PARENT ACTIONS -->
+<div class="section" id="parent-actions">
+    <div class="section-title">Chunk 4 — Parent Actions</div>
+    <div class="section-heading">Forms, Reviews &amp; Sub-Screens</div>
+    <div class="section-desc">Create chores/rewards, review swaps, give badges, manage companion, view wishlists, and notifications.</div>
+    <div class="flow-row">
+        <div class="screen-card">
+            <img src="06c-parent-create-reward.svg" alt="Create Reward">
+            <div class="screen-label">Create Reward</div>
+            <div class="screen-id">06c-parent-create-reward.svg</div>
+        </div>
+        <div class="screen-card">
+            <img src="06d-parent-create-chore.svg" alt="Create Chore">
+            <div class="screen-label">Create Chore</div>
+            <div class="screen-id">06d-parent-create-chore.svg</div>
+        </div>
+        <div class="screen-card">
+            <img src="06h-parent-companion-config.svg" alt="Companion Config">
+            <div class="screen-label">Configure Chal</div>
+            <div class="screen-id">06h-parent-companion-config.svg</div>
+        </div>
+        <div class="screen-card">
+            <img src="06i-parent-swap-review.svg" alt="Swap Review">
+            <div class="screen-label">Swap Request Review</div>
+            <div class="screen-id">06i-parent-swap-review.svg</div>
+        </div>
+        <div class="screen-card">
+            <img src="06j-parent-shoutout-review.svg" alt="Shout-out">
+            <div class="screen-label">Shout-out Boost</div>
+            <div class="screen-id">06j-parent-shoutout-review.svg</div>
+        </div>
+        <div class="screen-card">
+            <img src="06k-parent-wishlist.svg" alt="Wishlist">
+            <div class="screen-label">Kids' Wishlists</div>
+            <div class="screen-id">06k-parent-wishlist.svg</div>
+        </div>
+        <div class="screen-card">
+            <img src="06l-parent-give-badge.svg" alt="Give Badge">
+            <div class="screen-label">Give Badge</div>
+            <div class="screen-id">06l-parent-give-badge.svg</div>
+        </div>
+        <div class="screen-card">
+            <img src="06m-notifications-panel.svg" alt="Notifications">
+            <div class="screen-label">Notifications</div>
+            <div class="screen-id">06m-notifications-panel.svg</div>
+        </div>
+    </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- FLOW MAP -->
+<div class="section" id="flowmap">
+    <div class="section-title">Architecture</div>
+    <div class="section-heading">Complete Flow Map</div>
+    <div class="section-desc">How every screen connects.</div>
+
+    <div class="flow-diagram">
+        <strong style="color: white;">App Store</strong>
+        <span class="arrow">→</span>
+        <span class="step">Download</span>
+        <span class="arrow">→</span>
+        <span class="step">01 Splash</span>
+        <span class="arrow">→</span>
+        <span class="step">02 Join or Create</span>
+        <br><br>
+
+        <span class="branch">PATH A (Kid):</span><br>
+        02 <span class="arrow">→</span>
+        <span class="step">03a Enter Codes</span>
+        <span class="arrow">→</span>
+        <span class="step">03b Set PIN</span>
+        <span class="arrow">→</span>
+        <span class="step">03c Confirm PIN</span>
+        <span class="arrow">→</span>
+        <strong style="color: #28a745;">Kid Dashboard</strong>
+        <br>
+        <span style="margin-left: 20px; color: rgba(255,255,255,0.3);">Returning: 03d Enter PIN → Dashboard</span><br>
+        <span style="margin-left: 20px; color: rgba(255,255,255,0.3);">Forgot: 03d → 03e Forgot PIN → Parent notified</span>
+        <br><br>
+
+        <span class="branch">PATH B (Parent Onboarding):</span><br>
+        02 <span class="arrow">→</span>
+        <span class="step">04a Auth Method</span>
+        <span class="arrow">→</span>
+        <span class="step">04b Email Form</span> <span style="color:rgba(255,255,255,0.3);">(or social skip)</span>
+        <span class="arrow">→</span>
+        <span class="step">04c Pick Role</span>
+        <span class="arrow">→</span>
+        <span class="step">04d Name Family</span>
+        <span class="arrow">→</span>
+        <span class="step">04e Choose Pet</span>
+        <span class="arrow">→</span>
+        <span class="step">04f Welcome</span>
+        <br><br>
+
+        <span class="branch">PATH C (Parent Initial Setup):</span><br>
+        04f <span class="arrow">→</span>
+        <span class="step">05a Empty Dashboard</span>
+        <span class="arrow">→</span>
+        <span class="step">05b Add Kids</span>
+        <span class="arrow">→</span>
+        <span class="step">05c Kids Success</span>
+        <span class="arrow">→</span>
+        <span class="step">05d Pick Chores</span>
+        <span class="arrow">→</span>
+        <span class="step">05e Pick Rewards</span>
+        <span class="arrow">→</span>
+        <span class="step">05f First Post</span>
+        <span class="arrow">→</span>
+        <strong style="color: #28a745;">05g Parent Dashboard (Live)</strong>
+        <br><br>
+
+        <span class="branch">PARENT DASHBOARD (5 Tabs):</span><br>
+        <span class="step">05g Dashboard</span>
+        <span class="arrow">↔</span>
+        <span class="step">06a Verify</span>
+        <span class="arrow">↔</span>
+        <span class="step">06b Rewards</span>
+        <span class="arrow">↔</span>
+        <span class="step">06e Living Room</span>
+        <span class="arrow">↔</span>
+        <span class="step">06f Family</span>
+        <br>
+        <span style="margin-left: 20px; color: rgba(255,255,255,0.3);">Settings: 06g Settings → 06h Companion Config</span><br>
+        <span style="margin-left: 20px; color: rgba(255,255,255,0.3);">Notifications: Bell icon → 06m Notifications Panel</span>
+        <br><br>
+
+        <span class="branch">PARENT ACTIONS (Sub-Screens):</span><br>
+        <span style="margin-left: 20px; color: rgba(255,255,255,0.3);">Rewards tab → 06c Create Reward | 06k Wishlists</span><br>
+        <span style="margin-left: 20px; color: rgba(255,255,255,0.3);">Dashboard → 06d Create Chore | 06i Swap Review</span><br>
+        <span style="margin-left: 20px; color: rgba(255,255,255,0.3);">Family tab → 06j Shout-out | 06l Give Badge</span>
+    </div>
+</div>
+
+<footer>
+    Challey Screen Flows — 38 screens | 7 sections | Generated Feb 2026
+</footer>
+
+</body>
+</html>

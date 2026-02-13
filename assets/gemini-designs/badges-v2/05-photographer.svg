@@ -1,0 +1,28 @@
+<svg width="256" height="256" viewBox="0 0 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- Badge v2: Photographer -->
+<defs>
+    <linearGradient id="silver-b5" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#F0F0F0"/>
+        <stop offset="100%" stop-color="#B0B0B0"/>
+    </linearGradient>
+    <linearGradient id="dark-gloss" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#4A5459"/>
+        <stop offset="100%" stop-color="#2D3436"/>
+    </linearGradient>
+    <filter id="pin-shadow-b5" x="-15%" y="-15%" width="130%" height="130%">
+        <feDropShadow dx="4" dy="6" stdDeviation="6" flood-color="#000" flood-opacity="0.2"/>
+    </filter>
+</defs>
+<g filter="url(#pin-shadow-b5)">
+    <!-- Silver Border -->
+    <path d="M128 32 L198 68 L228 158 L128 224 L28 158 L58 68 Z" fill="url(#silver-b5)"/>
+    <!-- Inner Fill -->
+    <path d="M128 40 L192 73 L219 156 L128 216 L37 156 L64 73 Z" fill="url(#dark-gloss)"/>
+    <!-- Icon: Camera -->
+    <rect x="80" y="100" width="96" height="64" rx="10" fill="#B0B0B0"/>
+    <circle cx="128" cy="132" r="30" fill="#3399FF"/>
+    <circle cx="128"cy="132" r="15" fill="#003366"/>
+    <circle cx="128" cy="132" r="5" fill="white" opacity="0.8"/>
+    <rect x="150" y="90" width="16" height="10" rx="3" fill="#888"/>
+</g>
+</svg>

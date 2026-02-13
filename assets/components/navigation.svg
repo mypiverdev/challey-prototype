@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350" width="600" height="350">
+  <!-- Component: Navigation & Headers -->
+  <defs>
+    <filter id="navShadow">
+      <feDropShadow dx="0" dy="1" stdDeviation="3" flood-color="#1B2A4A" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="350" fill="#F5F7FA"/>
+
+  <text x="30" y="35" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#1B2A4A">Navigation</text>
+
+  <!-- Top Header (dark) -->
+  <text x="30" y="70" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#888" letter-spacing="1">TOP HEADER (DARK)</text>
+  <rect x="30" y="80" width="375" height="56" rx="12" fill="#1B2A4A"/>
+  <!-- Back arrow -->
+  <path d="M55 108 L48 108 M50 103 L45 108 L50 113" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Title -->
+  <text x="218" y="114" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="white">My Chores</text>
+  <!-- Bell + badge -->
+  <circle cx="375" cy="108" r="12" fill="none" stroke="white" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="380" cy="100" r="6" fill="#FF6B6B"/>
+  <text x="380" y="104" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" font-weight="700" fill="white">3</text>
+
+  <!-- Bottom Navigation Bar -->
+  <text x="30" y="165" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#888" letter-spacing="1">BOTTOM NAV (KID - 5 TABS)</text>
+  <g filter="url(#navShadow)">
+    <rect x="30" y="175" width="375" height="65" rx="12" fill="white"/>
+    <!-- Chores (active) -->
+    <g text-anchor="middle">
+      <circle cx="68" cy="198" r="4" fill="#2E86AB"/>
+      <text x="68" y="222" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#2E86AB">Chores</text>
+    </g>
+    <!-- Rewards -->
+    <g text-anchor="middle">
+      <circle cx="143" cy="198" r="4" fill="#B0B8C0"/>
+      <text x="143" y="222" font-family="Inter, sans-serif" font-size="10" fill="#B0B8C0">Rewards</text>
+    </g>
+    <!-- Points -->
+    <g text-anchor="middle">
+      <circle cx="218" cy="198" r="4" fill="#B0B8C0"/>
+      <text x="218" y="222" font-family="Inter, sans-serif" font-size="10" fill="#B0B8C0">Points</text>
+    </g>
+    <!-- Board -->
+    <g text-anchor="middle">
+      <circle cx="293" cy="198" r="4" fill="#B0B8C0"/>
+      <text x="293" y="222" font-family="Inter, sans-serif" font-size="10" fill="#B0B8C0">Board</text>
+    </g>
+    <!-- Living Room -->
+    <g text-anchor="middle">
+      <circle cx="368" cy="198" r="4" fill="#B0B8C0"/>
+      <text x="368" y="222" font-family="Inter, sans-serif" font-size="10" fill="#B0B8C0">Room</text>
+    </g>
+    <!-- Active indicator line -->
+    <rect x="48" y="175" width="40" height="3" rx="1.5" fill="#2E86AB"/>
+  </g>
+
+  <!-- Notification Badge -->
+  <text x="440" y="70" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#888" letter-spacing="1">BADGES</text>
+  <g>
+    <!-- Red notification -->
+    <circle cx="460" cy="95" r="10" fill="#FF6B6B"/>
+    <text x="460" y="99" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="white">3</text>
+    <text x="480" y="99" font-family="Inter, sans-serif" font-size="11" fill="#888">Notification count</text>
+    <!-- Status badge -->
+    <rect x="440" y="115" width="70" height="22" rx="11" fill="#E0F8E8"/>
+    <text x="475" y="130" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#28a745">Approved</text>
+    <!-- Pending badge -->
+    <rect x="520" y="115" width="60" height="22" rx="11" fill="#FFF5E0"/>
+    <text x="550" y="130" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#F18F01">Pending</text>
+  </g>
+
+  <!-- Toggle Switch -->
+  <text x="30" y="270" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#888" letter-spacing="1">TOGGLES</text>
+  <!-- On -->
+  <rect x="30" y="282" width="50" height="28" rx="14" fill="#28a745"/>
+  <circle cx="66" cy="296" r="10" fill="white"/>
+  <text x="90" y="300" font-family="Inter, sans-serif" font-size="12" fill="#1B2A4A">On</text>
+  <!-- Off -->
+  <rect x="130" y="282" width="50" height="28" rx="14" fill="#DDE4E8"/>
+  <circle cx="144" cy="296" r="10" fill="white"/>
+  <text x="190" y="300" font-family="Inter, sans-serif" font-size="12" fill="#888">Off</text>
+
+  <!-- Input Field -->
+  <text x="30" y="335" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#888" letter-spacing="1">TEXT INPUT</text>
+  <rect x="30" y="340" width="250" height="44" rx="10" fill="white" stroke="#DDE4E8" stroke-width="1.5"/>
+  <text x="45" y="367" font-family="Inter, sans-serif" font-size="13" fill="#B0B8C0">Enter family code...</text>
+  <rect x="300" y="340" width="250" height="44" rx="10" fill="white" stroke="#2E86AB" stroke-width="2"/>
+  <text x="315" y="367" font-family="Inter, sans-serif" font-size="13" fill="#1B2A4A">JOHN13</text>
+
+  <!-- Theme swatches -->
+  <text x="440" y="165" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#888" letter-spacing="1">THEME SWATCHES</text>
+  <circle cx="460" cy="190" r="14" fill="#2E86AB" stroke="#1B2A4A" stroke-width="3"/>
+  <circle cx="498" cy="190" r="14" fill="#FF6B35" stroke="#2D1B69" stroke-width="2"/>
+  <circle cx="536" cy="190" r="14" fill="#4A8C6F" stroke="#1B3A2D" stroke-width="2"/>
+  <circle cx="460" cy="228" r="14" fill="#58A6FF" stroke="#0D1117" stroke-width="2"/>
+  <circle cx="498" cy="228" r="14" fill="#FF69B4" stroke="#8B1A4A" stroke-width="2"/>
+  <circle cx="536" cy="228" r="14" fill="#74B9FF" stroke="#2C3E50" stroke-width="2"/>
+  <!-- Selected indicator -->
+  <path d="M456 186 L459 189 L465 183" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

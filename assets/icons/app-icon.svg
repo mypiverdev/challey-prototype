@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- App Icon - iOS/Android (1024x1024 base) -->
+  <defs>
+    <linearGradient id="iconBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B2A4A"/>
+      <stop offset="55%" stop-color="#234A6B"/>
+      <stop offset="100%" stop-color="#2E86AB"/>
+    </linearGradient>
+    <linearGradient id="iconCheck" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFB347"/>
+      <stop offset="100%" stop-color="#F18F01"/>
+    </linearGradient>
+    <filter id="iconCheckShadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0D1520" flood-opacity="0.4"/>
+    </filter>
+    <filter id="iconSparkle">
+      <feGaussianBlur stdDeviation="3" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- iOS icon mask (rounded rect) -->
+    <clipPath id="iosClip">
+      <rect x="0" y="0" width="1024" height="1024" rx="228" ry="228"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background (continuous shape, iOS will clip) -->
+  <g clip-path="url(#iosClip)">
+    <!-- Base gradient -->
+    <rect width="1024" height="1024" fill="url(#iconBg)"/>
+
+    <!-- Subtle texture: large soft circle for depth -->
+    <circle cx="400" cy="350" r="500" fill="white" opacity="0.03"/>
+    <circle cx="700" cy="750" r="400" fill="#1B2A4A" opacity="0.15"/>
+
+    <!-- Coin circle (subtle, behind checkmark) -->
+    <circle cx="512" cy="480" r="340" fill="none" stroke="#3A9BC5" stroke-width="4" opacity="0.2"/>
+    <circle cx="512" cy="480" r="330" fill="none" stroke="#3A9BC5" stroke-width="1.5" opacity="0.12"/>
+
+    <!-- THE CHECKMARK — large, bold, centered -->
+    <g filter="url(#iconCheckShadow)">
+      <path d="M300 510 L452 662 L740 350"
+            fill="none"
+            stroke="url(#iconCheck)"
+            stroke-width="100"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+    </g>
+
+    <!-- Sparkle cluster — top right -->
+    <g filter="url(#iconSparkle)">
+      <path d="M780 200 L788 224 L812 232 L788 240 L780 264 L772 240 L748 232 L772 224 Z"
+            fill="white" opacity="0.9"/>
+      <path d="M840 280 L844 292 L856 296 L844 300 L840 312 L836 300 L824 296 L836 292 Z"
+            fill="white" opacity="0.65"/>
+      <circle cx="750" cy="170" r="6" fill="white" opacity="0.45"/>
+      <circle cx="860" cy="240" r="4" fill="white" opacity="0.35"/>
+    </g>
+
+    <!-- Small sparkle — bottom left balance -->
+    <g filter="url(#iconSparkle)">
+      <path d="M200 740 L204 752 L216 756 L204 760 L200 772 L196 760 L184 756 L196 752 Z"
+            fill="#FFB347" opacity="0.5"/>
+      <circle cx="230" cy="780" r="4" fill="#FFB347" opacity="0.3"/>
+    </g>
+  </g>
+</svg>

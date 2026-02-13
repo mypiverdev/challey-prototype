@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Badge: Amazing Sibling — Gold/Orange gradient, star icon — ANIMATED -->
+  <defs>
+    <linearGradient id="asBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#F18F01"/>
+    </linearGradient>
+    <filter id="asShadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#B8760A" flood-opacity="0.3"/>
+    </filter>
+    <filter id="asGlow">
+      <feGaussianBlur stdDeviation="2" result="glow"/>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    /* Gentle float — entire badge */
+    .as-float {
+      animation: as-float 3s ease-in-out infinite;
+    }
+    @keyframes as-float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-3px); }
+    }
+
+    /* Star spin — full rotation */
+    .as-star-spin {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: as-star-spin 8s linear infinite;
+    }
+    @keyframes as-star-spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Badge shimmer — sheen slides across */
+    .as-shimmer {
+      animation: as-shimmer 4s ease-in-out infinite;
+    }
+    @keyframes as-shimmer {
+      0%, 100% { transform: translateX(-20px); opacity: 0.08; }
+      50% { transform: translateX(20px); opacity: 0.18; }
+    }
+
+    /* Rays pulse — staggered opacity */
+    .as-ray {
+      animation: as-ray-pulse 2s ease-in-out infinite;
+    }
+    .as-ray-1 { animation-delay: 0s; }
+    .as-ray-2 { animation-delay: 0.4s; }
+    .as-ray-3 { animation-delay: 0.8s; }
+    .as-ray-4 { animation-delay: 1.2s; }
+    .as-ray-5 { animation-delay: 1.6s; }
+    @keyframes as-ray-pulse {
+      0%, 100% { opacity: 0.15; }
+      50% { opacity: 0.35; }
+    }
+
+    /* Inner ring glow */
+    .as-inner-ring {
+      animation: as-ring-glow 3s ease-in-out infinite;
+    }
+    @keyframes as-ring-glow {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 0.5; }
+    }
+
+    /* Label pulse — text brightens */
+    .as-label-pulse {
+      animation: as-label-pulse 2s ease-in-out infinite;
+    }
+    @keyframes as-label-pulse {
+      0%, 100% { opacity: 0.9; }
+      50% { opacity: 1; }
+    }
+  </style>
+
+  <g class="as-float">
+    <!-- Outer ring -->
+    <circle cx="100" cy="100" r="96" fill="url(#asBg)" filter="url(#asShadow)"/>
+    <!-- Inner ring -->
+    <circle class="as-inner-ring" cx="100" cy="100" r="85" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
+    <!-- Center disc -->
+    <circle cx="100" cy="100" r="80" fill="url(#asBg)"/>
+    <!-- Sheen -->
+    <ellipse class="as-shimmer" cx="85" cy="72" rx="40" ry="28" fill="white" opacity="0.12"/>
+
+    <!-- Star icon -->
+    <g filter="url(#asGlow)">
+      <g class="as-star-spin">
+        <path d="M100 45 L113 75 L146 79 L122 102 L128 135 L100 120 L72 135 L78 102 L54 79 L87 75 Z"
+              fill="white" opacity="0.95"/>
+      </g>
+    </g>
+
+    <!-- Decorative rays -->
+    <g stroke="white" stroke-width="1.5">
+      <line class="as-ray as-ray-1" x1="100" y1="15" x2="100" y2="25" opacity="0.2"/>
+      <line class="as-ray as-ray-2" x1="140" y1="25" x2="135" y2="35" opacity="0.2"/>
+      <line class="as-ray as-ray-3" x1="60" y1="25" x2="65" y2="35" opacity="0.2"/>
+      <line class="as-ray as-ray-4" x1="170" y1="60" x2="160" y2="65" opacity="0.2"/>
+      <line class="as-ray as-ray-5" x1="30" y1="60" x2="40" y2="65" opacity="0.2"/>
+    </g>
+
+    <!-- Label -->
+    <text class="as-label-pulse" x="100" y="168" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="white" letter-spacing="0.5">AMAZING</text>
+    <text x="100" y="183" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="white" opacity="0.8">SIBLING</text>
+  </g>
+</svg>

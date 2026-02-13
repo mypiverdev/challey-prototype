@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 260" width="300" height="260">
+  <!-- Empty State: Empty Wishlist — Star with sparkles, dream big -->
+  <defs>
+    <linearGradient id="ewBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F0E6FF"/>
+      <stop offset="100%" stop-color="#E0D4F5"/>
+    </linearGradient>
+    <filter id="ewSoft">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#6C5CE7" flood-opacity="0.1"/>
+    </filter>
+    <filter id="ewGlow">
+      <feGaussianBlur stdDeviation="3" result="glow"/>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background blob -->
+  <ellipse cx="150" cy="115" rx="115" ry="95" fill="url(#ewBg)" opacity="0.5"/>
+
+  <!-- Thought bubble / dream cloud -->
+  <g filter="url(#ewSoft)" opacity="0.9">
+    <ellipse cx="150" cy="95" rx="70" ry="50" fill="white"/>
+    <ellipse cx="115" cy="115" rx="25" ry="20" fill="white"/>
+    <ellipse cx="185" cy="118" rx="22" ry="18" fill="white"/>
+    <ellipse cx="150" cy="60" rx="30" ry="22" fill="white"/>
+    <!-- Cloud dots trailing down -->
+    <circle cx="115" cy="150" r="8" fill="white"/>
+    <circle cx="125" cy="165" r="5" fill="white"/>
+  </g>
+
+  <!-- Star inside cloud (the wish!) -->
+  <g filter="url(#ewGlow)" transform="translate(150, 90)">
+    <path d="M0 -28 L8 -10 L28 -8 L14 8 L18 28 L0 18 L-18 28 L-14 8 L-28 -8 L-8 -10 Z"
+          fill="#FFD700" opacity="0.4"/>
+    <path d="M0 -20 L6 -7 L20 -6 L10 6 L13 20 L0 13 L-13 20 L-10 6 L-20 -6 L-6 -7 Z"
+          fill="none" stroke="#F18F01" stroke-width="1.5" stroke-dasharray="3,3" opacity="0.5"/>
+  </g>
+
+  <!-- Tiny sparkles around -->
+  <g fill="#F18F01" opacity="0.25">
+    <path d="M220 55 L222 60 L227 62 L222 64 L220 69 L218 64 L213 62 L218 60 Z"/>
+    <circle cx="80" cy="50" r="2.5"/>
+    <circle cx="240" cy="95" r="2"/>
+    <path d="M70 105 L71.5 109 L76 110.5 L71.5 112 L70 116 L68.5 112 L64 110.5 L68.5 109 Z"/>
+  </g>
+
+  <text x="150" y="205" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="#1B2A4A">Wishlist is empty</text>
+  <text x="150" y="227" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="400" fill="#888">Dream big! Add things you'd love to earn</text>
+</svg>

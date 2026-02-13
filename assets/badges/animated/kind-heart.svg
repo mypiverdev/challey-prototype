@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Badge: Kind Heart — Red gradient, heart icon — ANIMATED -->
+  <defs>
+    <linearGradient id="khBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B6B"/>
+      <stop offset="100%" stop-color="#EE3B5B"/>
+    </linearGradient>
+    <filter id="khShadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#A01030" flood-opacity="0.3"/>
+    </filter>
+    <filter id="khGlow">
+      <feGaussianBlur stdDeviation="2" result="glow"/>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    /* Gentle float — entire badge */
+    .kh-float {
+      animation: kh-float 3.5s ease-in-out infinite;
+    }
+    @keyframes kh-float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-3px); }
+    }
+
+    /* Heartbeat — realistic double-pump */
+    .kh-heartbeat {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: kh-heartbeat 1.2s ease-in-out infinite;
+    }
+    @keyframes kh-heartbeat {
+      0% { transform: scale(1); }
+      14% { transform: scale(1.1); }
+      28% { transform: scale(1); }
+      42% { transform: scale(1.05); }
+      56% { transform: scale(1); }
+      100% { transform: scale(1); }
+    }
+
+    /* Badge shimmer — sheen slides across */
+    .kh-shimmer {
+      animation: kh-shimmer 4s ease-in-out infinite;
+    }
+    @keyframes kh-shimmer {
+      0%, 100% { transform: translateX(-20px); opacity: 0.06; }
+      50% { transform: translateX(20px); opacity: 0.16; }
+    }
+
+    /* Sparkle twinkle — staggered scale + opacity */
+    .kh-sparkle {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: kh-sparkle-twinkle 2s ease-in-out infinite;
+    }
+    .kh-sparkle-1 { animation-delay: 0s; }
+    .kh-sparkle-2 { animation-delay: 0.7s; }
+    .kh-sparkle-3 { animation-delay: 1.3s; }
+    @keyframes kh-sparkle-twinkle {
+      0%, 100% { transform: scale(0); opacity: 0; }
+      50% { transform: scale(1); opacity: 0.5; }
+    }
+
+    /* Inner ring glow */
+    .kh-inner-ring {
+      animation: kh-ring-glow 3s ease-in-out infinite;
+    }
+    @keyframes kh-ring-glow {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 0.45; }
+    }
+  </style>
+
+  <g class="kh-float">
+    <circle cx="100" cy="100" r="96" fill="url(#khBg)" filter="url(#khShadow)"/>
+    <circle class="kh-inner-ring" cx="100" cy="100" r="85" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
+    <circle cx="100" cy="100" r="80" fill="url(#khBg)"/>
+    <ellipse class="kh-shimmer" cx="85" cy="72" rx="40" ry="28" fill="white" opacity="0.1"/>
+
+    <!-- Heart icon -->
+    <g filter="url(#khGlow)" transform="translate(100, 88)">
+      <g class="kh-heartbeat">
+        <path d="M0 45 C-5 40 -42 15 -42 -8 C-42 -25 -30 -38 -15 -38 C-5 -38 0 -30 0 -30 C0 -30 5 -38 15 -38 C30 -38 42 -25 42 -8 C42 15 5 40 0 45 Z"
+              fill="white" opacity="0.95"/>
+      </g>
+    </g>
+
+    <!-- Sparkle accents -->
+    <g fill="white">
+      <circle class="kh-sparkle kh-sparkle-1" cx="55" cy="55" r="3" opacity="0.4"/>
+      <circle class="kh-sparkle kh-sparkle-2" cx="150" cy="48" r="2.5" opacity="0.4"/>
+      <circle class="kh-sparkle kh-sparkle-3" cx="45" cy="95" r="2" opacity="0.4"/>
+    </g>
+
+    <text x="100" y="168" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="white" letter-spacing="0.5">KIND</text>
+    <text x="100" y="183" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="white" opacity="0.8">HEART</text>
+  </g>
+</svg>

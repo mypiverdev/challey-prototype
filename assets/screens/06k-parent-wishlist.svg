@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812" width="375" height="812">
+  <!-- Screen: Kids Wishlist Review -->
+  <defs>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#1B2A4A" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <rect width="375" height="812" fill="#F5F7FA"/>
+
+  <!-- Status bar -->
+  <text x="30" y="52" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#1B2A4A">9:41</text>
+  <g transform="translate(295, 40)">
+    <rect x="0" y="0" width="22" height="11" rx="2" fill="none" stroke="#1B2A4A" stroke-width="1.2"/>
+    <rect x="2" y="2" width="15" height="7" rx="1" fill="#1B2A4A"/>
+    <rect x="22" y="3" width="2" height="5" rx="1" fill="#1B2A4A" opacity="0.4"/>
+  </g>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="375" height="170" fill="#1B2A4A"/>
+  <g transform="translate(28, 88)">
+    <path d="M10 0 L0 0 M3 -5 L0 0 L3 5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="28" y="130" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="white">Kids' Wishlists</text>
+  <text x="28" y="155" font-family="Inter, sans-serif" font-size="14" fill="white" opacity="0.5">What your kids are hoping for</text>
+
+  <!-- Maggie's Wishes -->
+  <text x="28" y="200" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#888" letter-spacing="1">MAGGIE'S WISHES</text>
+
+  <!-- Wish 1 -->
+  <g filter="url(#cardShadow)">
+    <rect x="24" y="210" width="327" height="68" rx="12" fill="white"/>
+    <text x="44" y="238" font-family="Inter, sans-serif" font-size="20">🎨</text>
+    <text x="74" y="234" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#1B2A4A">Art supplies set</text>
+    <text x="74" y="252" font-family="Inter, sans-serif" font-size="11" fill="#888">"I want to paint more!"</text>
+    <text x="74" y="270" font-family="Inter, sans-serif" font-size="10" fill="#F18F01" font-weight="500">~$15 — 300 pts</text>
+    <rect x="270" y="228" width="65" height="24" rx="12" fill="#E8F4F8"/>
+    <text x="302" y="244" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#2E86AB">Add ›</text>
+  </g>
+
+  <!-- Wish 2 -->
+  <g filter="url(#cardShadow)">
+    <rect x="24" y="286" width="327" height="68" rx="12" fill="white"/>
+    <text x="44" y="314" font-family="Inter, sans-serif" font-size="20">📚</text>
+    <text x="74" y="310" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#1B2A4A">New book series</text>
+    <text x="74" y="328" font-family="Inter, sans-serif" font-size="11" fill="#888">"Wings of Fire please!"</text>
+    <text x="74" y="346" font-family="Inter, sans-serif" font-size="10" fill="#F18F01" font-weight="500">~$10 — 200 pts</text>
+    <rect x="270" y="304" width="65" height="24" rx="12" fill="#E8F4F8"/>
+    <text x="302" y="320" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#2E86AB">Add ›</text>
+  </g>
+
+  <!-- Wish 3 -->
+  <g filter="url(#cardShadow)">
+    <rect x="24" y="362" width="327" height="68" rx="12" fill="white"/>
+    <text x="44" y="390" font-family="Inter, sans-serif" font-size="20">🎧</text>
+    <text x="74" y="386" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#1B2A4A">Wireless earbuds</text>
+    <text x="74" y="404" font-family="Inter, sans-serif" font-size="11" fill="#888">"For music when I do chores!"</text>
+    <text x="74" y="422" font-family="Inter, sans-serif" font-size="10" fill="#F18F01" font-weight="500">~$25 — 500 pts</text>
+    <rect x="270" y="380" width="65" height="24" rx="12" fill="#E8F4F8"/>
+    <text x="302" y="396" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#2E86AB">Add ›</text>
+  </g>
+
+  <!-- Jake's Wishes -->
+  <text x="28" y="462" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#888" letter-spacing="1">JAKE'S WISHES</text>
+
+  <!-- Wish 1 -->
+  <g filter="url(#cardShadow)">
+    <rect x="24" y="472" width="327" height="68" rx="12" fill="white"/>
+    <text x="44" y="500" font-family="Inter, sans-serif" font-size="20">⚽</text>
+    <text x="74" y="496" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#1B2A4A">New soccer ball</text>
+    <text x="74" y="514" font-family="Inter, sans-serif" font-size="11" fill="#888">"Mine is flat!"</text>
+    <text x="74" y="532" font-family="Inter, sans-serif" font-size="10" fill="#F18F01" font-weight="500">~$20 — 400 pts</text>
+    <rect x="270" y="490" width="65" height="24" rx="12" fill="#E8F4F8"/>
+    <text x="302" y="506" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#2E86AB">Add ›</text>
+  </g>
+
+  <!-- Lily's Wishes -->
+  <text x="28" y="572" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#888" letter-spacing="1">LILY'S WISHES</text>
+  <rect x="24" y="582" width="327" height="40" rx="12" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+  <text x="187" y="608" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#B0B8C0">No wishes yet</text>
+
+  <!-- Info bar -->
+  <rect x="24" y="640" width="327" height="40" rx="10" fill="#E8F4F8"/>
+  <text x="44" y="665" font-family="Inter, sans-serif" font-size="11" fill="#2E86AB">💡 Tap "Add" to create it as a reward in the catalog</text>
+
+  <!-- Bottom Navigation -->
+  <rect x="0" y="740" width="375" height="72" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+  <!-- Dashboard -->
+  <g text-anchor="middle">
+    <g transform="translate(38, 762)">
+      <rect x="-7" y="-7" width="6" height="6" rx="1.5" fill="#B0B8C0"/>
+      <rect x="1" y="-7" width="6" height="6" rx="1.5" fill="#B0B8C0"/>
+      <rect x="-7" y="1" width="6" height="6" rx="1.5" fill="#B0B8C0"/>
+      <rect x="1" y="1" width="6" height="6" rx="1.5" fill="#B0B8C0"/>
+    </g>
+    <text x="38" y="783" font-family="Inter, sans-serif" font-size="10" fill="#B0B8C0">Dashboard</text>
+  </g>
+  <!-- Verify -->
+  <g text-anchor="middle">
+    <g transform="translate(112, 762)">
+      <path d="M-6,-1 L-2,5 L7,-6" fill="none" stroke="#B0B8C0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="112" y="783" font-family="Inter, sans-serif" font-size="10" fill="#B0B8C0">Verify</text>
+  </g>
+  <!-- Rewards (active) -->
+  <g text-anchor="middle">
+    <rect x="167" y="740" width="40" height="3" rx="1.5" fill="#2E86AB"/>
+    <g transform="translate(187, 762)">
+      <path d="M0,-8 L2,-3 L7.6,-2.5 L3.3,1 L4.7,6.5 L0,3.5 L-4.7,6.5 L-3.3,1 L-7.6,-2.5 L-2,-3 Z" fill="#2E86AB"/>
+    </g>
+    <text x="187" y="783" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#2E86AB">Rewards</text>
+  </g>
+  <!-- Room -->
+  <g text-anchor="middle">
+    <g transform="translate(262, 762)">
+      <path d="M-6,-7 L6,-7 C8,-7 9,-5.5 9,-4 L9,1.5 C9,3.5 8,5 6,5 L1,5 L-3,9 L-1,5 L-6,5 C-8,5 -9,3.5 -9,1.5 L-9,-4 C-9,-5.5 -8,-7 -6,-7 Z" fill="#B0B8C0"/>
+    </g>
+    <text x="262" y="783" font-family="Inter, sans-serif" font-size="10" fill="#B0B8C0">Room</text>
+  </g>
+  <!-- Family -->
+  <g text-anchor="middle">
+    <g transform="translate(337, 762)">
+      <circle cx="-3" cy="-5" r="3.5" fill="#B0B8C0"/>
+      <path d="M-9,7 C-9,1 3,1 3,7" fill="#B0B8C0"/>
+      <circle cx="5" cy="-6" r="2.5" fill="#B0B8C0" opacity="0.7"/>
+      <path d="M1,6 C1,1 9,1 9,6" fill="#B0B8C0" opacity="0.7"/>
+    </g>
+    <text x="337" y="783" font-family="Inter, sans-serif" font-size="10" fill="#B0B8C0">Family</text>
+  </g>
+
+  <!-- Home indicator -->
+  <rect x="120" y="800" width="135" height="5" rx="2.5" fill="#1B2A4A" opacity="0.15"/>
+</svg>

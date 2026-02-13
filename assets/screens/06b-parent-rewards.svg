@@ -1,0 +1,229 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812" width="375" height="812">
+  <!-- Screen: Parent Rewards — Rich catalog, proper button sizing, 2.5 visible cards -->
+  <defs>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="8" flood-color="#1B2A4A" flood-opacity="0.1"/>
+    </filter>
+    <filter id="stickyBar">
+      <feDropShadow dx="0" dy="-3" stdDeviation="10" flood-color="#1B2A4A" flood-opacity="0.1"/>
+    </filter>
+    <linearGradient id="gamingGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2E86AB"/>
+      <stop offset="100%" stop-color="#1B2A4A"/>
+    </linearGradient>
+    <linearGradient id="foodGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F18F01"/>
+      <stop offset="100%" stop-color="#E07800"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="375" height="812" fill="#F5F7FA"/>
+
+  <!-- Status bar -->
+  <text x="30" y="52" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#1B2A4A">9:41</text>
+  <g transform="translate(295, 40)">
+    <rect x="0" y="0" width="22" height="11" rx="2" fill="none" stroke="#1B2A4A" stroke-width="1.2"/>
+    <rect x="2" y="2" width="15" height="7" rx="1" fill="#1B2A4A"/>
+    <rect x="22" y="3" width="2" height="5" rx="1" fill="#1B2A4A" opacity="0.4"/>
+  </g>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="375" height="108" fill="#1B2A4A"/>
+  <text x="28" y="88" font-family="Inter, sans-serif" font-size="22" font-weight="700" fill="white">Rewards</text>
+  <text x="280" y="88" text-anchor="end" font-family="Inter, sans-serif" font-size="11" fill="white" opacity="0.4">20 pts = $1.00</text>
+  <!-- Active count badge -->
+  <rect x="310" y="74" width="42" height="22" rx="11" fill="white" opacity="0.15"/>
+  <text x="331" y="89" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="white">4</text>
+
+  <!-- ===== CATEGORY FILTER PILLS (larger) ===== -->
+  <g transform="translate(24, 120)">
+    <rect x="0" y="0" width="52" height="36" rx="18" fill="#2E86AB"/>
+    <text x="26" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="white">All</text>
+
+    <rect x="60" y="0" width="105" height="36" rx="18" fill="white" stroke="#E8ECF0" stroke-width="1.5"/>
+    <text x="112" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#888">Screen Time</text>
+
+    <rect x="173" y="0" width="64" height="36" rx="18" fill="white" stroke="#E8ECF0" stroke-width="1.5"/>
+    <text x="205" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#888">Food</text>
+
+    <rect x="245" y="0" width="58" height="36" rx="18" fill="white" stroke="#E8ECF0" stroke-width="1.5"/>
+    <text x="274" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#888">Cash</text>
+
+    <rect x="311" y="0" width="40" height="36" rx="18" fill="white" stroke="#E8ECF0" stroke-width="1.5"/>
+    <text x="331" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#888">…</text>
+  </g>
+
+  <!-- ===== REWARD CARD 1: WITH PHOTO (30min Gaming) ===== -->
+  <g filter="url(#cardShadow)">
+    <rect x="20" y="172" width="335" height="168" rx="18" fill="white"/>
+
+    <!-- Photo thumbnail (larger) -->
+    <rect x="34" y="186" width="108" height="140" rx="14" fill="#D4E8F0"/>
+    <rect x="34" y="186" width="108" height="140" rx="14" fill="url(#gamingGrad)" opacity="0.15"/>
+    <g transform="translate(88, 240)">
+      <circle cx="0" cy="0" r="28" fill="white" opacity="0.3"/>
+      <text x="0" y="12" text-anchor="middle" font-family="Inter, sans-serif" font-size="32">🎮</text>
+    </g>
+    <!-- Photo badge -->
+    <rect x="40" y="296" width="50" height="20" rx="10" fill="rgba(0,0,0,0.5)"/>
+    <text x="65" y="310" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="white">📷 Photo</text>
+
+    <!-- Reward details -->
+    <text x="158" y="210" font-family="Inter, sans-serif" font-size="17" font-weight="700" fill="#1B2A4A">30min Gaming</text>
+    <!-- Category tag -->
+    <rect x="158" y="218" width="88" height="22" rx="11" fill="#E8F4F8"/>
+    <text x="202" y="234" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#2E86AB">Screen Time</text>
+    <!-- Points + dollar -->
+    <g transform="translate(158, 250)">
+      <rect x="0" y="0" width="72" height="32" rx="16" fill="#FFF5E0"/>
+      <text x="36" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="800" fill="#F18F01">30</text>
+      <text x="80" y="22" font-family="Inter, sans-serif" font-size="13" fill="#888">pts</text>
+      <text x="108" y="22" font-family="Inter, sans-serif" font-size="12" fill="#B0B8C0">· $1.50</text>
+    </g>
+    <!-- Kid availability -->
+    <g transform="translate(158, 296)">
+      <circle cx="0" cy="0" r="10" fill="#A855F7"/>
+      <text x="0" y="4" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" font-weight="700" fill="white">M</text>
+      <circle cx="22" cy="0" r="10" fill="#FF6B6B"/>
+      <text x="22" y="4" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" font-weight="700" fill="white">J</text>
+      <circle cx="44" cy="0" r="10" fill="#2E86AB"/>
+      <text x="44" y="4" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" font-weight="700" fill="white">L</text>
+      <text x="66" y="4" font-family="Inter, sans-serif" font-size="11" fill="#888">All kids</text>
+    </g>
+    <!-- Status + Edit -->
+    <g transform="translate(320, 190)">
+      <circle cx="0" cy="0" r="5" fill="#28a745"/>
+    </g>
+    <text x="338" y="324" text-anchor="end" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#2E86AB">Edit ›</text>
+  </g>
+
+  <!-- ===== REWARD CARD 2: EMOJI ONLY (Pizza Party) ===== -->
+  <g filter="url(#cardShadow)">
+    <rect x="20" y="354" width="335" height="168" rx="18" fill="white"/>
+
+    <!-- Emoji thumbnail (no photo) -->
+    <rect x="34" y="368" width="108" height="140" rx="14" fill="url(#foodGrad)" opacity="0.1"/>
+    <rect x="34" y="368" width="108" height="140" rx="14" fill="none" stroke="#F18F01" stroke-width="1.2" stroke-dasharray="6 4" opacity="0.5"/>
+    <g transform="translate(88, 422)">
+      <text x="0" y="16" text-anchor="middle" font-family="Inter, sans-serif" font-size="44">🍕</text>
+    </g>
+    <!-- Add photo hint -->
+    <rect x="44" y="478" width="78" height="20" rx="10" fill="#FFF5E0"/>
+    <text x="83" y="493" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#F18F01">📷 Add photo</text>
+
+    <!-- Reward details -->
+    <text x="158" y="392" font-family="Inter, sans-serif" font-size="17" font-weight="700" fill="#1B2A4A">Pizza Party</text>
+    <rect x="158" y="400" width="92" height="22" rx="11" fill="#FFF5E0"/>
+    <text x="204" y="416" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#F18F01">Food &amp; Treats</text>
+    <g transform="translate(158, 432)">
+      <rect x="0" y="0" width="72" height="32" rx="16" fill="#FFF5E0"/>
+      <text x="36" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="800" fill="#F18F01">200</text>
+      <text x="80" y="22" font-family="Inter, sans-serif" font-size="13" fill="#888">pts</text>
+      <text x="108" y="22" font-family="Inter, sans-serif" font-size="12" fill="#B0B8C0">· $10</text>
+    </g>
+    <g transform="translate(158, 478)">
+      <circle cx="0" cy="0" r="10" fill="#A855F7"/>
+      <text x="0" y="4" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" font-weight="700" fill="white">M</text>
+      <circle cx="22" cy="0" r="10" fill="#FF6B6B"/>
+      <text x="22" y="4" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" font-weight="700" fill="white">J</text>
+      <text x="44" y="4" font-family="Inter, sans-serif" font-size="11" fill="#888">Maggie, Jake</text>
+    </g>
+    <g transform="translate(320, 372)">
+      <circle cx="0" cy="0" r="5" fill="#28a745"/>
+    </g>
+    <text x="338" y="506" text-anchor="end" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#2E86AB">Edit ›</text>
+  </g>
+
+  <!-- ===== REWARD CARD 3: PEEK (Movie Night — partially visible, hints scroll) ===== -->
+  <g filter="url(#cardShadow)">
+    <rect x="20" y="536" width="335" height="168" rx="18" fill="white"/>
+
+    <!-- Photo thumbnail peek -->
+    <rect x="34" y="550" width="108" height="100" rx="14" fill="#1B2A4A" opacity="0.8"/>
+    <g transform="translate(88, 590)">
+      <circle cx="0" cy="0" r="24" fill="white" opacity="0.15"/>
+      <text x="0" y="10" text-anchor="middle" font-family="Inter, sans-serif" font-size="28">🎬</text>
+    </g>
+    <rect x="40" y="628" width="50" height="20" rx="10" fill="rgba(0,0,0,0.5)"/>
+    <text x="65" y="642" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="white">📷 Photo</text>
+
+    <text x="158" y="574" font-family="Inter, sans-serif" font-size="17" font-weight="700" fill="#1B2A4A">Movie Night</text>
+    <rect x="158" y="582" width="88" height="22" rx="11" fill="#E8F4F8"/>
+    <text x="202" y="598" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#2E86AB">Screen Time</text>
+    <g transform="translate(158, 614)">
+      <rect x="0" y="0" width="72" height="32" rx="16" fill="#FFF5E0"/>
+      <text x="36" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="800" fill="#F18F01">80</text>
+      <text x="80" y="22" font-family="Inter, sans-serif" font-size="13" fill="#888">pts</text>
+      <text x="108" y="22" font-family="Inter, sans-serif" font-size="12" fill="#B0B8C0">· $4.00</text>
+    </g>
+    <g transform="translate(320, 554)">
+      <circle cx="0" cy="0" r="5" fill="#28a745"/>
+    </g>
+  </g>
+
+  <!-- Scroll fade at bottom of list -->
+  <rect x="0" y="660" width="375" height="40" fill="url(#scrollFade)" opacity="0"/>
+
+  <!-- ===== STICKY BOTTOM BAR (properly sized) ===== -->
+  <g filter="url(#stickyBar)">
+    <rect x="0" y="688" width="375" height="124" fill="white"/>
+    <rect x="0" y="686" width="375" height="2" fill="#E8ECF0"/>
+  </g>
+
+  <!-- Add New Reward button (large, primary) -->
+  <rect x="20" y="700" width="212" height="52" rx="16" fill="#F18F01"/>
+  <text x="126" y="732" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="white">+ Add Reward</text>
+
+  <!-- View Wishlists button (large, secondary) -->
+  <rect x="240" y="700" width="115" height="52" rx="16" fill="white" stroke="#2E86AB" stroke-width="2"/>
+  <text x="297" y="724" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#2E86AB">🎁 Wishlists</text>
+  <text x="297" y="740" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#2E86AB" opacity="0.5">4 wishes</text>
+
+  <!-- Bottom Navigation (proper size) -->
+  <rect x="0" y="762" width="375" height="50" fill="white"/>
+  <!-- Dashboard -->
+  <g text-anchor="middle">
+    <g transform="translate(38, 778)">
+      <rect x="-7" y="-7" width="6" height="6" rx="1.5" fill="#B0B8C0"/>
+      <rect x="1" y="-7" width="6" height="6" rx="1.5" fill="#B0B8C0"/>
+      <rect x="-7" y="1" width="6" height="6" rx="1.5" fill="#B0B8C0"/>
+      <rect x="1" y="1" width="6" height="6" rx="1.5" fill="#B0B8C0"/>
+    </g>
+    <text x="38" y="796" font-family="Inter, sans-serif" font-size="10" fill="#B0B8C0">Dashboard</text>
+  </g>
+  <!-- Verify -->
+  <g text-anchor="middle">
+    <g transform="translate(112, 778)">
+      <path d="M-6,-1 L-2,5 L7,-6" fill="none" stroke="#B0B8C0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="112" y="796" font-family="Inter, sans-serif" font-size="10" fill="#B0B8C0">Verify</text>
+  </g>
+  <!-- Rewards (active) -->
+  <g text-anchor="middle">
+    <rect x="173" y="762" width="28" height="3" rx="1.5" fill="#2E86AB"/>
+    <g transform="translate(187, 778)">
+      <path d="M0,-8 L2,-3 L7.6,-2.5 L3.3,1 L4.7,6.5 L0,3.5 L-4.7,6.5 L-3.3,1 L-7.6,-2.5 L-2,-3 Z" fill="#2E86AB"/>
+    </g>
+    <text x="187" y="796" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#2E86AB">Rewards</text>
+  </g>
+  <!-- Room -->
+  <g text-anchor="middle">
+    <g transform="translate(262, 778)">
+      <path d="M-6,-7 L6,-7 C8,-7 9,-5.5 9,-4 L9,1.5 C9,3.5 8,5 6,5 L1,5 L-3,9 L-1,5 L-6,5 C-8,5 -9,3.5 -9,1.5 L-9,-4 C-9,-5.5 -8,-7 -6,-7 Z" fill="#B0B8C0"/>
+    </g>
+    <text x="262" y="796" font-family="Inter, sans-serif" font-size="10" fill="#B0B8C0">Room</text>
+  </g>
+  <!-- Family -->
+  <g text-anchor="middle">
+    <g transform="translate(337, 778)">
+      <circle cx="-3" cy="-5" r="3.5" fill="#B0B8C0"/>
+      <path d="M-9,7 C-9,1 3,1 3,7" fill="#B0B8C0"/>
+      <circle cx="5" cy="-6" r="2.5" fill="#B0B8C0" opacity="0.7"/>
+      <path d="M1,6 C1,1 9,1 9,6" fill="#B0B8C0" opacity="0.7"/>
+    </g>
+    <text x="337" y="796" font-family="Inter, sans-serif" font-size="10" fill="#B0B8C0">Family</text>
+  </g>
+
+  <!-- Home indicator -->
+  <rect x="120" y="800" width="135" height="5" rx="2.5" fill="#1B2A4A" opacity="0.15"/>
+</svg>

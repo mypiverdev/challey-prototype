@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Chal: Dog — Loyal, energetic, tail-wagging -->
+  <defs>
+    <linearGradient id="dogBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4915E"/>
+      <stop offset="100%" stop-color="#B8763E"/>
+    </linearGradient>
+    <linearGradient id="dogDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A66832"/>
+      <stop offset="100%" stop-color="#8B5526"/>
+    </linearGradient>
+    <radialGradient id="dogCheek" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF9FF3" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#FF9FF3" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="dogShadow">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#6B3E1A" flood-opacity="0.15"/>
+    </filter>
+    <style>
+      @keyframes dogBounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+      @keyframes tailWag {
+        0%, 100% { transform: rotate(0deg); }
+        25% { transform: rotate(15deg); }
+        75% { transform: rotate(-15deg); }
+      }
+      #dog-all {
+        animation: dogBounce 2.5s ease-in-out infinite;
+        transform-origin: center bottom;
+      }
+      #dog-tail-group {
+        animation: tailWag 0.5s ease-in-out infinite alternate;
+        transform-origin: 285px 280px; /* Approximate base of the tail */
+      }
+    </style>
+  </defs>
+
+  <g id="dog-all">
+    <!-- Body shadow -->
+    <ellipse cx="200" cy="375" rx="80" ry="10" fill="#6B3E1A" opacity="0.1"/>
+
+    <!-- Body -->
+    <ellipse cx="200" cy="300" rx="85" ry="70" fill="url(#dogBody)" filter="url(#dogShadow)"/>
+
+    <!-- Belly patch -->
+    <ellipse cx="200" cy="315" rx="50" ry="45" fill="#F2DCC4"/>
+
+    <!-- Front paws -->
+    <ellipse cx="155" cy="360" rx="22" ry="18" fill="url(#dogBody)"/>
+    <ellipse cx="245" cy="360" rx="22" ry="18" fill="url(#dogBody)"/>
+    <ellipse cx="155" cy="362" rx="16" ry="10" fill="#F2DCC4"/>
+    <ellipse cx="245" cy="362" rx="16" ry="10" fill="#F2DCC4"/>
+
+    <!-- Paw toe lines -->
+    <g stroke="#C4956A" stroke-width="1.5" fill="none" stroke-linecap="round">
+      <path d="M149 362 L149 368"/>
+      <path d="M155 362 L155 369"/>
+      <path d="M161 362 L161 368"/>
+      <path d="M239 362 L239 368"/>
+      <path d="M245 362 L245 369"/>
+      <path d="M251 362 L251 368"/>
+    </g>
+
+    <!-- Tail (wagging!) -->
+    <g id="dog-tail-group">
+      <path d="M285 280 Q320 260 330 230 Q335 215 320 225 Q310 240 295 265" fill="url(#dogBody)" stroke="none"/>
+    </g>
+
+    <!-- Head -->
+    <ellipse cx="200" cy="175" rx="95" ry="90" fill="url(#dogBody)" filter="url(#dogShadow)"/>
+
+    <!-- Head highlight -->
+    <ellipse cx="185" cy="140" rx="50" ry="35" fill="white" opacity="0.06"/>
+
+    <!-- Floppy ears -->
+    <ellipse cx="115" cy="145" rx="35" ry="55" fill="url(#dogDark)" transform="rotate(-15, 115, 145)"/>
+    <ellipse cx="285" cy="145" rx="35" ry="55" fill="url(#dogDark)" transform="rotate(15, 285, 145)"/>
+    <!-- Inner ear -->
+    <ellipse cx="118" cy="150" rx="20" ry="35" fill="#E8A87C" transform="rotate(-15, 118, 150)" opacity="0.5"/>
+    <ellipse cx="282" cy="150" rx="20" ry="35" fill="#E8A87C" transform="rotate(15, 282, 150)" opacity="0.5"/>
+
+    <!-- Face patch (lighter snout area) -->
+    <ellipse cx="200" cy="205" rx="50" ry="40" fill="#F2DCC4"/>
+
+    <!-- Eyes -->
+    <ellipse cx="168" cy="175" rx="22" ry="25" fill="white"/>
+    <ellipse cx="232" cy="175" rx="22" ry="25" fill="white"/>
+    <ellipse cx="172" cy="179" rx="13" ry="15" fill="#3D2512"/>
+    <ellipse cx="228" cy="179" rx="13" ry="15" fill="#3D2512"/>
+    <!-- Eye highlights -->
+    <circle cx="177" cy="173" r="6" fill="white" opacity="0.9"/>
+    <circle cx="233" cy="173" r="6" fill="white" opacity="0.9"/>
+    <circle cx="169" cy="183" r="3" fill="white" opacity="0.4"/>
+    <circle cx="225" cy="183" r="3" fill="white" opacity="0.4"/>
+
+    <!-- Eyebrows (expressive) -->
+    <path d="M150 157 Q165 148 182 155" fill="none" stroke="#8B5526" stroke-width="3" stroke-linecap="round"/>
+    <path d="M218 155 Q235 148 250 157" fill="none" stroke="#8B5526" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Nose -->
+    <ellipse cx="200" cy="205" rx="14" ry="10" fill="#3D2512"/>
+    <ellipse cx="200" cy="203" rx="6" ry="4" fill="#5A3A1E" opacity="0.4"/>
+
+    <!-- Mouth -->
+    <path d="M200 215 L195 225" fill="none" stroke="#6B3E1A" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M200 215 L205 225" fill="none" stroke="#6B3E1A" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Smile curve -->
+    <path d="M182 225 Q195 235 200 232" fill="none" stroke="#6B3E1A" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M218 225 Q205 235 200 232" fill="none" stroke="#6B3E1A" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Tongue -->
+    <ellipse cx="207" cy="232" rx="8" ry="10" fill="#FF7675"/>
+    <path d="M203 230 Q207 234 211 230" fill="none" stroke="#E06665" stroke-width="1"/>
+
+    <!-- Cheek blush -->
+    <ellipse cx="142" cy="200" rx="16" ry="10" fill="url(#dogCheek)"/>
+    <ellipse cx="258" cy="200" rx="16" ry="10" fill="url(#dogCheek)"/>
+
+    <!-- Challey bandana -->
+    <g transform="translate(200, 248)">
+      <path d="M-55,-5 Q-30,-15 0,-8 Q30,-15 55,-5 L30,25 Q0,35 -30,25 Z" fill="#2E86AB"/>
+      <path d="M-40,-8 Q-20,-15 0,-10 Q20,-15 40,-8 L22,18 Q0,26 -22,18 Z" fill="#3A9BC5" opacity="0.4"/>
+      <!-- Tiny checkmark on bandana -->
+      <path d="M-5,5 L0,10 L10,0" fill="none" stroke="#F18F01" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+</svg>

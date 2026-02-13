@@ -1,0 +1,15 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- Badge 3: 100 Points Collector -->
+<defs>
+    <filter id="shadow-badge3" x="-10%" y="-10%" width="120%" height="120%">
+        <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#003366" flood-opacity="0.2"/>
+    </filter>
+</defs>
+<g filter="url(#shadow-badge3)">
+    <circle cx="128" cy="128" r="110" fill="#FFD700"/>
+    <circle cx="128" cy="128" r="95" fill="#FFFFFF"/>
+    <circle cx="128" cy="128" r="95" stroke="#F18F01" stroke-width="8"/>
+    <text x="128" y="145" font-family="Inter, sans-serif" font-size="64" font-weight="800" fill="#003366" text-anchor="middle">100</text>
+    <text x="128" y="180" font-family="Inter, sans-serif" font-size="24" font-weight="600" fill="#3399FF" text-anchor="middle">POINTS</text>
+</g>
+</svg>

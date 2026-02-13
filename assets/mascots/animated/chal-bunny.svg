@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Chal: Bunny — Sweet, fast, earns points quickly -->
+  <defs>
+    <linearGradient id="bunnyBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAFAFA"/>
+      <stop offset="100%" stop-color="#E8E8E8"/>
+    </linearGradient>
+    <radialGradient id="bunnyCheek" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFB8D0" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#FFB8D0" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="bunnyShadow">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#B0B0B0" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <style>
+    /* Hop bounce — whole body */
+    @keyframes bunny-hop {
+      0%   { transform: translateY(0); }
+      30%  { transform: translateY(-12px); }
+      50%  { transform: translateY(0); }
+      65%  { transform: translateY(2px) scaleY(0.97) scaleX(1.02); }
+      80%  { transform: translateY(0) scaleY(1) scaleX(1); }
+      100% { transform: translateY(0); }
+    }
+    .bunny-hop {
+      animation: bunny-hop 1.8s ease infinite;
+      transform-origin: 200px 378px;
+    }
+
+    /* Left ear wiggle */
+    @keyframes bunny-ear-left {
+      0%   { transform: rotate(-15deg); }
+      50%  { transform: rotate(-5deg); }
+      100% { transform: rotate(-15deg); }
+    }
+    .bunny-ear-left {
+      animation: bunny-ear-left 2s ease-in-out infinite;
+      transform-origin: 160px 155px;
+      transform-box: fill-box;
+    }
+
+    /* Right ear wiggle */
+    @keyframes bunny-ear-right {
+      0%   { transform: rotate(5deg); }
+      50%  { transform: rotate(15deg); }
+      100% { transform: rotate(5deg); }
+    }
+    .bunny-ear-right {
+      animation: bunny-ear-right 2s ease-in-out infinite;
+      animation-delay: 0.3s;
+      transform-origin: 240px 155px;
+      transform-box: fill-box;
+    }
+
+    /* Nose twitch */
+    @keyframes bunny-nose {
+      0%   { transform: scale(1); }
+      5%   { transform: scale(1.2); }
+      10%  { transform: scale(1); }
+      100% { transform: scale(1); }
+    }
+    .bunny-nose {
+      animation: bunny-nose 2s ease-in-out infinite;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    /* Tail wiggle */
+    @keyframes bunny-tail {
+      0%   { transform: translateX(0); }
+      25%  { transform: translateX(4px); }
+      75%  { transform: translateX(-4px); }
+      100% { transform: translateX(0); }
+    }
+    .bunny-tail {
+      animation: bunny-tail 1s ease-in-out infinite;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    /* Bow tie spin */
+    @keyframes bunny-bowtie {
+      0%   { transform: translate(200px, 260px) rotate(-5deg); }
+      50%  { transform: translate(200px, 260px) rotate(5deg); }
+      100% { transform: translate(200px, 260px) rotate(-5deg); }
+    }
+    .bunny-bowtie {
+      animation: bunny-bowtie 3s ease-in-out infinite;
+      transform-origin: 0px 0px;
+    }
+  </style>
+
+  <g class="bunny-hop">
+    <!-- Ground shadow -->
+    <ellipse cx="200" cy="378" rx="70" ry="8" fill="#999" opacity="0.08"/>
+
+    <!-- Body -->
+    <ellipse cx="200" cy="310" rx="78" ry="65" fill="url(#bunnyBody)" filter="url(#bunnyShadow)" stroke="#DDD" stroke-width="1"/>
+    <ellipse cx="200" cy="318" rx="45" ry="38" fill="#FFF5F5"/>
+
+    <!-- Tail -->
+    <g class="bunny-tail">
+      <circle cx="275" cy="320" r="18" fill="white" stroke="#E0E0E0" stroke-width="1"/>
+    </g>
+
+    <!-- Legs and feet -->
+    <ellipse cx="158" cy="360" rx="18" ry="14" fill="url(#bunnyBody)" stroke="#DDD" stroke-width="0.8"/>
+    <ellipse cx="242" cy="360" rx="18" ry="14" fill="url(#bunnyBody)" stroke="#DDD" stroke-width="0.8"/>
+    <ellipse cx="148" cy="372" rx="25" ry="10" fill="url(#bunnyBody)" stroke="#DDD" stroke-width="0.8"/>
+    <ellipse cx="252" cy="372" rx="25" ry="10" fill="url(#bunnyBody)" stroke="#DDD" stroke-width="0.8"/>
+    <ellipse cx="148" cy="374" rx="16" ry="6" fill="#FFE0E8"/>
+    <ellipse cx="252" cy="374" rx="16" ry="6" fill="#FFE0E8"/>
+
+    <!-- Head -->
+    <ellipse cx="200" cy="190" rx="82" ry="80" fill="url(#bunnyBody)" filter="url(#bunnyShadow)" stroke="#DDD" stroke-width="1"/>
+    <ellipse cx="185" cy="150" rx="40" ry="28" fill="white" opacity="0.3"/>
+
+    <!-- Left ear -->
+    <g class="bunny-ear-left">
+      <ellipse cx="160" cy="80" rx="24" ry="75" fill="url(#bunnyBody)" stroke="#DDD" stroke-width="1" transform="rotate(-10, 160, 80)"/>
+      <ellipse cx="160" cy="80" rx="14" ry="55" fill="#FFB8D0" opacity="0.5" transform="rotate(-10, 160, 80)"/>
+    </g>
+
+    <!-- Right ear -->
+    <g class="bunny-ear-right">
+      <ellipse cx="240" cy="80" rx="24" ry="75" fill="url(#bunnyBody)" stroke="#DDD" stroke-width="1" transform="rotate(10, 240, 80)"/>
+      <ellipse cx="240" cy="80" rx="14" ry="55" fill="#FFB8D0" opacity="0.5" transform="rotate(10, 240, 80)"/>
+    </g>
+
+    <!-- Eyes -->
+    <ellipse cx="172" cy="185" rx="22" ry="25" fill="white" stroke="#DDD" stroke-width="0.5"/>
+    <ellipse cx="228" cy="185" rx="22" ry="25" fill="white" stroke="#DDD" stroke-width="0.5"/>
+    <ellipse cx="176" cy="189" rx="13" ry="16" fill="#1B2A4A"/>
+    <ellipse cx="224" cy="189" rx="13" ry="16" fill="#1B2A4A"/>
+    <circle cx="181" cy="182" r="6" fill="white" opacity="0.9"/>
+    <circle cx="229" cy="182" r="6" fill="white" opacity="0.9"/>
+    <circle cx="173" cy="193" r="3" fill="white" opacity="0.4"/>
+    <circle cx="221" cy="193" r="3" fill="white" opacity="0.4"/>
+
+    <!-- Nose -->
+    <g class="bunny-nose">
+      <path d="M195 212 L200 218 L205 212 Z" fill="#FFB8D0"/>
+    </g>
+
+    <!-- Mouth -->
+    <path d="M200 218 L200 225" fill="none" stroke="#C0C0C0" stroke-width="2" stroke-linecap="round"/>
+    <path d="M190 228 Q200 235 210 228" fill="none" stroke="#C0C0C0" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Whiskers -->
+    <g stroke="#D0D0D0" stroke-width="1.2" fill="none" stroke-linecap="round">
+      <line x1="125" y1="205" x2="163" y2="215"/>
+      <line x1="120" y1="220" x2="162" y2="222"/>
+      <line x1="275" y1="205" x2="237" y2="215"/>
+      <line x1="280" y1="220" x2="238" y2="222"/>
+    </g>
+
+    <!-- Buck teeth -->
+    <rect x="194" y="225" width="5" height="7" rx="2" fill="white" stroke="#DDD" stroke-width="0.8"/>
+    <rect x="201" y="225" width="5" height="7" rx="2" fill="white" stroke="#DDD" stroke-width="0.8"/>
+
+    <!-- Cheek blush -->
+    <ellipse cx="148" cy="210" rx="16" ry="10" fill="url(#bunnyCheek)"/>
+    <ellipse cx="252" cy="210" rx="16" ry="10" fill="url(#bunnyCheek)"/>
+
+    <!-- Bow tie -->
+    <g class="bunny-bowtie">
+      <polygon points="-20,-8 0,0 -20,8" fill="#2E86AB"/>
+      <polygon points="20,-8 0,0 20,8" fill="#2E86AB"/>
+      <circle cx="0" cy="0" r="5" fill="#F18F01"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,31 @@
+<svg width="256" height="256" viewBox="0 0 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- Badge v2: Team Player -->
+<defs>
+    <linearGradient id="silver-b4" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#F0F0F0"/>
+        <stop offset="100%" stop-color="#B0B0B0"/>
+    </linearGradient>
+    <linearGradient id="ocean-gloss" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#3399FF"/>
+        <stop offset="100%" stop-color="#0066CC"/>
+    </linearGradient>
+    <filter id="pin-shadow-b4" x="-15%" y="-15%" width="130%" height="130%">
+        <feDropShadow dx="4" dy="6" stdDeviation="6" flood-color="#000" flood-opacity="0.2"/>
+    </filter>
+</defs>
+<g filter="url(#pin-shadow-b4)">
+    <!-- Silver Border -->
+    <path d="M128 32 C 200 32, 224 100, 224 128 C 224 156, 200 224, 128 224 C 56 224, 32 156, 32 128 C 32 100, 56 32, 128 32 Z" fill="url(#silver-b4)"/>
+    <!-- Inner Fill -->
+    <path d="M128 40 C 195 40, 216 103, 216 128 C 216 153, 195 216, 128 216 C 61 216, 40 153, 40 128 C 40 103, 61 40, 128 40 Z" fill="url(#ocean-gloss)"/>
+    <!-- Icon: High Five -->
+    <g transform="translate(10, 10)">
+        <path d="M100 100 L80 160 L120 160 L125 120" fill="#FDCB6E"/>
+        <path d="M140 100 L160 160 L120 160 L115 120" fill="#E8A930"/>
+    </g>
+    <!-- Sparks -->
+    <path d="M128 90 L135 110 L142 90 L135 70 Z" fill="#FFD700"/>
+    <path d="M100 110 L110 120 L120 110 L110 100 Z" fill="white"/>
+    <path d="M146 110 L156 120 L166 110 L156 100 Z" fill="white"/>
+</g>
+</svg>

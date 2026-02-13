@@ -1,0 +1,25 @@
+<svg width="256" height="256" viewBox="0 0 256" fill="none" xmlns="http://www.w.w3.org/2000/svg">
+<!-- Badge v2: On Fire! (3-Day Streak) -->
+<defs>
+    <linearGradient id="gold-b8" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FFD700"/>
+        <stop offset="100%" stop-color="#FFA800"/>
+    </linearGradient>
+    <linearGradient id="flame-gloss" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FF4500"/>
+        <stop offset="100%" stop-color="#FF6347"/>
+    </linearGradient>
+    <filter id="pin-shadow-b8" x="-15%" y="-15%" width="130%" height="130%">
+        <feDropShadow dx="4" dy="6" stdDeviation="6" flood-color="#000" flood-opacity="0.2"/>
+    </filter>
+</defs>
+<g filter="url(#pin-shadow-b8)">
+    <!-- Gold Border -->
+    <path d="M128 32 C 80 100, 80 150, 128 224 C 176 150, 176 100, 128 32 Z" fill="url(#gold-b8)"/>
+    <!-- Inner Fill -->
+    <path d="M128 42 C 90 110, 90 155, 128 214 C 166 155, 166 110, 128 42 Z" fill="url(#flame-gloss)"/>
+    <!-- Icon: Flame and Number -->
+    <path d="M128 80 C 110 110, 110 130, 128 160 C 146 130, 146 110, 128 80 Z" fill="#FFD700"/>
+    <text x="128" y="138" font-family="Inter, sans-serif" font-size="48" font-weight="800" fill="white" text-anchor="middle">3</text>
+</g>
+</svg>

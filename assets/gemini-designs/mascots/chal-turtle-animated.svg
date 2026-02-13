@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Chal: Turtle — Patient, steady, reliable streak-keeper -->
+  <defs>
+    <linearGradient id="turtleShell" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00B894"/>
+      <stop offset="100%" stop-color="#00896A"/>
+    </linearGradient>
+    <linearGradient id="turtleSkin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#81ECAC"/>
+      <stop offset="100%" stop-color="#55D98B"/>
+    </linearGradient>
+    <linearGradient id="shellDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#009E7E"/>
+      <stop offset="100%" stop-color="#007A5E"/>
+    </linearGradient>
+    <radialGradient id="turtleCheek" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF9FF3" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#FF9FF3" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="turtleShadow">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#005A42" flood-opacity="0.15"/>
+    </filter>
+    <style>
+      @keyframes headPeek {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+      @keyframes legPaddle {
+        0%, 100% { transform: rotate(0deg); }
+        50% { transform: rotate(5deg); }
+      }
+      @keyframes blink {
+        0%, 90%, 100% { transform: scaleY(1); }
+        95% { transform: scaleY(0.1); }
+      }
+      #turtle-head-group {
+        animation: headPeek 4s ease-in-out infinite alternate;
+        transform-origin: 200px 225px; /* Base of the neck */
+      }
+      #front-left-leg {
+        animation: legPaddle 2s ease-in-out infinite alternate;
+        transform-origin: 120px 340px;
+      }
+      #front-right-leg {
+        animation: legPaddle 2s ease-in-out infinite alternate reverse;
+        transform-origin: 280px 340px;
+      }
+      .turtle-eye-pupil {
+        animation: blink 5s infinite;
+        transform-origin: center;
+      }
+    </style>
+  </defs>
+
+  <!-- Shadow -->
+  <ellipse cx="200" cy="380" rx="100" ry="10" fill="#005A42" opacity="0.1"/>
+
+  <!-- Shell (main dome) -->
+  <ellipse cx="200" cy="280" rx="110" ry="85" fill="url(#turtleShell)" filter="url(#turtleShadow)"/>
+
+  <!-- Shell pattern (hexagonal plates) -->
+  <g fill="none" stroke="url(#shellDark)" stroke-width="2.5" opacity="0.5">
+    <!-- Center plate -->
+    <path d="M170 250 L200 235 L230 250 L230 280 L200 295 L170 280 Z"/>
+    <!-- Top -->
+    <path d="M170 250 L200 235 L200 210 L175 220 L155 240 Z"/>
+    <path d="M230 250 L200 235 L200 210 L225 220 L245 240 Z"/>
+    <!-- Sides -->
+    <path d="M170 280 L155 240 L125 265 L135 295 Z"/>
+    <path d="M230 280 L245 240 L275 265 L265 295 Z"/>
+    <!-- Bottom -->
+    <path d="M170 280 L200 295 L200 320 L165 310 L135 295 Z"/>
+    <path d="M230 280 L200 295 L200 320 L235 310 L265 295 Z"/>
+  </g>
+
+  <!-- Shell highlight -->
+  <ellipse cx="185" cy="245" rx="40" ry="25" fill="white" opacity="0.06"/>
+
+  <!-- Shell rim -->
+  <ellipse cx="200" cy="340" rx="105" ry="20" fill="url(#shellDark)" opacity="0.3"/>
+
+  <!-- Legs (stubby and cute) -->
+  <!-- Front legs -->
+  <g id="front-left-leg">
+    <ellipse cx="120" cy="340" rx="22" ry="18" fill="url(#turtleSkin)" transform="rotate(-20, 120, 340)"/>
+  </g>
+  <g id="front-right-leg">
+    <ellipse cx="280" cy="340" rx="22" ry="18" fill="url(#turtleSkin)" transform="rotate(20, 280, 340)"/>
+  </g>
+  <!-- Back legs -->
+  <ellipse cx="135" cy="365" rx="20" ry="14" fill="url(#turtleSkin)" transform="rotate(-10, 135, 365)"/>
+  <ellipse cx="265" cy="365" rx="20" ry="14" fill="url(#turtleSkin)" transform="rotate(10, 265, 365)"/>
+
+  <!-- Tiny tail -->
+  <path d="M200 360 Q200 375 195 378 Q192 380 195 375 Q198 368 200 360" fill="url(#turtleSkin)"/>
+
+  <!-- Neck and Head group for animation -->
+  <g id="turtle-head-group">
+    <!-- Neck -->
+    <ellipse cx="200" cy="225" rx="30" ry="40" fill="url(#turtleSkin)"/>
+
+    <!-- Head -->
+    <ellipse cx="200" cy="175" rx="60" ry="55" fill="url(#turtleSkin)" filter="url(#turtleShadow)"/>
+
+    <!-- Head highlight -->
+    <ellipse cx="190" cy="150" rx="28" ry="20" fill="white" opacity="0.08"/>
+
+    <!-- Eyes (gentle, wise) -->
+    <ellipse cx="178" cy="170" rx="18" ry="20" fill="white"/>
+    <ellipse cx="222" cy="170" rx="18" ry="20" fill="white"/>
+    <g class="turtle-eye-pupil">
+      <ellipse cx="181" cy="173" rx="11" ry="13" fill="#1B2A4A"/>
+    </g>
+    <g class="turtle-eye-pupil">
+      <ellipse cx="219" cy="173" rx="11" ry="13" fill="#1B2A4A"/>
+    </g>
+    <!-- Eye highlights -->
+    <circle cx="185" cy="167" r="5" fill="white" opacity="0.9"/>
+    <circle cx="223" cy="167" r="5" fill="white" opacity="0.9"/>
+    <circle cx="178" cy="177" r="2.5" fill="white" opacity="0.4"/>
+    <circle cx="216" cy="177" r="2.5" fill="white" opacity="0.4"/>
+
+    <!-- Gentle smile -->
+    <path d="M185 200 Q200 215 215 200" fill="none" stroke="#3D8B6E" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Nostrils -->
+    <circle cx="195" cy="192" r="2.5" fill="#3D8B6E" opacity="0.5"/>
+    <circle cx="205" cy="192" r="2.5" fill="#3D8B6E" opacity="0.5"/>
+
+    <!-- Cheek blush -->
+    <ellipse cx="155" cy="190" rx="14" ry="9" fill="url(#turtleCheek)"/>
+    <ellipse cx="245" cy="190" rx="14" ry="9" fill="url(#turtleCheek)"/>
+
+    <!-- Challey hat (tiny top hat) -->
+    <g transform="translate(200, 118)">
+      <ellipse cx="0" cy="8" rx="22" ry="5" fill="#1B2A4A"/>
+      <rect x="-14" y="-15" width="28" height="23" rx="3" fill="#1B2A4A"/>
+      <ellipse cx="0" cy="-15" rx="14" ry="4" fill="#2E3D52"/>
+      <rect x="-14" y="0" width="28" height="5" fill="#F18F01"/>
+    </g>
+  </g>
+</svg>

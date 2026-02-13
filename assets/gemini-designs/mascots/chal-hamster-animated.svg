@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Chal: Hamster — Adorable, chubby, collector (hoards points!) -->
+  <defs>
+    <linearGradient id="hamBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDCB6E"/>
+      <stop offset="100%" stop-color="#E8A930"/>
+    </linearGradient>
+    <radialGradient id="hamCheek" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF9FF3" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#FF9FF3" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="hamShadow">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#A67C20" flood-opacity="0.15"/>
+    </filter>
+    <style>
+      @keyframes bob {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+      }
+      @keyframes pawTwitch {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-2px); }
+      }
+      #hamster-all {
+        animation: bob 3s ease-in-out infinite;
+        transform-origin: center bottom;
+      }
+      .front-paw {
+        animation: pawTwitch 1s ease-in-out infinite alternate;
+      }
+    </style>
+  </defs>
+
+  <g id="hamster-all">
+    <!-- Body shadow -->
+    <ellipse cx="200" cy="378" rx="75" ry="8" fill="#A67C20" opacity="0.1"/>
+
+    <!-- Body (round! hamster ball) -->
+    <ellipse cx="200" cy="300" rx="85" ry="72" fill="url(#hamBody)" filter="url(#hamShadow)"/>
+
+    <!-- Belly -->
+    <ellipse cx="200" cy="315" rx="52" ry="42" fill="#FFF5E0"/>
+
+    <!-- Tiny front paws (holding position) -->
+    <g class="front-paw">
+      <ellipse cx="152" cy="330" rx="15" ry="12" fill="url(#hamBody)"/>
+      <ellipse cx="248" cy="330" rx="15" ry="12" fill="url(#hamBody)"/>
+      <ellipse cx="152" cy="332" rx="10" ry="7" fill="#FFF5E0"/>
+      <ellipse cx="248" cy="332" rx="10" ry="7" fill="#FFF5E0"/>
+    </g>
+
+    <!-- Tiny feet -->
+    <ellipse cx="160" cy="365" rx="16" ry="10" fill="url(#hamBody)"/>
+    <ellipse cx="240" cy="365" rx="16" ry="10" fill="url(#hamBody)"/>
+    <ellipse cx="160" cy="367" rx="10" ry="6" fill="#FFE0B8"/>
+    <ellipse cx="240" cy="367" rx="10" ry="6" fill="#FFE0B8"/>
+
+    <!-- Head (big and round!) -->
+    <ellipse cx="200" cy="185" rx="90" ry="88" fill="url(#hamBody)" filter="url(#hamShadow)"/>
+
+    <!-- Head highlight -->
+    <ellipse cx="180" cy="140" rx="45" ry="32" fill="white" opacity="0.08"/>
+
+    <!-- Brown stripe on top of head -->
+    <path d="M170 100 Q200 95 230 100 Q215 115 200 120 Q185 115 170 100" fill="#C4880C" opacity="0.4"/>
+
+    <!-- Round ears -->
+    <circle cx="128" cy="125" r="28" fill="url(#hamBody)"/>
+    <circle cx="272" cy="125" r="28" fill="url(#hamBody)"/>
+    <!-- Inner ears -->
+    <circle cx="130" cy="127" r="17" fill="#FFB8D0" opacity="0.5"/>
+    <circle cx="270" cy="127" r="17" fill="#FFB8D0" opacity="0.5"/>
+
+    <!-- POOFY CHEEKS (stuffed with points!) -->
+    <ellipse cx="140" cy="210" rx="35" ry="30" fill="#FDCB6E"/>
+    <ellipse cx="260" cy="210" rx="35" ry="30" fill="#FDCB6E"/>
+
+    <!-- Face — white muzzle -->
+    <ellipse cx="200" cy="215" rx="38" ry="30" fill="#FFF5E0"/>
+
+    <!-- Eyes (beady and bright) -->
+    <ellipse cx="175" cy="185" rx="17" ry="19" fill="white"/>
+    <ellipse cx="225" cy="185" rx="17" ry="19" fill="white"/>
+    <ellipse cx="178" cy="188" rx="11" ry="13" fill="#1B2A4A"/>
+    <ellipse cx="222" cy="188" rx="11" ry="13" fill="#1B2A4A"/>
+    <!-- Eye highlights -->
+    <circle cx="182" cy="182" r="5" fill="white" opacity="0.9"/>
+    <circle cx="226" cy="182" r="5" fill="white" opacity="0.9"/>
+    <circle cx="175" cy="191" r="2.5" fill="white" opacity="0.4"/>
+    <circle cx="219" cy="191" r="2.5" fill="white" opacity="0.4"/>
+
+    <!-- Nose -->
+    <ellipse cx="200" cy="210" rx="8" ry="6" fill="#FF9FF3"/>
+
+    <!-- Mouth -->
+    <path d="M192 218 Q200 226 208 218" fill="none" stroke="#C4880C" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Tiny whiskers -->
+    <g stroke="#D4A830" stroke-width="1" fill="none" stroke-linecap="round">
+      <line x1="120" y1="210" x2="165" y2="215"/>
+      <line x1="118" y1="222" x2="164" y2="220"/>
+      <line x1="280" y1="210" x2="235" y2="215"/>
+      <line x1="282" y1="222" x2="236" y2="220"/>
+    </g>
+
+    <!-- Buck teeth (tiny) -->
+    <rect x="196" y="222" width="4" height="5" rx="1.5" fill="white" stroke="#DDD" stroke-width="0.6"/>
+    <rect x="201" y="222" width="4" height="5" rx="1.5" fill="white" stroke="#DDD" stroke-width="0.6"/>
+
+    <!-- Cheek blush over poofy cheeks -->
+    <ellipse cx="135" cy="218" rx="20" ry="12" fill="url(#hamCheek)"/>
+    <ellipse cx="265" cy="218" rx="20" ry="12" fill="url(#hamCheek)"/>
+
+    <!-- Challey sunflower seed (held in paws) -->
+    <g transform="translate(200, 332)">
+      <ellipse cx="0" cy="0" rx="10" ry="7" fill="#8B6914" transform="rotate(-15)"/>
+      <ellipse cx="0" cy="-1" rx="6" ry="4" fill="#A67C20" opacity="0.5" transform="rotate(-15)"/>
+      <!-- Tiny star on seed = points! -->
+      <path d="M0,-4 L1.5,-1 L4.5,-1 L2,1 L3,4 L0,2 L-3,4 L-2,1 L-4.5,-1 L-1.5,-1 Z" fill="#F18F01" opacity="0.8" transform="scale(0.7)"/>
+    </g>
+  </g>
+</svg>

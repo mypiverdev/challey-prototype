@@ -1,0 +1,31 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- Badge v2: First Step (First Chore Completed) -->
+<defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FFD700"/>
+        <stop offset="100%" stop-color="#FFA800"/>
+    </linearGradient>
+    <linearGradient id="navy-gloss" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#004a8d"/>
+        <stop offset="100%" stop-color="#003366"/>
+    </linearGradient>
+    <filter id="pin-shadow" x="-15%" y="-15%" width="130%" height="130%">
+        <feDropShadow dx="4" dy="6" stdDeviation="6" flood-color="#000" flood-opacity="0.2"/>
+    </filter>
+</defs>
+<g filter="url(#pin-shadow)">
+    <!-- Gold Border -->
+    <path d="M50 40 L206 40 L226 100 L128 220 L30 100 Z" fill="url(#gold)"/>
+    <!-- Inner Fill -->
+    <path d="M58 46 L200 46 L218 100 L128 210 L38 100 Z" fill="url(#navy-gloss)"/>
+    <!-- Icon: Boot -->
+    <g transform="translate(-10, 0)">
+        <path d="M110 115 L115 165 L170 165 L175 145 L155 142 L150 120 Z" fill="#D4915E"/>
+        <path d="M115 155 L170 155" stroke="#B8763E" stroke-width="4"/>
+        <ellipse cx="145" cy="118" rx="28" ry="8" fill="#B8763E"/>
+    </g>
+    <!-- Sparkles -->
+    <path d="M95 150 L100 160 L105 150 L100 140 Z" fill="white"/>
+    <path d="M175 110 L180 120 L185 110 L180 100 Z" fill="rgba(255,255,255,0.8)"/>
+</g>
+</svg>

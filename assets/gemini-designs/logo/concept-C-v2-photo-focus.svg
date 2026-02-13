@@ -1,0 +1,14 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- Concept C v2: Photo Focus (Refined) -->
+<!-- A clearer, more refined take on the photo verification concept. The outer 'C' shape frames a stylized camera lens, directly referencing the app's unique proof-of-completion feature. -->
+<defs>
+    <linearGradient id="grad_c2" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#003366;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#002244;stop-opacity:1" />
+    </linearGradient>
+</defs>
+<rect width="512" height="512" rx="90" fill="url(#grad_c2)"/>
+<path d="M334.882 142.667C309.11 142.667 284.582 148.694 262.889 159.907L256 163.093L249.111 159.907C203.019 139.306 148.981 155.13 128.38 201.222C118.074 224.278 114.157 250.398 117.241 275.981L118.074 282.87L114.889 289.759C94.287 335.852 110.111 389.889 156.204 410.491C179.259 420.796 205.38 424.713 230.963 421.629L237.852 420.796L244.741 423.981C290.833 444.583 344.87 428.759 365.472 382.667C375.778 359.611 379.694 333.491 376.611 307.907L375.778 301.019L378.963 294.13C399.565 248.037 383.741 194 337.648 173.398C327.343 169.306 316.519 166.491 305.472 164.537" stroke="white" stroke-width="2" stroke-linecap="round" fill="none" />
+<circle cx="256" cy="256" r="100" fill="#3399FF"/>
+<circle cx="256" cy="256" r="40" fill="rgba(255,255,255,0.8)"/>
+</svg>

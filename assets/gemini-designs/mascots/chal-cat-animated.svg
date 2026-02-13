@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Chal: Cat — Curious, independent, clever -->
+  <defs>
+    <linearGradient id="catBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#636E72"/>
+      <stop offset="100%" stop-color="#4A5459"/>
+    </linearGradient>
+    <linearGradient id="catLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B2BEC3"/>
+      <stop offset="100%" stop-color="#95A5A6"/>
+    </linearGradient>
+    <radialGradient id="catCheek" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF9FF3" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#FF9FF3" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="catShadow">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#2D3436" flood-opacity="0.15"/>
+    </filter>
+    <style>
+      @keyframes tailWag {
+        0%, 100% { transform: rotate(0deg); }
+        50% { transform: rotate(10deg); }
+      }
+      @keyframes blink {
+        0%, 90%, 100% { transform: scaleY(1); }
+        95% { transform: scaleY(0.1); }
+      }
+      #cat-tail {
+        animation: tailWag 2s ease-in-out infinite alternate;
+        transform-origin: 290px 300px; /* Approximate base of the tail */
+      }
+      .cat-eye-pupil {
+        animation: blink 4s infinite;
+        transform-origin: center;
+      }
+    </style>
+  </defs>
+
+  <!-- Body shadow -->
+  <ellipse cx="200" cy="375" rx="75" ry="10" fill="#2D3436" opacity="0.1"/>
+
+  <!-- Tail -->
+  <g id="cat-tail">
+    <path d="M285 310 Q330 280 340 240 Q345 210 330 220 Q320 240 310 260 Q295 290 275 305" fill="url(#catBody)" stroke="none"/>
+  </g>
+
+  <!-- Body -->
+  <ellipse cx="200" cy="305" rx="80" ry="65" fill="url(#catBody)" filter="url(#catShadow)"/>
+
+  <!-- Belly -->
+  <ellipse cx="200" cy="320" rx="45" ry="40" fill="#DFE6E9"/>
+
+  <!-- Front paws -->
+  <ellipse cx="155" cy="360" rx="20" ry="16" fill="url(#catBody)"/>
+  <ellipse cx="245" cy="360" rx="20" ry="16" fill="url(#catBody)"/>
+  <ellipse cx="155" cy="362" rx="14" ry="9" fill="#DFE6E9"/>
+  <ellipse cx="245" cy="362" rx="14" ry="9" fill="#DFE6E9"/>
+
+  <!-- Paw beans! -->
+  <g fill="#B2BEC3" opacity="0.5">
+    <circle cx="150" cy="363" r="3"/>
+    <circle cx="155" cy="365" r="2.5"/>
+    <circle cx="160" cy="363" r="3"/>
+    <circle cx="240" cy="363" r="3"/>
+    <circle cx="245" cy="365" r="2.5"/>
+    <circle cx="250" cy="363" r="3"/>
+  </g>
+
+  <!-- Head -->
+  <ellipse cx="200" cy="180" rx="90" ry="85" fill="url(#catBody)" filter="url(#catShadow)"/>
+
+  <!-- Head highlight -->
+  <ellipse cx="185" cy="140" rx="45" ry="30" fill="white" opacity="0.05"/>
+
+  <!-- Pointed ears -->
+  <polygon points="130,130 108,55 155,110" fill="url(#catBody)"/>
+  <polygon points="270,130 292,55 245,110" fill="url(#catBody)"/>
+  <!-- Inner ears -->
+  <polygon points="133,122 116,70 150,112" fill="#E8A0B5" opacity="0.5"/>
+  <polygon points="267,122 284,70 250,112" fill="#E8A0B5" opacity="0.5"/>
+
+  <!-- Face — white chin/muzzle -->
+  <ellipse cx="200" cy="210" rx="42" ry="32" fill="#DFE6E9"/>
+
+  <!-- Eyes (cat-style, slightly almond) -->
+  <ellipse cx="170" cy="178" rx="22" ry="24" fill="white"/>
+  <ellipse cx="230" cy="178" rx="22" ry="24" fill="white"/>
+  <!-- Vertical slit pupils -->
+  <g class="cat-eye-pupil">
+    <ellipse cx="172" cy="180" rx="9" ry="16" fill="#2E86AB"/>
+    <ellipse cx="172" cy="180" rx="4" ry="14" fill="#1B2A4A"/>
+  </g>
+  <g class="cat-eye-pupil">
+    <ellipse cx="228" cy="180" rx="9" ry="16" fill="#2E86AB"/>
+    <ellipse cx="228" cy="180" rx="4" ry="14" fill="#1B2A4A"/>
+  </g>
+  <!-- Eye highlights -->
+  <circle cx="178" cy="173" r="6" fill="white" opacity="0.85"/>
+  <circle cx="234" cy="173" r="6" fill="white" opacity="0.85"/>
+  <circle cx="168" cy="185" r="3" fill="white" opacity="0.4"/>
+  <circle cx="224" cy="185" r="3" fill="white" opacity="0.4"/>
+
+  <!-- Nose -->
+  <path d="M194 205 L200 212 L206 205 Z" fill="#FF9FF3"/>
+
+  <!-- Mouth -->
+  <path d="M200 212 L193 220" fill="none" stroke="#4A5459" stroke-width="2" stroke-linecap="round"/>
+  <path d="M200 212 L207 220" fill="none" stroke="#4A5459" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Whiskers -->
+  <g stroke="#95A5A6" stroke-width="1.5" fill="none" stroke-linecap="round">
+    <line x1="115" y1="195" x2="160" y2="205"/>
+    <line x1="110" y1="210" x2="158" y2="212"/>
+    <line x1="118" y1="225" x2="162" y2="218"/>
+    <line x1="285" y1="195" x2="240" y2="205"/>
+    <line x1="290" y1="210" x2="242" y2="212"/>
+    <line x1="282" y1="225" x2="238" y2="218"/>
+  </g>
+
+  <!-- Cheek blush -->
+  <ellipse cx="143" cy="205" rx="15" ry="10" fill="url(#catCheek)"/>
+  <ellipse cx="257" cy="205" rx="15" ry="10" fill="url(#catCheek)"/>
+
+  <!-- Challey collar -->
+  <g>
+    <path d="M140 250 Q200 270 260 250" fill="none" stroke="#F18F01" stroke-width="6" stroke-linecap="round"/>
+    <!-- Bell charm -->
+    <circle cx="200" cy="268" r="10" fill="#FFD700"/>
+    <circle cx="200" cy="268" r="6" fill="#F18F01"/>
+    <line x1="200" y1="268" x2="200" y2="275" stroke="#B8763E" stroke-width="1.5"/>
+  </g>
+</svg>

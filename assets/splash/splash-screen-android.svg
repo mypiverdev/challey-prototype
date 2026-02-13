@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+  <!-- Android Splash Screen (1080x1920 xxhdpi) -->
+  <defs>
+    <linearGradient id="aSplashBg" x1="0%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#1B2A4A"/>
+      <stop offset="60%" stop-color="#1F3A5C"/>
+      <stop offset="100%" stop-color="#2E86AB"/>
+    </linearGradient>
+    <linearGradient id="aSplashCheck" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFB347"/>
+      <stop offset="100%" stop-color="#F18F01"/>
+    </linearGradient>
+    <filter id="aShadow">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#0D1520" flood-opacity="0.45"/>
+    </filter>
+    <filter id="aSparkle">
+      <feGaussianBlur stdDeviation="3" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="aParticle" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1080" height="1920" fill="url(#aSplashBg)"/>
+
+  <!-- Ambient shapes -->
+  <circle cx="250" cy="450" r="400" fill="white" opacity="0.015"/>
+  <circle cx="850" cy="1500" r="500" fill="#1B2A4A" opacity="0.18"/>
+
+  <!-- Particles -->
+  <circle cx="180" cy="350" r="65" fill="url(#aParticle)"/>
+  <circle cx="880" cy="600" r="45" fill="url(#aParticle)"/>
+  <circle cx="540" cy="250" r="35" fill="url(#aParticle)"/>
+
+  <!-- Logo mark centered -->
+  <g transform="translate(540, 800)">
+    <circle cx="0" cy="0" r="170" fill="none" stroke="#3A9BC5" stroke-width="3" opacity="0.25"/>
+    <circle cx="0" cy="0" r="160" fill="url(#aSplashBg)" stroke="#3A9BC5" stroke-width="1" stroke-opacity="0.15"/>
+    <circle cx="-25" cy="-30" r="110" fill="white" opacity="0.025"/>
+
+    <g filter="url(#aShadow)">
+      <path d="M-65 8 L-18 58 L72 -44"
+            fill="none" stroke="url(#aSplashCheck)" stroke-width="36"
+            stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <g filter="url(#aSparkle)">
+      <path d="M92 -94 L96 -80 L110 -76 L96 -72 L92 -58 L88 -72 L74 -76 L88 -80 Z"
+            fill="white" opacity="0.85"/>
+      <path d="M120 -60 L122.5 -53 L129.5 -50.5 L122.5 -48 L120 -41 L117.5 -48 L110.5 -50.5 L117.5 -53 Z"
+            fill="white" opacity="0.6"/>
+      <circle cx="80" cy="-108" r="3.5" fill="white" opacity="0.4"/>
+    </g>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="540" y="1090" text-anchor="middle"
+        font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+        font-size="96" font-weight="700" letter-spacing="-2.5" fill="white">
+    challey
+  </text>
+
+  <!-- Tagline -->
+  <text x="540" y="1145" text-anchor="middle"
+        font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+        font-size="22" font-weight="400" letter-spacing="7" fill="white" opacity="0.5">
+    CHORES. POINTS. REWARDS.
+  </text>
+
+  <!-- Bottom -->
+  <text x="540" y="1810" text-anchor="middle"
+        font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+        font-size="16" font-weight="300" letter-spacing="2" fill="white" opacity="0.3">
+    MADE WITH CARE FOR FAMILIES
+  </text>
+</svg>

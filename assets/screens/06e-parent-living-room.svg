@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812" width="375" height="812">
+  <!-- Screen: Parent Living Room — Instagram-style doom-scroll feed -->
+  <defs>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="1" stdDeviation="4" flood-color="#1B2A4A" flood-opacity="0.06"/>
+    </filter>
+    <linearGradient id="rewardGrad" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0%" stop-color="#FFF8E8"/>
+      <stop offset="100%" stop-color="#FFE0B2"/>
+    </linearGradient>
+    <linearGradient id="streakGrad" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FF6B6B"/>
+      <stop offset="100%" stop-color="#F18F01"/>
+    </linearGradient>
+    <linearGradient id="shoutGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E8F4F8"/>
+      <stop offset="100%" stop-color="#D0E8F8"/>
+    </linearGradient>
+    <filter id="navShadow">
+      <feDropShadow dx="0" dy="-2" stdDeviation="8" flood-color="#1B2A4A" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <rect width="375" height="812" fill="#F5F7FA"/>
+
+  <!-- Status bar -->
+  <text x="30" y="52" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#1B2A4A">9:41</text>
+  <g transform="translate(295, 40)">
+    <rect x="0" y="0" width="22" height="11" rx="2" fill="none" stroke="#1B2A4A" stroke-width="1.2"/>
+    <rect x="2" y="2" width="15" height="7" rx="1" fill="#1B2A4A"/>
+    <rect x="22" y="3" width="2" height="5" rx="1" fill="#1B2A4A" opacity="0.4"/>
+  </g>
+
+  <!-- Compact Header -->
+  <rect x="0" y="0" width="375" height="100" fill="#1B2A4A"/>
+  <text x="20" y="88" font-family="Inter, sans-serif" font-size="22" font-weight="700" fill="white">The Living Room</text>
+  <!-- Camera icon -->
+  <g transform="translate(340, 80)">
+    <rect x="-12" y="-9" width="24" height="18" rx="3" fill="none" stroke="white" stroke-width="1.5" opacity="0.6"/>
+    <circle cx="0" cy="0" r="5" fill="none" stroke="white" stroke-width="1.5" opacity="0.6"/>
+  </g>
+
+  <!-- ======= POST 1: CHORE PHOTO — Full-width Instagram style ======= -->
+  <rect x="0" y="108" width="375" height="292" fill="white"/>
+
+  <!-- Post header bar -->
+  <circle cx="32" cy="130" r="16" fill="#A855F7"/>
+  <text x="32" y="135" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="white">M</text>
+  <text x="56" y="126" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#1B2A4A">Maggie</text>
+  <text x="56" y="141" font-family="Inter, sans-serif" font-size="11" fill="#B0B8C0">15 min ago</text>
+  <!-- Type badge -->
+  <rect x="288" y="118" width="74" height="22" rx="11" fill="#E8F8E8"/>
+  <text x="325" y="133" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="500" fill="#28a745">✅ Chore Done</text>
+
+  <!-- Chore name + points -->
+  <text x="16" y="168" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#1B2A4A">Clean the garage</text>
+  <rect x="300" y="154" width="58" height="22" rx="11" fill="#FFF5E0"/>
+  <text x="329" y="169" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#F18F01">50 pts</text>
+
+  <!-- FULL-WIDTH PHOTO (Instagram-style, edge-to-edge) -->
+  <rect x="0" y="178" width="375" height="182" fill="#E0EDF4"/>
+  <g transform="translate(187, 258)">
+    <circle cx="0" cy="0" r="34" fill="#2E86AB" opacity="0.1"/>
+    <text x="0" y="14" text-anchor="middle" font-family="Inter, sans-serif" font-size="46">📸</text>
+  </g>
+  <!-- Verified badge overlay -->
+  <rect x="288" y="334" width="78" height="20" rx="10" fill="rgba(40,167,69,0.9)"/>
+  <text x="327" y="348" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="600" fill="white">✓ Verified</text>
+
+  <!-- Action bar (Instagram-style reactions) -->
+  <g transform="translate(14, 368)">
+    <text x="0" y="14" font-family="Inter, sans-serif" font-size="20">❤️</text>
+    <text x="28" y="12" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#1B2A4A">3</text>
+    <text x="54" y="14" font-family="Inter, sans-serif" font-size="20">💬</text>
+    <text x="82" y="12" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#1B2A4A">1</text>
+    <text x="108" y="14" font-family="Inter, sans-serif" font-size="20">🙌</text>
+  </g>
+
+  <!-- Kid's caption -->
+  <text x="14" y="398" font-family="Inter, sans-serif" font-size="12" fill="#555" font-style="italic">"All done! Organized everything in the garage."</text>
+
+  <!-- Thin separator -->
+  <rect x="0" y="406" width="375" height="1" fill="#E8ECF0"/>
+
+  <!-- ======= POST 2: REWARD EARNED — Rich celebration graphic ======= -->
+  <g filter="url(#cardShadow)">
+    <rect x="12" y="416" width="351" height="155" rx="20" fill="url(#rewardGrad)"/>
+  </g>
+
+  <!-- Celebration decorations -->
+  <text x="28" y="444" font-family="Inter, sans-serif" font-size="18" opacity="0.3">🎉</text>
+  <text x="320" y="438" font-family="Inter, sans-serif" font-size="14" opacity="0.25">✨</text>
+  <text x="305" y="558" font-family="Inter, sans-serif" font-size="12" opacity="0.2">🎊</text>
+  <text x="42" y="558" font-family="Inter, sans-serif" font-size="10" opacity="0.2">✨</text>
+
+  <!-- Big reward icon -->
+  <text x="187" y="487" text-anchor="middle" font-family="Inter, sans-serif" font-size="52">🎮</text>
+
+  <!-- Reward text -->
+  <text x="187" y="520" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" font-weight="800" fill="#1B2A4A">30min Gaming!</text>
+
+  <!-- Kid info -->
+  <g transform="translate(107, 545)">
+    <circle cx="0" cy="0" r="11" fill="#2E86AB"/>
+    <text x="0" y="4" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" font-weight="700" fill="white">L</text>
+    <text x="16" y="4" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#1B2A4A">Lily earned a reward!</text>
+  </g>
+
+  <!-- Reactions -->
+  <g transform="translate(28, 562)">
+    <text x="0" y="0" font-family="Inter, sans-serif" font-size="15">❤️</text>
+    <text x="22" y="-1" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#1B2A4A">5</text>
+    <text x="44" y="0" font-family="Inter, sans-serif" font-size="15">🎉</text>
+    <text x="66" y="-1" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#1B2A4A">2</text>
+  </g>
+
+  <!-- ======= POST 3: STREAK — Dramatic fire graphic (cut off by nav) ======= -->
+  <g filter="url(#cardShadow)">
+    <rect x="12" y="582" width="351" height="185" rx="20" fill="url(#streakGrad)"/>
+  </g>
+
+  <!-- Fire decorations -->
+  <text x="45" y="618" font-family="Inter, sans-serif" font-size="32" opacity="0.25">🔥</text>
+  <text x="290" y="630" font-family="Inter, sans-serif" font-size="22" opacity="0.2">🔥</text>
+  <text x="320" y="728" font-family="Inter, sans-serif" font-size="16" opacity="0.15">🔥</text>
+
+  <!-- HUGE streak number -->
+  <text x="187" y="678" text-anchor="middle" font-family="Inter, sans-serif" font-size="72" font-weight="900" fill="white" opacity="0.95">7</text>
+  <text x="187" y="706" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="800" fill="white" letter-spacing="4" opacity="0.9">DAY STREAK</text>
+
+  <!-- Kid info -->
+  <g transform="translate(118, 732)">
+    <circle cx="0" cy="0" r="11" fill="white" opacity="0.3"/>
+    <text x="0" y="4" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" font-weight="700" fill="white">J</text>
+    <text x="16" y="4" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="white" opacity="0.9">Jake · Walk the dog</text>
+  </g>
+
+  <!-- Reactions (partially hidden by nav — doom scroll tease) -->
+  <text x="28" y="758" font-family="Inter, sans-serif" font-size="15">🔥</text>
+  <text x="50" y="756" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="white">8</text>
+
+  <!-- ======= NAV BAR (overlays content — creates scroll-cut effect) ======= -->
+  <g filter="url(#navShadow)">
+    <rect x="0" y="740" width="375" height="72" fill="white"/>
+  </g>
+  <!-- Dashboard -->
+  <g text-anchor="middle">
+    <g transform="translate(38, 762)">
+      <rect x="-7" y="-7" width="6" height="6" rx="1.5" fill="#B0B8C0"/>
+      <rect x="1" y="-7" width="6" height="6" rx="1.5" fill="#B0B8C0"/>
+      <rect x="-7" y="1" width="6" height="6" rx="1.5" fill="#B0B8C0"/>
+      <rect x="1" y="1" width="6" height="6" rx="1.5" fill="#B0B8C0"/>
+    </g>
+    <text x="38" y="783" font-family="Inter, sans-serif" font-size="10" fill="#B0B8C0">Dashboard</text>
+  </g>
+  <!-- Verify -->
+  <g text-anchor="middle">
+    <g transform="translate(112, 762)">
+      <path d="M-6,-1 L-2,5 L7,-6" fill="none" stroke="#B0B8C0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="112" y="783" font-family="Inter, sans-serif" font-size="10" fill="#B0B8C0">Verify</text>
+  </g>
+  <!-- Rewards -->
+  <g text-anchor="middle">
+    <g transform="translate(187, 762)">
+      <path d="M0,-8 L2,-3 L7.6,-2.5 L3.3,1 L4.7,6.5 L0,3.5 L-4.7,6.5 L-3.3,1 L-7.6,-2.5 L-2,-3 Z" fill="#B0B8C0"/>
+    </g>
+    <text x="187" y="783" font-family="Inter, sans-serif" font-size="10" fill="#B0B8C0">Rewards</text>
+  </g>
+  <!-- Room (active) -->
+  <g text-anchor="middle">
+    <rect x="242" y="740" width="40" height="3" rx="1.5" fill="#2E86AB"/>
+    <g transform="translate(262, 762)">
+      <path d="M-6,-7 L6,-7 C8,-7 9,-5.5 9,-4 L9,1.5 C9,3.5 8,5 6,5 L1,5 L-3,9 L-1,5 L-6,5 C-8,5 -9,3.5 -9,1.5 L-9,-4 C-9,-5.5 -8,-7 -6,-7 Z" fill="#2E86AB"/>
+    </g>
+    <text x="262" y="783" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#2E86AB">Room</text>
+  </g>
+  <!-- Family -->
+  <g text-anchor="middle">
+    <g transform="translate(337, 762)">
+      <circle cx="-3" cy="-5" r="3.5" fill="#B0B8C0"/>
+      <path d="M-9,7 C-9,1 3,1 3,7" fill="#B0B8C0"/>
+      <circle cx="5" cy="-6" r="2.5" fill="#B0B8C0" opacity="0.7"/>
+      <path d="M1,6 C1,1 9,1 9,6" fill="#B0B8C0" opacity="0.7"/>
+    </g>
+    <text x="337" y="783" font-family="Inter, sans-serif" font-size="10" fill="#B0B8C0">Family</text>
+  </g>
+
+  <!-- Home indicator -->
+  <rect x="120" y="800" width="135" height="5" rx="2.5" fill="#1B2A4A" opacity="0.15"/>
+</svg>

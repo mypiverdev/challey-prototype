@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 628" width="1200" height="628">
+  <!-- Social/Marketing Promo Banner (1200x628 - OG/Meta standard) -->
+  <defs>
+    <linearGradient id="pbBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B2A4A"/>
+      <stop offset="55%" stop-color="#1F3A5C"/>
+      <stop offset="100%" stop-color="#2E86AB"/>
+    </linearGradient>
+    <linearGradient id="pbCheck" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFB347"/>
+      <stop offset="100%" stop-color="#F18F01"/>
+    </linearGradient>
+    <filter id="pbGlow">
+      <feGaussianBlur stdDeviation="4" result="glow"/>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="pbShadow">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#0D1520" flood-opacity="0.35"/>
+    </filter>
+    <radialGradient id="pbGlobe" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="628" fill="url(#pbBg)"/>
+
+  <!-- Ambient -->
+  <circle cx="250" cy="200" r="350" fill="url(#pbGlobe)"/>
+  <circle cx="950" cy="500" r="300" fill="#1B2A4A" opacity="0.12"/>
+
+  <!-- Phone mockup (center-right) -->
+  <g transform="translate(820, 314)" filter="url(#pbShadow)">
+    <!-- Phone frame -->
+    <rect x="-90" y="-190" width="180" height="380" rx="24" fill="#111" stroke="#333" stroke-width="2"/>
+    <!-- Screen -->
+    <rect x="-80" y="-175" width="160" height="350" rx="16" fill="url(#pbBg)"/>
+    <!-- Notch -->
+    <rect x="-30" y="-180" width="60" height="8" rx="4" fill="#111"/>
+
+    <!-- App screen content mockup -->
+    <!-- Header -->
+    <rect x="-75" y="-160" width="150" height="35" rx="0" fill="#1B2A4A" opacity="0.3"/>
+    <text x="0" y="-138" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="white" opacity="0.8">My Chores</text>
+
+    <!-- Streak card -->
+    <rect x="-70" y="-115" width="140" height="40" rx="8" fill="#F18F01" opacity="0.8"/>
+    <text x="-58" y="-92" font-family="Inter, sans-serif" font-size="9" font-weight="600" fill="white">5 Day Streak 🔥</text>
+    <text x="-58" y="-80" font-family="Inter, sans-serif" font-size="7" font-weight="400" fill="white" opacity="0.7">Keep it going!</text>
+
+    <!-- Chore cards -->
+    <rect x="-70" y="-65" width="140" height="40" rx="8" fill="white" opacity="0.9"/>
+    <circle cx="-52" cy="-45" r="8" fill="#E8F4F8"/>
+    <path d="M-55 -45 L-53 -43 L-49 -47" fill="none" stroke="#28a745" stroke-width="1.5" stroke-linecap="round"/>
+    <rect x="-38" y="-52" width="60" height="5" rx="2" fill="#DDE4E8"/>
+    <rect x="-38" y="-43" width="40" height="4" rx="1.5" fill="#E8ECF0"/>
+    <rect x="40" y="-52" width="25" height="14" rx="7" fill="#28a745" opacity="0.15"/>
+    <text x="52" y="-43" text-anchor="middle" font-family="Inter, sans-serif" font-size="7" font-weight="600" fill="#28a745">20 pts</text>
+
+    <rect x="-70" y="-18" width="140" height="40" rx="8" fill="white" opacity="0.9"/>
+    <circle cx="-52" cy="2" r="8" fill="#FFF5E0"/>
+    <rect x="-38" y="-5" width="55" height="5" rx="2" fill="#DDE4E8"/>
+    <rect x="-38" y="4" width="35" height="4" rx="1.5" fill="#E8ECF0"/>
+    <rect x="40" y="-5" width="25" height="14" rx="7" fill="#F18F01" opacity="0.15"/>
+    <text x="52" y="4" text-anchor="middle" font-family="Inter, sans-serif" font-size="7" font-weight="600" fill="#F18F01">40 pts</text>
+
+    <rect x="-70" y="29" width="140" height="40" rx="8" fill="white" opacity="0.9"/>
+    <circle cx="-52" cy="49" r="8" fill="#F0E6FF"/>
+    <rect x="-38" y="42" width="65" height="5" rx="2" fill="#DDE4E8"/>
+    <rect x="-38" y="51" width="45" height="4" rx="1.5" fill="#E8ECF0"/>
+    <rect x="40" y="42" width="25" height="14" rx="7" fill="#A855F7" opacity="0.15"/>
+    <text x="52" y="51" text-anchor="middle" font-family="Inter, sans-serif" font-size="7" font-weight="600" fill="#A855F7">10 pts</text>
+
+    <!-- Bottom nav -->
+    <rect x="-80" y="135" width="160" height="40" rx="0" fill="#1B2A4A" opacity="0.2"/>
+    <g fill="white" opacity="0.4" font-family="Inter, sans-serif" font-size="5" text-anchor="middle">
+      <circle cx="-50" cy="148" r="4" fill="white" opacity="0.8"/>
+      <text x="-50" y="160">Chores</text>
+      <circle cx="-15" cy="148" r="4"/>
+      <text x="-15" y="160">Rewards</text>
+      <circle cx="20" cy="148" r="4"/>
+      <text x="20" y="160">Points</text>
+      <circle cx="55" cy="148" r="4"/>
+      <text x="55" y="160">Board</text>
+    </g>
+  </g>
+
+  <!-- Left side: brand and messaging -->
+  <!-- Logo coin (small) -->
+  <g transform="translate(120, 200)" filter="url(#pbShadow)">
+    <circle cx="0" cy="0" r="52" fill="url(#pbBg)" stroke="#3A9BC5" stroke-width="1.5" stroke-opacity="0.3"/>
+    <path d="M-18 2 L-6 15 L22 -14" fill="none" stroke="url(#pbCheck)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M28 -30 L30 -24 L36 -22 L30 -20 L28 -14 L26 -20 L20 -22 L26 -24 Z" fill="white" opacity="0.7"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="200" y="210" font-family="Inter, -apple-system, sans-serif" font-size="64" font-weight="700" fill="white" letter-spacing="-2">challey</text>
+
+  <!-- Tagline -->
+  <text x="120" y="270" font-family="Inter, sans-serif" font-size="22" font-weight="400" fill="white" opacity="0.6" letter-spacing="4">CHORES. POINTS. REWARDS.</text>
+
+  <!-- Description -->
+  <text x="120" y="330" font-family="Inter, sans-serif" font-size="18" font-weight="300" fill="white" opacity="0.45">The family chore tracker</text>
+  <text x="120" y="355" font-family="Inter, sans-serif" font-size="18" font-weight="300" fill="white" opacity="0.45">that makes it fun.</text>
+
+  <!-- CTA button -->
+  <g transform="translate(120, 400)">
+    <rect x="0" y="0" width="180" height="48" rx="24" fill="#F18F01"/>
+    <text x="90" y="30" text-anchor="middle" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="white">Download Free</text>
+  </g>
+
+  <!-- Store badges hint -->
+  <g transform="translate(120, 470)" opacity="0.3">
+    <rect x="0" y="0" width="100" height="32" rx="6" fill="white" opacity="0.15"/>
+    <text x="50" y="20" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" font-weight="500" fill="white">App Store</text>
+    <rect x="115" y="0" width="100" height="32" rx="6" fill="white" opacity="0.15"/>
+    <text x="165" y="20" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" font-weight="500" fill="white">Google Play</text>
+  </g>
+
+  <!-- Confetti -->
+  <rect x="400" y="80" width="7" height="9" rx="1.5" fill="#FFD700" opacity="0.25" transform="rotate(30, 403, 84)"/>
+  <rect x="650" y="60" width="5" height="8" rx="1" fill="#FF6B6B" opacity="0.2" transform="rotate(-25, 652, 64)"/>
+  <circle cx="500" cy="500" r="3" fill="#A855F7" opacity="0.2"/>
+  <circle cx="680" cy="540" r="2.5" fill="#00D2D3" opacity="0.15"/>
+  <path d="M450 120 L452 126 L458 128 L452 130 L450 136 L448 130 L442 128 L448 126 Z" fill="white" opacity="0.15"/>
+</svg>

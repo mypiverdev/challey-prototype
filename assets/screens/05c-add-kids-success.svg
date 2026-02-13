@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812" width="375" height="812">
+  <!-- Screen: Add Kids Success - Shows member codes -->
+  <defs>
+    <filter id="btnShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#1B2A4A" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="375" height="812" fill="#F5F7FA"/>
+
+  <!-- Status bar -->
+  <text x="30" y="52" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#1B2A4A">9:41</text>
+  <g transform="translate(295, 40)">
+    <rect x="0" y="0" width="22" height="11" rx="2" fill="none" stroke="#1B2A4A" stroke-width="1.2"/>
+    <rect x="2" y="2" width="15" height="7" rx="1" fill="#1B2A4A"/>
+    <rect x="22" y="3" width="2" height="5" rx="1" fill="#1B2A4A" opacity="0.4"/>
+  </g>
+
+  <!-- Success check -->
+  <g transform="translate(187.5, 140)">
+    <circle cx="0" cy="0" r="36" fill="#E0F8E8"/>
+    <circle cx="0" cy="0" r="28" fill="#28a745"/>
+    <path d="M-10 0 L-4 6 L12 -8" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Title -->
+  <text x="187.5" y="210" text-anchor="middle" font-family="Inter, sans-serif" font-size="26" font-weight="700" fill="#1B2A4A">Kids Added!</text>
+
+  <!-- Kid 1: Maggie -->
+  <rect x="24" y="245" width="327" height="70" rx="14" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+  <g transform="translate(24, 245)">
+    <circle cx="30" cy="35" r="14" fill="#28a745" opacity="0.15"/>
+    <path d="M25 35 L28 38 L35 31" fill="none" stroke="#28a745" stroke-width="2" stroke-linecap="round"/>
+    <text x="55" y="30" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#1B2A4A">Maggie</text>
+    <text x="55" y="48" font-family="Inter, sans-serif" font-size="12" fill="#888">Age 13</text>
+    <text x="295" y="40" text-anchor="end" font-family="Inter, sans-serif" font-size="16" font-weight="800" fill="#2E86AB" letter-spacing="2">MAG01</text>
+  </g>
+
+  <!-- Kid 2: Jake -->
+  <rect x="24" y="325" width="327" height="70" rx="14" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+  <g transform="translate(24, 325)">
+    <circle cx="30" cy="35" r="14" fill="#28a745" opacity="0.15"/>
+    <path d="M25 35 L28 38 L35 31" fill="none" stroke="#28a745" stroke-width="2" stroke-linecap="round"/>
+    <text x="55" y="30" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#1B2A4A">Jake</text>
+    <text x="55" y="48" font-family="Inter, sans-serif" font-size="12" fill="#888">Age 10</text>
+    <text x="295" y="40" text-anchor="end" font-family="Inter, sans-serif" font-size="16" font-weight="800" fill="#2E86AB" letter-spacing="2">JAK01</text>
+  </g>
+
+  <!-- Kid 3: Lily -->
+  <rect x="24" y="405" width="327" height="70" rx="14" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+  <g transform="translate(24, 405)">
+    <circle cx="30" cy="35" r="14" fill="#28a745" opacity="0.15"/>
+    <path d="M25 35 L28 38 L35 31" fill="none" stroke="#28a745" stroke-width="2" stroke-linecap="round"/>
+    <text x="55" y="30" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#1B2A4A">Lily</text>
+    <text x="55" y="48" font-family="Inter, sans-serif" font-size="12" fill="#888">Age 8</text>
+    <text x="295" y="40" text-anchor="end" font-family="Inter, sans-serif" font-size="16" font-weight="800" fill="#2E86AB" letter-spacing="2">LIL01</text>
+  </g>
+
+  <!-- Share message -->
+  <text x="187.5" y="515" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#888">Share these codes with your kids!</text>
+
+  <!-- Continue Button -->
+  <g filter="url(#btnShadow)">
+    <rect x="24" y="550" width="327" height="56" rx="14" fill="#2E86AB"/>
+    <text x="187.5" y="584" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="white">Continue to Setup</text>
+  </g>
+
+  <!-- Home indicator -->
+  <rect x="120" y="790" width="135" height="5" rx="2.5" fill="#1B2A4A" opacity="0.15"/>
+</svg>

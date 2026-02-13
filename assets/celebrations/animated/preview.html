@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Challey Animated Celebrations Preview</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0a1628;
+      color: #fff;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #28a745, #F18F01, #FF6B6B);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle {
+      text-align: center;
+      color: #8899aa;
+      margin-bottom: 40px;
+      font-size: 0.95rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 28px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .card {
+      background: #131d30;
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+      border: 1px solid #1e2d45;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(241, 143, 1, 0.15);
+    }
+    .card object {
+      width: 240px;
+      height: 240px;
+      display: block;
+      margin: 0 auto 16px;
+    }
+    .card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+    }
+    .card .trigger {
+      font-size: 0.85rem;
+      color: #F18F01;
+      margin-bottom: 8px;
+    }
+    .card .desc {
+      font-size: 0.8rem;
+      color: #8899aa;
+      line-height: 1.4;
+    }
+    .card .animations {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      justify-content: center;
+    }
+    .card .animations span {
+      background: #1e2d45;
+      color: #28a745;
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Challey Animated Celebrations</h1>
+  <p class="subtitle">5 festive celebration moments with entrance + idle loop animations</p>
+
+  <div class="grid">
+    <div class="card">
+      <object type="image/svg+xml" data="chore-complete.svg"></object>
+      <h3>Chore Complete</h3>
+      <div class="trigger">When a kid finishes a chore</div>
+      <div class="desc">Circle pops in, checkmark draws itself, burst rays expand, confetti falls</div>
+      <div class="animations">
+        <span>circle pop</span><span>check draw</span><span>rays burst</span><span>confetti fall</span><span>sparkle twinkle</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <object type="image/svg+xml" data="reward-redeemed.svg"></object>
+      <h3>Reward Redeemed</h3>
+      <div class="trigger">When points are spent on a reward</div>
+      <div class="desc">Gift lid pops off, stars erupt, coins float, box shakes with excitement</div>
+      <div class="animations">
+        <span>lid pop</span><span>box shake</span><span>stars erupt</span><span>coins float</span><span>confetti scatter</span><span>burst rotate</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <object type="image/svg+xml" data="swap-accepted.svg"></object>
+      <h3>Swap Accepted</h3>
+      <div class="trigger">When a chore swap is approved</div>
+      <div class="desc">Arrows slide in from opposite sides, checkmark stamps approval</div>
+      <div class="animations">
+        <span>circle pop</span><span>arrows slide</span><span>check stamp</span><span>rays pulse</span><span>confetti drift</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <object type="image/svg+xml" data="shoutout-sent.svg"></object>
+      <h3>Shoutout Sent</h3>
+      <div class="trigger">When a family member sends a shoutout</div>
+      <div class="desc">Heart beats with double-pump rhythm, mini hearts float upward, sheen slides</div>
+      <div class="animations">
+        <span>heartbeat</span><span>mini hearts float</span><span>glow pulse</span><span>sheen slide</span><span>sparkle twinkle</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <object type="image/svg+xml" data="family-created.svg"></object>
+      <h3>Family Created</h3>
+      <div class="trigger">When a new family account is set up</div>
+      <div class="desc">House builds in with bounce, windows glow warm, chimney smokes, welcome text fades in</div>
+      <div class="animations">
+        <span>house build</span><span>window glow</span><span>chimney smoke</span><span>door heart</span><span>welcome fade</span><span>knob shine</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

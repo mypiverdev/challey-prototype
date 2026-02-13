@@ -1,0 +1,17 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- Concept D v2: The Family Hub (Revised) -->
+<!-- This updated design uses interlocking shapes to represent family members coming together and forming a cohesive unit around a central point, symbolizing the app as a family hub. The 'C' for Challey is subtly integrated by the overall form. -->
+<defs>
+    <linearGradient id="grad_d_v2" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#003366;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#002244;stop-opacity:1" />
+    </linearGradient>
+</defs>
+<rect width="512" height="512" rx="90" fill="url(#grad_d_v2)"/>
+<path d="M256 128C180.796 128 120 188.796 120 264C120 339.204 180.796 400 256 400C331.204 400 392 339.204 392 264C392 188.796 331.204 128 256 128Z" fill="#3399FF"/>
+<path d="M256 128C274.659 128 292.656 131.579 309.284 138.412C296.793 118.005 277.306 104 256 104C180.796 104 120 164.796 120 240C120 315.204 180.796 376 256 376C331.204 376 392 315.204 392 240C392 201.272 376.541 166.417 350.158 141.696C331.066 133.02 310.279 128 288.667 128H256Z" fill="#003366"/>
+<circle cx="256" cy="264" r="40" fill="white"/>
+<path d="M256 264L256 216" stroke="#3399FF" stroke-width="10" stroke-linecap="round"/>
+<path d="M288 288L296 240" stroke="#3399FF" stroke-width="10" stroke-linecap="round"/>
+<path d="M224 288L216 240" stroke="#3399FF" stroke-width="10" stroke-linecap="round"/>
+</svg>

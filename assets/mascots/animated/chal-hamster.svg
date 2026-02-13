@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Chal: Hamster — Adorable, chubby, collector (hoards points!) -->
+  <defs>
+    <linearGradient id="hamBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDCB6E"/>
+      <stop offset="100%" stop-color="#E8A930"/>
+    </linearGradient>
+    <radialGradient id="hamCheek" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF9FF3" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#FF9FF3" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="hamShadow">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#A67C20" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <style>
+    /* Body wobble — whole character */
+    @keyframes ham-wobble {
+      0%   { transform: rotate(0deg); }
+      25%  { transform: rotate(-2deg); }
+      75%  { transform: rotate(2deg); }
+      100% { transform: rotate(0deg); }
+    }
+    .ham-wobble {
+      animation: ham-wobble 2.5s ease-in-out infinite;
+      transform-origin: 200px 300px;
+    }
+
+    /* Cheek puff — left */
+    @keyframes ham-cheek-left {
+      0%   { transform: scaleX(1); }
+      50%  { transform: scaleX(1.1); }
+      100% { transform: scaleX(1); }
+    }
+    .ham-cheek-left {
+      animation: ham-cheek-left 2s ease-in-out infinite;
+      transform-origin: 140px 210px;
+    }
+
+    /* Cheek puff — right */
+    @keyframes ham-cheek-right {
+      0%   { transform: scaleX(1); }
+      50%  { transform: scaleX(1.1); }
+      100% { transform: scaleX(1); }
+    }
+    .ham-cheek-right {
+      animation: ham-cheek-right 2s ease-in-out infinite;
+      transform-origin: 260px 210px;
+    }
+
+    /* Ear wiggle — both ears twitch */
+    @keyframes ham-ear {
+      0%   { transform: translateY(0); }
+      5%   { transform: translateY(-3px); }
+      10%  { transform: translateY(0); }
+      100% { transform: translateY(0); }
+    }
+    .ham-ear-left {
+      animation: ham-ear 3s ease-in-out infinite;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+    .ham-ear-right {
+      animation: ham-ear 3s ease-in-out infinite;
+      animation-delay: 0.15s;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    /* Seed sparkle — star opacity pulse */
+    @keyframes ham-sparkle {
+      0%   { opacity: 0.5; }
+      50%  { opacity: 1; }
+      100% { opacity: 0.5; }
+    }
+    .ham-sparkle {
+      animation: ham-sparkle 1.5s ease-in-out infinite;
+    }
+
+    /* Nose twitch */
+    @keyframes ham-nose {
+      0%   { transform: scale(1); }
+      4%   { transform: scale(1.15); }
+      8%   { transform: scale(1); }
+      100% { transform: scale(1); }
+    }
+    .ham-nose {
+      animation: ham-nose 2.5s ease-in-out infinite;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+  </style>
+
+  <g class="ham-wobble">
+    <!-- Ground shadow -->
+    <ellipse cx="200" cy="378" rx="75" ry="8" fill="#A67C20" opacity="0.1"/>
+
+    <!-- Body -->
+    <ellipse cx="200" cy="300" rx="85" ry="72" fill="url(#hamBody)" filter="url(#hamShadow)"/>
+    <ellipse cx="200" cy="315" rx="52" ry="42" fill="#FFF5E0"/>
+
+    <!-- Hands -->
+    <ellipse cx="152" cy="330" rx="15" ry="12" fill="url(#hamBody)"/>
+    <ellipse cx="248" cy="330" rx="15" ry="12" fill="url(#hamBody)"/>
+    <ellipse cx="152" cy="332" rx="10" ry="7" fill="#FFF5E0"/>
+    <ellipse cx="248" cy="332" rx="10" ry="7" fill="#FFF5E0"/>
+
+    <!-- Feet -->
+    <ellipse cx="160" cy="365" rx="16" ry="10" fill="url(#hamBody)"/>
+    <ellipse cx="240" cy="365" rx="16" ry="10" fill="url(#hamBody)"/>
+    <ellipse cx="160" cy="367" rx="10" ry="6" fill="#FFE0B8"/>
+    <ellipse cx="240" cy="367" rx="10" ry="6" fill="#FFE0B8"/>
+
+    <!-- Head -->
+    <ellipse cx="200" cy="185" rx="90" ry="88" fill="url(#hamBody)" filter="url(#hamShadow)"/>
+    <ellipse cx="180" cy="140" rx="45" ry="32" fill="white" opacity="0.08"/>
+
+    <!-- Head stripe -->
+    <path d="M170 100 Q200 95 230 100 Q215 115 200 120 Q185 115 170 100" fill="#C4880C" opacity="0.4"/>
+
+    <!-- Left ear -->
+    <g class="ham-ear-left">
+      <circle cx="128" cy="125" r="28" fill="url(#hamBody)"/>
+      <circle cx="130" cy="127" r="17" fill="#FFB8D0" opacity="0.5"/>
+    </g>
+
+    <!-- Right ear -->
+    <g class="ham-ear-right">
+      <circle cx="272" cy="125" r="28" fill="url(#hamBody)"/>
+      <circle cx="270" cy="127" r="17" fill="#FFB8D0" opacity="0.5"/>
+    </g>
+
+    <!-- Poofy cheeks -->
+    <g class="ham-cheek-left">
+      <ellipse cx="140" cy="210" rx="35" ry="30" fill="#FDCB6E"/>
+    </g>
+    <g class="ham-cheek-right">
+      <ellipse cx="260" cy="210" rx="35" ry="30" fill="#FDCB6E"/>
+    </g>
+
+    <!-- Face -->
+    <ellipse cx="200" cy="215" rx="38" ry="30" fill="#FFF5E0"/>
+
+    <!-- Eyes -->
+    <ellipse cx="175" cy="185" rx="17" ry="19" fill="white"/>
+    <ellipse cx="225" cy="185" rx="17" ry="19" fill="white"/>
+    <ellipse cx="178" cy="188" rx="11" ry="13" fill="#1B2A4A"/>
+    <ellipse cx="222" cy="188" rx="11" ry="13" fill="#1B2A4A"/>
+    <circle cx="182" cy="182" r="5" fill="white" opacity="0.9"/>
+    <circle cx="226" cy="182" r="5" fill="white" opacity="0.9"/>
+    <circle cx="175" cy="191" r="2.5" fill="white" opacity="0.4"/>
+    <circle cx="219" cy="191" r="2.5" fill="white" opacity="0.4"/>
+
+    <!-- Nose -->
+    <g class="ham-nose">
+      <ellipse cx="200" cy="210" rx="8" ry="6" fill="#FF9FF3"/>
+    </g>
+
+    <!-- Mouth -->
+    <path d="M192 218 Q200 226 208 218" fill="none" stroke="#C4880C" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Whiskers -->
+    <g stroke="#D4A830" stroke-width="1" fill="none" stroke-linecap="round">
+      <line x1="120" y1="210" x2="165" y2="215"/>
+      <line x1="118" y1="222" x2="164" y2="220"/>
+      <line x1="280" y1="210" x2="235" y2="215"/>
+      <line x1="282" y1="222" x2="236" y2="220"/>
+    </g>
+
+    <!-- Buck teeth -->
+    <rect x="196" y="222" width="4" height="5" rx="1.5" fill="white" stroke="#DDD" stroke-width="0.6"/>
+    <rect x="201" y="222" width="4" height="5" rx="1.5" fill="white" stroke="#DDD" stroke-width="0.6"/>
+
+    <!-- Cheek blush -->
+    <ellipse cx="135" cy="218" rx="20" ry="12" fill="url(#hamCheek)"/>
+    <ellipse cx="265" cy="218" rx="20" ry="12" fill="url(#hamCheek)"/>
+
+    <!-- Sunflower seed -->
+    <g transform="translate(200, 332)">
+      <ellipse cx="0" cy="0" rx="10" ry="7" fill="#8B6914" transform="rotate(-15)"/>
+      <ellipse cx="0" cy="-1" rx="6" ry="4" fill="#A67C20" opacity="0.5" transform="rotate(-15)"/>
+      <path class="ham-sparkle" d="M0,-4 L1.5,-1 L4.5,-1 L2,1 L3,4 L0,2 L-3,4 L-2,1 L-4.5,-1 L-1.5,-1 Z" fill="#F18F01" opacity="0.8" transform="scale(0.7)"/>
+    </g>
+  </g>
+</svg>

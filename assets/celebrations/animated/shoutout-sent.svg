@@ -1,0 +1,226 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <!-- Celebration: Shoutout Sent — Heart burst with sparkles (Animated) -->
+  <defs>
+    <linearGradient id="ssHeart" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B6B"/>
+      <stop offset="100%" stop-color="#EE3B5B"/>
+    </linearGradient>
+    <filter id="ssGlow">
+      <feGaussianBlur stdDeviation="4" result="glow"/>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="ssShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#A01030" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <style>
+    /* === HEARTBEAT — double-pump rhythm === */
+    @keyframes ss-heartbeat {
+      0%   { transform: scale(1); }
+      15%  { transform: scale(1.12); }
+      30%  { transform: scale(1); }
+      45%  { transform: scale(1.06); }
+      60%  { transform: scale(1); }
+      100% { transform: scale(1); }
+    }
+    .ss-heart {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: ss-heartbeat 1.2s ease-in-out infinite;
+    }
+
+    /* === RADIAL GLOW PULSE === */
+    @keyframes ss-glow-pulse {
+      0%   { opacity: 0.03; }
+      15%  { opacity: 0.08; }
+      30%  { opacity: 0.03; }
+      45%  { opacity: 0.06; }
+      60%  { opacity: 0.03; }
+      100% { opacity: 0.03; }
+    }
+    .ss-glow {
+      animation: ss-glow-pulse 1.2s ease-in-out infinite;
+    }
+
+    /* === BURST RAYS PULSE === */
+    @keyframes ss-rays-pulse {
+      0%   { transform: scale(0.9); opacity: 0.05; }
+      15%  { transform: scale(1.1); opacity: 0.15; }
+      30%  { transform: scale(0.9); opacity: 0.05; }
+      45%  { transform: scale(1.05); opacity: 0.12; }
+      60%  { transform: scale(0.9); opacity: 0.05; }
+      100% { transform: scale(0.9); opacity: 0.05; }
+    }
+    .ss-rays {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: ss-rays-pulse 1.2s ease-in-out infinite;
+    }
+
+    /* === MINI HEARTS FLOAT === */
+    @keyframes ss-mini-float-1 {
+      0%   { transform: translate(0, 0); opacity: 0.35; }
+      50%  { transform: translate(5px, -15px); opacity: 0.25; }
+      100% { transform: translate(-5px, -30px); opacity: 0.15; }
+    }
+    @keyframes ss-mini-float-2 {
+      0%   { transform: translate(0, 0); opacity: 0.35; }
+      50%  { transform: translate(-5px, -15px); opacity: 0.25; }
+      100% { transform: translate(5px, -30px); opacity: 0.15; }
+    }
+    @keyframes ss-mini-float-3 {
+      0%   { transform: translate(0, 0); opacity: 0.35; }
+      50%  { transform: translate(4px, -18px); opacity: 0.22; }
+      100% { transform: translate(-3px, -30px); opacity: 0.15; }
+    }
+    @keyframes ss-mini-float-4 {
+      0%   { transform: translate(0, 0); opacity: 0.35; }
+      50%  { transform: translate(-4px, -12px); opacity: 0.28; }
+      100% { transform: translate(5px, -30px); opacity: 0.15; }
+    }
+    .ss-mini-heart-1 {
+      animation: ss-mini-float-1 3.2s ease-in-out infinite;
+    }
+    .ss-mini-heart-2 {
+      animation: ss-mini-float-2 3.8s ease-in-out infinite;
+      animation-delay: 0.5s;
+    }
+    .ss-mini-heart-3 {
+      animation: ss-mini-float-3 3.5s ease-in-out infinite;
+      animation-delay: 1.2s;
+    }
+    .ss-mini-heart-4 {
+      animation: ss-mini-float-4 4.0s ease-in-out infinite;
+      animation-delay: 0.8s;
+    }
+
+    /* === CONFETTI FLOAT === */
+    @keyframes ss-confetti-1 {
+      0%   { transform: translate(0, 0) rotate(25deg); }
+      100% { transform: translate(-3px, 12px) rotate(55deg); }
+    }
+    @keyframes ss-confetti-2 {
+      0%   { transform: translate(0, 0) rotate(-20deg); }
+      100% { transform: translate(4px, 14px) rotate(10deg); }
+    }
+    @keyframes ss-confetti-3 {
+      0%   { transform: translate(0, 0) rotate(40deg); }
+      100% { transform: translate(-2px, 10px) rotate(80deg); }
+    }
+    @keyframes ss-confetti-4 {
+      0%   { transform: translate(0, 0) rotate(-35deg); }
+      100% { transform: translate(3px, 11px) rotate(-5deg); }
+    }
+    @keyframes ss-confetti-5 {
+      0%   { transform: translate(0, 0); }
+      100% { transform: translate(-2px, 10px); }
+    }
+    @keyframes ss-confetti-6 {
+      0%   { transform: translate(0, 0); }
+      100% { transform: translate(3px, 8px); }
+    }
+    .ss-confetti-1 { animation: ss-confetti-1 4s ease-in-out infinite alternate; }
+    .ss-confetti-2 { animation: ss-confetti-2 3.6s ease-in-out infinite alternate; animation-delay: 0.4s; }
+    .ss-confetti-3 { animation: ss-confetti-3 4.2s ease-in-out infinite alternate; animation-delay: 0.9s; }
+    .ss-confetti-4 { animation: ss-confetti-4 3.8s ease-in-out infinite alternate; animation-delay: 1.3s; }
+    .ss-confetti-5 { animation: ss-confetti-5 4.5s ease-in-out infinite alternate; animation-delay: 0.6s; }
+    .ss-confetti-6 { animation: ss-confetti-6 3.4s ease-in-out infinite alternate; animation-delay: 1.0s; }
+
+    /* === SPARKLE TWINKLE === */
+    @keyframes ss-twinkle {
+      0%   { transform: scale(0); opacity: 0; }
+      50%  { transform: scale(1); opacity: 1; }
+      100% { transform: scale(0); opacity: 0; }
+    }
+    .ss-sparkle-1 {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: ss-twinkle 2s ease-in-out infinite;
+    }
+    .ss-sparkle-2 {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: ss-twinkle 2s ease-in-out infinite;
+      animation-delay: 0.7s;
+    }
+    .ss-sparkle-3 {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: ss-twinkle 2s ease-in-out infinite;
+      animation-delay: 1.3s;
+    }
+
+    /* === HEART SHEEN SLIDE === */
+    @keyframes ss-sheen {
+      0%   { transform: translateX(-10px); opacity: 0.1; }
+      50%  { opacity: 0.2; }
+      100% { transform: translateX(10px); opacity: 0.1; }
+    }
+    .ss-sheen {
+      animation: ss-sheen 4s ease-in-out infinite alternate;
+    }
+  </style>
+
+  <!-- Soft radial glow -->
+  <circle class="ss-glow" cx="150" cy="145" r="100" fill="#FF6B6B" opacity="0.04"/>
+  <circle class="ss-glow" cx="150" cy="145" r="70" fill="#FF6B6B" opacity="0.04"/>
+
+  <!-- Burst rays -->
+  <g class="ss-rays" stroke="#FF6B6B" stroke-width="2" stroke-linecap="round" opacity="0.08">
+    <line x1="150" y1="28" x2="150" y2="55"/>
+    <line x1="150" y1="245" x2="150" y2="272"/>
+    <line x1="28" y1="145" x2="55" y2="145"/>
+    <line x1="245" y1="145" x2="272" y2="145"/>
+    <line x1="55" y1="55" x2="75" y2="75"/>
+    <line x1="225" y1="75" x2="245" y2="55"/>
+    <line x1="55" y1="240" x2="75" y2="220"/>
+    <line x1="225" y1="220" x2="245" y2="240"/>
+  </g>
+
+  <!-- Big heart -->
+  <g class="ss-heart" transform="translate(150, 140)" filter="url(#ssShadow)">
+    <g filter="url(#ssGlow)">
+      <path d="M0 55 C-8 48 -60 20 -60 -12 C-60 -35 -42 -52 -22 -52 C-8 -52 0 -42 0 -42 C0 -42 8 -52 22 -52 C42 -52 60 -35 60 -12 C60 20 8 48 0 55 Z"
+            fill="url(#ssHeart)"/>
+    </g>
+    <ellipse class="ss-sheen" cx="-18" cy="-25" rx="15" ry="12" fill="white" opacity="0.15" transform="rotate(-20)"/>
+  </g>
+
+  <!-- Floating mini hearts -->
+  <g fill="#FF6B6B">
+    <g class="ss-mini-heart-1">
+      <path d="M80 70 C80 65 75 60 70 63 C65 60 60 65 60 70 C60 78 70 84 75 88 C80 84 90 78 80 70" transform="scale(0.6) translate(70, 50)" opacity="0.35"/>
+    </g>
+    <g class="ss-mini-heart-2">
+      <path d="M80 70 C80 65 75 60 70 63 C65 60 60 65 60 70 C60 78 70 84 75 88 C80 84 90 78 80 70" transform="scale(0.45) translate(430, 60)" opacity="0.35"/>
+    </g>
+    <g class="ss-mini-heart-3">
+      <path d="M80 70 C80 65 75 60 70 63 C65 60 60 65 60 70 C60 78 70 84 75 88 C80 84 90 78 80 70" transform="scale(0.35) translate(180, 580)" opacity="0.35"/>
+    </g>
+    <g class="ss-mini-heart-4">
+      <path d="M80 70 C80 65 75 60 70 63 C65 60 60 65 60 70 C60 78 70 84 75 88 C80 84 90 78 80 70" transform="scale(0.4) translate(480, 480)" opacity="0.35"/>
+    </g>
+  </g>
+
+  <!-- Confetti -->
+  <g>
+    <rect class="ss-confetti-1" x="75" y="50" width="7" height="7" rx="1.5" fill="#FFD700" opacity="0.6"/>
+    <rect class="ss-confetti-2" x="215" y="45" width="6" height="9" rx="1.5" fill="#2E86AB" opacity="0.55"/>
+    <rect class="ss-confetti-3" x="55" y="180" width="8" height="5" rx="1.5" fill="#A855F7" opacity="0.45"/>
+    <rect class="ss-confetti-4" x="240" y="200" width="5" height="8" rx="1" fill="#00D2D3" opacity="0.5"/>
+    <circle class="ss-confetti-5" cx="98" cy="230" r="3.5" fill="#FFD700" opacity="0.4"/>
+    <circle class="ss-confetti-6" cx="210" cy="245" r="3" fill="#F18F01" opacity="0.35"/>
+  </g>
+
+  <!-- Sparkle stars -->
+  <g class="ss-sparkle-1">
+    <path d="M90 95 L93 103 L101 106 L93 109 L90 117 L87 109 L79 106 L87 103 Z" fill="#FFD700" opacity="0.5"/>
+  </g>
+  <g class="ss-sparkle-2">
+    <path d="M220 100 L222 105 L227 107 L222 109 L220 114 L218 109 L213 107 L218 105 Z" fill="white" opacity="0.4"/>
+  </g>
+  <g class="ss-sparkle-3">
+    <path d="M145 55 L147 60 L152 61 L147 63 L145 68 L143 63 L138 61 L143 60 Z" fill="#FF6B6B" opacity="0.4"/>
+  </g>
+</svg>

@@ -1,0 +1,209 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Chal: Cat — Curious, independent, clever -->
+  <defs>
+    <linearGradient id="catBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#636E72"/>
+      <stop offset="100%" stop-color="#4A5459"/>
+    </linearGradient>
+    <linearGradient id="catLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B2BEC3"/>
+      <stop offset="100%" stop-color="#95A5A6"/>
+    </linearGradient>
+    <radialGradient id="catCheek" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF9FF3" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#FF9FF3" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="catShadow">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#2D3436" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <style>
+    /* Tail swish animation */
+    @keyframes cat-tail-swish {
+      0%, 100% { transform: rotate(-10deg); }
+      50% { transform: rotate(10deg); }
+    }
+    .cat-tail {
+      transform-origin: 285px 310px;
+      animation: cat-tail-swish 2s ease-in-out infinite;
+    }
+
+    /* Ear twitch animation */
+    @keyframes cat-ear-twitch {
+      0%, 85%, 100% { transform: rotate(0deg); }
+      88% { transform: rotate(-6deg); }
+      91% { transform: rotate(3deg); }
+      94% { transform: rotate(-2deg); }
+    }
+    .cat-ear-left {
+      transform-origin: 130px 130px;
+      animation: cat-ear-twitch 3s ease-in-out infinite;
+    }
+    .cat-ear-right {
+      transform-origin: 270px 130px;
+      animation: cat-ear-twitch 3s ease-in-out infinite;
+      animation-delay: 1.5s;
+    }
+
+    /* Slow blink animation */
+    @keyframes cat-slow-blink {
+      0%, 80%, 100% { transform: scaleY(1); }
+      86% { transform: scaleY(0.05); }
+      90% { transform: scaleY(0.05); }
+      96% { transform: scaleY(1); }
+    }
+    .cat-eye-left {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: cat-slow-blink 5s ease-in-out infinite;
+    }
+    .cat-eye-right {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: cat-slow-blink 5s ease-in-out infinite;
+      animation-delay: 0.05s;
+    }
+
+    /* Whisker wiggle animation */
+    @keyframes cat-whisker-wiggle {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-1px); }
+      75% { transform: translateX(1px); }
+    }
+    .cat-whiskers {
+      animation: cat-whisker-wiggle 1.5s ease-in-out infinite;
+    }
+
+    /* Bell swing animation */
+    @keyframes cat-bell-swing {
+      0%, 100% { transform: rotate(0deg); }
+      25% { transform: rotate(-5deg); }
+      75% { transform: rotate(5deg); }
+    }
+    .cat-bell {
+      transform-origin: 200px 268px;
+      animation: cat-bell-swing 1.5s ease-in-out infinite;
+    }
+
+    /* Paw knead animation */
+    @keyframes cat-paw-knead {
+      0%, 100% { transform: scaleY(1); }
+      50% { transform: scaleY(0.9); }
+    }
+    .cat-paw-left {
+      transform-box: fill-box;
+      transform-origin: center bottom;
+      animation: cat-paw-knead 2s ease-in-out infinite;
+    }
+
+    /* Body idle breathing */
+    @keyframes cat-breathe {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-3px); }
+    }
+    .cat-body-breathe {
+      animation: cat-breathe 4s ease-in-out infinite;
+    }
+  </style>
+
+  <g class="cat-body-breathe">
+    <!-- Body shadow -->
+    <ellipse cx="200" cy="375" rx="75" ry="10" fill="#2D3436" opacity="0.1"/>
+
+    <!-- Tail -->
+    <g class="cat-tail">
+      <path d="M285 310 Q330 280 340 240 Q345 210 330 220 Q320 240 310 260 Q295 290 275 305" fill="url(#catBody)" stroke="none"/>
+    </g>
+
+    <!-- Body -->
+    <ellipse cx="200" cy="305" rx="80" ry="65" fill="url(#catBody)" filter="url(#catShadow)"/>
+    <!-- Belly -->
+    <ellipse cx="200" cy="320" rx="45" ry="40" fill="#DFE6E9"/>
+
+    <!-- Front paws -->
+    <g class="cat-paw-left">
+      <ellipse cx="155" cy="360" rx="20" ry="16" fill="url(#catBody)"/>
+      <ellipse cx="155" cy="362" rx="14" ry="9" fill="#DFE6E9"/>
+      <!-- Paw beans left -->
+      <g fill="#B2BEC3" opacity="0.5">
+        <circle cx="150" cy="363" r="3"/>
+        <circle cx="155" cy="365" r="2.5"/>
+        <circle cx="160" cy="363" r="3"/>
+      </g>
+    </g>
+    <g>
+      <ellipse cx="245" cy="360" rx="20" ry="16" fill="url(#catBody)"/>
+      <ellipse cx="245" cy="362" rx="14" ry="9" fill="#DFE6E9"/>
+      <!-- Paw beans right -->
+      <g fill="#B2BEC3" opacity="0.5">
+        <circle cx="240" cy="363" r="3"/>
+        <circle cx="245" cy="365" r="2.5"/>
+        <circle cx="250" cy="363" r="3"/>
+      </g>
+    </g>
+
+    <!-- Head -->
+    <ellipse cx="200" cy="180" rx="90" ry="85" fill="url(#catBody)" filter="url(#catShadow)"/>
+    <ellipse cx="185" cy="140" rx="45" ry="30" fill="white" opacity="0.05"/>
+
+    <!-- Pointed ears -->
+    <g class="cat-ear-left">
+      <polygon points="130,130 108,55 155,110" fill="url(#catBody)"/>
+      <polygon points="133,122 116,70 150,112" fill="#E8A0B5" opacity="0.5"/>
+    </g>
+    <g class="cat-ear-right">
+      <polygon points="270,130 292,55 245,110" fill="url(#catBody)"/>
+      <polygon points="267,122 284,70 250,112" fill="#E8A0B5" opacity="0.5"/>
+    </g>
+
+    <!-- Face -->
+    <ellipse cx="200" cy="210" rx="42" ry="32" fill="#DFE6E9"/>
+
+    <!-- Eyes -->
+    <g class="cat-eye-left">
+      <ellipse cx="170" cy="178" rx="22" ry="24" fill="white"/>
+      <ellipse cx="172" cy="180" rx="9" ry="16" fill="#2E86AB"/>
+      <ellipse cx="172" cy="180" rx="4" ry="14" fill="#1B2A4A"/>
+      <circle cx="178" cy="173" r="6" fill="white" opacity="0.85"/>
+      <circle cx="168" cy="185" r="3" fill="white" opacity="0.4"/>
+    </g>
+    <g class="cat-eye-right">
+      <ellipse cx="230" cy="178" rx="22" ry="24" fill="white"/>
+      <ellipse cx="228" cy="180" rx="9" ry="16" fill="#2E86AB"/>
+      <ellipse cx="228" cy="180" rx="4" ry="14" fill="#1B2A4A"/>
+      <circle cx="234" cy="173" r="6" fill="white" opacity="0.85"/>
+      <circle cx="224" cy="185" r="3" fill="white" opacity="0.4"/>
+    </g>
+
+    <!-- Nose -->
+    <path d="M194 205 L200 212 L206 205 Z" fill="#FF9FF3"/>
+    <!-- Mouth -->
+    <path d="M200 212 L193 220" fill="none" stroke="#4A5459" stroke-width="2" stroke-linecap="round"/>
+    <path d="M200 212 L207 220" fill="none" stroke="#4A5459" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Whiskers -->
+    <g class="cat-whiskers" stroke="#95A5A6" stroke-width="1.5" fill="none" stroke-linecap="round">
+      <line x1="115" y1="195" x2="160" y2="205"/>
+      <line x1="110" y1="210" x2="158" y2="212"/>
+      <line x1="118" y1="225" x2="162" y2="218"/>
+      <line x1="285" y1="195" x2="240" y2="205"/>
+      <line x1="290" y1="210" x2="242" y2="212"/>
+      <line x1="282" y1="225" x2="238" y2="218"/>
+    </g>
+
+    <!-- Cheek blush -->
+    <ellipse cx="143" cy="205" rx="15" ry="10" fill="url(#catCheek)"/>
+    <ellipse cx="257" cy="205" rx="15" ry="10" fill="url(#catCheek)"/>
+
+    <!-- Challey collar -->
+    <g>
+      <path d="M140 250 Q200 270 260 250" fill="none" stroke="#F18F01" stroke-width="6" stroke-linecap="round"/>
+      <g class="cat-bell">
+        <circle cx="200" cy="268" r="10" fill="#FFD700"/>
+        <circle cx="200" cy="268" r="6" fill="#F18F01"/>
+        <line x1="200" y1="268" x2="200" y2="275" stroke="#B8763E" stroke-width="1.5"/>
+      </g>
+    </g>
+  </g>
+</svg>

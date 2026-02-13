@@ -1,0 +1,17 @@
+<svg width="512" height="512" viewBox="0 0 512" fill="none" xmlns="http://www.w.org/2000/svg">
+<!-- Concept C: Photo Proof Focus -->
+<!-- This logo directly highlights the app's unique photo verification feature. The design cleverly integrates a camera shutter or lens into the letter 'C'. -->
+<defs>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#003366;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#002244;stop-opacity:1" />
+    </linearGradient>
+</defs>
+<rect width="512" height="512" rx="90" fill="url(#grad3)"/>
+<path d="M364.667 256C364.667 315.42 315.42 364.667 256 364.667C196.58 364.667 147.333 315.42 147.333 256C147.333 196.58 196.58 147.333 256 147.333C315.42 147.333 364.667 196.58 364.667 256Z" stroke="white" stroke-width="32"/>
+<path d="M290.667 256C290.667 275.152 275.152 290.667 256 290.667C236.848 290.667 221.333 275.152 221.333 256C221.333 236.848 236.848 221.333 256 221.333C275.152 221.333 290.667 236.848 290.667 256Z" stroke="#3399FF" stroke-width="32"/>
+<path d="M256 147.333V112" stroke="white" stroke-width="32" stroke-linecap="round"/>
+<path d="M344.355 167.645L369.833 142.167" stroke="white" stroke-width="32" stroke-linecap="round"/>
+<path d="M167.645 344.355L142.167 369.833" stroke="white" stroke-width="32" stroke-linecap="round"/>
+<path d="M167.645 167.645L142.167 142.167" stroke="#3399FF" stroke-width="32" stroke-linecap="round"/>
+</svg>

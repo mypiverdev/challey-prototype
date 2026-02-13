@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 240" width="960" height="240">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B2A4A"/>
+      <stop offset="100%" stop-color="#2E86AB"/>
+    </linearGradient>
+    <linearGradient id="rimGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3A9BC5"/>
+      <stop offset="100%" stop-color="#152240"/>
+    </linearGradient>
+    <linearGradient id="checkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFB347"/>
+      <stop offset="100%" stop-color="#F18F01"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B2A4A"/>
+      <stop offset="70%" stop-color="#1B2A4A"/>
+      <stop offset="100%" stop-color="#2E86AB"/>
+    </linearGradient>
+    <filter id="checkShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0D1520" flood-opacity="0.3"/>
+    </filter>
+    <filter id="sparkleGlow">
+      <feGaussianBlur stdDeviation="1" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ICON MARK (scaled to fit 240px height) -->
+  <g transform="translate(20, 8) scale(0.44)">
+    <!-- Outer coin ring -->
+    <circle cx="256" cy="256" r="248" fill="url(#rimGrad)" opacity="0.6"/>
+    <!-- Main coin body -->
+    <circle cx="256" cy="256" r="230" fill="url(#bgGrad)"/>
+    <!-- Inner coin ridges -->
+    <circle cx="256" cy="256" r="200" fill="none" stroke="#3A9BC5" stroke-width="2.5" opacity="0.35"/>
+    <circle cx="256" cy="256" r="195" fill="none" stroke="#3A9BC5" stroke-width="1" opacity="0.2"/>
+    <!-- Subtle sheen -->
+    <circle cx="220" cy="200" r="160" fill="white" opacity="0.04"/>
+    <!-- Checkmark -->
+    <g filter="url(#checkShadow)">
+      <path d="M160 268 L228 336 L360 192"
+            fill="none" stroke="url(#checkGrad)" stroke-width="52"
+            stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <!-- Sparkles -->
+    <g filter="url(#sparkleGlow)">
+      <path d="M390 120 L394 132 L406 136 L394 140 L390 152 L386 140 L374 136 L386 132 Z"
+            fill="white" opacity="0.9"/>
+      <path d="M420 160 L422 166 L428 168 L422 170 L420 176 L418 170 L412 168 L418 166 Z"
+            fill="white" opacity="0.7"/>
+      <circle cx="370" cy="100" r="3" fill="white" opacity="0.5"/>
+    </g>
+    <g filter="url(#sparkleGlow)">
+      <path d="M110 380 L113 388 L121 391 L113 394 L110 402 L107 394 L99 391 L107 388 Z"
+            fill="#FFB347" opacity="0.6"/>
+    </g>
+  </g>
+
+  <!-- WORDMARK -->
+  <text x="270" y="148" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+        font-size="96" font-weight="700" letter-spacing="-2" fill="url(#textGrad)">
+    challey
+  </text>
+
+  <!-- TAGLINE -->
+  <text x="275" y="192" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+        font-size="22" font-weight="400" letter-spacing="6" fill="#2E86AB" opacity="0.75">
+    CHORES. POINTS. REWARDS.
+  </text>
+</svg>

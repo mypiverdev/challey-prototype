@@ -1,0 +1,14 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- Badge 1: First Chore -->
+<defs>
+    <filter id="shadow-badge1" x="-10%" y="-10%" width="120%" height="120%">
+        <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#003366" flood-opacity="0.2"/>
+    </filter>
+</defs>
+<g filter="url(#shadow-badge1)">
+    <circle cx="128" cy="128" r="110" fill="#E8F4F8"/>
+    <circle cx="128" cy="128" r="110" stroke="#3399FF" stroke-width="8"/>
+    <path d="M85 133L115 163L171 107" stroke="#003366" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M128 50 L148 70 L128 90 L108 70 Z" fill="#3399FF"/>
+</g>
+</svg>

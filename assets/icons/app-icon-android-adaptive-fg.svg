@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="108" height="108">
+  <!-- Android Adaptive Icon - Foreground Layer
+       Safe zone: 66dp centered (inset 18dp on each side)
+       This layer contains only the checkmark + sparkles on transparent bg -->
+  <defs>
+    <linearGradient id="aCheckGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFB347"/>
+      <stop offset="100%" stop-color="#F18F01"/>
+    </linearGradient>
+    <filter id="aCheckShadow">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#0D1520" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Checkmark centered in safe zone (18-90 range) -->
+  <g filter="url(#aCheckShadow)">
+    <path d="M32 56 L48 72 L78 38"
+          fill="none"
+          stroke="url(#aCheckGrad)"
+          stroke-width="11"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+  </g>
+
+  <!-- Sparkle accents -->
+  <path d="M82 26 L83.5 30 L87.5 31.5 L83.5 33 L82 37 L80.5 33 L76.5 31.5 L80.5 30 Z"
+        fill="white" opacity="0.85"/>
+  <path d="M88 36 L89 38.5 L91.5 39.5 L89 40.5 L88 43 L87 40.5 L84.5 39.5 L87 38.5 Z"
+        fill="white" opacity="0.6"/>
+  <circle cx="78" cy="22" r="1.2" fill="white" opacity="0.4"/>
+</svg>

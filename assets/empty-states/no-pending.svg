@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 260" width="300" height="260">
+  <!-- Empty State: No Pending Verifications — All clear, checkmark shield -->
+  <defs>
+    <linearGradient id="npBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E0F8E8"/>
+      <stop offset="100%" stop-color="#D0F0D8"/>
+    </linearGradient>
+    <filter id="npSoft">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#28a745" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background blob -->
+  <ellipse cx="150" cy="115" rx="115" ry="95" fill="url(#npBg)" opacity="0.4"/>
+
+  <!-- Shield with checkmark -->
+  <g transform="translate(150, 100)" filter="url(#npSoft)">
+    <!-- Shield shape -->
+    <path d="M0 -55 L45 -35 L45 5 Q45 45 0 60 Q-45 45 -45 5 L-45 -35 Z"
+          fill="white" stroke="#28a745" stroke-width="2" opacity="0.9"/>
+    <!-- Inner shield -->
+    <path d="M0 -42 L35 -26 L35 3 Q35 35 0 48 Q-35 35 -35 3 L-35 -26 Z"
+          fill="#E0F8E8" opacity="0.5"/>
+    <!-- Checkmark -->
+    <path d="M-18 0 L-6 12 L20 -12" fill="none" stroke="#28a745" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Floating leaves / peace elements -->
+  <g opacity="0.2">
+    <path d="M80 65 Q85 55 95 60 Q90 70 80 65" fill="#28a745"/>
+    <path d="M225 80 Q230 70 240 75 Q235 85 225 80" fill="#28a745"/>
+  </g>
+
+  <text x="150" y="205" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="#1B2A4A">All caught up!</text>
+  <text x="150" y="227" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="400" fill="#888">No pending items to review</text>
+</svg>

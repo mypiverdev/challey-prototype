@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 250" width="350" height="250">
+  <!-- Onboarding: Family Ready — Rocket/launch celebration -->
+  <defs>
+    <linearGradient id="frRocket" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E8F4F8"/>
+    </linearGradient>
+    <linearGradient id="frFlame" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F18F01"/>
+      <stop offset="60%" stop-color="#FF6B6B"/>
+      <stop offset="100%" stop-color="#FF6B6B" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="frGlow">
+      <feGaussianBlur stdDeviation="3" result="glow"/>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="frShadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#1B2A4A" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background glow -->
+  <ellipse cx="175" cy="110" rx="140" ry="100" fill="#E8F4F8" opacity="0.3"/>
+
+  <!-- Rocket -->
+  <g transform="translate(175, 110)" filter="url(#frShadow)">
+    <!-- Rocket body -->
+    <path d="M0 -70 Q-18 -40 -18 0 L-18 35 L18 35 L18 0 Q18 -40 0 -70 Z"
+          fill="url(#frRocket)" stroke="#DDE4E8" stroke-width="1.5"/>
+    <!-- Nose cone accent -->
+    <path d="M0 -70 Q-10 -45 -12 -25 L12 -25 Q10 -45 0 -70 Z" fill="#2E86AB" opacity="0.15"/>
+    <!-- Window -->
+    <circle cx="0" cy="-15" r="10" fill="#2E86AB"/>
+    <circle cx="0" cy="-15" r="7" fill="#3A9BC5"/>
+    <ellipse cx="-2" cy="-18" rx="3" ry="2" fill="white" opacity="0.4"/>
+    <!-- Side fins -->
+    <path d="M-18 20 L-32 45 L-18 35 Z" fill="#F18F01"/>
+    <path d="M18 20 L32 45 L18 35 Z" fill="#F18F01"/>
+    <!-- Center stripe -->
+    <rect x="-4" y="-5" width="8" height="40" rx="2" fill="#F18F01" opacity="0.2"/>
+
+    <!-- Flame -->
+    <g filter="url(#frGlow)">
+      <path d="M-12 35 Q-15 55 -8 70 Q0 85 0 80 Q0 85 8 70 Q15 55 12 35 Z" fill="url(#frFlame)" opacity="0.8"/>
+      <path d="M-6 35 Q-8 50 -3 62 Q0 68 3 62 Q8 50 6 35 Z" fill="#FFD700" opacity="0.6"/>
+    </g>
+  </g>
+
+  <!-- Star trail / sparkle trail -->
+  <g filter="url(#frGlow)">
+    <path d="M145 180 L147 185 L152 187 L147 189 L145 194 L143 189 L138 187 L143 185 Z" fill="#FFD700" opacity="0.5"/>
+    <path d="M210 185 L211.5 188.5 L215 190 L211.5 191.5 L210 195 L208.5 191.5 L205 190 L208.5 188.5 Z" fill="#F18F01" opacity="0.4"/>
+    <circle cx="160" cy="195" r="2.5" fill="#FFD700" opacity="0.3"/>
+    <circle cx="195" cy="200" r="2" fill="#F18F01" opacity="0.25"/>
+  </g>
+
+  <!-- Confetti around rocket -->
+  <g>
+    <rect x="80" y="50" width="7" height="7" rx="1.5" fill="#FFD700" opacity="0.55" transform="rotate(25, 83, 53)"/>
+    <rect x="260" y="55" width="6" height="9" rx="1.5" fill="#FF6B6B" opacity="0.5" transform="rotate(-20, 263, 59)"/>
+    <rect x="65" y="130" width="8" height="5" rx="1.5" fill="#2E86AB" opacity="0.4" transform="rotate(40, 69, 132)"/>
+    <rect x="275" y="125" width="5" height="8" rx="1" fill="#A855F7" opacity="0.45" transform="rotate(-35, 277, 129)"/>
+    <circle cx="100" cy="75" r="3.5" fill="#F18F01" opacity="0.4"/>
+    <circle cx="255" cy="85" r="3" fill="#00D2D3" opacity="0.35"/>
+    <circle cx="310" cy="105" r="2.5" fill="#FFD700" opacity="0.3"/>
+    <circle cx="40" cy="100" r="2.5" fill="#FF6B6B" opacity="0.3"/>
+  </g>
+
+  <text x="175" y="225" text-anchor="middle" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#1B2A4A">You're all set!</text>
+  <text x="175" y="245" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="400" fill="#888">Your family is ready to start earning</text>
+</svg>

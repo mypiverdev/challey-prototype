@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <!-- Celebration: Shoutout Sent — Heart burst with sparkles -->
+  <defs>
+    <linearGradient id="ssHeart" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B6B"/>
+      <stop offset="100%" stop-color="#EE3B5B"/>
+    </linearGradient>
+    <filter id="ssGlow">
+      <feGaussianBlur stdDeviation="4" result="glow"/>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="ssShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#A01030" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Soft radial glow -->
+  <circle cx="150" cy="145" r="100" fill="#FF6B6B" opacity="0.04"/>
+  <circle cx="150" cy="145" r="70" fill="#FF6B6B" opacity="0.04"/>
+
+  <!-- Burst rays -->
+  <g stroke="#FF6B6B" stroke-width="2" stroke-linecap="round" opacity="0.08">
+    <line x1="150" y1="28" x2="150" y2="55"/>
+    <line x1="150" y1="245" x2="150" y2="272"/>
+    <line x1="28" y1="145" x2="55" y2="145"/>
+    <line x1="245" y1="145" x2="272" y2="145"/>
+    <line x1="55" y1="55" x2="75" y2="75"/>
+    <line x1="225" y1="75" x2="245" y2="55"/>
+    <line x1="55" y1="240" x2="75" y2="220"/>
+    <line x1="225" y1="220" x2="245" y2="240"/>
+  </g>
+
+  <!-- Big heart -->
+  <g transform="translate(150, 140)" filter="url(#ssShadow)">
+    <g filter="url(#ssGlow)">
+      <path d="M0 55 C-8 48 -60 20 -60 -12 C-60 -35 -42 -52 -22 -52 C-8 -52 0 -42 0 -42 C0 -42 8 -52 22 -52 C42 -52 60 -35 60 -12 C60 20 8 48 0 55 Z"
+            fill="url(#ssHeart)"/>
+    </g>
+    <!-- Heart sheen -->
+    <ellipse cx="-18" cy="-25" rx="15" ry="12" fill="white" opacity="0.15" transform="rotate(-20)"/>
+  </g>
+
+  <!-- Floating mini hearts -->
+  <g fill="#FF6B6B" opacity="0.35">
+    <path d="M80 70 C80 65 75 60 70 63 C65 60 60 65 60 70 C60 78 70 84 75 88 C80 84 90 78 80 70" transform="scale(0.6) translate(70, 50)"/>
+    <path d="M80 70 C80 65 75 60 70 63 C65 60 60 65 60 70 C60 78 70 84 75 88 C80 84 90 78 80 70" transform="scale(0.45) translate(430, 60)"/>
+    <path d="M80 70 C80 65 75 60 70 63 C65 60 60 65 60 70 C60 78 70 84 75 88 C80 84 90 78 80 70" transform="scale(0.35) translate(180, 580)"/>
+    <path d="M80 70 C80 65 75 60 70 63 C65 60 60 65 60 70 C60 78 70 84 75 88 C80 84 90 78 80 70" transform="scale(0.4) translate(480, 480)"/>
+  </g>
+
+  <!-- Confetti -->
+  <g>
+    <rect x="75" y="50" width="7" height="7" rx="1.5" fill="#FFD700" opacity="0.6" transform="rotate(25, 78, 53)"/>
+    <rect x="215" y="45" width="6" height="9" rx="1.5" fill="#2E86AB" opacity="0.55" transform="rotate(-20, 218, 49)"/>
+    <rect x="55" y="180" width="8" height="5" rx="1.5" fill="#A855F7" opacity="0.45" transform="rotate(40, 59, 182)"/>
+    <rect x="240" y="200" width="5" height="8" rx="1" fill="#00D2D3" opacity="0.5" transform="rotate(-35, 242, 204)"/>
+    <circle cx="98" cy="230" r="3.5" fill="#FFD700" opacity="0.4"/>
+    <circle cx="210" cy="245" r="3" fill="#F18F01" opacity="0.35"/>
+  </g>
+
+  <!-- Sparkle stars -->
+  <path d="M90 95 L93 103 L101 106 L93 109 L90 117 L87 109 L79 106 L87 103 Z" fill="#FFD700" opacity="0.5"/>
+  <path d="M220 100 L222 105 L227 107 L222 109 L220 114 L218 109 L213 107 L218 105 Z" fill="white" opacity="0.4"/>
+  <path d="M145 55 L147 60 L152 61 L147 63 L145 68 L143 63 L138 61 L143 60 Z" fill="#FF6B6B" opacity="0.4"/>
+</svg>

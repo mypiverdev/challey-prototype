@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Favicon - ultra simplified for small size -->
+  <defs>
+    <linearGradient id="fBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B2A4A"/>
+      <stop offset="100%" stop-color="#2E86AB"/>
+    </linearGradient>
+    <linearGradient id="fCheck" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFB347"/>
+      <stop offset="100%" stop-color="#F18F01"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded background -->
+  <rect width="32" height="32" rx="7" ry="7" fill="url(#fBg)"/>
+
+  <!-- Simplified checkmark -->
+  <path d="M8 17 L13.5 22.5 L24 11"
+        fill="none"
+        stroke="url(#fCheck)"
+        stroke-width="4"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+  <!-- Single sparkle hint -->
+  <circle cx="26" cy="7" r="1.5" fill="white" opacity="0.7"/>
+</svg>

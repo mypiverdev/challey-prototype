@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812" width="375" height="812">
+  <!-- Screen: Shout-out Boost Review -->
+  <defs>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#1B2A4A" flood-opacity="0.1"/>
+    </filter>
+    <filter id="btnShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#1B2A4A" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="375" height="812" fill="#F5F7FA"/>
+
+  <!-- Status bar -->
+  <text x="30" y="52" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#1B2A4A">9:41</text>
+  <g transform="translate(295, 40)">
+    <rect x="0" y="0" width="22" height="11" rx="2" fill="none" stroke="#1B2A4A" stroke-width="1.2"/>
+    <rect x="2" y="2" width="15" height="7" rx="1" fill="#1B2A4A"/>
+    <rect x="22" y="3" width="2" height="5" rx="1" fill="#1B2A4A" opacity="0.4"/>
+  </g>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="375" height="170" fill="#1B2A4A"/>
+  <g transform="translate(28, 88)">
+    <path d="M10 0 L0 0 M3 -5 L0 0 L3 5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="28" y="130" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="white">Shout-out</text>
+  <text x="28" y="155" font-family="Inter, sans-serif" font-size="14" fill="white" opacity="0.5">Boost a kid with bonus points</text>
+
+  <!-- Kid selector pills -->
+  <g transform="translate(24, 185)">
+    <rect x="0" y="0" width="70" height="36" rx="18" fill="#A855F7"/>
+    <text x="35" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="white">Maggie</text>
+    <rect x="78" y="0" width="55" height="36" rx="18" fill="white" stroke="#E8ECF0" stroke-width="1.5"/>
+    <text x="105" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#888">Jake</text>
+    <rect x="141" y="0" width="50" height="36" rx="18" fill="white" stroke="#E8ECF0" stroke-width="1.5"/>
+    <text x="166" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#888">Lily</text>
+  </g>
+
+  <!-- Shout-out preview card -->
+  <g filter="url(#cardShadow)">
+    <rect x="24" y="240" width="327" height="120" rx="16" fill="white"/>
+    <rect x="24" y="240" width="327" height="40" rx="16" fill="#FFF5E0"/>
+    <rect x="24" y="264" width="327" height="16" fill="#FFF5E0"/>
+    <text x="187" y="266" text-anchor="middle" font-family="Inter, sans-serif" font-size="18">🌟</text>
+    <text x="187" y="300" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#1B2A4A">Great job, Maggie!</text>
+    <text x="187" y="322" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#888">This will appear in The Living Room</text>
+    <text x="187" y="350" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#A855F7">From: Parent → Maggie</text>
+  </g>
+
+  <!-- Shout-out message -->
+  <text x="28" y="390" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#888" letter-spacing="1">YOUR MESSAGE</text>
+  <rect x="24" y="398" width="327" height="80" rx="12" fill="white" stroke="#DDE4E8" stroke-width="1.5"/>
+  <text x="44" y="425" font-family="Inter, sans-serif" font-size="14" fill="#1B2A4A">Maggie cleaned the whole kitchen</text>
+  <text x="44" y="445" font-family="Inter, sans-serif" font-size="14" fill="#1B2A4A">without being asked!</text>
+  <rect x="270" y="420" width="2" height="18" rx="1" fill="#2E86AB"/>
+
+  <!-- Bonus points chips -->
+  <text x="28" y="510" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#888" letter-spacing="1">BONUS POINTS</text>
+  <g transform="translate(24, 518)">
+    <rect x="0" y="0" width="60" height="40" rx="12" fill="white" stroke="#E8ECF0" stroke-width="1.5"/>
+    <text x="30" y="26" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#888">+5</text>
+
+    <rect x="68" y="0" width="60" height="40" rx="12" fill="white" stroke="#E8ECF0" stroke-width="1.5"/>
+    <text x="98" y="26" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#888">+10</text>
+
+    <rect x="136" y="0" width="60" height="40" rx="12" fill="#F18F01"/>
+    <text x="166" y="26" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="white">+25</text>
+
+    <rect x="204" y="0" width="60" height="40" rx="12" fill="white" stroke="#E8ECF0" stroke-width="1.5"/>
+    <text x="234" y="26" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#888">+50</text>
+  </g>
+
+  <!-- Custom amount -->
+  <g transform="translate(24, 575)">
+    <rect x="0" y="0" width="327" height="44" rx="12" fill="white" stroke="#DDE4E8" stroke-width="1.5"/>
+    <text x="16" y="28" font-family="Inter, sans-serif" font-size="12" fill="#B0B8C0">Or enter custom amount...</text>
+  </g>
+
+  <!-- Summary -->
+  <rect x="24" y="635" width="327" height="36" rx="10" fill="#FFF5E0"/>
+  <text x="44" y="659" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#F18F01">Maggie will receive +25 bonus points</text>
+
+  <!-- Boost & Deliver Button -->
+  <g filter="url(#btnShadow)">
+    <rect x="24" y="690" width="327" height="56" rx="14" fill="#F18F01"/>
+    <text x="187" y="724" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="white">Boost &amp; Deliver 🌟</text>
+  </g>
+
+  <!-- Home indicator -->
+  <rect x="120" y="800" width="135" height="5" rx="2.5" fill="#1B2A4A" opacity="0.15"/>
+</svg>

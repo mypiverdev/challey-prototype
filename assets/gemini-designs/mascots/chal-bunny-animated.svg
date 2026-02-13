@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Chal: Bunny — Sweet, fast, earns points quickly -->
+  <defs>
+    <linearGradient id="bunnyBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAFAFA"/>
+      <stop offset="100%" stop-color="#E8E8E8"/>
+    </linearGradient>
+    <radialGradient id="bunnyCheek" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFB8D0" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#FFB8D0" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="bunnyShadow">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#B0B0B0" flood-opacity="0.2"/>
+    </filter>
+    <style>
+      @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-8px); }
+      }
+      @keyframes earTwitchLeft {
+        0%, 100% { transform: rotate(-10deg); }
+        25% { transform: rotate(-15deg); }
+        75% { transform: rotate(-5deg); }
+      }
+      @keyframes earTwitchRight {
+        0%, 100% { transform: rotate(10deg); }
+        25% { transform: rotate(5deg); }
+        75% { transform: rotate(15deg); }
+      }
+      #bunny-all {
+        animation: bounce 3s ease-in-out infinite;
+        transform-origin: center bottom;
+      }
+      #left-ear {
+        animation: earTwitchLeft 2s ease-in-out infinite;
+        transform-origin: 160px 80px; /* Adjusted origin to match ellipse center */
+      }
+      #right-ear {
+        animation: earTwitchRight 2s ease-in-out infinite;
+        transform-origin: 240px 80px; /* Adjusted origin to match ellipse center */
+      }
+    </style>
+  </defs>
+
+  <g id="bunny-all">
+    <!-- Body shadow -->
+    <ellipse cx="200" cy="378" rx="70" ry="8" fill="#999" opacity="0.08"/>
+
+    <!-- Body -->
+    <ellipse cx="200" cy="310" rx="78" ry="65" fill="url(#bunnyBody)" filter="url(#bunnyShadow)" stroke="#DDD" stroke-width="1"/>
+
+    <!-- Belly -->
+    <ellipse cx="200" cy="318" rx="45" ry="38" fill="#FFF5F5"/>
+
+    <!-- Bunny tail -->
+    <circle cx="275" cy="320" r="18" fill="white" stroke="#E0E0E0" stroke-width="1"/>
+
+    <!-- Front paws -->
+    <ellipse cx="158" cy="360" rx="18" ry="14" fill="url(#bunnyBody)" stroke="#DDD" stroke-width="0.8"/>
+    <ellipse cx="242" cy="360" rx="18" ry="14" fill="url(#bunnyBody)" stroke="#DDD" stroke-width="0.8"/>
+
+    <!-- Back feet (big bunny feet!) -->
+    <ellipse cx="148" cy="372" rx="25" ry="10" fill="url(#bunnyBody)" stroke="#DDD" stroke-width="0.8"/>
+    <ellipse cx="252" cy="372" rx="25" ry="10" fill="url(#bunnyBody)" stroke="#DDD" stroke-width="0.8"/>
+    <ellipse cx="148" cy="374" rx="16" ry="6" fill="#FFE0E8"/>
+    <ellipse cx="252" cy="374" rx="16" ry="6" fill="#FFE0E8"/>
+
+    <!-- Head -->
+    <ellipse cx="200" cy="190" rx="82" ry="80" fill="url(#bunnyBody)" filter="url(#bunnyShadow)" stroke="#DDD" stroke-width="1"/>
+
+    <!-- Head highlight -->
+    <ellipse cx="185" cy="150" rx="40" ry="28" fill="white" opacity="0.3"/>
+
+    <!-- Long ears -->
+    <g id="left-ear">
+      <ellipse cx="160" cy="80" rx="24" ry="75" fill="url(#bunnyBody)" stroke="#DDD" stroke-width="1" transform="rotate(-10, 160, 80)"/>
+      <!-- Inner ear (pink!) -->
+      <ellipse cx="160" cy="80" rx="14" ry="55" fill="#FFB8D0" opacity="0.5" transform="rotate(-10, 160, 80)"/>
+    </g>
+    <g id="right-ear">
+      <ellipse cx="240" cy="80" rx="24" ry="75" fill="url(#bunnyBody)" stroke="#DDD" stroke-width="1" transform="rotate(10, 240, 80)"/>
+      <!-- Inner ear (pink!) -->
+      <ellipse cx="240" cy="80" rx="14" ry="55" fill="#FFB8D0" opacity="0.5" transform="rotate(10, 240, 80)"/>
+    </g>
+
+    <!-- Eyes (big round bunny eyes) -->
+    <ellipse cx="172" cy="185" rx="22" ry="25" fill="white" stroke="#DDD" stroke-width="0.5"/>
+    <ellipse cx="228" cy="185" rx="22" ry="25" fill="white" stroke="#DDD" stroke-width="0.5"/>
+    <ellipse cx="176" cy="189" rx="13" ry="16" fill="#1B2A4A"/>
+    <ellipse cx="224" cy="189" rx="13" ry="16" fill="#1B2A4A"/>
+    <!-- Eye highlights -->
+    <circle cx="181" cy="182" r="6" fill="white" opacity="0.9"/>
+    <circle cx="229" cy="182" r="6" fill="white" opacity="0.9"/>
+    <circle cx="173" cy="193" r="3" fill="white" opacity="0.4"/>
+    <circle cx="221" cy="193" r="3" fill="white" opacity="0.4"/>
+
+    <!-- Nose (pink triangle) -->
+    <path d="M195 212 L200 218 L205 212 Z" fill="#FFB8D0"/>
+
+    <!-- Mouth (bunny Y shape) -->
+    <path d="M200 218 L200 225" fill="none" stroke="#C0C0C0" stroke-width="2" stroke-linecap="round"/>
+    <path d="M190 228 Q200 235 210 228" fill="none" stroke="#C0C0C0" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Whiskers -->
+    <g stroke="#D0D0D0" stroke-width="1.2" fill="none" stroke-linecap="round">
+      <line x1="125" y1="205" x2="163" y2="215"/>
+      <line x1="120" y1="220" x2="162" y2="222"/>
+      <line x1="275" y1="205" x2="237" y2="215"/>
+      <line x1="280" y1="220" x2="238" y2="222"/>
+    </g>
+
+    <!-- Buck teeth -->
+    <rect x="194" y="225" width="5" height="7" rx="2" fill="white" stroke="#DDD" stroke-width="0.8"/>
+    <rect x="201" y="225" width="5" height="7" rx="2" fill="white" stroke="#DDD" stroke-width="0.8"/>
+
+    <!-- Cheek blush -->
+    <ellipse cx="148" cy="210" rx="16" ry="10" fill="url(#bunnyCheek)"/>
+    <ellipse cx="252" cy="210" rx="16" ry="10" fill="url(#bunnyCheek)"/>
+
+    <!-- Challey bow tie -->
+    <g transform="translate(200, 260)">
+      <polygon points="-20,-8 0,0 -20,8" fill="#2E86AB"/>
+      <polygon points="20,-8 0,0 20,8" fill="#2E86AB"/>
+      <circle cx="0" cy="0" r="5" fill="#F18F01"/>
+    </g>
+  </g>
+</svg>

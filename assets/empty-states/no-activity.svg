@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 260" width="300" height="260">
+  <!-- Empty State: No Activity/Points History — Clock, fresh start -->
+  <defs>
+    <linearGradient id="naBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8F4F8"/>
+      <stop offset="100%" stop-color="#D8EEF5"/>
+    </linearGradient>
+    <filter id="naSoft">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#1B2A4A" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background blob -->
+  <ellipse cx="150" cy="115" rx="115" ry="95" fill="url(#naBg)" opacity="0.5"/>
+
+  <!-- Clock face -->
+  <g transform="translate(150, 100)" filter="url(#naSoft)">
+    <circle cx="0" cy="0" r="52" fill="white" stroke="#DDE4E8" stroke-width="2"/>
+    <!-- Clock ticks -->
+    <g stroke="#C0CCD4" stroke-width="2" stroke-linecap="round">
+      <line x1="0" y1="-42" x2="0" y2="-36"/>
+      <line x1="0" y1="36" x2="0" y2="42"/>
+      <line x1="-42" y1="0" x2="-36" y2="0"/>
+      <line x1="36" y1="0" x2="42" y2="0"/>
+    </g>
+    <g stroke="#DDE4E8" stroke-width="1.5" stroke-linecap="round">
+      <line x1="21" y1="-36" x2="18" y2="-31" transform="rotate(0)"/>
+      <line x1="36" y1="-21" x2="31" y2="-18"/>
+      <line x1="36" y1="21" x2="31" y2="18"/>
+      <line x1="21" y1="36" x2="18" y2="31"/>
+      <line x1="-21" y1="36" x2="-18" y2="31"/>
+      <line x1="-36" y1="21" x2="-31" y2="18"/>
+      <line x1="-36" y1="-21" x2="-31" y2="-18"/>
+      <line x1="-21" y1="-36" x2="-18" y2="-31"/>
+    </g>
+    <!-- Clock hands (pointing to start) -->
+    <line x1="0" y1="4" x2="0" y2="-28" stroke="#1B2A4A" stroke-width="3" stroke-linecap="round"/>
+    <line x1="0" y1="4" x2="18" y2="-8" stroke="#2E86AB" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Center dot -->
+    <circle cx="0" cy="0" r="4" fill="#1B2A4A"/>
+    <circle cx="0" cy="0" r="2" fill="#2E86AB"/>
+  </g>
+
+  <!-- Zzz (idle/waiting) -->
+  <g font-family="Inter, sans-serif" font-weight="700" fill="#2E86AB" opacity="0.2">
+    <text x="210" y="68" font-size="16">z</text>
+    <text x="222" y="55" font-size="13">z</text>
+    <text x="230" y="45" font-size="10">z</text>
+  </g>
+
+  <text x="150" y="205" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="#1B2A4A">No activity yet</text>
+  <text x="150" y="227" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="400" fill="#888">Complete your first chore to get started!</text>
+</svg>

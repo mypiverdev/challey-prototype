@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Badge: Best Helper — Teal gradient, handshake icon — ANIMATED -->
+  <defs>
+    <linearGradient id="bhBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D2D3"/>
+      <stop offset="100%" stop-color="#01A3A4"/>
+    </linearGradient>
+    <filter id="bhShadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#006A6B" flood-opacity="0.3"/>
+    </filter>
+    <filter id="bhGlow">
+      <feGaussianBlur stdDeviation="2" result="glow"/>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    /* Gentle float — entire badge */
+    .bh-float {
+      animation: bh-float 3s ease-in-out infinite;
+    }
+    @keyframes bh-float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-3px); }
+    }
+
+    /* Handshake shake — side-to-side with pause */
+    .bh-handshake {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: bh-shake 3s ease-in-out infinite;
+    }
+    @keyframes bh-shake {
+      0% { transform: rotate(0deg); }
+      5% { transform: rotate(-3deg); }
+      10% { transform: rotate(3deg); }
+      15% { transform: rotate(-3deg); }
+      20% { transform: rotate(3deg); }
+      25% { transform: rotate(-2deg); }
+      30% { transform: rotate(0deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    /* Badge shimmer — sheen slides across */
+    .bh-shimmer {
+      animation: bh-shimmer 4s ease-in-out infinite;
+    }
+    @keyframes bh-shimmer {
+      0%, 100% { transform: translateX(-20px); opacity: 0.06; }
+      50% { transform: translateX(20px); opacity: 0.16; }
+    }
+
+    /* Sparkle twinkle — staggered scale + opacity */
+    .bh-sparkle {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: bh-sparkle-twinkle 2s ease-in-out infinite;
+    }
+    .bh-sparkle-1 { animation-delay: 0s; }
+    .bh-sparkle-2 { animation-delay: 1s; }
+    @keyframes bh-sparkle-twinkle {
+      0%, 100% { transform: scale(0); opacity: 0; }
+      50% { transform: scale(1); opacity: 0.55; }
+    }
+
+    /* Inner ring glow */
+    .bh-inner-ring {
+      animation: bh-ring-glow 3s ease-in-out infinite;
+    }
+    @keyframes bh-ring-glow {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 0.45; }
+    }
+  </style>
+
+  <g class="bh-float">
+    <circle cx="100" cy="100" r="96" fill="url(#bhBg)" filter="url(#bhShadow)"/>
+    <circle class="bh-inner-ring" cx="100" cy="100" r="85" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
+    <circle cx="100" cy="100" r="80" fill="url(#bhBg)"/>
+    <ellipse class="bh-shimmer" cx="85" cy="72" rx="40" ry="28" fill="white" opacity="0.1"/>
+
+    <!-- Handshake icon -->
+    <g filter="url(#bhGlow)" transform="translate(100, 90)">
+      <g class="bh-handshake" fill="white" opacity="0.95">
+        <path d="M-40 10 L-30 -15 L-18 -10 L-25 12 Z"/>
+        <path d="M40 10 L30 -15 L18 -10 L25 12 Z"/>
+        <path d="M-18 -10 Q-10 -25 0 -22 Q10 -25 18 -10 L12 8 Q6 15 0 12 Q-6 15 -12 8 Z"/>
+        <ellipse cx="-12" cy="0" rx="5" ry="8" fill="white" opacity="0.6" transform="rotate(-15, -12, 0)"/>
+        <ellipse cx="12" cy="0" rx="5" ry="8" fill="white" opacity="0.6" transform="rotate(15, 12, 0)"/>
+      </g>
+    </g>
+
+    <!-- Sparkles -->
+    <g class="bh-sparkle bh-sparkle-1">
+      <path d="M65 55 L67 60 L72 62 L67 64 L65 69 L63 64 L58 62 L63 60 Z" fill="white" opacity="0.5"/>
+    </g>
+    <g class="bh-sparkle bh-sparkle-2">
+      <path d="M140 50 L141.5 53 L145 54.5 L141.5 56 L140 59 L138.5 56 L135 54.5 L138.5 53 Z" fill="white" opacity="0.4"/>
+    </g>
+
+    <text x="100" y="168" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="white" letter-spacing="0.5">BEST</text>
+    <text x="100" y="183" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="white" opacity="0.8">HELPER</text>
+  </g>
+</svg>

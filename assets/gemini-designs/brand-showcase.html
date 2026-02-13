@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challey Brand Showcase | Interactive Concept Review</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #003366;
+            --ocean: #3399FF;
+            --bg: #f8f9fa;
+            --text: #1d3557;
+            --card-bg: #ffffff;
+            --shadow: 0 10px 30px rgba(0, 51, 102, 0.08);
+            --radius: 24px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--navy), #004a8d);
+            color: white;
+        }
+        .header h1 {
+            font-size: 4rem;
+            font-weight: 800;
+        }
+        .header p {
+            font-size: 1.25rem;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 10px auto 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--navy);
+        }
+        .section-title p {
+            font-size: 1.1rem;
+            color: #6c757d;
+            margin-top: 5px;
+        }
+        .logo-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+        .logo-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 20px;
+            text-align: center;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+        }
+        .logo-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--ocean);
+        }
+        .logo-card.selected {
+            border-color: var(--ocean);
+            box-shadow: 0 15px 40px rgba(51, 153, 255, 0.3);
+        }
+        .logo-card .preview {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .logo-card .preview img {
+            max-height: 150px;
+        }
+        .logo-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .logo-card p {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        .mockup-section {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+        .mockup-section > div { flex: 1; }
+        .phone-mockup {
+            width: 350px;
+            height: 700px;
+            background: #111;
+            border-radius: 40px;
+            padding: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            margin: 0 auto;
+        }
+        .phone-mockup .screen {
+            background-color: #fff;
+            height: 100%;
+            border-radius: 30px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .phone-mockup .screen .status-bar {
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: white;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 2;
+        }
+        .phone-mockup .app-icon-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 120px;
+        }
+        .phone-mockup .app-icon-container img {
+            width: 100%;
+            height: 100%;
+            border-radius: 25%;
+        }
+        .mockup-info h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 20px;
+        }
+        .mockup-info p {
+            margin-bottom: 20px;
+        }
+        .color-palette {
+            display: flex;
+            gap: 15px;
+        }
+        .swatch {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Challey</h1>
+        <p>Connecting families, one chore at a time. This is the interactive brand showcase. Select a logo concept below to see it come to life.</p>
+    </div>
+
+    <div class="container">
+        <div class="section-title">
+            <h2>1. Choose a Logo Concept</h2>
+            <p>Your selection will dynamically update the brand assets on this page.</p>
+        </div>
+
+        <div class="logo-selector">
+            <div class="logo-card" data-concept="B" onclick="selectConcept('B', this)">
+                <div class="preview"><img src="./logo/concept-B-recognition-spark.svg" alt="Concept B"></div>
+                <h3>Concept B</h3>
+                <p>Recognition Spark</p>
+            </div>
+            <div class="logo-card" data-concept="C" onclick="selectConcept('C', this)">
+                <div class="preview"><img src="./logo/concept-C-v2-photo-focus.svg" alt="Concept C v2"></div>
+                <h3>Concept C v2</h3>
+                <p>Photo Focus</p>
+            </div>
+            <div class="logo-card" data-concept="D" onclick="selectConcept('D', this)">
+                <div class="preview"><img src="./logo/concept-D-v2-family-hub.svg" alt="Concept D v2"></div>
+                <h3>Concept D v2</h3>
+                <p>Family Hub</p>
+            </div>
+            <div class="logo-card" data-concept="E" onclick="selectConcept('E', this)">
+                <div class="preview"><img src="./logo/concept-E-communication-loop.svg" alt="Concept E"></div>
+                <h3>Concept E</h3>
+                <p>Communication Loop</p>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>2. See It in Action</h2>
+            <p>Visualize the brand on a splash screen and as an app icon.</p>
+        </div>
+
+        <div class="mockup-section">
+            <div class="mockup-info">
+                <h3>App Icon & Splash Screen</h3>
+                <p>The logo must be instantly recognizable on a busy home screen. It sets the first impression every time the app is launched. The chosen concept becomes the core of the app's visual identity, scaled perfectly for a mobile experience.</p>
+                <div class="color-palette">
+                    <div class="swatch" style="background-color: var(--navy);"></div>
+                    <div class="swatch" style="background-color: var(--ocean);"></div>
+                    <div class="swatch" style="background-color: #f1faee;"></div>
+                    <div class="swatch" style="background-color: #e63946;"></div>
+                </div>
+            </div>
+            <div class="phone-mockup">
+                <div id="app-screen" class="screen" style="background-image: linear-gradient(135deg, var(--navy), #004a8d);">
+                    <div class="status-bar">9:41</div>
+                    <div class="app-icon-container">
+                        <img id="dynamic-app-icon" src="./logo/concept-B-recognition-spark.svg" alt="Dynamic App Icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const conceptImages = {
+            'B': './logo/concept-B-recognition-spark.svg',
+            'C': './logo/concept-C-v2-photo-focus.svg',
+            'D': './logo/concept-D-v2-family-hub.svg',
+            'E': './logo/concept-E-communication-loop.svg',
+        };
+
+        function selectConcept(concept, element) {
+            // Update selected card style
+            document.querySelectorAll('.logo-card').forEach(card => card.classList.remove('selected'));
+            element.classList.add('selected');
+
+            // Update dynamic images
+            const imageUrl = conceptImages[concept];
+            const appIcon = document.getElementById('dynamic-app-icon');
+
+            // Fade out
+            appIcon.style.transition = 'opacity 0.3s ease-in-out';
+            appIcon.style.opacity = 0;
+
+            setTimeout(() => {
+                appIcon.src = imageUrl;
+                // Fade in
+                appIcon.style.opacity = 1;
+            }, 300);
+        }
+
+        // Set initial state
+        document.addEventListener('DOMContentLoaded', () => {
+            const initialCard = document.querySelector('.logo-card[data-concept="B"]');
+            if(initialCard) {
+                initialCard.classList.add('selected');
+            }
+        });
+    </script>
+
+</body>
+</html>

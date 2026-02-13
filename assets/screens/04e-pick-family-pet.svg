@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812" width="375" height="812">
+  <!-- Screen: Pick Family Pet -->
+  <defs>
+    <filter id="btnShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#1B2A4A" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="375" height="812" fill="#F5F7FA"/>
+
+  <!-- Status bar -->
+  <text x="30" y="52" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#1B2A4A">9:41</text>
+  <g transform="translate(295, 40)">
+    <rect x="0" y="0" width="22" height="11" rx="2" fill="none" stroke="#1B2A4A" stroke-width="1.2"/>
+    <rect x="2" y="2" width="15" height="7" rx="1" fill="#1B2A4A"/>
+    <rect x="22" y="3" width="2" height="5" rx="1" fill="#1B2A4A" opacity="0.4"/>
+  </g>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="375" height="210" fill="#1B2A4A"/>
+  <g transform="translate(28, 88)">
+    <path d="M10 0 L0 0 M3 -5 L0 0 L3 5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="28" y="140" font-family="Inter, sans-serif" font-size="26" font-weight="700" fill="white">Choose Your</text>
+  <text x="28" y="170" font-family="Inter, sans-serif" font-size="26" font-weight="700" fill="white">Family Pet!</text>
+  <text x="28" y="195" font-family="Inter, sans-serif" font-size="14" fill="white" opacity="0.6">Every family needs a pet! Pick one and name them.</text>
+
+  <!-- Pet Grid (4x3) -->
+  <!-- Row 1 -->
+  <rect x="24" y="230" width="76" height="70" rx="14" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+  <text x="62" y="262" text-anchor="middle" font-family="Inter, sans-serif" font-size="24">🐕</text>
+  <text x="62" y="286" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#888">Dog</text>
+
+  <rect x="108" y="230" width="76" height="70" rx="14" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+  <text x="146" y="262" text-anchor="middle" font-family="Inter, sans-serif" font-size="24">🐈</text>
+  <text x="146" y="286" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#888">Cat</text>
+
+  <!-- Octopus (selected) -->
+  <rect x="192" y="230" width="76" height="70" rx="14" fill="#E8F4F8" stroke="#2E86AB" stroke-width="2.5"/>
+  <text x="230" y="262" text-anchor="middle" font-family="Inter, sans-serif" font-size="24">🐙</text>
+  <text x="230" y="286" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="600" fill="#2E86AB">Octopus</text>
+  <!-- Selected check -->
+  <circle cx="254" cy="242" r="9" fill="#2E86AB"/>
+  <path d="M250 242 L253 245 L259 239" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+
+  <rect x="276" y="230" width="76" height="70" rx="14" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+  <text x="314" y="262" text-anchor="middle" font-family="Inter, sans-serif" font-size="24">🐰</text>
+  <text x="314" y="286" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#888">Bunny</text>
+
+  <!-- Row 2 -->
+  <rect x="24" y="310" width="76" height="70" rx="14" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+  <text x="62" y="342" text-anchor="middle" font-family="Inter, sans-serif" font-size="24">🐹</text>
+  <text x="62" y="366" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#888">Hamster</text>
+
+  <rect x="108" y="310" width="76" height="70" rx="14" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+  <text x="146" y="342" text-anchor="middle" font-family="Inter, sans-serif" font-size="24">🦜</text>
+  <text x="146" y="366" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#888">Parrot</text>
+
+  <rect x="192" y="310" width="76" height="70" rx="14" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+  <text x="230" y="342" text-anchor="middle" font-family="Inter, sans-serif" font-size="24">🐢</text>
+  <text x="230" y="366" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#888">Turtle</text>
+
+  <rect x="276" y="310" width="76" height="70" rx="14" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+  <text x="314" y="342" text-anchor="middle" font-family="Inter, sans-serif" font-size="24">🦊</text>
+  <text x="314" y="366" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#888">Fox</text>
+
+  <!-- Row 3 -->
+  <rect x="24" y="390" width="76" height="70" rx="14" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+  <text x="62" y="422" text-anchor="middle" font-family="Inter, sans-serif" font-size="24">🐼</text>
+  <text x="62" y="446" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#888">Panda</text>
+
+  <rect x="108" y="390" width="76" height="70" rx="14" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+  <text x="146" y="422" text-anchor="middle" font-family="Inter, sans-serif" font-size="24">🐧</text>
+  <text x="146" y="446" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#888">Penguin</text>
+
+  <rect x="192" y="390" width="76" height="70" rx="14" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+  <text x="230" y="422" text-anchor="middle" font-family="Inter, sans-serif" font-size="24">🦁</text>
+  <text x="230" y="446" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#888">Lion</text>
+
+  <rect x="276" y="390" width="76" height="70" rx="14" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+  <text x="314" y="422" text-anchor="middle" font-family="Inter, sans-serif" font-size="24">🐸</text>
+  <text x="314" y="446" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#888">Frog</text>
+
+  <!-- Name Your Pet Input -->
+  <text x="28" y="498" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#1B2A4A">Name your pet</text>
+  <rect x="24" y="508" width="327" height="48" rx="12" fill="white" stroke="#2E86AB" stroke-width="2"/>
+  <text x="44" y="538" font-family="Inter, sans-serif" font-size="15" fill="#1B2A4A">Chal</text>
+  <rect x="72" y="525" width="2" height="18" rx="1" fill="#2E86AB"/>
+
+  <!-- Meet Button -->
+  <g filter="url(#btnShadow)">
+    <rect x="24" y="590" width="327" height="56" rx="14" fill="#F18F01"/>
+    <text x="187.5" y="624" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="white">Meet Chal! 🐙</text>
+  </g>
+
+  <!-- Home indicator -->
+  <rect x="120" y="790" width="135" height="5" rx="2.5" fill="#1B2A4A" opacity="0.15"/>
+</svg>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Challey Animated Badges Preview</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0a1628;
+      color: #fff;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #FFD700, #A855F7, #FF6B6B);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle {
+      text-align: center;
+      color: #8899aa;
+      margin-bottom: 40px;
+      font-size: 0.95rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .card {
+      background: #131d30;
+      border-radius: 16px;
+      padding: 24px 16px;
+      text-align: center;
+      border: 1px solid #1e2d45;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(255, 215, 0, 0.12);
+    }
+    .card object {
+      width: 160px;
+      height: 160px;
+      display: block;
+      margin: 0 auto 14px;
+    }
+    .card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+    }
+    .card .desc {
+      font-size: 0.8rem;
+      color: #8899aa;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .card .animations {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      justify-content: center;
+    }
+    .card .animations span {
+      background: #1e2d45;
+      font-size: 0.68rem;
+      padding: 2px 7px;
+      border-radius: 10px;
+    }
+    .card:nth-child(1) .animations span { color: #FFD700; }
+    .card:nth-child(2) .animations span { color: #FF6B6B; }
+    .card:nth-child(3) .animations span { color: #00D2D3; }
+    .card:nth-child(4) .animations span { color: #FFA502; }
+    .card:nth-child(5) .animations span { color: #E17055; }
+    .card:nth-child(6) .animations span { color: #A855F7; }
+  </style>
+</head>
+<body>
+  <h1>Challey Animated Badges</h1>
+  <p class="subtitle">6 achievement badges with prestigious, medal-like animations</p>
+
+  <div class="grid">
+    <div class="card">
+      <object type="image/svg+xml" data="amazing-sibling.svg"></object>
+      <h3>Amazing Sibling</h3>
+      <div class="desc">Gold star spins with metallic shimmer</div>
+      <div class="animations">
+        <span>star spin</span><span>shimmer</span><span>rays pulse</span><span>ring glow</span><span>float</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <object type="image/svg+xml" data="kind-heart.svg"></object>
+      <h3>Kind Heart</h3>
+      <div class="desc">Heart beats with real lub-dub rhythm</div>
+      <div class="animations">
+        <span>heartbeat</span><span>shimmer</span><span>sparkle twinkle</span><span>ring glow</span><span>float</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <object type="image/svg+xml" data="best-helper.svg"></object>
+      <h3>Best Helper</h3>
+      <div class="desc">Hands shake in a friendly greeting</div>
+      <div class="animations">
+        <span>handshake</span><span>shimmer</span><span>sparkle</span><span>ring glow</span><span>float</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <object type="image/svg+xml" data="so-funny.svg"></object>
+      <h3>So Funny</h3>
+      <div class="desc">Face giggles, "Ha!" bubbles up</div>
+      <div class="animations">
+        <span>laugh shake</span><span>Ha! bounce</span><span>tear drop</span><span>mouth pulse</span><span>shimmer</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <object type="image/svg+xml" data="super-brave.svg"></object>
+      <h3>Super Brave</h3>
+      <div class="desc">Lightning flashes with power surge</div>
+      <div class="animations">
+        <span>lightning flash</span><span>shield pulse</span><span>sparks</span><span>shimmer</span><span>float</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <object type="image/svg+xml" data="team-player.svg"></object>
+      <h3>Team Player</h3>
+      <div class="desc">Team leans in, energy bolts connect</div>
+      <div class="animations">
+        <span>people pulse</span><span>lean in</span><span>bolt flash</span><span>shimmer</span><span>float</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

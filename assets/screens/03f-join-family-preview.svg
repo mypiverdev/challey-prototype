@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812" width="375" height="812">
+  <!-- Screen: 03f — Family preview after entering valid code (invite join flow) -->
+  <defs>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#1B2A4A" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="warmGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1B2A4A"/>
+      <stop offset="60%" stop-color="#2E86AB"/>
+      <stop offset="100%" stop-color="#E8F4F8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Gradient background -->
+  <rect width="375" height="812" fill="url(#warmGrad)"/>
+
+  <!-- Status bar -->
+  <text x="30" y="52" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="white">9:41</text>
+  <g transform="translate(295, 40)">
+    <rect x="0" y="0" width="22" height="11" rx="2" fill="none" stroke="white" stroke-width="1.2"/>
+    <rect x="2" y="2" width="15" height="7" rx="1" fill="white"/>
+    <rect x="22" y="3" width="2" height="5" rx="1" fill="white" opacity="0.4"/>
+  </g>
+
+  <!-- Back arrow -->
+  <g transform="translate(28, 85)">
+    <path d="M10 0 L0 0 M3 -5 L0 0 L3 5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Subtle sparkle decorations -->
+  <text x="50" y="120" font-family="Inter, sans-serif" font-size="20" opacity="0.15">✨</text>
+  <text x="310" y="160" font-family="Inter, sans-serif" font-size="16" opacity="0.12">✨</text>
+  <text x="80" y="280" font-family="Inter, sans-serif" font-size="14" opacity="0.1">⭐</text>
+  <text x="300" y="340" font-family="Inter, sans-serif" font-size="12" opacity="0.1">✨</text>
+
+  <!-- Code accepted badge -->
+  <g transform="translate(147, 108)">
+    <rect x="0" y="0" width="80" height="26" rx="13" fill="rgba(40,167,69,0.3)"/>
+    <text x="40" y="18" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="white">✓ Code valid</text>
+  </g>
+
+  <!-- Family pet mascot -->
+  <g transform="translate(187, 195)">
+    <circle cx="0" cy="0" r="55" fill="white" opacity="0.08"/>
+    <circle cx="0" cy="0" r="40" fill="white" opacity="0.06"/>
+    <text x="0" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-size="72">🐙</text>
+  </g>
+
+  <!-- Welcome text -->
+  <text x="187" y="280" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="white" opacity="0.7">You're joining</text>
+
+  <!-- Family name (big, bold) -->
+  <text x="187" y="320" text-anchor="middle" font-family="Inter, sans-serif" font-size="28" font-weight="800" fill="white">The Johnson Family</text>
+
+  <!-- Role badge -->
+  <g transform="translate(127, 340)">
+    <rect x="0" y="0" width="120" height="30" rx="15" fill="white" opacity="0.15"/>
+    <text x="60" y="20" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="white">Joining as: Co-Parent</text>
+  </g>
+
+  <!-- ===== FAMILY MEMBERS CARD ===== -->
+  <g filter="url(#cardShadow)">
+    <rect x="32" y="395" width="311" height="190" rx="24" fill="white"/>
+  </g>
+
+  <text x="56" y="425" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#888" letter-spacing="1">YOUR NEW FAMILY</text>
+
+  <!-- Adults row -->
+  <g transform="translate(56, 444)">
+    <!-- Mike -->
+    <circle cx="0" cy="0" r="18" fill="#2E86AB"/>
+    <text x="0" y="5" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="white">M</text>
+    <text x="0" y="28" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#1B2A4A">Mike</text>
+    <text x="0" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" fill="#888">Dad</text>
+    <!-- Sarah -->
+    <circle cx="70" cy="0" r="18" fill="#F18F01"/>
+    <text x="70" y="5" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="white">S</text>
+    <text x="70" y="28" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#1B2A4A">Sarah</text>
+    <text x="70" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" fill="#888">Mom</text>
+  </g>
+
+  <!-- Divider -->
+  <rect x="56" y="496" width="263" height="1" fill="#E8ECF0"/>
+
+  <!-- Kids row -->
+  <text x="56" y="515" font-family="Inter, sans-serif" font-size="9" font-weight="500" fill="#B0B8C0" letter-spacing="0.5">KIDS</text>
+  <g transform="translate(56, 530)">
+    <!-- Maggie -->
+    <circle cx="0" cy="0" r="16" fill="#A855F7"/>
+    <text x="0" y="5" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="white">M</text>
+    <text x="0" y="26" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" fill="#1B2A4A">Maggie</text>
+    <!-- Jake -->
+    <circle cx="58" cy="0" r="16" fill="#FF6B6B"/>
+    <text x="58" y="5" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="white">J</text>
+    <text x="58" y="26" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" fill="#1B2A4A">Jake</text>
+    <!-- Lily -->
+    <circle cx="116" cy="0" r="16" fill="#2E86AB"/>
+    <text x="116" y="5" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="white">L</text>
+    <text x="116" y="26" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" fill="#1B2A4A">Lily</text>
+    <!-- "You" placeholder -->
+    <circle cx="186" cy="0" r="16" fill="none" stroke="#2E86AB" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="186" y="3" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#2E86AB">+</text>
+    <text x="186" y="26" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" fill="#2E86AB" font-weight="600">You!</text>
+  </g>
+
+  <!-- ===== WHAT YOU CAN DO ===== -->
+  <g transform="translate(32, 605)">
+    <rect x="0" y="0" width="311" height="88" rx="16" fill="white" opacity="0.12"/>
+    <text x="20" y="24" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="white" opacity="0.9">As a Co-Parent you can:</text>
+    <text x="20" y="44" font-family="Inter, sans-serif" font-size="11" fill="white" opacity="0.7">✓  Create and assign chores</text>
+    <text x="20" y="60" font-family="Inter, sans-serif" font-size="11" fill="white" opacity="0.7">✓  Verify completed chores</text>
+    <text x="20" y="76" font-family="Inter, sans-serif" font-size="11" fill="white" opacity="0.7">✓  Manage rewards and give badges</text>
+  </g>
+
+  <!-- ===== JOIN BUTTON ===== -->
+  <rect x="32" y="712" width="311" height="56" rx="16" fill="white"/>
+  <text x="187" y="746" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="700" fill="#2E86AB">Join The Johnson Family →</text>
+
+  <!-- Already have an account link -->
+  <text x="187" y="786" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="white" opacity="0.5">Already have an account? Sign in</text>
+
+  <!-- Home indicator -->
+  <rect x="120" y="800" width="135" height="5" rx="2.5" fill="white" opacity="0.15"/>
+</svg>

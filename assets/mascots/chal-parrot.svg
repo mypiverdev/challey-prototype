@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Chal: Parrot — Chatty, colorful, encouraging -->
+  <defs>
+    <linearGradient id="parrotBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00B894"/>
+      <stop offset="100%" stop-color="#00896A"/>
+    </linearGradient>
+    <linearGradient id="parrotWing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0984E3"/>
+      <stop offset="100%" stop-color="#0670C4"/>
+    </linearGradient>
+    <linearGradient id="parrotHead" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDCB6E"/>
+      <stop offset="100%" stop-color="#F0B429"/>
+    </linearGradient>
+    <radialGradient id="parrotCheek" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF9FF3" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#FF9FF3" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="parrotShadow">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#005A42" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Shadow -->
+  <ellipse cx="200" cy="378" rx="65" ry="8" fill="#005A42" opacity="0.1"/>
+
+  <!-- Tail feathers -->
+  <path d="M160 340 Q140 380 125 395" fill="none" stroke="#E17055" stroke-width="10" stroke-linecap="round"/>
+  <path d="M175 340 Q165 385 155 398" fill="none" stroke="#00B894" stroke-width="10" stroke-linecap="round"/>
+  <path d="M190 340 Q188 388 185 398" fill="none" stroke="#0984E3" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- Body -->
+  <ellipse cx="200" cy="290" rx="70" ry="75" fill="url(#parrotBody)" filter="url(#parrotShadow)"/>
+
+  <!-- Belly (lighter) -->
+  <ellipse cx="200" cy="305" rx="42" ry="48" fill="#55EFC4" opacity="0.4"/>
+
+  <!-- Wings -->
+  <path d="M130 260 Q110 300 120 340 Q135 325 140 290 Q145 265 140 255" fill="url(#parrotWing)"/>
+  <path d="M270 260 Q290 300 280 340 Q265 325 260 290 Q255 265 260 255" fill="url(#parrotWing)"/>
+  <!-- Wing feather detail -->
+  <path d="M122 315 Q130 320 138 310" fill="none" stroke="#0670C4" stroke-width="1.5" opacity="0.4"/>
+  <path d="M125 300 Q132 305 139 296" fill="none" stroke="#0670C4" stroke-width="1.5" opacity="0.4"/>
+  <path d="M278 315 Q270 320 262 310" fill="none" stroke="#0670C4" stroke-width="1.5" opacity="0.4"/>
+  <path d="M275 300 Q268 305 261 296" fill="none" stroke="#0670C4" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Feet (perching) -->
+  <g fill="#E8A930" stroke="#D49520" stroke-width="1.5">
+    <path d="M170 360 L160 375 M170 360 L170 378 M170 360 L180 375" fill="none"/>
+    <path d="M230 360 L220 375 M230 360 L230 378 M230 360 L240 375" fill="none"/>
+  </g>
+
+  <!-- Head -->
+  <ellipse cx="200" cy="170" rx="75" ry="72" fill="url(#parrotHead)" filter="url(#parrotShadow)"/>
+
+  <!-- Head crest feathers -->
+  <path d="M200 100 Q195 65 180 50" fill="none" stroke="#E17055" stroke-width="6" stroke-linecap="round"/>
+  <path d="M205 100 Q210 60 215 42" fill="none" stroke="#FDCB6E" stroke-width="6" stroke-linecap="round"/>
+  <path d="M210 102 Q225 70 240 58" fill="none" stroke="#00B894" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Green cap on head -->
+  <path d="M140 150 Q200 115 260 150" fill="url(#parrotBody)" opacity="0.6"/>
+
+  <!-- Eyes (round, alert parrot eyes) -->
+  <circle cx="175" cy="168" r="20" fill="white"/>
+  <circle cx="225" cy="168" r="20" fill="white"/>
+  <circle cx="178" cy="170" r="12" fill="#1B2A4A"/>
+  <circle cx="222" cy="170" r="12" fill="#1B2A4A"/>
+  <!-- Eye ring (parrot feature) -->
+  <circle cx="175" cy="168" r="20" fill="none" stroke="white" stroke-width="3"/>
+  <circle cx="225" cy="168" r="20" fill="none" stroke="white" stroke-width="3"/>
+  <!-- Eye highlights -->
+  <circle cx="182" cy="164" r="5" fill="white" opacity="0.9"/>
+  <circle cx="226" cy="164" r="5" fill="white" opacity="0.9"/>
+
+  <!-- Beak (curved parrot beak) -->
+  <path d="M188 195 Q200 190 212 195 Q208 215 200 222 Q192 215 188 195 Z" fill="#E8A930"/>
+  <path d="M192 198 Q200 195 208 198 Q206 208 200 212 Q194 208 192 198 Z" fill="#D49520" opacity="0.5"/>
+  <!-- Beak line -->
+  <path d="M192 200 Q200 203 208 200" fill="none" stroke="#B8820E" stroke-width="1.5"/>
+
+  <!-- Cheek blush -->
+  <ellipse cx="152" cy="185" rx="14" ry="10" fill="url(#parrotCheek)"/>
+  <ellipse cx="248" cy="185" rx="14" ry="10" fill="url(#parrotCheek)"/>
+
+  <!-- Challey star badge on chest -->
+  <g transform="translate(200, 280)">
+    <circle cx="0" cy="0" r="14" fill="#2E86AB"/>
+    <path d="M0,-8 L2.5,-3 L8,-3 L3.5,1 L5,7 L0,3.5 L-5,7 L-3.5,1 L-8,-3 L-2.5,-3 Z" fill="#F18F01"/>
+  </g>
+</svg>

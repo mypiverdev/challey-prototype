@@ -1,0 +1,13 @@
+<svg width="512" height="512" viewBox="0 0 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- Concept E: The Communication Loop -->
+<!-- Emphasizing the parent-child communication cycle. Two distinct forms, one navy and one ocean blue, flow together to create a dynamic 'C'. It represents the back-and-forth of assigning, completing, and recognizing chores. -->
+<defs>
+    <linearGradient id="grad_e" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#003366;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#002244;stop-opacity:1" />
+    </linearGradient>
+</defs>
+<rect width="512" height="512" rx="90" fill="url(#grad_e)"/>
+<path d="M364.667 256C364.667 196.58 315.42 147.333 256 147.333C196.58 147.333 147.333 196.58 147.333 256C147.333 315.42 196.58 364.667 256 364.667" stroke="white" stroke-width="40" stroke-linecap="round"/>
+<path d="M256 364.667C315.42 364.667 364.667 315.42 364.667 256" stroke="#3399FF" stroke-width="40" stroke-linecap="round"/>
+</svg>

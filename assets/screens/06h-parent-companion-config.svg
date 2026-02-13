@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812" width="375" height="812">
+  <!-- Screen: Companion Config — Chal message settings -->
+  <defs>
+    <filter id="btnShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#1B2A4A" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="375" height="812" fill="#F5F7FA"/>
+
+  <!-- Status bar -->
+  <text x="30" y="52" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#1B2A4A">9:41</text>
+  <g transform="translate(295, 40)">
+    <rect x="0" y="0" width="22" height="11" rx="2" fill="none" stroke="#1B2A4A" stroke-width="1.2"/>
+    <rect x="2" y="2" width="15" height="7" rx="1" fill="#1B2A4A"/>
+    <rect x="22" y="3" width="2" height="5" rx="1" fill="#1B2A4A" opacity="0.4"/>
+  </g>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="375" height="200" fill="#1B2A4A"/>
+  <g transform="translate(28, 88)">
+    <path d="M10 0 L0 0 M3 -5 L0 0 L3 5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="28" y="130" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="white">Configure Chal</text>
+  <text x="28" y="155" font-family="Inter, sans-serif" font-size="14" fill="white" opacity="0.5">Manage companion messages</text>
+  <!-- Chal icon -->
+  <text x="28" y="185" font-family="Inter, sans-serif" font-size="28">🐙</text>
+  <text x="68" y="185" font-family="Inter, sans-serif" font-size="13" fill="white" opacity="0.5">Your family's companion</text>
+
+  <!-- Message Types Section -->
+  <text x="28" y="230" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#888" letter-spacing="1">MESSAGE TYPES</text>
+
+  <!-- Toggle 1: Chore reminders -->
+  <rect x="24" y="240" width="327" height="48" rx="12" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+  <text x="44" y="260" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#1B2A4A">Chore reminders</text>
+  <text x="44" y="278" font-family="Inter, sans-serif" font-size="10" fill="#888">Nudge kids when chores are due</text>
+  <rect x="300" y="254" width="36" height="20" rx="10" fill="#2E86AB"/>
+  <circle cx="326" cy="264" r="8" fill="white"/>
+
+  <!-- Toggle 2: Encouragement -->
+  <rect x="24" y="294" width="327" height="48" rx="12" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+  <text x="44" y="314" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#1B2A4A">Encouragement</text>
+  <text x="44" y="332" font-family="Inter, sans-serif" font-size="10" fill="#888">Celebrate streaks and progress</text>
+  <rect x="300" y="308" width="36" height="20" rx="10" fill="#2E86AB"/>
+  <circle cx="326" cy="318" r="8" fill="white"/>
+
+  <!-- Toggle 3: Reward alerts -->
+  <rect x="24" y="348" width="327" height="48" rx="12" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+  <text x="44" y="368" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#1B2A4A">Reward alerts</text>
+  <text x="44" y="386" font-family="Inter, sans-serif" font-size="10" fill="#888">Let kids know when they can redeem</text>
+  <rect x="300" y="362" width="36" height="20" rx="10" fill="#2E86AB"/>
+  <circle cx="326" cy="372" r="8" fill="white"/>
+
+  <!-- Toggle 4: Morning check-in -->
+  <rect x="24" y="402" width="327" height="48" rx="12" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+  <text x="44" y="422" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#1B2A4A">Morning check-in</text>
+  <text x="44" y="440" font-family="Inter, sans-serif" font-size="10" fill="#888">Daily greeting with today's chores</text>
+  <rect x="300" y="416" width="36" height="20" rx="10" fill="#E8ECF0"/>
+  <circle cx="312" cy="426" r="8" fill="white"/>
+
+  <!-- Toggle 5: Bedtime recap -->
+  <rect x="24" y="456" width="327" height="48" rx="12" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+  <text x="44" y="476" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#1B2A4A">Bedtime recap</text>
+  <text x="44" y="494" font-family="Inter, sans-serif" font-size="10" fill="#888">Nightly summary of the day's progress</text>
+  <rect x="300" y="470" width="36" height="20" rx="10" fill="#E8ECF0"/>
+  <circle cx="312" cy="480" r="8" fill="white"/>
+
+  <!-- Suggestion Mode -->
+  <text x="28" y="535" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#888" letter-spacing="1">SUGGESTION MODE</text>
+
+  <rect x="24" y="545" width="327" height="42" rx="12" fill="white" stroke="#2E86AB" stroke-width="2"/>
+  <circle cx="44" cy="566" r="8" fill="#2E86AB"/>
+  <circle cx="44" cy="566" r="3" fill="white"/>
+  <text x="62" y="570" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#1B2A4A">Friendly &amp; fun</text>
+
+  <rect x="24" y="593" width="327" height="42" rx="12" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+  <circle cx="44" cy="614" r="8" fill="none" stroke="#DDE4E8" stroke-width="1.5"/>
+  <text x="62" y="618" font-family="Inter, sans-serif" font-size="13" fill="#1B2A4A">Motivational coach</text>
+
+  <rect x="24" y="641" width="327" height="42" rx="12" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+  <circle cx="44" cy="662" r="8" fill="none" stroke="#DDE4E8" stroke-width="1.5"/>
+  <text x="62" y="666" font-family="Inter, sans-serif" font-size="13" fill="#1B2A4A">Minimal / quiet</text>
+
+  <!-- Save Button -->
+  <g filter="url(#btnShadow)">
+    <rect x="24" y="705" width="327" height="50" rx="14" fill="#2E86AB"/>
+    <text x="187" y="736" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="white">Save Preferences</text>
+  </g>
+
+  <!-- Home indicator -->
+  <rect x="120" y="800" width="135" height="5" rx="2.5" fill="#1B2A4A" opacity="0.15"/>
+</svg>

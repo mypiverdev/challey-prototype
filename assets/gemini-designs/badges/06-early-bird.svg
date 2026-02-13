@@ -1,0 +1,15 @@
+<svg width="256" height="256" viewBox="0 0 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- Badge 6: Early Bird -->
+<defs>
+    <filter id="shadow-badge6" x="-10%" y="-10%" width="120%" height="120%">
+        <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#003366" flood-opacity="0.2"/>
+    </filter>
+</defs>
+<g filter="url(#shadow-badge6)">
+    <path d="M128 38 L218 108 L188 208 L68 208 L38 108 Z" fill="#003366"/>
+    <path d="M128 38 L218 108 L188 208 L68 208 L38 108 Z" stroke="#3399FF" stroke-width="8"/>
+    <path d="M100 138 L128 110 L156 138" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M128 110 V 160" stroke="white" stroke-width="12" stroke-linecap="round"/>
+    <path d="M100 160 H 156" stroke="white" stroke-width="12" stroke-linecap="round"/>
+</g>
+</svg>

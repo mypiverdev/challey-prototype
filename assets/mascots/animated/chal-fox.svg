@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Chal: Fox — Clever, strategic, quick thinker -->
+  <defs>
+    <linearGradient id="foxBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E17055"/>
+      <stop offset="100%" stop-color="#D35137"/>
+    </linearGradient>
+    <linearGradient id="foxDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C44232"/>
+      <stop offset="100%" stop-color="#A33528"/>
+    </linearGradient>
+    <radialGradient id="foxCheek" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF9FF3" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#FF9FF3" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="foxShadow">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#8B2920" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <style>
+    /* Tail swish — fluffy tail rotates gently around its base */
+    @keyframes fox-tail-swish {
+      0%, 100% { transform: rotate(-8deg); }
+      50% { transform: rotate(8deg); }
+    }
+    .fox-tail-swish {
+      animation: fox-tail-swish 2s ease-in-out infinite;
+      transform-origin: 275px 290px;
+    }
+
+    /* Ear perk — ears do a quick perk up */
+    @keyframes fox-ear-perk {
+      0%, 90%, 100% { transform: translateY(0); }
+      93%, 97% { transform: translateY(-4px); }
+    }
+    .fox-ear-perk {
+      animation: fox-ear-perk 4s ease-in-out infinite;
+    }
+
+    /* Sly eye — pupils shift side-to-side */
+    @keyframes fox-sly-eye {
+      0%, 100% { transform: translateX(-2px); }
+      50% { transform: translateX(2px); }
+    }
+    .fox-sly-eye {
+      animation: fox-sly-eye 3s ease-in-out infinite;
+    }
+
+    /* Scarf flutter — scarf sways gently */
+    @keyframes fox-scarf-flutter {
+      0%, 100% { transform: translate(200px, 250px) rotate(-2deg); }
+      50% { transform: translate(200px, 250px) rotate(2deg); }
+    }
+    .fox-scarf-flutter {
+      animation: fox-scarf-flutter 2.5s ease-in-out infinite;
+      transform-origin: 0px 0px;
+    }
+
+    /* Whisker twitch — whiskers translate slightly */
+    @keyframes fox-whisker-twitch-left {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(-1px); }
+    }
+    @keyframes fox-whisker-twitch-right {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(1px); }
+    }
+    .fox-whisker-twitch-left {
+      animation: fox-whisker-twitch-left 1s ease-in-out infinite;
+    }
+    .fox-whisker-twitch-right {
+      animation: fox-whisker-twitch-right 1s ease-in-out infinite;
+    }
+  </style>
+
+  <ellipse cx="200" cy="378" rx="75" ry="9" fill="#8B2920" opacity="0.1"/>
+  <!-- Fluffy tail -->
+  <g class="fox-tail-swish">
+    <path d="M275 290 Q340 250 350 200 Q355 170 335 190 Q310 220 290 260 Q285 275 280 285" fill="url(#foxBody)"/>
+    <path d="M335 195 Q340 185 330 192" fill="#FFF5E0" opacity="0.7"/>
+  </g>
+  <!-- Body -->
+  <ellipse cx="200" cy="305" rx="78" ry="65" fill="url(#foxBody)" filter="url(#foxShadow)"/>
+  <ellipse cx="200" cy="318" rx="48" ry="42" fill="#FFF5E0"/>
+  <!-- Dark paws -->
+  <ellipse cx="155" cy="362" rx="18" ry="14" fill="#3D2512"/>
+  <ellipse cx="245" cy="362" rx="18" ry="14" fill="#3D2512"/>
+  <!-- Head -->
+  <ellipse cx="200" cy="180" rx="85" ry="80" fill="url(#foxBody)" filter="url(#foxShadow)"/>
+  <ellipse cx="185" cy="140" rx="40" ry="28" fill="white" opacity="0.06"/>
+  <!-- Pointed ears -->
+  <g class="fox-ear-perk">
+    <polygon points="130,130 100,50 162,110" fill="url(#foxBody)"/>
+    <polygon points="270,130 300,50 238,110" fill="url(#foxBody)"/>
+    <polygon points="133,122 110,65 155,112" fill="#FFB8A0" opacity="0.5"/>
+    <polygon points="267,122 290,65 245,112" fill="#FFB8A0" opacity="0.5"/>
+  </g>
+  <!-- White face -->
+  <path d="M155 160 Q200 145 245 160 Q235 205 200 225 Q165 205 155 160" fill="#FFF5E0"/>
+  <!-- Eyes — whites and outer structure -->
+  <ellipse cx="172" cy="178" rx="20" ry="22" fill="white"/>
+  <ellipse cx="228" cy="178" rx="20" ry="22" fill="white"/>
+  <!-- Pupils — sly side-to-side movement -->
+  <g class="fox-sly-eye">
+    <ellipse cx="176" cy="181" rx="12" ry="14" fill="#F18F01"/>
+    <ellipse cx="224" cy="181" rx="12" ry="14" fill="#F18F01"/>
+    <ellipse cx="176" cy="181" rx="6" ry="10" fill="#1B2A4A"/>
+    <ellipse cx="224" cy="181" rx="6" ry="10" fill="#1B2A4A"/>
+    <circle cx="180" cy="175" r="5" fill="white" opacity="0.9"/>
+    <circle cx="228" cy="175" r="5" fill="white" opacity="0.9"/>
+    <circle cx="173" cy="185" r="2.5" fill="white" opacity="0.4"/>
+    <circle cx="221" cy="185" r="2.5" fill="white" opacity="0.4"/>
+  </g>
+  <!-- Eyebrows -->
+  <path d="M155 162 Q168 155 185 160" fill="none" stroke="#A33528" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M215 160 Q232 155 245 162" fill="none" stroke="#A33528" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Nose -->
+  <ellipse cx="200" cy="205" rx="10" ry="7" fill="#3D2512"/>
+  <ellipse cx="200" cy="203" rx="4" ry="3" fill="#5A3A1E" opacity="0.3"/>
+  <!-- Mouth -->
+  <path d="M200 212 L194 220" fill="none" stroke="#8B4030" stroke-width="2" stroke-linecap="round"/>
+  <path d="M200 212 L206 220" fill="none" stroke="#8B4030" stroke-width="2" stroke-linecap="round"/>
+  <path d="M186 222 Q194 228 200 226" fill="none" stroke="#8B4030" stroke-width="2" stroke-linecap="round"/>
+  <path d="M214 222 Q206 228 200 226" fill="none" stroke="#8B4030" stroke-width="2" stroke-linecap="round"/>
+  <!-- Whiskers -->
+  <g class="fox-whisker-twitch-left" stroke="#D35137" stroke-width="1.2" fill="none" stroke-linecap="round">
+    <line x1="125" y1="200" x2="162" y2="208"/>
+    <line x1="120" y1="215" x2="160" y2="215"/>
+  </g>
+  <g class="fox-whisker-twitch-right" stroke="#D35137" stroke-width="1.2" fill="none" stroke-linecap="round">
+    <line x1="275" y1="200" x2="238" y2="208"/>
+    <line x1="280" y1="215" x2="240" y2="215"/>
+  </g>
+  <!-- Cheek blush -->
+  <ellipse cx="148" cy="200" rx="14" ry="9" fill="url(#foxCheek)"/>
+  <ellipse cx="252" cy="200" rx="14" ry="9" fill="url(#foxCheek)"/>
+  <!-- Scarf -->
+  <g class="fox-scarf-flutter">
+    <path d="M-60,-8 Q-30,-18 0,-12 Q30,-18 60,-8 Q50,5 30,8 L20,30 Q10,35 0,30 L-10,30 Q-20,35 -30,8 Q-50,5 -60,-8 Z" fill="#2E86AB" opacity="0.85"/>
+    <path d="M-10,12 L-15,30 Q-5,34 5,30 L10,12" fill="#2E86AB"/>
+    <path d="M-4,18 L0,22 L8,14" fill="none" stroke="#F18F01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

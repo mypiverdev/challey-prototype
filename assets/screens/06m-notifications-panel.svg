@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812" width="375" height="812">
+  <!-- Screen: Notifications Panel — Overlay -->
+  <defs>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#1B2A4A" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <rect width="375" height="812" fill="#F5F7FA"/>
+
+  <!-- Status bar -->
+  <text x="30" y="52" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#1B2A4A">9:41</text>
+  <g transform="translate(295, 40)">
+    <rect x="0" y="0" width="22" height="11" rx="2" fill="none" stroke="#1B2A4A" stroke-width="1.2"/>
+    <rect x="2" y="2" width="15" height="7" rx="1" fill="#1B2A4A"/>
+    <rect x="22" y="3" width="2" height="5" rx="1" fill="#1B2A4A" opacity="0.4"/>
+  </g>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="375" height="130" fill="#1B2A4A"/>
+  <g transform="translate(28, 88)">
+    <path d="M10 0 L0 0 M3 -5 L0 0 L3 5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="60" y="95" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="white">Notifications</text>
+  <rect x="175" y="80" width="30" height="20" rx="10" fill="#FF6B6B"/>
+  <text x="190" y="94" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="white">7</text>
+  <text x="335" y="95" text-anchor="end" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="white" opacity="0.5">Mark all read</text>
+
+  <!-- Notification 1 — Chore submitted (unread) -->
+  <g filter="url(#cardShadow)">
+    <rect x="0" y="140" width="375" height="70" fill="white"/>
+    <rect x="0" y="140" width="4" height="70" fill="#F18F01"/>
+    <circle cx="36" cy="170" r="5" fill="#F18F01"/>
+    <circle cx="56" cy="170" r="14" fill="#A855F7"/>
+    <text x="56" y="175" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="white">M</text>
+    <text x="80" y="165" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#1B2A4A">Maggie submitted a chore</text>
+    <text x="80" y="183" font-family="Inter, sans-serif" font-size="11" fill="#888">"Clean the garage" — needs review</text>
+    <text x="335" y="165" text-anchor="end" font-family="Inter, sans-serif" font-size="10" fill="#B0B8C0">15m</text>
+  </g>
+
+  <!-- Notification 2 — Swap request (unread) -->
+  <g filter="url(#cardShadow)">
+    <rect x="0" y="212" width="375" height="70" fill="white"/>
+    <rect x="0" y="212" width="4" height="70" fill="#2E86AB"/>
+    <circle cx="36" cy="242" r="5" fill="#2E86AB"/>
+    <circle cx="56" cy="242" r="14" fill="#A855F7"/>
+    <text x="56" y="247" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="white">M</text>
+    <text x="80" y="237" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#1B2A4A">Maggie requested a swap</text>
+    <text x="80" y="255" font-family="Inter, sans-serif" font-size="11" fill="#888">Garage → Dishes — tap to review</text>
+    <text x="335" y="237" text-anchor="end" font-family="Inter, sans-serif" font-size="10" fill="#B0B8C0">30m</text>
+  </g>
+
+  <!-- Notification 3 — Chore submitted (unread) -->
+  <g filter="url(#cardShadow)">
+    <rect x="0" y="284" width="375" height="70" fill="white"/>
+    <rect x="0" y="284" width="4" height="70" fill="#F18F01"/>
+    <circle cx="36" cy="314" r="5" fill="#F18F01"/>
+    <circle cx="56" cy="314" r="14" fill="#FF6B6B"/>
+    <text x="56" y="319" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="white">J</text>
+    <text x="80" y="309" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#1B2A4A">Jake submitted a chore</text>
+    <text x="80" y="327" font-family="Inter, sans-serif" font-size="11" fill="#888">"Walk the dog" — needs review</text>
+    <text x="335" y="309" text-anchor="end" font-family="Inter, sans-serif" font-size="10" fill="#B0B8C0">1h</text>
+  </g>
+
+  <!-- Notification 4 — Reward redeemed (unread) -->
+  <g filter="url(#cardShadow)">
+    <rect x="0" y="356" width="375" height="70" fill="white"/>
+    <rect x="0" y="356" width="4" height="70" fill="#28a745"/>
+    <circle cx="36" cy="386" r="5" fill="#28a745"/>
+    <circle cx="56" cy="386" r="14" fill="#2E86AB"/>
+    <text x="56" y="391" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="white">L</text>
+    <text x="80" y="381" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#1B2A4A">Lily redeemed a reward</text>
+    <text x="80" y="399" font-family="Inter, sans-serif" font-size="11" fill="#888">🎮 30min Gaming — 30 pts</text>
+    <text x="335" y="381" text-anchor="end" font-family="Inter, sans-serif" font-size="10" fill="#B0B8C0">2h</text>
+  </g>
+
+  <!-- Notification 5 — Streak (unread) -->
+  <g filter="url(#cardShadow)">
+    <rect x="0" y="428" width="375" height="70" fill="white"/>
+    <rect x="0" y="428" width="4" height="70" fill="#FF6B6B"/>
+    <circle cx="36" cy="458" r="5" fill="#FF6B6B"/>
+    <circle cx="56" cy="458" r="14" fill="#FF6B6B"/>
+    <text x="56" y="463" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="white">J</text>
+    <text x="80" y="453" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#1B2A4A">Jake hit a 7-day streak!</text>
+    <text x="80" y="471" font-family="Inter, sans-serif" font-size="11" fill="#888">🔥 Walk the dog every day</text>
+    <text x="335" y="453" text-anchor="end" font-family="Inter, sans-serif" font-size="10" fill="#B0B8C0">3h</text>
+  </g>
+
+  <!-- Divider: Earlier -->
+  <text x="28" y="522" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#888" letter-spacing="1">EARLIER</text>
+
+  <!-- Notification 6 — Wishlist (read) -->
+  <rect x="0" y="532" width="375" height="70" fill="#F5F7FA"/>
+  <circle cx="56" cy="562" r="14" fill="#A855F7" opacity="0.5"/>
+  <text x="56" y="567" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="white">M</text>
+  <text x="80" y="557" font-family="Inter, sans-serif" font-size="13" fill="#888">Maggie added to wishlist</text>
+  <text x="80" y="575" font-family="Inter, sans-serif" font-size="11" fill="#B0B8C0">🎨 Art supplies set</text>
+  <text x="335" y="557" text-anchor="end" font-family="Inter, sans-serif" font-size="10" fill="#B0B8C0">Yesterday</text>
+
+  <!-- Notification 7 — PIN forgotten (read) -->
+  <rect x="0" y="604" width="375" height="70" fill="#F5F7FA"/>
+  <circle cx="56" cy="634" r="14" fill="#2E86AB" opacity="0.5"/>
+  <text x="56" y="639" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="white">L</text>
+  <text x="80" y="629" font-family="Inter, sans-serif" font-size="13" fill="#888">Lily forgot their PIN</text>
+  <text x="80" y="647" font-family="Inter, sans-serif" font-size="11" fill="#B0B8C0">Tap to reset</text>
+  <text x="335" y="629" text-anchor="end" font-family="Inter, sans-serif" font-size="10" fill="#B0B8C0">2 days</text>
+
+  <!-- Home indicator -->
+  <rect x="120" y="800" width="135" height="5" rx="2.5" fill="#1B2A4A" opacity="0.15"/>
+</svg>

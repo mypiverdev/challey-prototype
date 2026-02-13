@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812" width="375" height="812">
+  <!-- Screen: Kid Confirm PIN -->
+  <rect width="375" height="812" fill="#F5F7FA"/>
+
+  <!-- Status bar -->
+  <text x="30" y="52" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#1B2A4A">9:41</text>
+  <g transform="translate(295, 40)">
+    <rect x="0" y="0" width="22" height="11" rx="2" fill="none" stroke="#1B2A4A" stroke-width="1.2"/>
+    <rect x="2" y="2" width="15" height="7" rx="1" fill="#1B2A4A"/>
+    <rect x="22" y="3" width="2" height="5" rx="1" fill="#1B2A4A" opacity="0.4"/>
+  </g>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="375" height="200" fill="#1B2A4A"/>
+  <g transform="translate(28, 88)">
+    <path d="M10 0 L0 0 M3 -5 L0 0 L3 5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="28" y="145" font-family="Inter, sans-serif" font-size="28" font-weight="700" fill="white">Confirm Your PIN</text>
+  <text x="28" y="175" font-family="Inter, sans-serif" font-size="15" fill="white" opacity="0.6">Enter the same PIN again</text>
+
+  <!-- Lock icon -->
+  <g transform="translate(187.5, 270)">
+    <circle cx="0" cy="0" r="36" fill="#E0F8E8"/>
+    <!-- Lock body -->
+    <rect x="-12" y="-4" width="24" height="18" rx="3" fill="#28a745" opacity="0.3"/>
+    <rect x="-10" y="-2" width="20" height="14" rx="2" fill="none" stroke="#28a745" stroke-width="1.5"/>
+    <!-- Lock shackle -->
+    <path d="M-6 -2 L-6 -8 C-6 -14 6 -14 6 -8 L6 -2" fill="none" stroke="#28a745" stroke-width="2" stroke-linecap="round"/>
+    <!-- Keyhole -->
+    <circle cx="0" cy="5" r="2" fill="#28a745"/>
+  </g>
+
+  <!-- PIN dots (all 4 filled - about to confirm) -->
+  <g transform="translate(187.5, 345)">
+    <circle cx="-45" cy="0" r="10" fill="#28a745"/>
+    <circle cx="-15" cy="0" r="10" fill="#28a745"/>
+    <circle cx="15" cy="0" r="10" fill="#28a745"/>
+    <circle cx="45" cy="0" r="10" fill="#28a745"/>
+  </g>
+
+  <!-- Success hint -->
+  <text x="187.5" y="385" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#28a745" font-weight="500">PINs match!</text>
+
+  <!-- PIN Pad -->
+  <g transform="translate(187.5, 480)">
+    <g transform="translate(-90, 0)">
+      <circle cx="0" cy="0" r="30" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+      <text x="0" y="8" text-anchor="middle" font-family="Inter, sans-serif" font-size="24" font-weight="500" fill="#1B2A4A">1</text>
+    </g>
+    <g transform="translate(0, 0)">
+      <circle cx="0" cy="0" r="30" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+      <text x="0" y="8" text-anchor="middle" font-family="Inter, sans-serif" font-size="24" font-weight="500" fill="#1B2A4A">2</text>
+    </g>
+    <g transform="translate(90, 0)">
+      <circle cx="0" cy="0" r="30" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+      <text x="0" y="8" text-anchor="middle" font-family="Inter, sans-serif" font-size="24" font-weight="500" fill="#1B2A4A">3</text>
+    </g>
+    <g transform="translate(-90, 76)">
+      <circle cx="0" cy="0" r="30" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+      <text x="0" y="8" text-anchor="middle" font-family="Inter, sans-serif" font-size="24" font-weight="500" fill="#1B2A4A">4</text>
+    </g>
+    <g transform="translate(0, 76)">
+      <circle cx="0" cy="0" r="30" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+      <text x="0" y="8" text-anchor="middle" font-family="Inter, sans-serif" font-size="24" font-weight="500" fill="#1B2A4A">5</text>
+    </g>
+    <g transform="translate(90, 76)">
+      <circle cx="0" cy="0" r="30" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+      <text x="0" y="8" text-anchor="middle" font-family="Inter, sans-serif" font-size="24" font-weight="500" fill="#1B2A4A">6</text>
+    </g>
+    <g transform="translate(-90, 152)">
+      <circle cx="0" cy="0" r="30" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+      <text x="0" y="8" text-anchor="middle" font-family="Inter, sans-serif" font-size="24" font-weight="500" fill="#1B2A4A">7</text>
+    </g>
+    <g transform="translate(0, 152)">
+      <circle cx="0" cy="0" r="30" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+      <text x="0" y="8" text-anchor="middle" font-family="Inter, sans-serif" font-size="24" font-weight="500" fill="#1B2A4A">8</text>
+    </g>
+    <g transform="translate(90, 152)">
+      <circle cx="0" cy="0" r="30" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+      <text x="0" y="8" text-anchor="middle" font-family="Inter, sans-serif" font-size="24" font-weight="500" fill="#1B2A4A">9</text>
+    </g>
+    <g transform="translate(0, 228)">
+      <circle cx="0" cy="0" r="30" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+      <text x="0" y="8" text-anchor="middle" font-family="Inter, sans-serif" font-size="24" font-weight="500" fill="#1B2A4A">0</text>
+    </g>
+    <g transform="translate(90, 228)">
+      <circle cx="0" cy="0" r="30" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+      <path d="M8 -5 L-2 0 L8 5 M-2 0 L10 0" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <!-- Home indicator -->
+  <rect x="120" y="790" width="135" height="5" rx="2.5" fill="#1B2A4A" opacity="0.15"/>
+</svg>

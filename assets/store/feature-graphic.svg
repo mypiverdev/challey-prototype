@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 500" width="1024" height="500">
+  <!-- Google Play Feature Graphic (1024x500) -->
+  <defs>
+    <linearGradient id="fgBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B2A4A"/>
+      <stop offset="50%" stop-color="#1F3A5C"/>
+      <stop offset="100%" stop-color="#2E86AB"/>
+    </linearGradient>
+    <linearGradient id="fgCheck" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFB347"/>
+      <stop offset="100%" stop-color="#F18F01"/>
+    </linearGradient>
+    <filter id="fgGlow">
+      <feGaussianBlur stdDeviation="3" result="glow"/>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="fgShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0D1520" flood-opacity="0.3"/>
+    </filter>
+    <radialGradient id="fgParticle" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1024" height="500" fill="url(#fgBg)"/>
+
+  <!-- Ambient shapes -->
+  <circle cx="200" cy="150" r="300" fill="white" opacity="0.015"/>
+  <circle cx="850" cy="400" r="250" fill="#1B2A4A" opacity="0.15"/>
+  <circle cx="100" cy="400" r="150" fill="url(#fgParticle)"/>
+  <circle cx="900" cy="100" r="100" fill="url(#fgParticle)"/>
+
+  <!-- Left side: Logo coin -->
+  <g transform="translate(250, 220)" filter="url(#fgShadow)">
+    <circle cx="0" cy="0" r="110" fill="url(#fgBg)" stroke="#3A9BC5" stroke-width="2" stroke-opacity="0.3"/>
+    <circle cx="0" cy="0" r="95" fill="none" stroke="#3A9BC5" stroke-width="1.5" opacity="0.2"/>
+    <g filter="url(#fgGlow)">
+      <path d="M-38 5 L-12 32 L45 -28" fill="none" stroke="url(#fgCheck)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <!-- Sparkles -->
+    <path d="M60 -65 L63 -55 L73 -52 L63 -49 L60 -39 L57 -49 L47 -52 L57 -55 Z" fill="white" opacity="0.7"/>
+    <path d="M80 -40 L82 -35 L87 -33 L82 -31 L80 -26 L78 -31 L73 -33 L78 -35 Z" fill="white" opacity="0.5"/>
+  </g>
+
+  <!-- Right side: Text -->
+  <text x="550" y="180" font-family="Inter, -apple-system, sans-serif" font-size="72" font-weight="700" fill="white" letter-spacing="-2">challey</text>
+  <text x="555" y="230" font-family="Inter, -apple-system, sans-serif" font-size="20" font-weight="400" fill="white" opacity="0.5" letter-spacing="5">CHORES. POINTS. REWARDS.</text>
+
+  <!-- Feature highlights -->
+  <g transform="translate(555, 275)">
+    <!-- Pill 1 -->
+    <g>
+      <rect x="0" y="0" width="130" height="36" rx="18" fill="white" opacity="0.1"/>
+      <circle cx="18" cy="18" r="10" fill="#28a745" opacity="0.8"/>
+      <path d="M14 18 L17 21 L23 15" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="36" y="23" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="white" opacity="0.8">Track Chores</text>
+    </g>
+    <!-- Pill 2 -->
+    <g transform="translate(145, 0)">
+      <rect x="0" y="0" width="120" height="36" rx="18" fill="white" opacity="0.1"/>
+      <circle cx="18" cy="18" r="10" fill="#FFD700" opacity="0.8"/>
+      <text x="18" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#B8760A">$</text>
+      <text x="36" y="23" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="white" opacity="0.8">Earn Points</text>
+    </g>
+    <!-- Pill 3 -->
+    <g transform="translate(280, 0)">
+      <rect x="0" y="0" width="130" height="36" rx="18" fill="white" opacity="0.1"/>
+      <circle cx="18" cy="18" r="10" fill="#F18F01" opacity="0.8"/>
+      <text x="18" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="white">★</text>
+      <text x="36" y="23" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="white" opacity="0.8">Get Rewards</text>
+    </g>
+  </g>
+
+  <!-- Tagline -->
+  <text x="555" y="355" font-family="Inter, sans-serif" font-size="16" font-weight="300" fill="white" opacity="0.4">The family chore tracker that makes it fun</text>
+
+  <!-- Confetti accents -->
+  <rect x="480" y="60" width="6" height="8" rx="1.5" fill="#FFD700" opacity="0.3" transform="rotate(25, 483, 64)"/>
+  <rect x="920" y="80" width="5" height="7" rx="1" fill="#FF6B6B" opacity="0.25" transform="rotate(-20, 922, 83)"/>
+  <rect x="500" y="420" width="7" height="5" rx="1.5" fill="#A855F7" opacity="0.2" transform="rotate(40, 503, 422)"/>
+  <circle cx="950" cy="350" r="3" fill="#FFD700" opacity="0.2"/>
+  <circle cx="460" y="100" r="2.5" fill="#00D2D3" opacity="0.2"/>
+</svg>

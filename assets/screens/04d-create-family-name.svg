@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812" width="375" height="812">
+  <!-- Screen: Create Family - Name Your Family -->
+  <defs>
+    <filter id="btnShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#1B2A4A" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="375" height="812" fill="#F5F7FA"/>
+
+  <!-- Status bar -->
+  <text x="30" y="52" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#1B2A4A">9:41</text>
+  <g transform="translate(295, 40)">
+    <rect x="0" y="0" width="22" height="11" rx="2" fill="none" stroke="#1B2A4A" stroke-width="1.2"/>
+    <rect x="2" y="2" width="15" height="7" rx="1" fill="#1B2A4A"/>
+    <rect x="22" y="3" width="2" height="5" rx="1" fill="#1B2A4A" opacity="0.4"/>
+  </g>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="375" height="200" fill="#1B2A4A"/>
+  <g transform="translate(28, 88)">
+    <path d="M10 0 L0 0 M3 -5 L0 0 L3 5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="28" y="145" font-family="Inter, sans-serif" font-size="28" font-weight="700" fill="white">Name Your Family</text>
+  <text x="28" y="175" font-family="Inter, sans-serif" font-size="15" fill="white" opacity="0.6">This is how your family will appear</text>
+
+  <!-- Family Name Input -->
+  <text x="28" y="240" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#1B2A4A">Family Name</text>
+  <rect x="24" y="250" width="327" height="52" rx="12" fill="white" stroke="#2E86AB" stroke-width="2"/>
+  <text x="44" y="282" font-family="Inter, sans-serif" font-size="16" fill="#1B2A4A">The Johnson Family</text>
+  <!-- Cursor -->
+  <rect x="235" y="267" width="2" height="20" rx="1" fill="#2E86AB"/>
+
+  <!-- Family Code Preview -->
+  <rect x="24" y="330" width="327" height="90" rx="16" fill="#E8F4F8"/>
+  <text x="44" y="360" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#2E86AB">YOUR FAMILY CODE WILL BE:</text>
+  <!-- Code display -->
+  <g transform="translate(187.5, 395)">
+    <text x="0" y="5" text-anchor="middle" font-family="Inter, sans-serif" font-size="32" font-weight="800" fill="#2E86AB" letter-spacing="6">JOHN13</text>
+  </g>
+
+  <!-- Explanation -->
+  <rect x="24" y="450" width="327" height="65" rx="12" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+  <text x="44" y="475" font-family="Inter, sans-serif" font-size="12" fill="#888">📋 Share this code with your kids so they can join</text>
+  <text x="44" y="495" font-family="Inter, sans-serif" font-size="12" fill="#888">your family. Each kid also gets a member code.</text>
+
+  <!-- Create Family Button -->
+  <g filter="url(#btnShadow)">
+    <rect x="24" y="550" width="327" height="56" rx="14" fill="#2E86AB"/>
+    <text x="187.5" y="584" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="white">Create Family</text>
+  </g>
+
+  <!-- Home indicator -->
+  <rect x="120" y="790" width="135" height="5" rx="2.5" fill="#1B2A4A" opacity="0.15"/>
+</svg>

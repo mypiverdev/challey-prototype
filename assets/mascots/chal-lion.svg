@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Chal: Lion — Brave, leader, protector of the family -->
+  <defs>
+    <linearGradient id="lionBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDCB6E"/>
+      <stop offset="100%" stop-color="#E8A930"/>
+    </linearGradient>
+    <linearGradient id="lionMane" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4915E"/>
+      <stop offset="100%" stop-color="#B8763E"/>
+    </linearGradient>
+    <radialGradient id="lionCheek" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF9FF3" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#FF9FF3" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="lionShadow">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#8B5526" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Shadow -->
+  <ellipse cx="200" cy="380" rx="80" ry="9" fill="#8B5526" opacity="0.1"/>
+
+  <!-- Tail -->
+  <path d="M280 300 Q330 280 340 250 Q342 235 332 245 Q325 255 315 270" fill="none" stroke="url(#lionBody)" stroke-width="8" stroke-linecap="round"/>
+  <!-- Tail tuft -->
+  <ellipse cx="340" cy="246" rx="12" ry="10" fill="url(#lionMane)"/>
+
+  <!-- Body -->
+  <ellipse cx="200" cy="305" rx="80" ry="68" fill="url(#lionBody)" filter="url(#lionShadow)"/>
+
+  <!-- Belly -->
+  <ellipse cx="200" cy="318" rx="48" ry="40" fill="#FFF5E0"/>
+
+  <!-- Front paws -->
+  <ellipse cx="152" cy="365" rx="22" ry="16" fill="url(#lionBody)"/>
+  <ellipse cx="248" cy="365" rx="22" ry="16" fill="url(#lionBody)"/>
+
+  <!-- MANE (the crown!) -->
+  <g filter="url(#lionShadow)">
+    <!-- Outer mane puffs -->
+    <circle cx="130" cy="140" r="28" fill="url(#lionMane)"/>
+    <circle cx="145" cy="115" r="26" fill="url(#lionMane)"/>
+    <circle cx="170" cy="98" r="25" fill="url(#lionMane)"/>
+    <circle cx="200" cy="90" r="26" fill="url(#lionMane)"/>
+    <circle cx="230" cy="98" r="25" fill="url(#lionMane)"/>
+    <circle cx="255" cy="115" r="26" fill="url(#lionMane)"/>
+    <circle cx="270" cy="140" r="28" fill="url(#lionMane)"/>
+    <circle cx="275" cy="170" r="26" fill="url(#lionMane)"/>
+    <circle cx="270" cy="200" r="25" fill="url(#lionMane)"/>
+    <circle cx="258" cy="225" r="24" fill="url(#lionMane)"/>
+    <circle cx="125" cy="170" r="26" fill="url(#lionMane)"/>
+    <circle cx="130" cy="200" r="25" fill="url(#lionMane)"/>
+    <circle cx="142" cy="225" r="24" fill="url(#lionMane)"/>
+  </g>
+
+  <!-- Head -->
+  <ellipse cx="200" cy="175" rx="78" ry="75" fill="url(#lionBody)" filter="url(#lionShadow)"/>
+
+  <!-- Head highlight -->
+  <ellipse cx="185" cy="140" rx="38" ry="25" fill="white" opacity="0.06"/>
+
+  <!-- Face markings -->
+  <ellipse cx="200" cy="208" rx="40" ry="30" fill="#FFF5E0"/>
+
+  <!-- Ears (rounded, through mane) -->
+  <circle cx="140" cy="130" r="18" fill="url(#lionBody)"/>
+  <circle cx="260" cy="130" r="18" fill="url(#lionBody)"/>
+  <circle cx="141" cy="131" r="10" fill="#E8A0B5" opacity="0.4"/>
+  <circle cx="259" cy="131" r="10" fill="#E8A0B5" opacity="0.4"/>
+
+  <!-- Eyes (bold, confident) -->
+  <ellipse cx="175" cy="172" rx="20" ry="22" fill="white"/>
+  <ellipse cx="225" cy="172" rx="20" ry="22" fill="white"/>
+  <ellipse cx="178" cy="175" rx="12" ry="14" fill="#B8763E"/>
+  <ellipse cx="222" cy="175" rx="12" ry="14" fill="#B8763E"/>
+  <ellipse cx="178" cy="175" rx="6" ry="10" fill="#1B2A4A"/>
+  <ellipse cx="222" cy="175" rx="6" ry="10" fill="#1B2A4A"/>
+  <!-- Eye highlights -->
+  <circle cx="182" cy="169" r="5" fill="white" opacity="0.9"/>
+  <circle cx="226" cy="169" r="5" fill="white" opacity="0.9"/>
+  <circle cx="175" cy="179" r="2.5" fill="white" opacity="0.4"/>
+  <circle cx="219" cy="179" r="2.5" fill="white" opacity="0.4"/>
+
+  <!-- Confident eyebrows -->
+  <path d="M158 155 Q170 148 188 155" fill="none" stroke="#A67C20" stroke-width="3" stroke-linecap="round"/>
+  <path d="M212 155 Q230 148 242 155" fill="none" stroke="#A67C20" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Nose -->
+  <path d="M193 202 L200 210 L207 202 Z" fill="#3D2512" stroke="none"/>
+  <path d="M196 204 L200 208 L204 204" fill="#5A3A1E" opacity="0.3"/>
+
+  <!-- Mouth -->
+  <path d="M200 210 L195 218" fill="none" stroke="#8B5526" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M200 210 L205 218" fill="none" stroke="#8B5526" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M185 220 Q195 228 200 226" fill="none" stroke="#8B5526" stroke-width="2" stroke-linecap="round"/>
+  <path d="M215 220 Q205 228 200 226" fill="none" stroke="#8B5526" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Cheek blush -->
+  <ellipse cx="150" cy="200" rx="14" ry="9" fill="url(#lionCheek)"/>
+  <ellipse cx="250" cy="200" rx="14" ry="9" fill="url(#lionCheek)"/>
+
+  <!-- Challey medal -->
+  <g transform="translate(200, 260)">
+    <path d="M-8,-15 L8,-15 L12,-5 L-12,-5 Z" fill="#2E86AB"/>
+    <circle cx="0" cy="4" r="14" fill="#F18F01"/>
+    <circle cx="0" cy="4" r="10" fill="#FFD700"/>
+    <path d="M0,-2 L1.8,1 L5,1 L2.5,3 L3.5,6 L0,4 L-3.5,6 L-2.5,3 L-5,1 L-1.8,1 Z" fill="#F18F01"/>
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+<svg width="256" height="256" viewBox="0 0 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- Badge 8: 3-Day Streak -->
+<defs>
+    <filter id="shadow-badge8" x="-10%" y="-10%" width="120%" height="120%">
+        <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#003366" flood-opacity="0.2"/>
+    </filter>
+</defs>
+<g filter="url(#shadow-badge8)">
+    <path d="M128 38 L218 108 L188 208 L68 208 L38 108 Z" fill="white"/>
+    <path d="M128 38 L218 108 L188 208 L68 208 L38 108 Z" stroke="#003366" stroke-width="8"/>
+    <path d="M90 110 L128 150 L166 110" stroke="#F18F01" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M90 140 L128 180 L166 140" stroke="#F18F01" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+    <path d="M110 90 L128 70 L146 90" stroke="#3399FF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>

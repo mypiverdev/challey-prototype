@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812" width="375" height="812">
+  <!-- Screen: Welcome / Join or Create Family -->
+  <defs>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#1B2A4A" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="375" height="812" fill="#F5F7FA"/>
+
+  <!-- Status bar -->
+  <text x="30" y="52" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#1B2A4A">9:41</text>
+  <g transform="translate(295, 40)">
+    <rect x="0" y="0" width="22" height="11" rx="2" fill="none" stroke="#1B2A4A" stroke-width="1.2"/>
+    <rect x="2" y="2" width="15" height="7" rx="1" fill="#1B2A4A"/>
+    <rect x="22" y="3" width="2" height="5" rx="1" fill="#1B2A4A" opacity="0.4"/>
+  </g>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="375" height="200" fill="#1B2A4A"/>
+  <!-- Back arrow -->
+  <g transform="translate(28, 88)">
+    <path d="M10 0 L0 0 M3 -5 L0 0 L3 5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- Title -->
+  <text x="28" y="145" font-family="Inter, sans-serif" font-size="28" font-weight="700" fill="white">Welcome to Challey</text>
+  <text x="28" y="175" font-family="Inter, sans-serif" font-size="15" fill="white" opacity="0.6">How would you like to get started?</text>
+
+  <!-- Join Family Card -->
+  <g filter="url(#cardShadow)">
+    <rect x="24" y="230" width="327" height="170" rx="16" fill="white"/>
+    <!-- Icon circle: abstract family group (race/gender neutral) -->
+    <circle cx="187.5" cy="290" r="32" fill="#E8F4F8"/>
+    <g transform="translate(187.5, 285)">
+      <!-- Center person (taller) -->
+      <circle cx="0" cy="-8" r="6" fill="#2E86AB"/>
+      <rect x="-5" y="0" width="10" height="12" rx="4" fill="#2E86AB"/>
+      <!-- Left person (medium) -->
+      <circle cx="-14" cy="-5" r="5" fill="#2E86AB" opacity="0.7"/>
+      <rect x="-18" y="2" width="8" height="10" rx="3.5" fill="#2E86AB" opacity="0.7"/>
+      <!-- Right person (small) -->
+      <circle cx="14" cy="-3" r="4.5" fill="#2E86AB" opacity="0.7"/>
+      <rect x="10.5" y="3" width="7" height="9" rx="3" fill="#2E86AB" opacity="0.7"/>
+    </g>
+    <!-- Title -->
+    <text x="187.5" y="345" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#1B2A4A">Join a Family</text>
+    <!-- Description -->
+    <text x="187.5" y="370" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#888">I have a family code and member code</text>
+    <text x="187.5" y="386" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#888">from my parent</text>
+    <!-- Arrow -->
+    <g transform="translate(320, 290)">
+      <path d="M0 -4 L4 0 L0 4" fill="none" stroke="#B0B8C0" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Create Family Card -->
+  <g filter="url(#cardShadow)">
+    <rect x="24" y="420" width="327" height="170" rx="16" fill="white"/>
+    <!-- Icon circle -->
+    <circle cx="187.5" cy="480" r="32" fill="#FFF5E0"/>
+    <text x="187.5" y="490" text-anchor="middle" font-family="Inter, sans-serif" font-size="32">🏠</text>
+    <!-- Title -->
+    <text x="187.5" y="535" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#1B2A4A">Create a Family</text>
+    <!-- Description -->
+    <text x="187.5" y="560" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#888">I'm a parent setting up Challey</text>
+    <text x="187.5" y="576" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#888">for the first time</text>
+    <!-- Arrow -->
+    <g transform="translate(320, 480)">
+      <path d="M0 -4 L4 0 L0 4" fill="none" stroke="#B0B8C0" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Home indicator -->
+  <rect x="120" y="790" width="135" height="5" rx="2.5" fill="#1B2A4A" opacity="0.15"/>
+</svg>

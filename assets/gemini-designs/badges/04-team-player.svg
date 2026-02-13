@@ -1,0 +1,15 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- Badge 4: Team Player -->
+<defs>
+    <filter id="shadow-badge4" x="-10%" y="-10%" width="120%" height="120%">
+        <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#003366" flood-opacity="0.2"/>
+    </filter>
+</defs>
+<g filter="url(#shadow-badge4)">
+    <path d="M128 38 L218 108 L188 208 L68 208 L38 108 Z" fill="#3399FF"/>
+    <path d="M128 38 L218 108 L188 208 L68 208 L38 108 Z" stroke="#FFFFFF" stroke-width="8"/>
+    <path d="M128 90 C108 90 92 106 92 126 C92 146 128 176 128 176 C128 176 164 146 164 126 C164 106 148 90 128 90 Z" fill="#FFFFFF"/>
+    <path d="M100 120 L156 120" stroke="#003366" stroke-width="10" stroke-linecap="round"/>
+    <path d="M128 92 L128 148" stroke="#003366" stroke-width="10" stroke-linecap="round"/>
+</g>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Badge: Super Brave — Orange/Brown gradient, shield/lion icon -->
+  <defs>
+    <linearGradient id="sbBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E17055"/>
+      <stop offset="100%" stop-color="#B8532E"/>
+    </linearGradient>
+    <filter id="sbShadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#7A2D15" flood-opacity="0.3"/>
+    </filter>
+    <filter id="sbGlow">
+      <feGaussianBlur stdDeviation="2" result="glow"/>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <circle cx="100" cy="100" r="96" fill="url(#sbBg)" filter="url(#sbShadow)"/>
+  <circle cx="100" cy="100" r="85" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
+  <circle cx="100" cy="100" r="80" fill="url(#sbBg)"/>
+  <ellipse cx="85" cy="72" rx="40" ry="28" fill="white" opacity="0.1"/>
+
+  <!-- Shield icon -->
+  <g filter="url(#sbGlow)" transform="translate(100, 85)">
+    <path d="M0 -40 L35 -25 L35 5 Q35 35 0 50 Q-35 35 -35 5 L-35 -25 Z"
+          fill="white" opacity="0.95"/>
+    <!-- Inner shield -->
+    <path d="M0 -32 L28 -20 L28 3 Q28 28 0 40 Q-28 28 -28 3 L-28 -20 Z"
+          fill="url(#sbBg)" opacity="0.3"/>
+    <!-- Lightning bolt (bravery!) -->
+    <path d="M-5 -22 L5 -5 L-2 -5 L5 18 L-8 -2 L0 -2 Z" fill="white" opacity="0.9"/>
+  </g>
+
+  <!-- Decorative sparks -->
+  <g fill="white" opacity="0.3">
+    <path d="M50 50 L52 55 L57 57 L52 59 L50 64 L48 59 L43 57 L48 55 Z"/>
+    <path d="M155 55 L156.5 58 L160 59.5 L156.5 61 L155 64 L153.5 61 L150 59.5 L153.5 58 Z"/>
+  </g>
+
+  <text x="100" y="168" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="white" letter-spacing="0.5">SUPER</text>
+  <text x="100" y="183" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="white" opacity="0.8">BRAVE</text>
+</svg>

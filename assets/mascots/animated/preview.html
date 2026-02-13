@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Challey Animated Mascots Preview</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0a1628;
+      color: #fff;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #6C5CE7, #F18F01);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle {
+      text-align: center;
+      color: #8899aa;
+      margin-bottom: 40px;
+      font-size: 0.95rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .card {
+      background: #131d30;
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #1e2d45;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(108, 92, 231, 0.2);
+    }
+    .card object {
+      width: 200px;
+      height: 200px;
+      display: block;
+      margin: 0 auto 12px;
+    }
+    .card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 4px;
+    }
+    .card .trait {
+      font-size: 0.8rem;
+      color: #8899aa;
+      font-style: italic;
+    }
+    .card .animations {
+      margin-top: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      justify-content: center;
+    }
+    .card .animations span {
+      background: #1e2d45;
+      color: #6C5CE7;
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+    .compare-section {
+      max-width: 1200px;
+      margin: 60px auto 0;
+      text-align: center;
+    }
+    .compare-section h2 {
+      font-size: 1.4rem;
+      margin-bottom: 24px;
+      color: #8899aa;
+    }
+    .compare-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .compare-item {
+      text-align: center;
+    }
+    .compare-item object, .compare-item img {
+      width: 150px;
+      height: 150px;
+    }
+    .compare-item .label {
+      font-size: 0.8rem;
+      color: #8899aa;
+      margin-top: 4px;
+    }
+    .arrow {
+      font-size: 2rem;
+      color: #F18F01;
+    }
+  </style>
+</head>
+<body>
+  <h1>Challey Animated Mascots</h1>
+  <p class="subtitle">12 character-specific CSS animations &mdash; hover a card to highlight</p>
+
+  <div class="grid">
+    <div class="card">
+      <object type="image/svg+xml" data="chal-octopus.svg"></object>
+      <h3>Octopus</h3>
+      <div class="trait">Friendly, clever, multi-tasking</div>
+      <div class="animations">
+        <span>tentacle wave</span><span>body float</span><span>eye blink</span><span>crown bounce</span><span>cheek pulse</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <object type="image/svg+xml" data="chal-dog.svg"></object>
+      <h3>Dog</h3>
+      <div class="trait">Loyal, energetic, tail-wagging</div>
+      <div class="animations">
+        <span>tail wag</span><span>ear flop</span><span>tongue bounce</span><span>body wiggle</span><span>bandana sway</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <object type="image/svg+xml" data="chal-cat.svg"></object>
+      <h3>Cat</h3>
+      <div class="trait">Curious, independent, clever</div>
+      <div class="animations">
+        <span>tail swish</span><span>ear twitch</span><span>slow blink</span><span>whisker wiggle</span><span>bell swing</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <object type="image/svg+xml" data="chal-bunny.svg"></object>
+      <h3>Bunny</h3>
+      <div class="trait">Sweet, fast, earns points quickly</div>
+      <div class="animations">
+        <span>ear wiggle</span><span>nose twitch</span><span>hop bounce</span><span>tail wiggle</span><span>bow tie spin</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <object type="image/svg+xml" data="chal-hamster.svg"></object>
+      <h3>Hamster</h3>
+      <div class="trait">Adorable, chubby, hoards points!</div>
+      <div class="animations">
+        <span>cheek puff</span><span>body wobble</span><span>ear wiggle</span><span>seed sparkle</span><span>nose twitch</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <object type="image/svg+xml" data="chal-parrot.svg"></object>
+      <h3>Parrot</h3>
+      <div class="trait">Chatty, colorful, encouraging</div>
+      <div class="animations">
+        <span>wing flap</span><span>crest sway</span><span>head bob</span><span>tail fan</span><span>badge spin</span><span>beak talk</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <object type="image/svg+xml" data="chal-turtle.svg"></object>
+      <h3>Turtle</h3>
+      <div class="trait">Patient, steady, streak-keeper</div>
+      <div class="animations">
+        <span>slow head bob</span><span>shell shimmer</span><span>leg paddle</span><span>gentle sway</span><span>hat tip</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <object type="image/svg+xml" data="chal-fox.svg"></object>
+      <h3>Fox</h3>
+      <div class="trait">Clever, strategic, quick thinker</div>
+      <div class="animations">
+        <span>tail swish</span><span>ear perk</span><span>sly eye</span><span>scarf flutter</span><span>whisker twitch</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <object type="image/svg+xml" data="chal-panda.svg"></object>
+      <h3>Panda</h3>
+      <div class="trait">Chill, balanced, zen-like patience</div>
+      <div class="animations">
+        <span>zen sway</span><span>arm wave</span><span>bamboo munch</span><span>eye blink</span><span>star sparkle</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <object type="image/svg+xml" data="chal-penguin.svg"></object>
+      <h3>Penguin</h3>
+      <div class="trait">Cool, teamwork, family-oriented</div>
+      <div class="animations">
+        <span>waddle</span><span>flipper wave</span><span>pom-pom bounce</span><span>beak chirp</span><span>foot tap</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <object type="image/svg+xml" data="chal-lion.svg"></object>
+      <h3>Lion</h3>
+      <div class="trait">Brave, leader, protector</div>
+      <div class="animations">
+        <span>mane flutter</span><span>tail swish</span><span>proud stance</span><span>medal shine</span><span>blink</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <object type="image/svg+xml" data="chal-frog.svg"></object>
+      <h3>Frog</h3>
+      <div class="trait">Cheerful, jumping ahead!</div>
+      <div class="animations">
+        <span>jump bounce</span><span>tongue flick</span><span>eye bulge</span><span>leg spring</span><span>crown bounce</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

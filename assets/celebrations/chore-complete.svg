@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <!-- Celebration: Chore Completed — Big checkmark burst -->
+  <defs>
+    <linearGradient id="ccCheck" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFB347"/>
+      <stop offset="100%" stop-color="#F18F01"/>
+    </linearGradient>
+    <linearGradient id="ccCircle" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#28a745"/>
+      <stop offset="100%" stop-color="#20923C"/>
+    </linearGradient>
+    <filter id="ccGlow">
+      <feGaussianBlur stdDeviation="4" result="glow"/>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="ccShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#15692A" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Burst rays -->
+  <g opacity="0.08" stroke="#28a745" stroke-width="3" stroke-linecap="round">
+    <line x1="150" y1="25" x2="150" y2="55"/>
+    <line x1="150" y1="245" x2="150" y2="275"/>
+    <line x1="25" y1="150" x2="55" y2="150"/>
+    <line x1="245" y1="150" x2="275" y2="150"/>
+    <line x1="55" y1="55" x2="75" y2="75"/>
+    <line x1="225" y1="75" x2="245" y2="55"/>
+    <line x1="55" y1="245" x2="75" y2="225"/>
+    <line x1="225" y1="225" x2="245" y2="245"/>
+  </g>
+
+  <!-- Outer glow ring -->
+  <circle cx="150" cy="150" r="90" fill="none" stroke="#28a745" stroke-width="3" opacity="0.08" filter="url(#ccGlow)"/>
+
+  <!-- Main circle -->
+  <circle cx="150" cy="150" r="72" fill="url(#ccCircle)" filter="url(#ccShadow)"/>
+  <!-- Inner ring -->
+  <circle cx="150" cy="150" r="62" fill="none" stroke="white" stroke-width="2" opacity="0.2"/>
+  <!-- Sheen -->
+  <ellipse cx="138" cy="125" rx="30" ry="20" fill="white" opacity="0.1"/>
+
+  <!-- Big checkmark -->
+  <g filter="url(#ccGlow)">
+    <path d="M118 150 L140 172 L185 125" fill="none" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Confetti particles -->
+  <g>
+    <rect x="65" y="45" width="8" height="8" rx="1.5" fill="#FFD700" opacity="0.7" transform="rotate(30, 69, 49)"/>
+    <rect x="220" y="55" width="6" height="10" rx="1.5" fill="#FF6B6B" opacity="0.6" transform="rotate(-20, 223, 60)"/>
+    <rect x="50" y="180" width="7" height="7" rx="1.5" fill="#2E86AB" opacity="0.5" transform="rotate(45, 53, 183)"/>
+    <rect x="240" y="190" width="8" height="6" rx="1.5" fill="#F18F01" opacity="0.6" transform="rotate(-35, 244, 193)"/>
+    <circle cx="90" cy="70" r="4" fill="#A855F7" opacity="0.5"/>
+    <circle cx="215" cy="235" r="3.5" fill="#00D2D3" opacity="0.45"/>
+    <circle cx="55" y="130" r="3" fill="#FF6B6B" opacity="0.4"/>
+    <rect x="230" y="120" width="5" height="9" rx="1" fill="#FFD700" opacity="0.5" transform="rotate(15)"/>
+  </g>
+
+  <!-- Sparkle stars -->
+  <path d="M80 100 L83 108 L91 111 L83 114 L80 122 L77 114 L69 111 L77 108 Z" fill="#FFD700" opacity="0.5"/>
+  <path d="M230 95 L232 100 L237 102 L232 104 L230 109 L228 104 L223 102 L228 100 Z" fill="white" opacity="0.4"/>
+  <path d="M110 240 L112 245 L117 247 L112 249 L110 254 L108 249 L103 247 L108 245 Z" fill="#F18F01" opacity="0.4"/>
+</svg>

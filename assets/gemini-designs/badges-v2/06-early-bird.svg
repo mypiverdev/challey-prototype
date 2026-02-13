@@ -1,0 +1,31 @@
+<svg width="256" height="256" viewBox="0 0 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- Badge v2: Early Bird -->
+<defs>
+    <linearGradient id="bronze-b6" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#CD7F32"/>
+        <stop offset="100%" stop-color="#A0522D"/>
+    </linearGradient>
+    <linearGradient id="dawn-gloss" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FFDAB9"/>
+        <stop offset="100%" stop-color="#FFC48C"/>
+    </linearGradient>
+    <filter id="pin-shadow-b6" x="-15%" y="-15%" width="130%" height="130%">
+        <feDropShadow dx="4" dy="6" stdDeviation="6" flood-color="#000" flood-opacity="0.2"/>
+    </filter>
+</defs>
+<g filter="url(#pin-shadow-b6)">
+    <!-- Bronze Border -->
+    <circle cx="128" cy="128" r="112" fill="url(#bronze-b6)"/>
+    <!-- Inner Fill -->
+    <circle cx="128" cy="128" r="102" fill="url(#dawn-gloss)"/>
+    <!-- Icon: Worm -->
+    <path d="M128 160 C 100 160, 100 120, 128 120 C 156 120, 156 160, 128 160 Z" fill="#81ECAC"/>
+    <path d="M128 120 C 110 120, 110 90, 128 90 C 146 90, 146 120, 128 120 Z" fill="#55EFC4"/>
+    <circle cx="120" cy="95" r="5" fill="white"/>
+    <circle cx="136" cy="95" r="5" fill="white"/>
+    <circle cx="122" cy="95" r="2" fill="black"/>
+    <circle cx="134" cy="95" r="2" fill="black"/>
+    <!-- Sun -->
+    <path d="M60 180 C 128 120, 196 120, 256 180 Z" fill="#FFD700"/>
+</g>
+</svg>

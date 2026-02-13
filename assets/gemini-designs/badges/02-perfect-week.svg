@@ -1,0 +1,17 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- Badge 2: Perfect Week -->
+<defs>
+    <filter id="shadow-badge2" x="-10%" y="-10%" width="120%" height="120%">
+        <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#003366" flood-opacity="0.2"/>
+    </filter>
+</defs>
+<g filter="url(#shadow-badge2)">
+    <path d="M58 88 L128 38 L198 88 V 168 L128 218 L58 168 V 88 Z" fill="#003366"/>
+    <path d="M58 88 L128 38 L198 88 V 168 L128 218 L58 168 V 88 Z" stroke="#FFD700" stroke-width="8"/>
+    <path d="M100 128 L120 148 L156 112" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M80 100 L100 120" stroke="#3399FF" stroke-width="6" stroke-linecap="round"/>
+    <path d="M176 100 L156 120" stroke="#3399FF" stroke-width="6" stroke-linecap="round"/>
+    <path d="M100 160 L120 140" stroke="#3399FF" stroke-width="6" stroke-linecap="round"/>
+    <path d="M156 150 L146 140" stroke="#3399FF" stroke-width="6" stroke-linecap="round"/>
+</g>
+</svg>

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812" width="375" height="812">
+  <!-- Screen: Welcome Family - Setup Complete -->
+  <defs>
+    <filter id="btnShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#1B2A4A" flood-opacity="0.12"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="375" height="812" fill="#F5F7FA"/>
+
+  <!-- Status bar -->
+  <text x="30" y="52" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#1B2A4A">9:41</text>
+  <g transform="translate(295, 40)">
+    <rect x="0" y="0" width="22" height="11" rx="2" fill="none" stroke="#1B2A4A" stroke-width="1.2"/>
+    <rect x="2" y="2" width="15" height="7" rx="1" fill="#1B2A4A"/>
+    <rect x="22" y="3" width="2" height="5" rx="1" fill="#1B2A4A" opacity="0.4"/>
+  </g>
+
+  <!-- Confetti particles -->
+  <circle cx="60" cy="110" r="4" fill="#FF6B6B" opacity="0.6"/>
+  <circle cx="120" cy="95" r="3" fill="#2E86AB" opacity="0.5"/>
+  <circle cx="250" cy="100" r="4" fill="#F18F01" opacity="0.6"/>
+  <circle cx="320" cy="120" r="3" fill="#28a745" opacity="0.5"/>
+  <rect x="90" y="105" width="8" height="4" rx="2" fill="#A855F7" opacity="0.5" transform="rotate(30 94 107)"/>
+  <rect x="280" y="90" width="8" height="4" rx="2" fill="#FF6B6B" opacity="0.5" transform="rotate(-20 284 92)"/>
+  <rect x="170" y="85" width="6" height="3" rx="1.5" fill="#FFB347" opacity="0.6" transform="rotate(45 173 86.5)"/>
+  <circle cx="340" cy="160" r="3" fill="#2E86AB" opacity="0.4"/>
+  <circle cx="40" cy="170" r="2.5" fill="#F18F01" opacity="0.4"/>
+
+  <!-- Celebration pet (bouncing) -->
+  <g transform="translate(187.5, 210)" filter="url(#glow)">
+    <text x="0" y="20" text-anchor="middle" font-family="Inter, sans-serif" font-size="80">🐙</text>
+  </g>
+
+  <!-- Welcome Text -->
+  <text x="187.5" y="310" text-anchor="middle" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#1B2A4A">Welcome to Challey,</text>
+  <text x="187.5" y="342" text-anchor="middle" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#2E86AB">The Johnson Family!</text>
+
+  <!-- Family Code Card -->
+  <rect x="40" y="380" width="295" height="70" rx="14" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+  <text x="60" y="408" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#888">FAMILY CODE</text>
+  <text x="60" y="432" font-family="Inter, sans-serif" font-size="22" font-weight="800" fill="#2E86AB" letter-spacing="3">JOHN13</text>
+  <!-- Copy icon -->
+  <g transform="translate(305, 412)">
+    <rect x="-8" y="-8" width="12" height="14" rx="2" fill="none" stroke="#B0B8C0" stroke-width="1.5"/>
+    <rect x="-4" y="-12" width="12" height="14" rx="2" fill="white" stroke="#B0B8C0" stroke-width="1.5"/>
+  </g>
+
+  <!-- Member Code Card -->
+  <rect x="40" y="465" width="295" height="70" rx="14" fill="white" stroke="#E8ECF0" stroke-width="1"/>
+  <text x="60" y="493" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#888">YOUR MEMBER CODE</text>
+  <text x="60" y="517" font-family="Inter, sans-serif" font-size="22" font-weight="800" fill="#F18F01" letter-spacing="3">MIKE01</text>
+  <!-- Copy icon -->
+  <g transform="translate(305, 497)">
+    <rect x="-8" y="-8" width="12" height="14" rx="2" fill="none" stroke="#B0B8C0" stroke-width="1.5"/>
+    <rect x="-4" y="-12" width="12" height="14" rx="2" fill="white" stroke="#B0B8C0" stroke-width="1.5"/>
+  </g>
+
+  <!-- Share message -->
+  <text x="187.5" y="570" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#888">Share these codes with your family to join!</text>
+
+  <!-- Share Button -->
+  <rect x="80" y="595" width="215" height="44" rx="12" fill="white" stroke="#2E86AB" stroke-width="2"/>
+  <text x="187.5" y="623" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#2E86AB">📤 Share Codes</text>
+
+  <!-- Go to Dashboard Button -->
+  <g filter="url(#btnShadow)">
+    <rect x="24" y="670" width="327" height="56" rx="14" fill="#2E86AB"/>
+    <text x="187.5" y="704" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="white">Go to Dashboard →</text>
+  </g>
+
+  <!-- Home indicator -->
+  <rect x="120" y="790" width="135" height="5" rx="2.5" fill="#1B2A4A" opacity="0.15"/>
+</svg>

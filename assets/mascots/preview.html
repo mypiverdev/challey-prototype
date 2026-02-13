@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Challey — Chal Mascot Family</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: linear-gradient(135deg, #E8F4F8 0%, #f5f7fa 50%, #FFF5E0 100%);
+    min-height: 100vh;
+    color: #1B2A4A;
+  }
+
+  .header {
+    background: linear-gradient(135deg, #1B2A4A 0%, #2E86AB 100%);
+    color: white;
+    padding: 50px 40px;
+    text-align: center;
+  }
+  .header h1 { font-size: 42px; font-weight: 700; letter-spacing: -1px; }
+  .header p { font-size: 16px; opacity: 0.6; margin-top: 8px; font-weight: 300; }
+  .header .subtitle { font-size: 20px; opacity: 0.8; margin-top: 4px; letter-spacing: 3px; font-weight: 400; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 28px;
+  }
+
+  .card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(27,42,74,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+  }
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(27,42,74,0.15);
+  }
+
+  .card .preview {
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 260px;
+    position: relative;
+    overflow: hidden;
+  }
+  .card .preview::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 60%, rgba(46,134,171,0.04) 0%, transparent 70%);
+  }
+
+  .card .preview img {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s;
+  }
+  .card:hover .preview img { transform: scale(1.08); }
+
+  .card .info {
+    padding: 16px 20px;
+    border-top: 1px solid #f0f2f5;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .card .info .emoji { font-size: 28px; }
+  .card .info .text h3 { font-size: 16px; font-weight: 600; }
+  .card .info .text p { font-size: 12px; color: #888; margin-top: 2px; }
+
+  .card.default { border: 2px solid #F18F01; }
+  .card.default .preview::after {
+    content: 'DEFAULT';
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #F18F01;
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    z-index: 2;
+  }
+
+  .design-notes {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    margin-top: 40px;
+    box-shadow: 0 2px 12px rgba(27,42,74,0.06);
+  }
+  .design-notes h2 { font-size: 22px; font-weight: 600; margin-bottom: 16px; }
+  .design-notes ul { padding-left: 20px; line-height: 2; color: #555; font-size: 14px; }
+  .design-notes li::marker { color: #2E86AB; }
+
+  .accessory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+  }
+  .accessory-item {
+    background: #f8f9fa;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 13px;
+  }
+  .accessory-item strong { color: #1B2A4A; }
+  .accessory-item span { color: #888; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Meet the Chal Family</h1>
+  <div class="subtitle">12 COMPANION MASCOTS</div>
+  <p>Every family picks their Chal — their pet companion through the chore journey</p>
+</div>
+
+<div class="container">
+  <div class="grid">
+
+    <div class="card default">
+      <div class="preview"><img src="chal-octopus.svg" alt="Octopus"></div>
+      <div class="info">
+        <span class="emoji">🐙</span>
+        <div class="text">
+          <h3>Octopus</h3>
+          <p>Clever multi-tasker, handles everything at once</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="preview"><img src="chal-dog.svg" alt="Dog"></div>
+      <div class="info">
+        <span class="emoji">🐕</span>
+        <div class="text">
+          <h3>Dog</h3>
+          <p>Loyal and energetic, always ready to help</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="preview"><img src="chal-cat.svg" alt="Cat"></div>
+      <div class="info">
+        <span class="emoji">🐈</span>
+        <div class="text">
+          <h3>Cat</h3>
+          <p>Curious and independent, works on their own terms</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="preview"><img src="chal-bunny.svg" alt="Bunny"></div>
+      <div class="info">
+        <span class="emoji">🐰</span>
+        <div class="text">
+          <h3>Bunny</h3>
+          <p>Sweet and quick, earns points in a flash</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="preview"><img src="chal-hamster.svg" alt="Hamster"></div>
+      <div class="info">
+        <span class="emoji">🐹</span>
+        <div class="text">
+          <h3>Hamster</h3>
+          <p>Adorable collector, hoards every last point</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="preview"><img src="chal-parrot.svg" alt="Parrot"></div>
+      <div class="info">
+        <span class="emoji">🦜</span>
+        <div class="text">
+          <h3>Parrot</h3>
+          <p>Chatty and colorful, cheers everyone on</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="preview"><img src="chal-turtle.svg" alt="Turtle"></div>
+      <div class="info">
+        <span class="emoji">🐢</span>
+        <div class="text">
+          <h3>Turtle</h3>
+          <p>Patient and steady, the ultimate streak-keeper</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="preview"><img src="chal-fox.svg" alt="Fox"></div>
+      <div class="info">
+        <span class="emoji">🦊</span>
+        <div class="text">
+          <h3>Fox</h3>
+          <p>Clever strategist, finds the smartest path</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="preview"><img src="chal-panda.svg" alt="Panda"></div>
+      <div class="info">
+        <span class="emoji">🐼</span>
+        <div class="text">
+          <h3>Panda</h3>
+          <p>Chill and balanced, zen-like patience</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="preview"><img src="chal-penguin.svg" alt="Penguin"></div>
+      <div class="info">
+        <span class="emoji">🐧</span>
+        <div class="text">
+          <h3>Penguin</h3>
+          <p>Cool team player, stronger together</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="preview"><img src="chal-lion.svg" alt="Lion"></div>
+      <div class="info">
+        <span class="emoji">🦁</span>
+        <div class="text">
+          <h3>Lion</h3>
+          <p>Brave leader, protector of the family</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="preview"><img src="chal-frog.svg" alt="Frog"></div>
+      <div class="info">
+        <span class="emoji">🐸</span>
+        <div class="text">
+          <h3>Frog</h3>
+          <p>Cheerful jumper, always leaping ahead</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="design-notes">
+    <h2>Design System Notes</h2>
+    <ul>
+      <li><strong>Consistent style:</strong> Rounded shapes, large expressive eyes with dual highlights, pink cheek blush, friendly proportions</li>
+      <li><strong>Brand integration:</strong> Each mascot wears a unique Challey-branded accessory (bandana, collar, scarf, hat, bow tie, medal, crown, star badge, bamboo star, winter hat, checkmark crown, party hat)</li>
+      <li><strong>Color palette:</strong> Each animal has its own natural colors, with Challey brand blue (#2E86AB) and orange (#F18F01) appearing in accessories</li>
+      <li><strong>Scalable SVG:</strong> All 400x400 viewBox, works from 32px avatar to full-screen display</li>
+      <li><strong>Character personality:</strong> Each mascot's personality maps to a chore/reward behavior (collector, leader, streak-keeper, etc.)</li>
+    </ul>
+
+    <h2 style="margin-top: 24px;">Challey Accessories per Mascot</h2>
+    <div class="accessory-grid">
+      <div class="accessory-item"><strong>Octopus:</strong> <span>Gold party hat</span></div>
+      <div class="accessory-item"><strong>Dog:</strong> <span>Blue bandana with checkmark</span></div>
+      <div class="accessory-item"><strong>Cat:</strong> <span>Orange collar with gold bell</span></div>
+      <div class="accessory-item"><strong>Bunny:</strong> <span>Blue & orange bow tie</span></div>
+      <div class="accessory-item"><strong>Hamster:</strong> <span>Star-marked sunflower seed</span></div>
+      <div class="accessory-item"><strong>Parrot:</strong> <span>Blue star badge on chest</span></div>
+      <div class="accessory-item"><strong>Turtle:</strong> <span>Navy top hat with orange band</span></div>
+      <div class="accessory-item"><strong>Fox:</strong> <span>Blue scarf with checkmark</span></div>
+      <div class="accessory-item"><strong>Panda:</strong> <span>Bamboo with Challey star</span></div>
+      <div class="accessory-item"><strong>Penguin:</strong> <span>Blue winter hat with checkmark</span></div>
+      <div class="accessory-item"><strong>Lion:</strong> <span>Star medal on ribbon</span></div>
+      <div class="accessory-item"><strong>Frog:</strong> <span>Orange & blue gem crown</span></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 260" width="300" height="260">
+  <!-- Empty State: No Chores Yet — Relaxing character, clipboard -->
+  <defs>
+    <linearGradient id="ncBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8F4F8"/>
+      <stop offset="100%" stop-color="#D0EBF5"/>
+    </linearGradient>
+    <filter id="ncSoft">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#1B2A4A" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background blob -->
+  <ellipse cx="150" cy="130" rx="130" ry="110" fill="url(#ncBg)" opacity="0.5"/>
+
+  <!-- Clipboard -->
+  <g transform="translate(150, 115)" filter="url(#ncSoft)">
+    <rect x="-40" y="-55" width="80" height="110" rx="8" fill="white" stroke="#DDE4E8" stroke-width="1.5"/>
+    <!-- Clip -->
+    <rect x="-15" y="-62" width="30" height="14" rx="4" fill="#2E86AB"/>
+    <circle cx="0" cy="-55" r="4" fill="#E8F4F8"/>
+    <!-- Empty lines (dashed = nothing here yet) -->
+    <g stroke="#DDE4E8" stroke-width="2" stroke-dasharray="4,4" stroke-linecap="round">
+      <line x1="-25" y1="-30" x2="25" y2="-30"/>
+      <line x1="-25" y1="-15" x2="15" y2="-15"/>
+      <line x1="-25" y1="0" x2="20" y2="0"/>
+      <line x1="-25" y1="15" x2="10" y2="15"/>
+    </g>
+    <!-- Big checkmark (faded, waiting) -->
+    <path d="M-10 30 L0 40 L20 18" fill="none" stroke="#2E86AB" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.15"/>
+  </g>
+
+  <!-- Floating sparkle (potential!) -->
+  <path d="M220 60 L223 68 L231 71 L223 74 L220 82 L217 74 L209 71 L217 68 Z" fill="#F18F01" opacity="0.3"/>
+  <circle cx="80" cy="55" r="3" fill="#2E86AB" opacity="0.2"/>
+  <circle cx="240" cy="100" r="2.5" fill="#2E86AB" opacity="0.15"/>
+
+  <!-- Text -->
+  <text x="150" y="210" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="#1B2A4A">No chores yet!</text>
+  <text x="150" y="232" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="400" fill="#888">Time to set up some tasks</text>
+</svg>

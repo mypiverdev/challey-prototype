@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Badge: Best Helper — Teal gradient, handshake/hands icon -->
+  <defs>
+    <linearGradient id="bhBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D2D3"/>
+      <stop offset="100%" stop-color="#01A3A4"/>
+    </linearGradient>
+    <filter id="bhShadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#006A6B" flood-opacity="0.3"/>
+    </filter>
+    <filter id="bhGlow">
+      <feGaussianBlur stdDeviation="2" result="glow"/>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <circle cx="100" cy="100" r="96" fill="url(#bhBg)" filter="url(#bhShadow)"/>
+  <circle cx="100" cy="100" r="85" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
+  <circle cx="100" cy="100" r="80" fill="url(#bhBg)"/>
+  <ellipse cx="85" cy="72" rx="40" ry="28" fill="white" opacity="0.1"/>
+
+  <!-- Handshake icon -->
+  <g filter="url(#bhGlow)" transform="translate(100, 90)" fill="white" opacity="0.95">
+    <!-- Left hand -->
+    <path d="M-40 10 L-30 -15 L-18 -10 L-25 12 Z"/>
+    <!-- Right hand -->
+    <path d="M40 10 L30 -15 L18 -10 L25 12 Z"/>
+    <!-- Clasped center -->
+    <path d="M-18 -10 Q-10 -25 0 -22 Q10 -25 18 -10 L12 8 Q6 15 0 12 Q-6 15 -12 8 Z"/>
+    <!-- Thumb details -->
+    <ellipse cx="-12" cy="0" rx="5" ry="8" fill="white" opacity="0.6" transform="rotate(-15, -12, 0)"/>
+    <ellipse cx="12" cy="0" rx="5" ry="8" fill="white" opacity="0.6" transform="rotate(15, 12, 0)"/>
+  </g>
+
+  <!-- Sparkle -->
+  <path d="M65 55 L67 60 L72 62 L67 64 L65 69 L63 64 L58 62 L63 60 Z" fill="white" opacity="0.5"/>
+  <path d="M140 50 L141.5 53 L145 54.5 L141.5 56 L140 59 L138.5 56 L135 54.5 L138.5 53 Z" fill="white" opacity="0.4"/>
+
+  <text x="100" y="168" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="white" letter-spacing="0.5">BEST</text>
+  <text x="100" y="183" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="white" opacity="0.8">HELPER</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Badge: Amazing Sibling — Gold/Orange gradient, star icon -->
+  <defs>
+    <linearGradient id="asBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#F18F01"/>
+    </linearGradient>
+    <filter id="asShadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#B8760A" flood-opacity="0.3"/>
+    </filter>
+    <filter id="asGlow">
+      <feGaussianBlur stdDeviation="2" result="glow"/>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Outer ring -->
+  <circle cx="100" cy="100" r="96" fill="url(#asBg)" filter="url(#asShadow)"/>
+  <!-- Inner ring -->
+  <circle cx="100" cy="100" r="85" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
+  <!-- Center disc -->
+  <circle cx="100" cy="100" r="80" fill="url(#asBg)"/>
+  <!-- Sheen -->
+  <ellipse cx="85" cy="72" rx="40" ry="28" fill="white" opacity="0.12"/>
+
+  <!-- Star icon -->
+  <g filter="url(#asGlow)">
+    <path d="M100 45 L113 75 L146 79 L122 102 L128 135 L100 120 L72 135 L78 102 L54 79 L87 75 Z"
+          fill="white" opacity="0.95"/>
+  </g>
+
+  <!-- Decorative rays -->
+  <g stroke="white" stroke-width="1.5" opacity="0.2">
+    <line x1="100" y1="15" x2="100" y2="25"/>
+    <line x1="140" y1="25" x2="135" y2="35"/>
+    <line x1="60" y1="25" x2="65" y2="35"/>
+    <line x1="170" y1="60" x2="160" y2="65"/>
+    <line x1="30" y1="60" x2="40" y2="65"/>
+  </g>
+
+  <!-- Label -->
+  <text x="100" y="168" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="white" letter-spacing="0.5">AMAZING</text>
+  <text x="100" y="183" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="white" opacity="0.8">SIBLING</text>
+</svg>

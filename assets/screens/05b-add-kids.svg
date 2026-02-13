@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812" width="375" height="812">
+  <!-- Screen: Add Kids Form -->
+  <defs>
+    <filter id="btnShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#1B2A4A" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="375" height="812" fill="#F5F7FA"/>
+
+  <!-- Status bar -->
+  <text x="30" y="52" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#1B2A4A">9:41</text>
+  <g transform="translate(295, 40)">
+    <rect x="0" y="0" width="22" height="11" rx="2" fill="none" stroke="#1B2A4A" stroke-width="1.2"/>
+    <rect x="2" y="2" width="15" height="7" rx="1" fill="#1B2A4A"/>
+    <rect x="22" y="3" width="2" height="5" rx="1" fill="#1B2A4A" opacity="0.4"/>
+  </g>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="375" height="200" fill="#1B2A4A"/>
+  <g transform="translate(28, 88)">
+    <path d="M10 0 L0 0 M3 -5 L0 0 L3 5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="28" y="145" font-family="Inter, sans-serif" font-size="28" font-weight="700" fill="white">Add Your Kids</text>
+  <text x="28" y="175" font-family="Inter, sans-serif" font-size="15" fill="white" opacity="0.6">Each kid gets a unique code</text>
+
+  <!-- Already added kid (Maggie) -->
+  <rect x="24" y="220" width="327" height="55" rx="12" fill="#E0F8E8" stroke="#28a745" stroke-width="1"/>
+  <circle cx="55" cy="247" r="14" fill="#A855F7"/>
+  <text x="55" y="252" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="white">M</text>
+  <text x="78" y="242" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#1B2A4A">Maggie</text>
+  <text x="78" y="258" font-family="Inter, sans-serif" font-size="11" fill="#888">Age 13</text>
+  <g transform="translate(325, 247)">
+    <circle cx="0" cy="0" r="10" fill="#28a745"/>
+    <path d="M-4 0 L-1 3 L5 -3" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- New kid form -->
+  <text x="28" y="310" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#1B2A4A">Name or Nickname</text>
+  <rect x="24" y="318" width="327" height="48" rx="12" fill="white" stroke="#2E86AB" stroke-width="2"/>
+  <text x="44" y="348" font-family="Inter, sans-serif" font-size="15" fill="#1B2A4A">Jake</text>
+  <rect x="72" y="335" width="2" height="18" rx="1" fill="#2E86AB"/>
+
+  <text x="28" y="395" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#1B2A4A">Birthday</text>
+  <rect x="24" y="403" width="158" height="48" rx="12" fill="white" stroke="#DDE4E8" stroke-width="1.5"/>
+  <text x="44" y="433" font-family="Inter, sans-serif" font-size="15" fill="#B0B8C0">mm/dd/yyyy</text>
+
+  <text x="197" y="395" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#1B2A4A">Age</text>
+  <rect x="193" y="403" width="158" height="48" rx="12" fill="white" stroke="#DDE4E8" stroke-width="1.5"/>
+  <text x="213" y="433" font-family="Inter, sans-serif" font-size="15" fill="#B0B8C0">e.g., 10</text>
+
+  <!-- Add Another Kid button -->
+  <rect x="24" y="480" width="327" height="48" rx="12" fill="white" stroke="#2E86AB" stroke-width="1.5" stroke-dasharray="6 3"/>
+  <text x="187.5" y="510" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#2E86AB">+ Add Another Kid</text>
+
+  <!-- Done button -->
+  <g filter="url(#btnShadow)">
+    <rect x="24" y="560" width="327" height="56" rx="14" fill="#2E86AB"/>
+    <text x="187.5" y="594" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="white">Done</text>
+  </g>
+
+  <!-- Home indicator -->
+  <rect x="120" y="790" width="135" height="5" rx="2.5" fill="#1B2A4A" opacity="0.15"/>
+</svg>

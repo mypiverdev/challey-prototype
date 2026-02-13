@@ -1,0 +1,220 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Chal: Octopus (Default Mascot) — Friendly, clever, multi-tasking -->
+  <defs>
+    <linearGradient id="octoBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6C5CE7"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+    <linearGradient id="octoBodyDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5B4BD5"/>
+      <stop offset="100%" stop-color="#8B3FCF"/>
+    </linearGradient>
+    <radialGradient id="octoCheek" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF9FF3" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#FF9FF3" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="octoShadow">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#3B1F7A" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <style>
+    /* Tentacle wave animations */
+    @keyframes octo-tentacle-wave-1 {
+      0%, 100% { transform: rotate(-3deg); }
+      50% { transform: rotate(3deg); }
+    }
+    @keyframes octo-tentacle-wave-2 {
+      0%, 100% { transform: rotate(3deg); }
+      50% { transform: rotate(-3deg); }
+    }
+    @keyframes octo-tentacle-wave-3 {
+      0%, 100% { transform: rotate(-2deg); }
+      50% { transform: rotate(2deg); }
+    }
+    @keyframes octo-tentacle-wave-4 {
+      0%, 100% { transform: rotate(2deg); }
+      50% { transform: rotate(-2deg); }
+    }
+
+    .octo-tentacle-back-left {
+      transform-origin: 120px 260px;
+      animation: octo-tentacle-wave-1 2.5s ease-in-out infinite;
+    }
+    .octo-tentacle-back-right {
+      transform-origin: 280px 260px;
+      animation: octo-tentacle-wave-2 2.5s ease-in-out infinite;
+    }
+    .octo-tentacle-side-left {
+      transform-origin: 135px 270px;
+      animation: octo-tentacle-wave-2 2.8s ease-in-out infinite;
+      animation-delay: 0.2s;
+    }
+    .octo-tentacle-side-right {
+      transform-origin: 265px 270px;
+      animation: octo-tentacle-wave-1 2.8s ease-in-out infinite;
+      animation-delay: 0.2s;
+    }
+    .octo-tentacle-front-left {
+      transform-origin: 155px 275px;
+      animation: octo-tentacle-wave-3 3s ease-in-out infinite;
+      animation-delay: 0.4s;
+    }
+    .octo-tentacle-front-right {
+      transform-origin: 245px 275px;
+      animation: octo-tentacle-wave-4 3s ease-in-out infinite;
+      animation-delay: 0.4s;
+    }
+    .octo-tentacle-center-left {
+      transform-origin: 175px 280px;
+      animation: octo-tentacle-wave-4 3.2s ease-in-out infinite;
+      animation-delay: 0.6s;
+    }
+    .octo-tentacle-center-right {
+      transform-origin: 225px 280px;
+      animation: octo-tentacle-wave-3 3.2s ease-in-out infinite;
+      animation-delay: 0.6s;
+    }
+
+    /* Body bob animation */
+    @keyframes octo-bob {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .octo-body-bob {
+      animation: octo-bob 3s ease-in-out infinite;
+    }
+
+    /* Eye blink animation */
+    @keyframes octo-blink {
+      0%, 90%, 100% { transform: scaleY(1); }
+      95% { transform: scaleY(0.1); }
+    }
+    .octo-eye-left {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: octo-blink 4s ease-in-out infinite;
+    }
+    .octo-eye-right {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: octo-blink 4s ease-in-out infinite;
+      animation-delay: 0.05s;
+    }
+
+    /* Crown bounce animation */
+    @keyframes octo-crown-bounce {
+      0%, 100% { transform: translate(200px, 62px) translateY(0); }
+      50% { transform: translate(200px, 62px) translateY(-4px); }
+    }
+    .octo-crown {
+      animation: octo-crown-bounce 2s ease-in-out infinite;
+    }
+
+    /* Cheek pulse animation */
+    @keyframes octo-cheek-pulse {
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 1; }
+    }
+    .octo-cheek-left,
+    .octo-cheek-right {
+      animation: octo-cheek-pulse 2s ease-in-out infinite;
+    }
+    .octo-cheek-right {
+      animation-delay: 0.3s;
+    }
+  </style>
+
+  <!-- Body shadow -->
+  <ellipse cx="200" cy="370" rx="90" ry="12" fill="#3B1F7A" opacity="0.12"/>
+
+  <!-- Tentacles (back layer) -->
+  <g class="octo-body-bob">
+    <g filter="url(#octoShadow)">
+      <!-- Back tentacles -->
+      <g class="octo-tentacle-back-left">
+        <path d="M120 260 Q95 310 80 340 Q75 355 85 355 Q95 355 100 340 Q110 310 130 270" fill="url(#octoBodyDark)" stroke="none"/>
+      </g>
+      <g class="octo-tentacle-back-right">
+        <path d="M280 260 Q305 310 320 340 Q325 355 315 355 Q305 355 300 340 Q290 310 270 270" fill="url(#octoBodyDark)" stroke="none"/>
+      </g>
+
+      <!-- Side tentacles -->
+      <g class="octo-tentacle-side-left">
+        <path d="M135 270 Q110 320 100 350 Q95 368 108 365 Q118 362 120 345 Q125 315 145 275" fill="url(#octoBody)" stroke="none"/>
+      </g>
+      <g class="octo-tentacle-side-right">
+        <path d="M265 270 Q290 320 300 350 Q305 368 292 365 Q282 362 280 345 Q275 315 255 275" fill="url(#octoBody)" stroke="none"/>
+      </g>
+
+      <!-- Front tentacles -->
+      <g class="octo-tentacle-front-left">
+        <path d="M155 275 Q140 330 135 355 Q132 372 145 368 Q155 365 152 348 Q150 325 165 280" fill="url(#octoBody)" stroke="none"/>
+      </g>
+      <g class="octo-tentacle-front-right">
+        <path d="M245 275 Q260 330 265 355 Q268 372 255 368 Q245 365 248 348 Q250 325 235 280" fill="url(#octoBody)" stroke="none"/>
+      </g>
+
+      <!-- Center front tentacles -->
+      <g class="octo-tentacle-center-left">
+        <path d="M175 280 Q170 335 168 358 Q166 374 180 370 Q188 368 185 350 Q182 330 185 282" fill="url(#octoBody)" stroke="none"/>
+      </g>
+      <g class="octo-tentacle-center-right">
+        <path d="M225 280 Q230 335 232 358 Q234 374 220 370 Q212 368 215 350 Q218 330 215 282" fill="url(#octoBody)" stroke="none"/>
+      </g>
+    </g>
+
+    <!-- Suction cups (dots on tentacles) -->
+    <g fill="#5B4BD5" opacity="0.3">
+      <circle cx="92" cy="335" r="4"/>
+      <circle cx="105" cy="345" r="3.5"/>
+      <circle cx="308" cy="335" r="4"/>
+      <circle cx="295" cy="345" r="3.5"/>
+      <circle cx="140" cy="350" r="3.5"/>
+      <circle cx="260" cy="350" r="3.5"/>
+      <circle cx="170" cy="355" r="3"/>
+      <circle cx="230" cy="355" r="3"/>
+    </g>
+
+    <!-- Main head/body -->
+    <ellipse cx="200" cy="190" rx="120" ry="130" fill="url(#octoBody)" filter="url(#octoShadow)"/>
+
+    <!-- Head dome highlight -->
+    <ellipse cx="185" cy="130" rx="70" ry="55" fill="white" opacity="0.08"/>
+    <ellipse cx="175" cy="115" rx="35" ry="25" fill="white" opacity="0.06"/>
+
+    <!-- Eyes -->
+    <g class="octo-eye-left">
+      <ellipse cx="162" cy="185" rx="32" ry="35" fill="white"/>
+      <ellipse cx="168" cy="190" rx="16" ry="19" fill="#1B2A4A"/>
+      <!-- Eye highlights -->
+      <circle cx="174" cy="182" r="7" fill="white" opacity="0.9"/>
+      <circle cx="164" cy="194" r="3.5" fill="white" opacity="0.5"/>
+    </g>
+    <g class="octo-eye-right">
+      <ellipse cx="238" cy="185" rx="32" ry="35" fill="white"/>
+      <ellipse cx="232" cy="190" rx="16" ry="19" fill="#1B2A4A"/>
+      <!-- Eye highlights -->
+      <circle cx="238" cy="182" r="7" fill="white" opacity="0.9"/>
+      <circle cx="228" cy="194" r="3.5" fill="white" opacity="0.5"/>
+    </g>
+
+    <!-- Happy mouth -->
+    <path d="M180 225 Q200 245 220 225" fill="none" stroke="#3B1F7A" stroke-width="3.5" stroke-linecap="round"/>
+
+    <!-- Cheek blush -->
+    <g class="octo-cheek-left">
+      <ellipse cx="140" cy="215" rx="18" ry="12" fill="url(#octoCheek)"/>
+    </g>
+    <g class="octo-cheek-right">
+      <ellipse cx="260" cy="215" rx="18" ry="12" fill="url(#octoCheek)"/>
+    </g>
+
+    <!-- Crown/party hat accessory -->
+    <g class="octo-crown" transform="translate(200, 62)">
+      <polygon points="0,-20 -14,8 14,8" fill="#F18F01"/>
+      <polygon points="0,-20 -8,5 8,5" fill="#FFB347" opacity="0.6"/>
+      <circle cx="0" cy="-22" r="5" fill="#FFD700"/>
+    </g>
+  </g>
+</svg>

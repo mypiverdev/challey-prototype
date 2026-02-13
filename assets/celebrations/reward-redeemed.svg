@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <!-- Celebration: Reward Redeemed — Gift opening burst -->
+  <defs>
+    <linearGradient id="rrGift" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F18F01"/>
+      <stop offset="100%" stop-color="#D47800"/>
+    </linearGradient>
+    <linearGradient id="rrLid" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFB347"/>
+      <stop offset="100%" stop-color="#F18F01"/>
+    </linearGradient>
+    <filter id="rrGlow">
+      <feGaussianBlur stdDeviation="4" result="glow"/>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="rrShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#8B5800" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Background radial burst -->
+  <g opacity="0.06">
+    <line x1="150" y1="30" x2="150" y2="270" stroke="#F18F01" stroke-width="2"/>
+    <line x1="30" y1="150" x2="270" y2="150" stroke="#F18F01" stroke-width="2"/>
+    <line x1="60" y1="60" x2="240" y2="240" stroke="#F18F01" stroke-width="1.5"/>
+    <line x1="240" y1="60" x2="60" y2="240" stroke="#F18F01" stroke-width="1.5"/>
+  </g>
+
+  <!-- Gift box body -->
+  <g transform="translate(150, 170)" filter="url(#rrShadow)">
+    <rect x="-50" y="-10" width="100" height="65" rx="8" fill="url(#rrGift)"/>
+    <!-- Ribbon -->
+    <rect x="-7" y="-10" width="14" height="65" rx="2" fill="#2E86AB"/>
+    <!-- Box detail -->
+    <rect x="-50" y="-10" width="100" height="65" rx="8" fill="none" stroke="white" stroke-width="1" opacity="0.15"/>
+  </g>
+
+  <!-- Lid (popping off!) -->
+  <g transform="translate(150, 130) rotate(-12)" filter="url(#rrShadow)">
+    <rect x="-55" y="-12" width="110" height="24" rx="6" fill="url(#rrLid)"/>
+    <rect x="-55" y="-2" width="110" height="12" fill="#F18F01" opacity="0.3"/>
+    <!-- Ribbon on lid -->
+    <rect x="-7" y="-12" width="14" height="24" rx="2" fill="#2E86AB"/>
+    <!-- Bow -->
+    <ellipse cx="-14" cy="-16" rx="14" ry="9" fill="#3A9BC5" transform="rotate(-15)"/>
+    <ellipse cx="14" cy="-16" rx="14" ry="9" fill="#3A9BC5" transform="rotate(15)"/>
+    <circle cx="0" cy="-14" r="6" fill="#2E86AB"/>
+  </g>
+
+  <!-- Stars/sparkles erupting from box -->
+  <g filter="url(#rrGlow)">
+    <path d="M150 85 L154 95 L164 97 L156 103 L158 113 L150 107 L142 113 L144 103 L136 97 L146 95 Z" fill="#FFD700" opacity="0.8"/>
+    <path d="M115 70 L118 77 L125 79 L119 82 L120 89 L115 84 L110 89 L111 82 L105 79 L112 77 Z" fill="#FFD700" opacity="0.6"/>
+    <path d="M190 75 L192 80 L197 81 L193 84 L194 89 L190 85 L186 89 L187 84 L183 81 L188 80 Z" fill="#FFD700" opacity="0.55"/>
+  </g>
+
+  <!-- Confetti burst -->
+  <g>
+    <rect x="100" y="55" width="7" height="7" rx="1.5" fill="#FF6B6B" opacity="0.65" transform="rotate(25, 103, 58)"/>
+    <rect x="195" y="50" width="6" height="9" rx="1.5" fill="#2E86AB" opacity="0.6" transform="rotate(-30, 198, 54)"/>
+    <rect x="80" y="100" width="8" height="5" rx="1.5" fill="#A855F7" opacity="0.5" transform="rotate(40, 84, 102)"/>
+    <rect x="215" y="95" width="5" height="8" rx="1" fill="#00D2D3" opacity="0.5" transform="rotate(-15, 217, 99)"/>
+    <circle cx="130" cy="50" r="4" fill="#F18F01" opacity="0.5"/>
+    <circle cx="175" cy="45" r="3" fill="#FF6B6B" opacity="0.45"/>
+    <circle cx="90" cy="85" r="3.5" fill="#FFD700" opacity="0.4"/>
+    <circle cx="220" cy="80" r="3" fill="#28a745" opacity="0.4"/>
+  </g>
+
+  <!-- Coin/points flying out -->
+  <g opacity="0.4">
+    <circle cx="125" cy="90" r="10" fill="#FFD700" stroke="#F18F01" stroke-width="1.5"/>
+    <text x="125" y="94" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="#B8760A">+</text>
+  </g>
+  <g opacity="0.3">
+    <circle cx="180" cy="80" r="8" fill="#FFD700" stroke="#F18F01" stroke-width="1"/>
+    <text x="180" y="83.5" text-anchor="middle" font-family="Inter, sans-serif" font-size="7" font-weight="700" fill="#B8760A">+</text>
+  </g>
+</svg>

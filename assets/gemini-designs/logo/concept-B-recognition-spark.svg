@@ -1,0 +1,13 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- Concept B: Recognition Spark -->
+<!-- This design focuses on the feeling of accomplishment. The dynamic 'C' with a spark represents the positive recognition kids receive for their work. -->
+<defs>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#003366;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#002244;stop-opacity:1" />
+    </linearGradient>
+</defs>
+<rect width="512" height="512" rx="90" fill="url(#grad2)"/>
+<path d="M344.229 326.544C328.026 352.75 299.819 369.333 268 369.333C218.283 369.333 177.333 328.383 177.333 278.667C177.333 229.011 218.219 188 268 188C299.819 188 328.026 204.583 344.229 230.789" stroke="white" stroke-width="32" stroke-linecap="round"/>
+<path d="M345.5 142.5L325 192.5L275 213L325 233.5L345.5 283.5L366 233.5L416 213L366 192.5L345.5 142.5Z" fill="#3399FF"/>
+</svg>

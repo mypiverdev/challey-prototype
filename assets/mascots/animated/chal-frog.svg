@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Chal: Frog — Cheerful, jumping ahead, leap of progress -->
+  <defs>
+    <linearGradient id="frogBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00B894"/>
+      <stop offset="100%" stop-color="#00A880"/>
+    </linearGradient>
+    <linearGradient id="frogLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#55EFC4"/>
+      <stop offset="100%" stop-color="#81ECAC"/>
+    </linearGradient>
+    <radialGradient id="frogCheek" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF9FF3" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#FF9FF3" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="frogShadow">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#005A42" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <style>
+    /* Jump bounce — whole character bounces with squash at landing */
+    @keyframes frog-jump {
+      0%   { transform: translateY(0) scaleX(1) scaleY(1); }
+      30%  { transform: translateY(-20px) scaleX(0.97) scaleY(1.03); }
+      50%  { transform: translateY(-20px) scaleX(0.97) scaleY(1.03); }
+      80%  { transform: translateY(0) scaleX(1.05) scaleY(0.95); }
+      100% { transform: translateY(0) scaleX(1) scaleY(1); }
+    }
+    .frog-jump {
+      animation: frog-jump 1.5s ease-in-out infinite;
+      transform-origin: 200px 380px;
+    }
+
+    /* Tongue flick — scales from 0 to 1 quickly every 4s */
+    @keyframes frog-tongue {
+      0%, 90%, 100% { transform: scaleY(0); }
+      93% { transform: scaleY(1); }
+      97% { transform: scaleY(1); }
+    }
+    .frog-tongue {
+      animation: frog-tongue 4s ease-in-out infinite;
+      transform-box: fill-box;
+      transform-origin: center top;
+    }
+
+    /* Eye bulge — mounds scale up then quick blink */
+    @keyframes frog-eye-bulge {
+      0%, 70%, 100% { transform: scale(1); }
+      35% { transform: scale(1.08); }
+      85% { transform: scaleY(0); }
+      90% { transform: scaleY(1); }
+    }
+    .frog-eye-left {
+      animation: frog-eye-bulge 3s ease-in-out infinite;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+    .frog-eye-right {
+      animation: frog-eye-bulge 3s ease-in-out infinite 0.1s;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    /* Leg spring — back legs compress/extend with jump */
+    @keyframes frog-leg-spring {
+      0%   { transform: scaleY(1); }
+      30%  { transform: scaleY(0.85); }
+      50%  { transform: scaleY(0.85); }
+      80%  { transform: scaleY(1.05); }
+      100% { transform: scaleY(1); }
+    }
+    .frog-leg-left {
+      animation: frog-leg-spring 1.5s ease-in-out infinite;
+      transform-origin: 115px 310px;
+    }
+    .frog-leg-right {
+      animation: frog-leg-spring 1.5s ease-in-out infinite;
+      transform-origin: 285px 310px;
+    }
+
+    /* Crown bounce — bounces after landing with a delay */
+    @keyframes frog-crown {
+      0%, 70% { transform: translateY(0); }
+      80% { transform: translateY(-5px); }
+      90% { transform: translateY(2px); }
+      100% { transform: translateY(0); }
+    }
+    .frog-crown {
+      animation: frog-crown 1.5s ease-in-out infinite;
+      transform-box: fill-box;
+      transform-origin: center bottom;
+    }
+  </style>
+
+  <g class="frog-jump">
+    <ellipse cx="200" cy="380" rx="90" ry="9" fill="#005A42" opacity="0.08"/>
+    <!-- Body -->
+    <ellipse cx="200" cy="300" rx="88" ry="65" fill="url(#frogBody)" filter="url(#frogShadow)"/>
+    <ellipse cx="200" cy="312" rx="55" ry="42" fill="url(#frogLight)" opacity="0.5"/>
+    <!-- Back legs -->
+    <g class="frog-leg-left">
+      <path d="M115 310 Q85 330 80 360 Q78 375 95 368 Q110 362 115 345 Q118 330 120 315" fill="url(#frogBody)"/>
+      <!-- Left webbed foot -->
+      <ellipse cx="85" cy="370" rx="20" ry="8" fill="url(#frogBody)" transform="rotate(-10, 85, 370)"/>
+      <g stroke="#009E7E" stroke-width="1.2" fill="none" opacity="0.4">
+        <path d="M75 370 L68 375"/>
+        <path d="M85 372 L85 380"/>
+        <path d="M95 370 L102 375"/>
+      </g>
+    </g>
+    <g class="frog-leg-right">
+      <path d="M285 310 Q315 330 320 360 Q322 375 305 368 Q290 362 285 345 Q282 330 280 315" fill="url(#frogBody)"/>
+      <!-- Right webbed foot -->
+      <ellipse cx="315" cy="370" rx="20" ry="8" fill="url(#frogBody)" transform="rotate(10, 315, 370)"/>
+      <g stroke="#009E7E" stroke-width="1.2" fill="none" opacity="0.4">
+        <path d="M305 370 L298 375"/>
+        <path d="M315 372 L315 380"/>
+        <path d="M325 370 L332 375"/>
+      </g>
+    </g>
+    <!-- Front legs -->
+    <path d="M140 300 Q125 320 130 345 Q132 355 140 348 Q145 335 148 310" fill="url(#frogBody)"/>
+    <path d="M260 300 Q275 320 270 345 Q268 355 260 348 Q255 335 252 310" fill="url(#frogBody)"/>
+    <!-- Head -->
+    <ellipse cx="200" cy="195" rx="95" ry="70" fill="url(#frogBody)" filter="url(#frogShadow)"/>
+    <ellipse cx="185" cy="160" rx="45" ry="25" fill="white" opacity="0.06"/>
+    <!-- Bulging eyes -->
+    <g class="frog-eye-left">
+      <circle cx="155" cy="140" r="38" fill="url(#frogBody)"/>
+      <circle cx="155" cy="138" r="28" fill="white"/>
+      <ellipse cx="160" cy="140" rx="14" ry="18" fill="#1B2A4A"/>
+      <circle cx="166" cy="132" r="7" fill="white" opacity="0.9"/>
+      <circle cx="155" cy="148" r="3.5" fill="white" opacity="0.4"/>
+    </g>
+    <g class="frog-eye-right">
+      <circle cx="245" cy="140" r="38" fill="url(#frogBody)"/>
+      <circle cx="245" cy="138" r="28" fill="white"/>
+      <ellipse cx="240" cy="140" rx="14" ry="18" fill="#1B2A4A"/>
+      <circle cx="246" cy="132" r="7" fill="white" opacity="0.9"/>
+      <circle cx="235" cy="148" r="3.5" fill="white" opacity="0.4"/>
+    </g>
+    <!-- Nostrils -->
+    <circle cx="188" cy="190" r="4" fill="#007A5E" opacity="0.4"/>
+    <circle cx="212" cy="190" r="4" fill="#007A5E" opacity="0.4"/>
+    <!-- Smile -->
+    <path d="M140 210 Q170 245 200 245 Q230 245 260 210" fill="none" stroke="#007A5E" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M155 215 Q180 238 200 238 Q220 238 245 215" fill="#FF7675" opacity="0.2"/>
+    <!-- Tongue -->
+    <g class="frog-tongue">
+      <path d="M200 238 Q208 255 215 248" fill="#FF7675" stroke="#E06665" stroke-width="1"/>
+    </g>
+    <!-- Cheek blush -->
+    <ellipse cx="128" cy="210" rx="16" ry="10" fill="url(#frogCheek)"/>
+    <ellipse cx="272" cy="210" rx="16" ry="10" fill="url(#frogCheek)"/>
+    <!-- Spots -->
+    <g fill="#009E7E" opacity="0.25">
+      <circle cx="165" cy="290" r="10"/>
+      <circle cx="235" cy="285" r="8"/>
+      <circle cx="195" cy="310" r="7"/>
+      <circle cx="220" cy="325" r="6"/>
+    </g>
+    <!-- Crown -->
+    <g class="frog-crown" transform="translate(200, 102)">
+      <polygon points="-22,8 -25,-5 -15,-2 -8,-14 0,-5 8,-14 15,-2 25,-5 22,8" fill="#F18F01"/>
+      <polygon points="-18,6 -20,-2 -12,0 -6,-10 0,-3 6,-10 12,0 20,-2 18,6" fill="#FFB347" opacity="0.5"/>
+      <circle cx="-8" cy="-4" r="3" fill="#2E86AB"/>
+      <circle cx="0" cy="0" r="3" fill="#FFD700"/>
+      <circle cx="8" cy="-4" r="3" fill="#2E86AB"/>
+    </g>
+  </g>
+</svg>

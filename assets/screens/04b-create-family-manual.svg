@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812" width="375" height="812">
+  <!-- Screen: Create Family - Manual Email Signup -->
+  <defs>
+    <filter id="btnShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#1B2A4A" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="375" height="812" fill="#F5F7FA"/>
+
+  <!-- Status bar -->
+  <text x="30" y="52" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#1B2A4A">9:41</text>
+  <g transform="translate(295, 40)">
+    <rect x="0" y="0" width="22" height="11" rx="2" fill="none" stroke="#1B2A4A" stroke-width="1.2"/>
+    <rect x="2" y="2" width="15" height="7" rx="1" fill="#1B2A4A"/>
+    <rect x="22" y="3" width="2" height="5" rx="1" fill="#1B2A4A" opacity="0.4"/>
+  </g>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="375" height="200" fill="#1B2A4A"/>
+  <g transform="translate(28, 88)">
+    <path d="M10 0 L0 0 M3 -5 L0 0 L3 5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="28" y="145" font-family="Inter, sans-serif" font-size="28" font-weight="700" fill="white">Create Account</text>
+  <text x="28" y="175" font-family="Inter, sans-serif" font-size="15" fill="white" opacity="0.6">Sign up with your email</text>
+
+  <!-- First Name -->
+  <text x="28" y="240" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#1B2A4A">First Name</text>
+  <rect x="24" y="250" width="327" height="48" rx="12" fill="white" stroke="#DDE4E8" stroke-width="1.5"/>
+  <text x="44" y="280" font-family="Inter, sans-serif" font-size="15" fill="#1B2A4A">Mike</text>
+
+  <!-- Last Name -->
+  <text x="28" y="325" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#1B2A4A">Last Name</text>
+  <rect x="24" y="335" width="327" height="48" rx="12" fill="white" stroke="#DDE4E8" stroke-width="1.5"/>
+  <text x="44" y="365" font-family="Inter, sans-serif" font-size="15" fill="#1B2A4A">Johnson</text>
+
+  <!-- Email -->
+  <text x="28" y="410" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#1B2A4A">Email</text>
+  <rect x="24" y="420" width="327" height="48" rx="12" fill="white" stroke="#2E86AB" stroke-width="2"/>
+  <text x="44" y="450" font-family="Inter, sans-serif" font-size="15" fill="#1B2A4A">mike@example.com</text>
+  <!-- Keyboard cursor indicator -->
+  <rect x="195" y="437" width="2" height="18" rx="1" fill="#2E86AB"/>
+
+  <!-- Password -->
+  <text x="28" y="495" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#1B2A4A">Create Password</text>
+  <rect x="24" y="505" width="327" height="48" rx="12" fill="white" stroke="#DDE4E8" stroke-width="1.5"/>
+  <text x="44" y="535" font-family="Inter, sans-serif" font-size="15" fill="#B0B8C0">Min. 8 characters</text>
+  <!-- Eye icon -->
+  <g transform="translate(325, 529)">
+    <ellipse cx="0" cy="0" rx="8" ry="5" fill="none" stroke="#B0B8C0" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="2.5" fill="#B0B8C0"/>
+  </g>
+
+  <!-- Continue Button -->
+  <g filter="url(#btnShadow)">
+    <rect x="24" y="590" width="327" height="56" rx="14" fill="#2E86AB"/>
+    <text x="187.5" y="624" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="white">Continue</text>
+  </g>
+
+  <!-- Terms text -->
+  <text x="187.5" y="670" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#B0B8C0">By continuing you agree to our Terms of Service</text>
+  <text x="187.5" y="686" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#B0B8C0">and Privacy Policy</text>
+
+  <!-- Home indicator -->
+  <rect x="120" y="790" width="135" height="5" rx="2.5" fill="#1B2A4A" opacity="0.15"/>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <!-- Celebration: Swap Accepted — Two hands shake/high-five -->
+  <defs>
+    <linearGradient id="saBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2E86AB"/>
+      <stop offset="100%" stop-color="#1B5A75"/>
+    </linearGradient>
+    <filter id="saGlow">
+      <feGaussianBlur stdDeviation="3" result="glow"/>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="saShadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#1B2A4A" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Burst lines -->
+  <g stroke="#2E86AB" stroke-width="2" stroke-linecap="round" opacity="0.08">
+    <line x1="150" y1="30" x2="150" y2="55"/>
+    <line x1="150" y1="245" x2="150" y2="270"/>
+    <line x1="35" y1="150" x2="60" y2="150"/>
+    <line x1="240" y1="150" x2="265" y2="150"/>
+    <line x1="60" y1="60" x2="80" y2="80"/>
+    <line x1="220" y1="80" x2="240" y2="60"/>
+  </g>
+
+  <!-- Swap arrows circle -->
+  <circle cx="150" cy="150" r="72" fill="url(#saBlue)" filter="url(#saShadow)"/>
+  <circle cx="150" cy="150" r="62" fill="none" stroke="white" stroke-width="2" opacity="0.2"/>
+  <ellipse cx="138" cy="125" rx="28" ry="18" fill="white" opacity="0.08"/>
+
+  <!-- Swap arrows icon -->
+  <g filter="url(#saGlow)" stroke="white" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Right arrow -->
+    <path d="M120 135 L180 135"/>
+    <path d="M168 123 L180 135 L168 147"/>
+    <!-- Left arrow -->
+    <path d="M180 165 L120 165"/>
+    <path d="M132 177 L120 165 L132 153"/>
+  </g>
+
+  <!-- Checkmark overlay (accepted!) -->
+  <g transform="translate(195, 110)" filter="url(#saGlow)">
+    <circle cx="0" cy="0" r="16" fill="#28a745"/>
+    <path d="M-7 0 L-2 5 L8 -5" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Confetti -->
+  <g>
+    <rect x="70" y="50" width="7" height="7" rx="1.5" fill="#FFD700" opacity="0.6" transform="rotate(20, 73, 53)"/>
+    <rect x="220" y="55" width="6" height="8" rx="1.5" fill="#FF6B6B" opacity="0.55" transform="rotate(-25, 223, 59)"/>
+    <rect x="55" y="200" width="8" height="5" rx="1.5" fill="#A855F7" opacity="0.45" transform="rotate(35, 59, 202)"/>
+    <rect x="235" y="210" width="5" height="8" rx="1" fill="#00D2D3" opacity="0.5" transform="rotate(-40, 237, 214)"/>
+    <circle cx="95" cy="75" r="3.5" fill="#F18F01" opacity="0.45"/>
+    <circle cx="210" cy="240" r="3" fill="#FFD700" opacity="0.4"/>
+  </g>
+
+  <!-- Sparkle stars -->
+  <path d="M85 115 L87 120 L92 122 L87 124 L85 129 L83 124 L78 122 L83 120 Z" fill="#FFD700" opacity="0.45"/>
+  <path d="M225 130 L227 134 L231 135 L227 137 L225 141 L223 137 L219 135 L223 134 Z" fill="white" opacity="0.35"/>
+</svg>
